@@ -9,5 +9,6 @@ I'll work through some of the content on these tutorials and references and impl
 * [MDN JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 * [HTML 5.2](https://www.w3.org/TR/html52/)
+* [Understanding CSS Specifications](https://www.w3.org/Style/CSS/read.en.html)
 * [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3)
 * [ECMAScript 262](https://www.ecma-international.org/publications/standards/Ecma-262.htm)
