@@ -1,7 +1,6 @@
 body {
-    text-align: center;
     max-width: 1000px;
     margin: auto;
 }
 
-.content * { border: 1px dashed gray; }
+/*.content * { border: 1px dashed gray; }*/
