@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8"/>
         <title>HTML, CSS, and JS Review</title>
@@ -12,14 +12,14 @@
             <p>In order to prepare for <a href="https://www.microsoft.com/en-us/learning/exam-70-480.aspx" rel="nofollow" target="_blank">certifications</a> and to review the various aspects of HTML, CSS, and JavaScript this page will be an overview of the fundamentals of each language.</p>
             <p>I'll work through some of the content on these tutorials and references and implement things myself to better practice, review, and learn:</p>
             <ul>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" rel="nofollow" target="_blank">MDN HTML</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" rel="nofollow" target="_blank">MDN CSS</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" rel="nofollow" target="_blank">MDN JavaScript</a></li>
-                <li><a href="https://www.w3.org/TR/html52/" rel="nofollow" target="_blank">HTML 5.2</a></li>
-                <li><a href="https://www.w3.org/Style/CSS/read.en.html" rel="nofollow" target="_blank">Understanding CSS Specifications</a></li>
-                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" rel="nofollow" target="_blank">CSS3</a></li>
-                <li><a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm" rel="nofollow" target="_blank">ECMAScript 262</a></li>
-                <li><a href="https://css-tricks.com/" rel="nofollow" target="_blank">CSS-Tricks</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" title="Goes to the MDN article on HTML" rel="nofollow" target="_blank">MDN HTML</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" title="Goes to the MDN article on CSS" rel="nofollow" target="_blank">MDN CSS</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" title="Goes to the MDN article on JavaScript" rel="nofollow" target="_blank">MDN JavaScript</a></li>
+                <li><a href="https://www.w3.org/TR/html52/" title="Goes to the W3.org HTML 5.2 recommendation" rel="nofollow" target="_blank">HTML 5.2</a></li>
+                <li><a href="https://www.w3.org/Style/CSS/read.en.html" title="Goes to the W3.org page describing how to understand the CSS specifications" rel="nofollow" target="_blank">Understanding CSS Specifications</a></li>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" title="Goes to the MDN article on CSS3" rel="nofollow" target="_blank">CSS3</a></li>
+                <li><a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm" title="Goes to the ECMA standards page for EMCA-262" rel="nofollow" target="_blank">ECMAScript 262</a></li>
+                <li><a href="https://css-tricks.com/" title="Goes to css-tricks.com" rel="nofollow" target="_blank">CSS-Tricks</a></li>
             </ul>
         </section>
         <section>
@@ -28,52 +28,50 @@
                 "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript)." - MDN
             </div>
             <div class="content">
-                <div>
-                    <h2>Topics</h2>
-                    <ul>
-                        <li>Semantic Markup</li>
-                        <ul>                                
-                            <li>Search Engine Optimization</li>
-                            <li>Screen Readers</li>
-                            <li>Create a Layout Container incorporating the elements: Section, Article, Nav, Header, Footer, Aside</li>
-                        </ul>
-                        <li>UI Controls</li>
-                        <ul>
-                            <li>Programmatically add and modify HTML</li>
-                            <li>Media Controls</li>
-                            <li>HTML5 Canvas and SVGs</li>
-                        </ul>
-                        <li>Style Programmatically</li>
-                        <ul>
-                            <li>Change location of an element</li>
-                            <li>Apply a transform</li>
-                            <li>Show and Hide elements</li>
-                        </ul>
-                        <li>HTML5 APIs</li>
-                        <ul>
-                            <li>Storage APIs</li>
-                            <li>Geolocation API</li>
-                        </ul>
-                        <li>Variable Scope and Lifetimes</li>
-                        <ul>
-                            <li>var, let, const</li>
-                            <li>global and local scope</li>
-                            <li>this and events</li>
-                        </ul>
-                        <li>Objects and Methods</li>
-                        <ul>
-                            <li>Native Objects</li>
-                            <li>Custom Objects</li>
-                            <li>Prototypes</li>
-                            <li>Inheritance</li>
-                            <li>Implement native objects with custom methods</li>
-                        </ul>
-                        <li>Input Validation</li>
-                        <ul>
-                            <li>HTML5 input types and attributes</li>
-                        </ul>
+                <h2>Topics</h2>
+                <ul>
+                    <li><a href="#semantics">Semantic Markup</a></li>
+                    <ul>                                
+                        <li>Search Engine Optimization</li>
+                        <li><a href="#accessibility">Screen Readers</a></li>
+                        <li>Create a Layout Container incorporating the elements: Section, Article, Nav, Header, Footer, Aside</li>
                     </ul>
-                </div>
+                    <li>UI Controls</li>
+                    <ul>
+                        <li>Programmatically add and modify HTML</li>
+                        <li>Media Controls</li>
+                        <li>HTML5 Canvas and SVGs</li>
+                    </ul>
+                    <li>Style Programmatically</li>
+                    <ul>
+                        <li>Change location of an element</li>
+                        <li>Apply a transform</li>
+                        <li>Show and Hide elements</li>
+                    </ul>
+                    <li>HTML5 APIs</li>
+                    <ul>
+                        <li>Storage APIs</li>
+                        <li>Geolocation API</li>
+                    </ul>
+                    <li>Variable Scope and Lifetimes</li>
+                    <ul>
+                        <li>var, let, const</li>
+                        <li>global and local scope</li>
+                        <li>this and events</li>
+                    </ul>
+                    <li>Objects and Methods</li>
+                    <ul>
+                        <li>Native Objects</li>
+                        <li>Custom Objects</li>
+                        <li>Prototypes</li>
+                        <li>Inheritance</li>
+                        <li>Implement native objects with custom methods</li>
+                    </ul>
+                    <li>Input Validation</li>
+                    <ul>
+                        <li>HTML5 input types and attributes</li>
+                    </ul>
+                </ul>
             </div>
         </section>
         <section>
@@ -82,58 +80,56 @@
                 "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media." - MDN
             </div>
             <div class="content">
-                <div>
-                    <h2>Topics</h2>
-                    <ul>
-                        <li>HTML Text Properties</li>
-                        <ul>                                
-                            <li>Style Text</li>
-                            <ul>
-                                <li>Style text font, WOFF, @font-face, size, understudy fonts</li>
-                                <li>Text alignment, spacing, and indentation</li>
-                                <li>Test hyphenations and drop shadow</li>
-                            </ul>
-                        </ul>
-                        <li>HTML Box Properties</li>
+                <h2>Topics</h2>
+                <ul>
+                    <li>HTML Text Properties</li>
+                    <ul>                                
+                        <li>Style Text</li>
                         <ul>
-                            <li>Size, borders, rounded corners, outline, padding, and margin</li>
-                            <li>Graphical effects, transparency, opacity, background images, gradients, shadow, and clipping</li>
-                            <li>Establish and change an element's position</li>
-                        </ul>
-                        <li>Flexible layout</li>
-                        <ul>
-                            <li>Flexible Box Model</li>
-                            <li>Multi-column layout</li>
-                            <li>Position floating and exclusions</li>
-                            <li>Grid alignment</li>
-                            <li>Regions, grouping, and nesting layout</li>
-                        </ul>
-                        <li>Animated and Adaptive UI</li>
-                        <ul>
-                            <li>CSS Transitions</li>
-                            <li>3D and 2D transformations</li>
-                            <li>Media Queries</li>
-                            <ul>
-                                <li>device adaptations for output formats, displays, and representations</li>
-                            </ul>
-                            <li>Hide and Show logic</li>
-                        </ul>
-                        <li>CSS and jQuery Selectors</li>
-                        <ul>
-                            <li>Different types of selectors</li>
-                            <li>Define element, style, and attribute selectors</li>
-                            <li>Find elements with pseudo-elements and classes</li>
-                        </ul>
-                        <li>CSS File Structure</li>
-                        <ul>
-                            <li>CSS Selectors</li>
-                            <li>Reference elements</li>
-                            <li>Implement inheritance</li>
-                            <li>Override inheritance with !important</li>
-                            <li>Style using pseudo-elements and classes</li>
+                            <li>Style text font, WOFF, @font-face, size, understudy fonts</li>
+                            <li>Text alignment, spacing, and indentation</li>
+                            <li>Test hyphenations and drop shadow</li>
                         </ul>
                     </ul>
-                </div>
+                    <li>HTML Box Properties</li>
+                    <ul>
+                        <li>Size, borders, rounded corners, outline, padding, and margin</li>
+                        <li>Graphical effects, transparency, opacity, background images, gradients, shadow, and clipping</li>
+                        <li>Establish and change an element's position</li>
+                    </ul>
+                    <li>Flexible layout</li>
+                    <ul>
+                        <li>Flexible Box Model</li>
+                        <li>Multi-column layout</li>
+                        <li>Position floating and exclusions</li>
+                        <li>Grid alignment</li>
+                        <li>Regions, grouping, and nesting layout</li>
+                    </ul>
+                    <li>Animated and Adaptive UI</li>
+                    <ul>
+                        <li>CSS Transitions</li>
+                        <li>3D and 2D transformations</li>
+                        <li>Media Queries</li>
+                        <ul>
+                            <li>device adaptations for output formats, displays, and representations</li>
+                        </ul>
+                        <li>Hide and Show logic</li>
+                    </ul>
+                    <li>CSS and jQuery Selectors</li>
+                    <ul>
+                        <li>Different types of selectors</li>
+                        <li>Define element, style, and attribute selectors</li>
+                        <li>Find elements with pseudo-elements and classes</li>
+                    </ul>
+                    <li>CSS File Structure</li>
+                    <ul>
+                        <li>CSS Selectors</li>
+                        <li>Reference elements</li>
+                        <li>Implement inheritance</li>
+                        <li>Override inheritance with !important</li>
+                        <li>Style using pseudo-elements and classes</li>
+                    </ul>
+                </ul>
             </div>
         </section>
         <section>
@@ -142,79 +138,98 @@
                 "JavaScript (JS) is a lightweight interpreted or JIT-compiled programming language with first-class functions. While it is most well-known as the scripting language for Web pages, many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles." - MDN
             </div>
             <div class="content">
-                <div>
-                    <h2>Topics</h2>
+                <h2>Topics</h2>
+                <ul>
+                    <li>Program Flow</li>
+                    <ul>                                
+                        <li>Iterate over collections and arrays</li>
+                        <li>Utilize: switch, if/else, and boolean logic</li>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators" title="Goes to the MDN article for expressions and operators" rel="nofollow" target="_blank">Operators and Expressions</a></li>
+                    </ul>
+                    <li>Raise and Handle events</li>
                     <ul>
-                        <li>Program Flow</li>
-                        <ul>                                
-                            <li>Iterate over collections and arrays</li>
-                            <li>Utilize: switch, if/else, and boolean logic</li>
-                            <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators">Operators and Expressions</a></li>
-                        </ul>
-                        <li>Raise and Handle events</li>
+                        <li>Common DOM events: OnBlur, OnFocus, OnClick, etc.</li>
+                        <li>Declare and handle bubbled events</li>
+                        <li>Handle events with anonymous functions</li>
+                    </ul>
+                    <li>Exception Handling</li>
+                    <ul>
+                        <li>Set and respond to error codes</li>
+                        <li>Exceptions</li>
+                        <li>Null checks</li>
+                        <li>try/catch/finally blocks</li>
+                    </ul>
+                    <li>Asynchronous Programming</li>
+                    <ul>
+                        <li>HTML5 WebSocket API</li>
+                        <li>jQuery AJAX</li>
+                        <li>Async Events</li>
+                        <li>anonymous callback functions</li>
+                        <li>Handle the 'this' pointer</li>
+                    </ul>
+                    <li>Web Worker Processes</li>
+                    <ul>
+                        <li>Start and Stop a Web Worker</li>
+                        <li>Pass data to a Web Worker</li>
+                        <li>Timeouts and Intervals</li>
+                        <li>Event Listeners</li>
+                        <li>Understand the limitations of Web Workers</li>
+                    </ul>
+                    <li>Validate Input Programmatically</li>
+                    <ul>
+                        <li>Regular Expressions</li>
+                        <li>Data Type checking</li>
+                        <li>Security</li>
                         <ul>
-                            <li>Common DOM events: OnBlur, OnFocus, OnClick, etc.</li>
-                            <li>Declare and handle bubbled events</li>
-                            <li>Handle events with anonymous functions</li>
-                        </ul>
-                        <li>Exception Handling</li>
-                        <ul>
-                            <li>Set and respond to error codes</li>
-                            <li>Exceptions</li>
-                            <li>Null checks</li>
-                            <li>try/catch/finally blocks</li>
-                        </ul>
-                        <li>Asynchronous Programming</li>
-                        <ul>
-                            <li>HTML5 WebSocket API</li>
-                            <li>jQuery AJAX</li>
-                            <li>Async Events</li>
-                            <li>anonymous callback functions</li>
-                            <li>Handle the 'this' pointer</li>
-                        </ul>
-                        <li>Web Worker Processes</li>
-                        <ul>
-                            <li>Start and Stop a Web Worker</li>
-                            <li>Pass data to a Web Worker</li>
-                            <li>Timeouts and Intervals</li>
-                            <li>Event Listeners</li>
-                            <li>Understand the limitations of Web Workers</li>
-                        </ul>
-                        <li>Validate Input Programmatically</li>
-                        <ul>
-                            <li>Regular Expressions</li>
-                            <li>Data Type checking</li>
-                            <li>Security</li>
-                            <ul>
-                                <li>Prevent Script Injection</li>
-                                <li>Input Sanitization - URI/form encoding</li>
-                            </ul>
-                        </ul>
-                        <li>Consume Data</li>
-                        <ul>
-                            <li>JSON and XML parsing</li>
-                            <li>Retrieve data from web services</li>
-                            <li>XMLHTTPRequest - send and receive</li>
-                        </ul>
-                        <li>Serialize, deserialize, and transmit data</li>
-                        <ul>
-                            <li>Binary Data</li>
-                            <li>JSON and XML</li>
-                            <li>jQuery Serialization</li>
-                            <li>Form.Submit</li>
+                            <li>Prevent Script Injection</li>
+                            <li>Input Sanitization - URI/form encoding</li>
                         </ul>
                     </ul>
-                </div>
-            </div>
+                    <li>Consume Data</li>
+                    <ul>
+                        <li>JSON and XML parsing</li>
+                        <li>Retrieve data from web services</li>
+                        <li>XMLHTTPRequest - send and receive</li>
+                    </ul>
+                    <li>Serialize, deserialize, and transmit data</li>
+                    <ul>
+                        <li>Binary Data</li>
+                        <li>JSON and XML</li>
+                        <li>jQuery Serialization</li>
+                        <li>Form.Submit</li>
+                    </ul>
+                </ul>
+            </div>            
         </section>
         <section id="examples">
-            <div>
-                <h2>HTML</h2>
-                <div>
-                    <h4>Semantic HTML</h4>
-                    <p>Semantics refers to the meaning of something. When using HTML one should think about the information within the template and the organization of that information rather than its appearance. Once the data is organized it can later be styled using CSS for presentation purposes. The semantics of a webpage are important to programmatically traverse the data. Web browsers use this data and so do other agents such as smart phones and other programs. HTML is the data structure for the webpage which is separate from the graphical aspects we interact with as users.</p>
-                    <p>Along with the idea of separation between data and presentation is that HTML elements need to be used to represent the data appropriately. This is to help ensure that web browsers and other agents navigate and access the HTML correctly. For example if an agent wanted to display the title of the page it would look within the HEAD element for a child TITLE tag. This consistence is something we need to be able to rely upon and is why it is also so important to remember.</p>
-                </div>
+            <h2>HTML</h2>
+            <div class="topic">
+                <h4><a id="semantics">Semantic HTML</a></h4>
+                <p>Semantics refers to the meaning of something. When using HTML one should think about the information within the template and the organization of that information rather than its appearance. Once the data is organized it can later be styled using CSS for presentation purposes. The semantics of a webpage are important to programmatically traverse the data. Web browsers use this data and so do other agents such as smart phones and other programs. HTML is the data structure for the webpage which is separate from the graphical aspects we interact with as users.</p>
+                <p>Along with the idea of separation between data and presentation is that HTML elements need to be used to represent the data appropriately. This is to help ensure that web browsers and other agents navigate and access the HTML correctly. For example if an agent wanted to display the title of the page it would look within the HEAD element for a child TITLE tag. This consistence is something we need to be able to rely upon and is why it is also so important to remember.</p>
+            </div>
+            <div class="resources">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://html.com/semantic-markup/" title="Goes to the HTML.com semantic HTML description page" rel="nofollow" target="_blank">Semantic HTML</a></li>
+                </ul>
+            </div>
+            <div class="topic">
+                <h4><a id="accessibility">Screen Readers</a></h4>
+                <p>Using semantic HTML is very important when considering accessibility and screen readers. The browser and accessibility tools will key off of the semantic HTML to help someone navigate your website. Using the wrong element to accomplish something, such as using a div element to create a button, can be confusing to people and other agents.</p>
+                <p>Using the correct ARIA and semantic HTML is also helpful in navigating a page because users can quickly navigate between links, forms, headings, paragraphs, sections and other elements. Along with that being descriptive within an opening sentence in a new paragraph for instance helps users skip content they aren't interested in much like someone would who can visually review the content.</p>
+                <p>Screen readers convert text to speech to help people navigate and understand a website. These users may have disabilities ranging from visual impairment to cognitive disabilities. Being sure to define the language the website is presented in is very important. This can be done within the html tag by defining a lang attribute. It's also possible to wrap smaller sections of text in the span element and apply the lang attribute to the span (though lang can be applied to many other elements as well).</p>
+                <p>The proper use of headings is helpful as well because search engines use these to index a webpage's structure and content. People are drawn to the headlines which direct them to different sections of relevant content.</p>
+                <p>Alternative text is important to have on images. This helps give context to the page when a screen reader encounters an image. Screen readers will read the text in the alt attribute for the user so be sure the text is descriptive. It's also useful to users when an image link is broken because the alt text will display for them.</p>
+                <p>Finally it is important that links are spelled out and descriptive to the user. "Click here" means nothing but links such as "book airline tickets here" helps to put things into perspective. Remember we can add title attributes to elements such as the anchor tag. Doing so is helpful because the information can be displayed as a tooltip to the user when mousing over the link.</p>
+                <p>It's important to remember that content described through a screen reader is much line an automated telephone directory. The content is "linearized" to the listener so, while some users can quickly navigate a webpage visually, those users who utilize a screen reader must do so by listening to each option before understanding what actions are available. Consider this when designing your webpages.</p>
+            </div>
+            <div class="resources">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://webaim.org/techniques/screenreader/" title="Goes to Webaim.org's discussion on Screen Readers" rel="nofollow" target="_blank">Screen Readers</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_accessibility.asp" title="Goes to the W3 Schools overview for Accessibility" rel="nofollow" target="_blank">Accessibility</a></li>
+                </ul>
             </div>
         </section>
     </body>
