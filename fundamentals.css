@@ -3,4 +3,8 @@ body {
     margin: auto;
 }
 
+.resources {
+    margin-bottom: 50px;
+}
+
 /*.content * { border: 1px dashed gray; }*/

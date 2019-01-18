@@ -199,30 +199,38 @@
                         <li>Form.Submit</li>
                     </ul>
                 </ul>
-            </div>
+            </div>            
         </section>
         <section id="examples">
             <h2>HTML</h2>
-            <div>
+            <div class="topic">
                 <h4><a id="semantics">Semantic HTML</a></h4>
                 <p>Semantics refers to the meaning of something. When using HTML one should think about the information within the template and the organization of that information rather than its appearance. Once the data is organized it can later be styled using CSS for presentation purposes. The semantics of a webpage are important to programmatically traverse the data. Web browsers use this data and so do other agents such as smart phones and other programs. HTML is the data structure for the webpage which is separate from the graphical aspects we interact with as users.</p>
                 <p>Along with the idea of separation between data and presentation is that HTML elements need to be used to represent the data appropriately. This is to help ensure that web browsers and other agents navigate and access the HTML correctly. For example if an agent wanted to display the title of the page it would look within the HEAD element for a child TITLE tag. This consistence is something we need to be able to rely upon and is why it is also so important to remember.</p>
-                
+            </div>
+            <div class="resources">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://html.com/semantic-markup/" title="Goes to the HTML.com semantic HTML description page" rel="nofollow" target="_blank">Semantic HTML</a></li>
+                </ul>
+            </div>
+            <div class="topic">
                 <h4><a id="accessibility">Screen Readers</a></h4>
                 <p>Using semantic HTML is very important when considering accessibility and screen readers. The browser and accessibility tools will key off of the semantic HTML to help someone navigate your website. Using the wrong element to accomplish something, such as using a div element to create a button, can be confusing to people and other agents.</p>
-                <p>Screen readers convert text to speech to help people navigate and understand a website. These users may have disabilities ranging from visual impairment to cognitive disabilities. Being sure to define the language the website is presented in is very important. This can be done within the html tag by defining a lang attribute. It's also possible to wrap smaller sections of text in the span element and apply the lang attribute to the span.</p>
+                <p>Using the correct ARIA and semantic HTML is also helpful in navigating a page because users can quickly navigate between links, forms, headings, paragraphs, sections and other elements. Along with that being descriptive within an opening sentence in a new paragraph for instance helps users skip content they aren't interested in much like someone would who can visually review the content.</p>
+                <p>Screen readers convert text to speech to help people navigate and understand a website. These users may have disabilities ranging from visual impairment to cognitive disabilities. Being sure to define the language the website is presented in is very important. This can be done within the html tag by defining a lang attribute. It's also possible to wrap smaller sections of text in the span element and apply the lang attribute to the span (though lang can be applied to many other elements as well).</p>
                 <p>The proper use of headings is helpful as well because search engines use these to index a webpage's structure and content. People are drawn to the headlines which direct them to different sections of relevant content.</p>
                 <p>Alternative text is important to have on images. This helps give context to the page when a screen reader encounters an image. Screen readers will read the text in the alt attribute for the user so be sure the text is descriptive. It's also useful to users when an image link is broken because the alt text will display for them.</p>
                 <p>Finally it is important that links are spelled out and descriptive to the user. "Click here" means nothing but links such as "book airline tickets here" helps to put things into perspective. Remember we can add title attributes to elements such as the anchor tag. Doing so is helpful because the information can be displayed as a tooltip to the user when mousing over the link.</p>
+                <p>It's important to remember that content described through a screen reader is much line an automated telephone directory. The content is "linearized" to the listener so, while some users can quickly navigate a webpage visually, those users who utilize a screen reader must do so by listening to each option before understanding what actions are available. Consider this when designing your webpages.</p>
             </div>
-        </section>
-        <section id="resources">
-            <h2>Resources</h2>
-            <ul>
-                <li><a href="https://html.com/semantic-markup/" title="Goes to the HTML.com semantic HTML description page" rel="nofollow" target="_blank">Semantic HTML</a></li>
-                <li><a href="https://webaim.org/techniques/screenreader/" title="Goes to Webaim.org's discussion on Screen Readers" rel="nofollow" target="_blank">Screen Readers</a></li>
-                <li><a href="https://www.w3schools.com/html/html_accessibility.asp" title="Goes to the W3 Schools overview for Accessibility" rel="nofollow" target="_blank">Accessibility</a></li>
-            </ul>
+            <div class="resources">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://webaim.org/techniques/screenreader/" title="Goes to Webaim.org's discussion on Screen Readers" rel="nofollow" target="_blank">Screen Readers</a></li>
+                    <li><a href="https://www.w3schools.com/html/html_accessibility.asp" title="Goes to the W3 Schools overview for Accessibility" rel="nofollow" target="_blank">Accessibility</a></li>
+                </ul>
+            </div>
         </section>
     </body>
 </html>
