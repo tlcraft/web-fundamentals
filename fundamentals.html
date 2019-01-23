@@ -32,7 +32,7 @@
                 <ul>
                     <li><a href="#semantics">Semantic Markup</a></li>
                     <ul>                                
-                        <li>Search Engine Optimization</li>
+                        <li><a href="#seo">Search Engine Optimization</a></li>
                         <li><a href="#accessibility">Screen Readers</a></li>
                         <li>Create a Layout Container incorporating the elements: Section, Article, Nav, Header, Footer, Aside</li>
                     </ul>
@@ -214,6 +214,27 @@
                     <li><a href="https://html.com/semantic-markup/" title="Goes to the HTML.com semantic HTML description page" rel="nofollow" target="_blank">Semantic HTML</a></li>
                 </ul>
             </div>
+            </div><div class="topic">
+                <h4><a id="seo">Search Engine Optimization</a></h4>
+                <p>Optimizing a webpage to increase its search index on search engines, such as Google and Bing, is important in grabbing a consumer's eye. Not often is it that someone reviews several pages of search result to find what they're looking for. Algorithms are very good at locating what it is exactly that person is looking for and it usually appears toward the top of the results. Plus there are more widgets now which provide greater functionality to the user upfront (such as when searching for airline tickets for example) users don't have to look very far to find what they need.</p>
+                <p>In order to be relevant a webpage must take into consideration "SEO" techniques to increase their chances of being ranked higher and found. This includes using the correct HTML elements and attributes (such as title and alt), having relevant words and content, as well as how many other webpages link back to yours which is important as a search engine's "crawler" investigates websites and links across the internet.</p>
+                <p>If a website has the same content in more than one location it will help to use the rel=canonical attribute so search engines can redirect users to the page you would rather them see. This helps search engines organize the ranks appropriately and increases the SEO. Another technique similar to this is a 301 redirect. 301 is the status code for content that has moved permanently to another URL. Other codes include 302 which is either for "moved" or "found" content. In HTTP version 1.0 it meant "moved temporarily" but in version 1.1 it's been updated to mean "found". 307 became the replacement for "moved temporarily" in version 1.1. Meta Refresh is another redirect which is generally used with countdown times and "click here" links if the redirect doesn't occur. However it's not recommended for SEO and is slower.</p>
+                <p>Link equity is another ranking factor which refers to links passing "value and authority" from one page to another. If a very valuable site links to another site then the search engine can presume the content on the linked site is valuable as well. Links need to be relevant to the original content, crawlable (via the robots.txt file), located in prominent places (e.g. within the main content as opposed to a footer), and use the appropriate HTTP status codes (e.g. 200 and 301). These factors play into a links value and equity.</p>
+                <p>The robots.txt file is the first file a crawler will parse once it reaches a website. This file can tell the crawler which pages to skip which can be important so internal pages (those of which a user interacts with once logged into the site) are not crawled and indexed. Google has even commented that internal search results pages are considered spam so these should be excluded in this way.</p>
+                <p>Schema Markup is another aspect of SEO. It's a "semantic vocabulary of tags (or microdata) that you can add to your HTML to improve the way search engines read and represent your pages" in search results according to Moz.com. Moz.com continues by describing the differences between Schema, microdata, and structured data:</p>
+                <p><ul><li>Structured data is a system of pairing a name with a value that helps search engines categorize and index your content. Microdata is one form of structured data that works with HTML5. Schema.org is a project that provides a particular set of agreed-upon definitions for microdata tags.</li></ul></p>
+                <p>Schema can be used to enhance the search results descriptions with content such as reviews, organizational information, and information about a person or book for example. The major search engines use this data to enhance the results page but it's unclear if using the markup actually helps with search ranking but appears to increase the website's click-through rate as users are more apt to click a link with a more descriptive result.</p>
+            </div>
+            <div class="resources">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="https://moz.com/beginners-guide-to-seo">Beginner's Guide to SEO</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Search_engine_optimization">Wikipedia Entry for SEO</a></li>
+                    <li><a href="https://support.google.com/webmasters/answer/6062608?hl=en">Learn about robots.txt files</a></li>
+                    <li><a href="https://moz.com/learn/seo/schema-structured-data">Schema.org Markup</a></li>
+                    <li><a href="https://schema.org/docs/full.html">Schema.org Full Hierarchy</a></li>
+                </ul>
+            </div>
             <div class="topic">
                 <h4><a id="accessibility">Screen Readers</a></h4>
                 <p>Using semantic HTML is very important when considering accessibility and screen readers. The browser and accessibility tools will key off of the semantic HTML to help someone navigate your website. Using the wrong element to accomplish something, such as using a div element to create a button, can be confusing to people and other agents.</p>
@@ -230,7 +251,6 @@
                     <li><a href="https://webaim.org/techniques/screenreader/" title="Goes to Webaim.org's discussion on Screen Readers" rel="nofollow" target="_blank">Screen Readers</a></li>
                     <li><a href="https://www.w3schools.com/html/html_accessibility.asp" title="Goes to the W3 Schools overview for Accessibility" rel="nofollow" target="_blank">Accessibility</a></li>
                 </ul>
-            </div>
         </section>
     </body>
 </html>
