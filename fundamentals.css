@@ -7,4 +7,20 @@ body {
     margin-bottom: 50px;
 }
 
+table tr:nth-child(even) {
+    background-color: #eee;
+}
+
+table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+table th {
+    text-align: left;
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
+
+
 /*.content * { border: 1px dashed gray; }*/
