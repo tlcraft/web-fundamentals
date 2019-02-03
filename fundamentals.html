@@ -354,7 +354,65 @@
 }
                 </pre>
                 <h5>Flexbox</h5>
-                <p>The CSS Flexbox is a new layout mode available in CSS3. It's only supported in more modern browsers with no support in IE10 and earlier [1]. The flexbox helps ensure that elements "behave predictably when the page layout must accommodate different screen sizes and different display devices" [1].</p>
+                <p>The CSS Flexbox is a new layout mode available in CSS3. It's only supported in more modern browsers with no support in IE10 and earlier [1]. The flexbox helps ensure that elements "behave predictably when the page layout must accommodate different screen sizes and different display devices" [1]. The flexbox allows content within a container to "flex" into a dynamic size. The container is able to alter the height and width of its items to fill the available space [3]. It is also direction-agnostic where block is vertically-based and inline is horizontally-based [3].</p>
+                <p>The flexbox has several parts because it encompasses the whole widget rather than a single item. There is the parent container known as the "flex container" and the elements within that container known as "flex items" [3]. The following examples color the containing element brown and the child items as light-yellow and each apply characteristics of the flexbox differently.</p>
+                <h5>Flex Container Row. This wraps and is justified to the end.</h5>
+                <div class="flex-container-row">
+                    <div class="flex-item-row">
+                        Flex Item One
+                    </div>
+                    <div class="flex-item-row">
+                        Flex Item Two. Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="flex-item-row">
+                        Flex Item Three
+                    </div>
+                </div>
+                <h5>Flex Container Row with an alignment. The items are stretched and centered.</h5>
+                <div class="flex-container-row-align">
+                    <div class="flex-item-row-align">
+                        Flex Item One
+                    </div>
+                    <div class="flex-item-row-align">
+                        Flex Item Two. Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="flex-item-row-align">
+                        Flex Item Three
+                    </div>
+                    <div class="flex-item-row-align">
+                        Flex Item Four
+                    </div>
+                    <div class="flex-item-row-align">
+                        Flex Item Five. Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="flex-item-row-align">
+                        Flex Item Six
+                    </div>
+                </div>
+                <h5>Flex Container Column. This wraps and the direction is reversed.</h5>
+                <div class="flex-container-column">
+                    <div class="flex-item-column">
+                        Flex Item One. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    </div>
+                    <div class="flex-item-column">
+                        Flex Item Two
+                    </div>
+                    <div class="flex-item-column">
+                        Flex Item Three
+                    </div>
+                </div>
+                <h5>Flex Container Flow. This is a revered row has a reverse wrap.</h5>
+                <div class="flex-container-flow">
+                    <div class="flex-item-flow">
+                        Flex Item One
+                    </div>
+                    <div class="flex-item-flow">
+                        Flex Item Two
+                    </div>
+                    <div class="flex-item-flow">
+                        Flex Item Three. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                    </div>
+                </div>
             </div>
             <div class="resources">
                 <h4>Resources</h4>
