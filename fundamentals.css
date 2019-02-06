@@ -1,7 +1,7 @@
 :root {
     --flex-item-color: lightyellow;
     --flex-item-margin: 5px;
-    --flex-item-size: 120px;
+    --flex-item-max-width: 120px;
     --flex-item-weight: bold;
     --flex-container-color: brown;
     --flex-container-padding: 10px;
@@ -34,104 +34,62 @@ table th {
     padding: 5px;
 }
 
-.flex-container-row {
-    background-color: var(--flex-container-color);
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: flex-end;
-    max-width: var(--flex-container-width);
-    padding: var(--flex-container-padding);
-    margin: var(--flex-container-margin);
-}
-
-.flex-item-row {
+.flex-item {
     background-color: var(--flex-item-color);
     font-weight: var(--flex-item-weight);
     margin: var(--flex-item-margin);
 }
 
-.flex-container-row-align {
-    background-color: var(--flex-container-color);
+.flex-container {
     display: flex;
+    background-color: var(--flex-container-color);
+    max-width: var(--flex-container-width);
+    padding: var(--flex-container-padding);
+    margin: var(--flex-container-margin);
+}
+
+.flex-container-row {    
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;    
+}
+
+.flex-container-row-align {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-end;
-    max-width: var(--flex-container-width);
     min-height: var(--flex-container-height);
-    padding: var(--flex-container-padding);
-    margin: var(--flex-container-margin);
     align-items: stretch;
     align-content: center;
 }
 
 .flex-item-row-align {
-    background-color: var(--flex-item-color);
-    font-weight: var(--flex-item-weight);
-    margin: var(--flex-item-margin);
-    max-width: var(--flex-item-size);
+    max-width: var(--flex-item-max-width);
 }
 
 .flex-container-column {
-    background-color: var(--flex-container-color);
-    display: flex;
     flex-wrap: wrap;
     flex-direction: column-reverse;
-    max-width: var(--flex-container-width);
-    padding: var(--flex-container-padding);
-    margin: var(--flex-container-margin);
-}
-
-.flex-item-column {
-    background-color: var(--flex-item-color);
-    font-weight: var(--flex-item-weight);
-    margin: var(--flex-item-margin);
 }
 
 .flex-container-flow {
-    background-color: var(--flex-container-color);
-    display: flex;
     flex-flow: row-reverse wrap-reverse;
-    max-width: var(--flex-container-width);
-    padding: var(--flex-container-padding);
-    margin: var(--flex-container-margin);
 }
 
 .flex-item-flow {
-    background-color: var(--flex-item-color);
-    font-weight: var(--flex-item-weight);
     justify-content: space-evenly;
-    margin: var(--flex-item-margin);
-}
-
-.flex-order {
-    display: flex;
-    background-color: var(--flex-container-color);
-    font-weight: var(--flex-item-weight);
-    max-width: var(--flex-container-width);
-    padding: var(--flex-container-padding);
-    margin: var(--flex-container-margin);
 }
 
 .flex-order-item-first {
     order: 1;
-    background-color: var(--flex-item-color);
-    font-weight: var(--flex-item-weight);
-    margin: var(--flex-item-margin);
 }
 
 .flex-order-item-second {
     order: 2;
-    background-color: var(--flex-item-color);
-    font-weight: var(--flex-item-weight);
-    margin: var(--flex-item-margin);
 }
 
 .flex-order-item-last {
     order: 3;
-    background-color: var(--flex-item-color);
-    font-weight: var(--flex-item-weight);
-    margin: var(--flex-item-margin);
 }
 
 /*.content * { border: 1px dashed gray; }*/

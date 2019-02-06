@@ -357,72 +357,72 @@
                 <p>The CSS Flexbox is a new layout mode available in CSS3. It's only supported in more modern browsers with no support in IE10 and earlier [1]. The flexbox helps ensure that elements "behave predictably when the page layout must accommodate different screen sizes and different display devices" [1]. The flexbox allows content within a container to "flex" into a dynamic size. The container is able to alter the height and width of its items to fill the available space [3]. It is also direction-agnostic where block is vertically-based and inline is horizontally-based [3].</p>
                 <p>The flexbox has several parts because it encompasses the whole widget rather than a single item. There is the parent container known as the "flex container" and the elements within that container known as "flex items" [3]. The following examples color the containing element brown and the child items as light-yellow and each apply characteristics of the flexbox differently.</p>
                 <h5>Flex Container Row. This wraps and is justified to the end.</h5>
-                <div class="flex-container-row">
-                    <div class="flex-item-row">
+                <div class="flex-container-row flex-container">
+                    <div class="flex-item">
                         Flex Item One
                     </div>
-                    <div class="flex-item-row">
+                    <div class="flex-item">
                         Flex Item Two. Lorem ipsum dolor sit amet.
                     </div>
-                    <div class="flex-item-row">
+                    <div class="flex-item">
                         Flex Item Three
                     </div>
                 </div>
                 <h5>Flex Container Row with an alignment. The items are stretched and centered.</h5>
-                <div class="flex-container-row-align">
-                    <div class="flex-item-row-align">
+                <div class="flex-container-row-align flex-container">
+                    <div class="flex-item-row-align flex-item">
                         Flex Item One
                     </div>
-                    <div class="flex-item-row-align">
+                    <div class="flex-item-row-align flex-item">
                         Flex Item Two. Lorem ipsum dolor sit amet.
                     </div>
-                    <div class="flex-item-row-align">
+                    <div class="flex-item-row-align flex-item">
                         Flex Item Three
                     </div>
-                    <div class="flex-item-row-align">
+                    <div class="flex-item-row-align flex-item">
                         Flex Item Four
                     </div>
-                    <div class="flex-item-row-align">
+                    <div class="flex-item-row-align flex-item">
                         Flex Item Five. Lorem ipsum dolor sit amet.
                     </div>
-                    <div class="flex-item-row-align">
+                    <div class="flex-item-row-align flex-item">
                         Flex Item Six
                     </div>
                 </div>
                 <h5>Flex Container Column. This wraps and the direction is reversed.</h5>
-                <div class="flex-container-column">
-                    <div class="flex-item-column">
+                <div class="flex-container-column flex-container">
+                    <div class="flex-item">
                         Flex Item One. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                     </div>
-                    <div class="flex-item-column">
+                    <div class="flex-item">
                         Flex Item Two
                     </div>
-                    <div class="flex-item-column">
+                    <div class="flex-item">
                         Flex Item Three
                     </div>
                 </div>
                 <h5>Flex Container Flow. This is a revered row has a reverse wrap.</h5>
-                <div class="flex-container-flow">
-                    <div class="flex-item-flow">
+                <div class="flex-container-flow flex-container">
+                    <div class="flex-item">
                         Flex Item One
                     </div>
-                    <div class="flex-item-flow">
+                    <div class="flex-item">
                         Flex Item Two
                     </div>
-                    <div class="flex-item-flow">
+                    <div class="flex-item">
                         Flex Item Three. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                     </div>
                 </div>
             </div>
             <p>All of the above examples use CSS properties of the container element. The following uses properties of the items themselves. It's possible to change the order of the items by defining an ordering index using the order property.</p>
-            <div class="flex-order">
-                <div class="flex-order-item-last">
+            <div class="flex-order flex-container">
+                <div class="flex-order-item-last flex-item">
                     This is defined first, but is ordered last.
                 </div>
-                <div class="flex-order-item-first">
+                <div class="flex-order-item-first flex-item">
                     This is defined second, but is ordered first.
                 </div>
-                <div class="flex-order-item-second">
+                <div class="flex-order-item-second flex-item">
                     This is defined last, but is ordered second.
                 </div>
             </div>
