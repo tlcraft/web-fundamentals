@@ -104,4 +104,34 @@ table th {
     margin: var(--flex-item-margin);
 }
 
+.flex-order {
+    display: flex;
+    background-color: var(--flex-container-color);
+    font-weight: var(--flex-item-weight);
+    max-width: var(--flex-container-width);
+    padding: var(--flex-container-padding);
+    margin: var(--flex-container-margin);
+}
+
+.flex-order-item-first {
+    order: 1;
+    background-color: var(--flex-item-color);
+    font-weight: var(--flex-item-weight);
+    margin: var(--flex-item-margin);
+}
+
+.flex-order-item-second {
+    order: 2;
+    background-color: var(--flex-item-color);
+    font-weight: var(--flex-item-weight);
+    margin: var(--flex-item-margin);
+}
+
+.flex-order-item-last {
+    order: 3;
+    background-color: var(--flex-item-color);
+    font-weight: var(--flex-item-weight);
+    margin: var(--flex-item-margin);
+}
+
 /*.content * { border: 1px dashed gray; }*/
