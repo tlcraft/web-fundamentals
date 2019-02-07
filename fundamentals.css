@@ -1,11 +1,10 @@
 :root {
+    --flex-padding: 5px;
+    --flex-margin: 5px;
     --flex-item-color: lightyellow;
-    --flex-item-margin: 5px;
     --flex-item-max-width: 120px;
     --flex-item-weight: bold;
     --flex-container-color: brown;
-    --flex-container-padding: 10px;
-    --flex-container-margin: 5px;
     --flex-container-width: 500px;
     --flex-container-height: 200px;
 }
@@ -37,15 +36,16 @@ table th {
 .flex-item {
     background-color: var(--flex-item-color);
     font-weight: var(--flex-item-weight);
-    margin: var(--flex-item-margin);
+    margin: var(--flex-margin);
+    padding: var(--flex-padding);
 }
 
 .flex-container {
     display: flex;
     background-color: var(--flex-container-color);
     max-width: var(--flex-container-width);
-    padding: var(--flex-container-padding);
-    margin: var(--flex-container-margin);
+    padding: var(--flex-padding);
+    margin: var(--flex-margin);
 }
 
 .flex-container-row {    
@@ -81,7 +81,7 @@ table th {
 }
 
 .flex-order-item-first {
-    order: 1;
+    order: -5;
 }
 
 .flex-order-item-second {
@@ -89,7 +89,45 @@ table th {
 }
 
 .flex-order-item-last {
-    order: 3;
+    order: 100;
+}
+
+.flex-grow-item {
+    flex-grow: 1;
+}
+
+.flex-grow-item-large {
+    flex-grow: 3;
+}
+
+.flex-shrink-item {
+    flex-shrink: 3;
+}
+
+.flex-flex-item {
+    flex: 1 2 auto;
+}
+
+.flex-flex-item-large {
+    flex: 4 3 content;
+}
+
+.flex-container-align-center {
+    align-items: center;
+    min-height: var(--flex-container-height);
+    justify-content: space-around;
+}
+
+.flex-align-item-start {
+    align-self: flex-start;
+}
+
+.flex-align-item-stretch {
+    align-self: stretch;
+}
+
+.flex-align-item-end {
+    align-self: flex-end;
 }
 
 /*.content * { border: 1px dashed gray; }*/

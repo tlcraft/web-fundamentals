@@ -413,19 +413,68 @@
                         Flex Item Three. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
                     </div>
                 </div>
-            </div>
-            <p>All of the above examples use CSS properties of the container element. The following uses properties of the items themselves. It's possible to change the order of the items by defining an ordering index using the order property.</p>
-            <div class="flex-order flex-container">
-                <div class="flex-order-item-last flex-item">
-                    This is defined first, but is ordered last.
+                <p>All of the above examples use CSS properties of the container element. The following uses properties of the items themselves. It's possible to change the order of the items by defining an ordering index using the order property. You can see an example of this in the next sample.</p>
+                <h5>Flex Item Order. Order was used to arrange these items.</h5>
+                <div class="flex-order flex-container">
+                    <div class="flex-order-item-last flex-item">
+                        This is defined first, but is ordered last.
+                    </div>
+                    <div class="flex-order-item-first flex-item">
+                        This is defined second, but is ordered first.
+                    </div>
+                    <div class="flex-order-item-second flex-item">
+                        This is defined last, but is ordered second.
+                    </div>
                 </div>
-                <div class="flex-order-item-first flex-item">
-                    This is defined second, but is ordered first.
+                <p>flex-grow and flex-shrink are used to expand or reduce the size of an item if necessary. These are proportional numbers so if an item has a flex-grow value of 2 and the other items have 1 the item set to 2 would take up about half the size of the container [3].</p>
+                <h5>Flex Item Grow and Shrink. Proportions were used to size the items.</h5>
+                <div class="flex-container">
+                    <div class="flex-grow-item flex-item">
+                        One
+                    </div>
+                    <div class="flex-grow-item flex-item">
+                        One
+                    </div>
+                    <div class="flex-grow-item-large flex-item">
+                        Three
+                    </div>
+                    <div class="flex-shrink-item flex-item">
+                        Shrink
+                    </div>
                 </div>
-                <div class="flex-order-item-second flex-item">
-                    This is defined last, but is ordered second.
+                <p>flex-basis is used to "set the default size of an element before the remaining space is distributed" [3]. flex is a combination of flex-grow, flex-shrink, and flex-basis. CSS-Tricks.com recommends using this shorthand version because it knows how to intelligently set the properties. The default is 0 1 auto [3].</p>
+                <h5>Flex. flex defined the grow, shrink, and basis of these items.</h5>
+                <div class="flex-container">
+                    <div class="flex-flex-item flex-item">
+                        One
+                    </div>
+                    <div class="flex-flex-item flex-item">
+                        One
+                    </div>
+                    <div class="flex-flex-item-large flex-item">
+                        Four
+                    </div>
+                    <div class="flex-flex-item flex-item">
+                        One
+                    </div>
                 </div>
-            </div>
+                <p>Finally it's possible for items to align themselves. The align-self property allows an element to be aligned using the same values as the container align-items property (e.g. flex-start, flex-end, stretch, and center).</p>
+                <h5>Flex Item Align-Self. All of these items rearranged themselves along the cross axis by overriding the property set by the parent container.</h5>
+                <div class="flex-container-align-center flex-container">
+                    <div class="flex-align-item-end flex-item">
+                        flex-end
+                    </div>
+                    <div class="flex-align-item-start flex-item">
+                        flex-start
+                    </div>
+                    <div class="flex-align-item-start flex-item">
+                        flex-start
+                    </div>
+                    <div class="flex-align-item-stretch flex-item">
+                        stretch
+                    </div>
+                </div>
+            </div>           
             <div class="resources">
                 <h4>Resources</h4>
                 <ul>
