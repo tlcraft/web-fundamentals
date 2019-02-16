@@ -146,3 +146,7 @@ table th {
 .flex-align-item-end {
     align-self: flex-end;
 }
+
+.modify-dom-examples {
+    display: flex;
+}

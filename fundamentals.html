@@ -680,6 +680,26 @@
                             To quote him, "The document object is a node that represents the entire HTML document (including the head). Everything in the DOM is a node. It's important to differentiate between nodes and elements: all 
                             elements are nodes, but not all nodes are elements. For example, a div element may have an id attribute - the attribute is a node, but not an element [2]."
                         </p>
+                        <div class="modify-dom-examples">
+                            <div>
+                                Here are some examples of the DOM API:
+                                <ul>
+                                    <li>Grab a single element by ID: <pre>document.getElementById('elementId')</pre></li>
+                                    <li>Gather a list of elements by the tag name: <pre>document.getElementsByTagName('div')</pre></li>
+                                    <li>Gather an array of elements by name: <pre>document.getElementsByName('name')</pre></li>
+                                    <li>Gather an array of elements by CSS class: <pre>document.getElementsByClassName('class')</pre></li>
+                                </ul>
+                            </div>
+                            <div>
+                                Here are the equivalent examples using jQuery:
+                                <ul>
+                                    <li>Grab a single element by ID: <pre>$('#elementId')</pre></li>
+                                    <li>Gather a list of elements by the tag name: <pre>$('div')</pre></li>
+                                    <li>Gather an array of elements by name: <pre>$('[name="name"]')</pre></li>
+                                    <li>Gather an array of elements by CSS class: <pre>$('.class') </pre></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
