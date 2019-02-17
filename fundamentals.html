@@ -700,12 +700,39 @@
                                 </ul>
                             </div>
                         </div>
+                        <div id="ui-controls-practice">
+                            <p>
+                                This paragraph is contained within a div. Below demonstrates the use of the above methods on this particular div and its containing children.
+                            </p>
+                            <input type="text" name="ui-controls-input" />
+                            <div id="grab-by-id"></div>
+                            <div id="grab-by-tag"></div>
+                            <div id="grab-by-name"></div>
+                            <div id="grab-by-class"></div>
+                        </div>
+                        <p>
+                            The Node class is "an interface from which a number of DOM API object types inherit" [3]. Those being: Document, Element, Attr, CharacterData (which Text, Comment, 
+                            and CDATASection all inherit from), ProcessingInstruction, DocumentFragment, DocumentType, Notation, Entity, EntityReference [3]. Because these all inherit from the 
+                            same Node interface they are able to be treated the same way.
+                        </p>
+                        <p>
+                            Some of the notable properties include:
+                            <ul>
+                                <li>Node.nodeType: returns an unsigned short representing the type of the node (e.g. ELEMENT_NODE: 1, ATTRIBUTE_NODE: 2, TEXT_NODE: 3, ENTITY_NODE: 6, DOCUMENT_NODE: 9, DOCUMENT_TYPE_NODE: 10).</li>
+                                <li>Node.nodeName: returns a DOMString containing the name of the Node. Differs depending on the node type. For example HTMLElement will contain the name of the corresponding tag, like 'audio', for an HTMLAudioElement, or Text will return a '#text' string.</li>
+                                <li>Node.nodeValue: returns or sets the value of the current node.</li>
+                                <li>Node.parentNode: returns a Node that is the parent of the current node. Returns null if no parent is available (e.g. if the parent is not an Element).</li>
+                                <li>Node.previousSibling: returns a Node representing the previous node in the tree, null if there isn't a node available.</li>
+                                <li>Node.nextSibling: returns a Node representing the next node in the tree, null if there isn't a node available.</li>
+                            </ul>
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" title="Goes to the MDN over of the Document Object Model." rel="nofollow" target="_blank">MDN - Document Object Model</a></li>
                             <li>[2] <a href="http://www.aidanjryan.com/blog/2013/01/22/microsoft-exam-70-480-study-guide-continued/" title="Goes to Aidan Ryan's blog post discussing the UI Controls portion of the Microsoft exam." rel="nofollow" target="_blank">UI Controls Study Guide by Aidan Ryan</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" title="Goes to the MDN article on DOM Nodes" rel="nofollow" target="_blank">DOM Node Properties</a></li>
                         </ul>
                     </div>
                 </article>
