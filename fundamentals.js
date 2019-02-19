@@ -13,22 +13,22 @@ function uiControlsExample() {
 
 function byIdExample(parentDiv) {
     const byIdDiv = document.getElementById('grab-by-id');
-    byIdDiv.innerHTML = 'Element By Id: Name:' + parentDiv.nodeName + ' Type:' + parentDiv.nodeType;
+    byIdDiv.innerHTML = 'Element By Id: Name: ' + parentDiv.nodeName + ' Type: ' + parentDiv.nodeType;
 }
 
 function byTagExample(parentDiv) {
     const byTagArray = parentDiv.getElementsByTagName('p');
     const byTagDiv = document.getElementById('grab-by-tag');
-    byTagDiv.innerHTML = 'Element By Tag Name: '
+    byTagDiv.innerHTML = 'Element By Tag Name: <br />'
     for (let i = 0; i < byTagArray.length; i++) {
-        byTagDiv.innerHTML += byTagArray[i].nodeName + ' ' + byTagArray[i].ownerDocument + '<br/>';
+        byTagDiv.innerHTML += byTagArray[i].nodeName + ' ' + byTagArray[i].textContent + '<br/>';
     }    
 }
 
 function byNameExample() {
     const byName = document.getElementsByName('ui-controls-input');
     const byNameDiv = document.getElementById('grab-by-name');
-    byNameDiv.innerHTML = 'Element By Name: ' + byName[0].nodeName + ' ' + byName[0].value;
+    byNameDiv.innerHTML = 'Element By Name: ' + byName[0].nodeName + ' value: ' + byName[0].value;
 }
 
 function byClassExample() {
