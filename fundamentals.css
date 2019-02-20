@@ -151,3 +151,8 @@ table th {
 .modify-dom-examples {
     display: flex;
 }
+
+.ui-controls-practice {
+    border: 1px solid black;
+    padding: 0 10px 10px 10px;
+}

@@ -700,15 +700,12 @@
                                 </ul>
                             </div>
                         </div>
-                        <div id="ui-controls-practice">
+                        <div id="ui-controls-practice" class="ui-controls-practice">
                             <p>
                                 This paragraph is contained within a div. Below demonstrates the use of the above methods on this particular div and its containing children.
                             </p>
                             <p>
-                                This paragraph will also be targeted using the DOM API.
-                                <p>
-                                    This is a child paragraph to the one directly above. It should also be targeted by the DOM API example. Check the list of P tags below.
-                                </p>
+                                This paragraph will also be targeted using the DOM API. Check the list of P tags below.
                             </p>
                             <label for="ui-controls-input">Test Input: </label><input type="text" id="ui-controls-input" name="ui-controls-input" value="Practice" />
                             <div id="grab-by-id"></div>
@@ -731,6 +728,46 @@
                                 <li>Node.previousSibling: returns a Node representing the previous node in the tree, null if there isn't a node available.</li>
                                 <li>Node.nextSibling: returns a Node representing the next node in the tree, null if there isn't a node available.</li>
                             </ul>
+                            The jQuery equivalents to firstChild, lastChild, nextSibling, and previousSibling are below:
+                            <ul>
+                                <li><pre>var element = $('#container');</pre></li>
+                                <li><pre>element.children(':first');</pre></li>
+                                <li><pre>element.children(':last')</pre></li>
+                                <li><pre>element.next();</pre></li>
+                                <li><pre>element.prev();;</pre></li>
+                            </ul>
+                        </p>
+                        <p>
+                            Elements can have attributes which provide additional information about them. They are set like name="value" pairs within the starting tag. Some examples of attributes 
+                            include: src, alt, title, rel, width, height, style, lang, id, class, for, name, onresize. There are many more and you can view a list on the W3 School.com website following 
+                            this <a href="https://www.w3schools.com/tags/ref_attributes.asp" rel="nofollow" target="_blank" title="Goes to the attribute list on W3Schools.com">link</a> [4].
+                        </p>
+                        <p>
+                            Attributes are not considered children of a node [2]. We can access them using the DOM API like so (there is no jQuery equivalent but you can build your own):
+    <pre>
+        var div = document.getElementById('divId');
+        var attributes = div.attributes;
+    </pre>
+                            Attributes can be updated, removed, and accessed using either jQuery or the DOM API as Aidan Ryan demonstrates on his blog [2]:
+    <pre>
+        var div = document.getElementById('divId');
+        var val = div.attributes['id'].value;
+        val = div.getAttribute('id');
+        var valNode = div.getAttributeNode('id');
+        div.attributes['id'].value = 'newValue';
+        div.setAttribute('id', 'newValue');
+        
+        var jqDiv = $('#divId');
+        var jqVal = jqDiv.attr('id');
+        jqdiv.attr('id', 'newValue');
+
+        var hasId = element.hasAttribute('id');
+        var jqHasId = (element.attr('id') !== undefined);
+
+        element.removeAttribute('id');
+        element.removeAttributeNode(element.getAttributeNode('id'));
+        jqElement.removeAttr('id');
+    </pre>
                         </p>
                     </div>
                     <div class="resources">
@@ -739,6 +776,7 @@
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" title="Goes to the MDN over of the Document Object Model." rel="nofollow" target="_blank">MDN - Document Object Model</a></li>
                             <li>[2] <a href="http://www.aidanjryan.com/blog/2013/01/22/microsoft-exam-70-480-study-guide-continued/" title="Goes to Aidan Ryan's blog post discussing the UI Controls portion of the Microsoft exam." rel="nofollow" target="_blank">UI Controls Study Guide by Aidan Ryan</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" title="Goes to the MDN article on DOM Nodes" rel="nofollow" target="_blank">DOM Node Properties</a></li>
+                            <li>[4] <a href="https://www.w3schools.com/tags/ref_attributes.asp" rel="nofollow" target="_blank" title="Goes to the attribute list on W3Schools.com">HTML Attributes</a></li>
                         </ul>
                     </div>
                 </article>
