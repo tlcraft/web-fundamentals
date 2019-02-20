@@ -12,6 +12,7 @@
 body {
     max-width: 1000px;
     margin: auto;
+    padding: 5px;
 }
 
 .side-nav {
