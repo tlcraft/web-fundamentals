@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
     uiControlsExample();
+    setNewText();
 });
 
 function uiControlsExample() {
@@ -35,4 +36,11 @@ function byClassExample() {
     const byClass = document.getElementsByClassName('topic');
     const byClassDiv = document.getElementById('grab-by-class');
     byClassDiv.innerHTML = 'Element By CSS Class, total \'topic\' class count: ' + byClass.length;
+}
+
+function setNewText() {
+    const div = $('#ui-controls-mod-practice');
+    const paragraph = div.children(':last');
+    const textInput = $('#ui-controls-new-text');
+    paragraph.text(textInput.text());
 }

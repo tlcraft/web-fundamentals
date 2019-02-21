@@ -5,6 +5,7 @@
         <title>HTML, CSS, and JS Review</title>
         <link rel="stylesheet" href="fundamentals.css">
         <script type="text/javascript" src="fundamentals.js" async></script>
+        <script type="text/javascript" src="jquery-3.3.1.min.js" async></script>
     </head>
     <body>
         <nav class="side-nav">
@@ -707,7 +708,8 @@
                             <p>
                                 This paragraph will also be targeted using the DOM API. Check the list of P tags below.
                             </p>
-                            <label for="ui-controls-input">Test Input: </label><input type="text" id="ui-controls-input" name="ui-controls-input" value="Practice" />
+                            <label for="ui-controls-input">Test Input: </label>
+                            <input type="text" id="ui-controls-input" name="ui-controls-input" value="Practice" />
                             <div id="grab-by-id"></div>
                             <div id="grab-by-tag"></div>
                             <div id="grab-by-name"></div>
@@ -769,6 +771,15 @@
         jqElement.removeAttr('id');
     </pre>
                         </p>
+                        <p>
+                            The next step after being able to access a DOM node it be make changes to it or the overall structure of the page itself. 
+                        </p>
+                        <div id="ui-controls-mod-practice" class="ui-controls-practice">
+                            <label for="ui-controls-new-text">New Text: </label>
+                            <input type="text" id="ui-controls-new-text" name="ui-controls-new-text" placeholder="Enter some text!" />
+                            <button type="button" onClick="setNewText()">Set new paragraph text</button>
+                            <p>This paragraph's text will be replaced with whatever you enter. Just click the button to see the text change.</p>
+                        </div>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
