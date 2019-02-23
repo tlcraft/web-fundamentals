@@ -5,12 +5,14 @@
         <title>HTML, CSS, and JS Review</title>
         <link rel="stylesheet" href="fundamentals.css">
         <script type="text/javascript" src="fundamentals.js" async></script>
+        <script type="text/javascript" src="jquery-3.3.1.min.js" async></script>
     </head>
     <body>
         <nav class="side-nav">
             <a href="#" title="Goes to the top of this page.">Back to the top</a>
             <a href="#html-topics" title="Goes to the list of HTML topics at the top of the page.">HTML Topics List</a>
             <a href="#semantics" title="Goes to the article on Semantic HTML.">- Semantic Markup</a>
+            <a href="#ui-controls" title="Goes to the article on UI Controls.">- UI Controls</a>            
             <a href="#css-topics" title="Goes to the list of CSS topics at the top of the page.">CSS Topics List</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
@@ -48,9 +50,9 @@
                         <li><a href="#accessibility" title="Goes to the article on Screen Readers.">Screen Readers</a></li>
                         <li><a href="#layout" title="Goes to the article on Layout Containers.">Create a Layout Container incorporating the elements: Section, Article, Nav, Header, Footer, Aside</a></li>
                     </ul>
-                    <li>UI Controls</li>
+                    <li><a href="#ui-controls" title="Goes to the article on UI Controls.">UI Controls</a></li>
                     <ul>
-                        <li>Programmatically add and modify HTML</li>
+                        <li><a href="#modify-html" title="Goes to the article on adding and modifying HTML programmatically.">Programmatically add and modify HTML</a></li>
                         <li>Media Controls</li>
                         <li>HTML5 Canvas and SVGs</li>
                     </ul>
@@ -214,437 +216,593 @@
         </section>
         <section id="html-examples">
             <h2>HTML</h2>
-            <nav>
-                <a href="#semantics" title="Goes to the article on Semantic HTML.">Semantic HTML</a>
-            </nav>
-            <article>
-                <div class="topic">                    
-                    <h4><a id="semantics">Semantic HTML</a></h4>
-                    <p>
-                        Semantics refers to the meaning of something. When using HTML one should think about the information within the template and the organization of that information rather than 
-                        its appearance. Once the data is organized it can later be styled using CSS for presentation purposes. The semantics of a web page are important to programmatically traverse the 
-                        data. Web browsers use this data and so do other agents such as smart phones and other programs. HTML is the data structure for the web page which is separate from the graphical 
-                        aspects we interact with as users.
-                    </p>
-                    <p>
-                        Along with the idea of separation between data and presentation is that HTML elements need to be used to represent the data appropriately. This is to help ensure that web 
-                        browsers and other agents navigate and access the HTML correctly. For example if an agent wanted to display the title of the page it would look within the HEAD element for a 
-                        child TITLE tag. This consistence is something we need to be able to rely upon and is why it is also so important to remember.
-                    </p>
-                    <p>
-                        The following sections describe how semantic HTML plays an important role in Search Engine Optimization, Screen Readers, and Layout Containers.
-                    </p>
-                    <nav>
-                        <a href="#seo" title="Goes to the article on Search Engine Optimization.">SEO</a> |
-                        <a href="#accessibility" title="Goes to the article on Screen Readers.">Screen Readers</a> |
-                        <a href="#layout" title="Goes to the article on Layout Containers.">Layout Containers</a>
-                    </nav>
-                </div>
-                <div class="resources">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li>[1] <a href="https://html.com/semantic-markup/" title="Goes to the HTML.com semantic HTML description page." rel="nofollow" target="_blank">Semantic HTML</a></li>
-                    </ul>
-                </div>
-            </article>
-            <article>
-                <div class="topic">
-                    <h4><a id="seo">Search Engine Optimization</a></h4>
-                    <p>
-                        Optimizing a web page to increase its search index on search engines, such as Google and Bing, is important in grabbing a consumer's eye. Not often is it that someone reviews 
-                        several pages of search result to find what they're looking for. Algorithms are very good at locating what it is exactly that person is looking for and it usually appears toward 
-                        the top of the results. Plus there are more widgets now which provide greater functionality to the user upfront (such as when searching for airline tickets for example) users 
-                        don't have to look very far to find what they need.
-                    </p>
-                    <p>
-                        In order to be relevant a web page must take into consideration "SEO" techniques to increase their chances of being ranked higher and found. This includes using the correct HTML 
-                        elements and attributes (such as title and alt), having relevant words and content, as well as how many other web pages link back to yours which is important as a search engine's 
-                        "crawler" investigates websites and links across the internet.
-                    </p>
-                    <p>
-                        If a website has the same content in more than one location it will help to use the rel=canonical attribute so search engines can redirect users to the page you would rather them 
-                        see. This helps search engines organize the ranks appropriately and increases the SEO. Another technique similar to this is a 301 redirect. 301 is the status code for content that 
-                        has moved permanently to another URL. Other codes include 302 which is either for "moved" or "found" content. In HTTP version 1.0 it meant "moved temporarily" but in version 1.1 it's 
-                        been updated to mean "found". 307 became the replacement for "moved temporarily" in version 1.1. Meta Refresh is another redirect which is generally used with countdown times and 
-                        "click here" links if the redirect doesn't occur. However it's not recommended for SEO and is slower.
-                    </p>
-                    <p>
-                        Link equity is another ranking factor which refers to links passing "value and authority" from one page to another. If a very valuable site links to another site then the search 
-                        engine can presume the content on the linked site is valuable as well. Links need to be relevant to the original content, crawlable (via the robots.txt file), located in prominent 
-                        places (e.g. within the main content as opposed to a footer), and use the appropriate HTTP status codes (e.g. 200 and 301). These factors play into a links value and equity.
-                    </p>
-                    <p>
-                        The robots.txt file is the first file a crawler will parse once it reaches a website. This file can tell the crawler which pages to skip which can be important so internal pages 
-                        (those of which a user interacts with once logged into the site) are not crawled and indexed. Google has even commented that internal search results pages are considered spam so these 
-                        should be excluded in this way.
-                    </p>
-                    <p>
-                        Schema Markup is another aspect of SEO. It's a "semantic vocabulary of tags (or microdata) that you can add to your HTML to improve the way search engines read and represent your 
-                        pages" in search results according to Moz.com. Moz.com continues by describing the differences between Schema, microdata, and structured data:
-                    </p>
-                    <p>
+            <section>
+                <nav>
+                    <a href="#semantics" title="Goes to the article on Semantic HTML.">Semantic HTML</a> |
+                    <a href="#ui-controls" title="Goes to the article on UI Controls.">UI Controls</a>
+                </nav>
+                <article>
+                    <div class="topic">                    
+                        <h4><a id="semantics">Semantic HTML</a></h4>
+                        <p>
+                            Semantics refers to the meaning of something. When using HTML one should think about the information within the template and the organization of that information rather than 
+                            its appearance. Once the data is organized it can later be styled using CSS for presentation purposes. The semantics of a web page are important to programmatically traverse the 
+                            data. Web browsers use this data and so do other agents such as smart phones and other programs. HTML is the data structure for the web page which is separate from the graphical 
+                            aspects we interact with as users.
+                        </p>
+                        <p>
+                            Along with the idea of separation between data and presentation is that HTML elements need to be used to represent the data appropriately. This is to help ensure that web 
+                            browsers and other agents navigate and access the HTML correctly. For example if an agent wanted to display the title of the page it would look within the HEAD element for a 
+                            child TITLE tag. This consistence is something we need to be able to rely upon and is why it is also so important to remember.
+                        </p>
+                        <p>
+                            The following sections describe how semantic HTML plays an important role in Search Engine Optimization, Screen Readers, and Layout Containers.
+                        </p>
+                        <nav>
+                            <a href="#seo" title="Goes to the article on Search Engine Optimization.">SEO</a> |
+                            <a href="#accessibility" title="Goes to the article on Screen Readers.">Screen Readers</a> |
+                            <a href="#layout" title="Goes to the article on Layout Containers.">Layout Containers</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
                         <ul>
-                            <li>
-                                Structured data is a system of pairing a name with a value that helps search engines categorize and index your content. Microdata is one form of structured data that works 
-                                with HTML5. Schema.org is a project that provides a particular set of agreed-upon definitions for microdata tags.
-                            </li>
+                            <li>[1] <a href="https://html.com/semantic-markup/" title="Goes to the HTML.com semantic HTML description page." rel="nofollow" target="_blank">Semantic HTML</a></li>
                         </ul>
-                    </p>
-                    <p>
-                        Schema can be used to enhance the search results descriptions with content such as reviews, organizational information, and information about a person or book for example. 
-                        The major search engines use this data to enhance the results page but it's unclear if using the markup actually helps with search ranking but appears to increase the website's 
-                        click-through rate as users are more apt to click a link with a more descriptive result.
-                    </p>
-                    <p>
-                        HTML defines the semantics of a web page, and Schema helps to give context to the data. For example a header tag with the text "avatar" may refer to a movie, an image, or some 
-                        other content. Using Schema helps better define the content which helps search engines determine how to display the data in search results.
-                    </p>
-                    <p>
-                        The official Schema.org documentation explains that "microdata is a set of tags introduced in HTML5" which allow us to markup HTML with this additional data.
-                    </p>
-                    <h5>Schema Example</h5>
-                    <p>
-                        Some of the important tags to remember are: itemscope, itemtype, and itemprop. These can be added to HTML elements to signify different things. itemscope should be applied to 
-                        the wrapping HTML element for a given group of information. The itemtype is used to describe what that group of information is, for example a movie. itemprop is used to more 
-                        fully define other information about the item, for example an author's name and a genre. Below is a concrete example of apply Schema to a div describing a book.
-                    </p>
-                    <pre>
-    &lt;div itemscope itemtype="http://schema.org/Book">
-        &lt;h1 itemprop="name">Design Patterns: Elements of Reusable Object-Oriented Software&lt;/h1>
-        &lt;span>Written by:&lt;span itemprop="author">Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides&lt;/span>&lt;/span>
-        &lt;span itemprop="genre">Software Engineering&lt;/span>
-    &lt;/div>
-                    </pre>
-                    <p>The most generic type is "thing" which has the following properties:</p>
-                    <table>
-                        <tr>
-                            <th>Name</th>
-                            <th>Type</th>
-                            <th>Description</th>
-                        </tr>
-                        <tr>
-                            <td>additionalType</td>
-                            <td>URL</td>
-                            <td>Defines additional types for the data, usually from external vocabularies in microdata syntax.</td>
-                        </tr>
-                        <tr>
-                            <td>alternateName</td>
-                            <td>Text</td>
-                            <td>An alias.</td>
-                        </tr>
-                        <tr>
-                            <td>description</td>
-                            <td>Text</td>
-                            <td>A meaningful description.</td>
-                        </tr>
-                        <tr>
-                            <td>disambiguationDescription</td>
-                            <td>Text</td>
-                            <td>Additional descriptive data which can be used to distinguish the item from other items.</td>
-                        </tr>
-                        <tr>
-                            <td>identifier</td>
-                            <td>PropertyValue, Text, or URL</td>
-                            <td>An identifying value, such as ISBNs, GTIN codes, UUIDs, etc.</td>
-                        </tr>
-                        <tr>
-                            <td>image</td>
-                            <td>ImageObject or URL</td>
-                            <td>An image of the item.</td>
-                        </tr>
-                        <tr>
-                            <td>mainEntityOfPage</td>
-                            <td>CreativeWork or URL</td>
-                            <td>Provides a page where the thing is the main item being described.</td>
-                        </tr>
-                        <tr>
-                            <td>name</td>
-                            <td>Text</td>
-                            <td>The name of the item.</td>
-                        </tr>
-                        <tr>
-                            <td>potentialAction</td>
-                            <td>Action</td>
-                            <td>An Action which can be performed on the thing.</td>
-                        </tr>
-                        <tr>
-                            <td>sameAs</td>
-                            <td>URL</td>
-                            <td>A link to a web page which describes the item, for example a Wikipedia entry.</td>
-                        </tr>
-                        <tr>
-                            <td>subjectOf</td>
-                            <td>CreativeWork or Event</td>
-                            <td>A CreativeWork or Event about this thing.</td>
-                        </tr>
-                        <tr>
-                            <td>url</td>
-                            <td>URL</td>
-                            <td>The URL of the thing.</td>
-                        </tr>
-                    </table>
-                </div>
-                <div class="resources">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li>[1] <a href="https://moz.com/beginners-guide-to-seo" title="Goes to a beginner's guide to searh engine optimization on MOZ.com." rel="nofollow" target="_blank">Beginner's Guide to SEO</a></li>
-                        <li>[2] <a href="https://en.wikipedia.org/wiki/Search_engine_optimization" title="Goes to the Wikipedia entry on searh engine optimization." rel="nofollow" target="_blank">Wikipedia Entry for SEO</a></li>
-                        <li>[3] <a href="https://support.google.com/webmasters/answer/6062608?hl=en" title="Goes to a Google support page for the robots.txt file." rel="nofollow" target="_blank">Learn about robots.txt files</a></li>
-                        <li>[4] <a href="https://moz.com/learn/seo/schema-structured-data" title="Goes to an overview of Schema.org on MOZ.com." rel="nofollow" target="_blank">Schema.org Markup</a></li>
-                        <li>[5] <a href="https://schema.org/docs/full.html" title="Goes to a full hierarchy of tags on Schema.org." rel="nofollow" target="_blank">Schema.org - Full Hierarchy</a></li>
-                        <li>[6] <a href="https://schema.org/docs/gs.html" title="Goes to the Getting Started page on Schema.org." rel="nofollow" target="_blank">Schema.org - Getting Started</a></li>
-                        <li>[7] <a href="https://schema.org/Thing" title="Goes to the Schema.org description of the generic type Thing." rel="nofollow" target="_blank">Schema.org - Thing reference</a></li>
-                    </ul>
-                </div>
-            </article>
-            <article>
-                <div class="topic">
-                    <h4><a id="accessibility">Screen Readers</a></h4>
-                    <p>
-                        Using semantic HTML is very important when considering accessibility and screen readers. The browser and accessibility tools will key off of the semantic HTML to help someone 
-                        navigate your website. Using the wrong element to accomplish something, such as using a div element to create a button, can be confusing to people and other agents.
-                    </p>
-                    <p>
-                        Using the correct ARIA and semantic HTML is also helpful in navigating a page because users can quickly navigate between links, forms, headings, paragraphs, sections and other 
-                        elements. Along with that being descriptive within an opening sentence in a new paragraph for instance helps users skip content they aren't interested in much like someone would 
-                        who can visually review the content.
-                    </p>
-                    <p>
-                        Screen readers convert text to speech to help people navigate and understand a website. These users may have disabilities ranging from visual impairment to cognitive disabilities. 
-                        Being sure to define the language the website is presented in is very important. This can be done within the html tag by defining a lang attribute. It's also possible to wrap smaller 
-                        sections of text in the span element and apply the lang attribute to the span (though lang can be applied to many other elements as well).
-                    </p>
-                    <p>
-                        The proper use of headings is helpful as well because search engines use these to index a web page's structure and content. People are drawn to the headlines which direct them to 
-                        different sections of relevant content.
-                    </p>
-                    <p>
-                        Alternative text is important to have on images. This helps give context to the page when a screen reader encounters an image. Screen readers will read the text in the alt attribute 
-                        for the user so be sure the text is descriptive. It's also useful to users when an image link is broken because the alt text will display for them.
-                    </p>
-                    <p>
-                        Finally it is important that links are spelled out and descriptive to the user. "Click here" means nothing but links such as "book airline tickets here" helps to put things into 
-                        perspective. Remember we can add title attributes to elements such as the anchor tag. Doing so is helpful because the information can be displayed as a tooltip to the user when 
-                        mousing over the link.
-                    </p>
-                    <p>
-                        It's important to remember that content described through a screen reader is much line an automated telephone directory. The content is "linearized" to the listener so, while some 
-                        users can quickly navigate a web page visually, those users who utilize a screen reader must do so by listening to each option before understanding what actions are available. 
-                        Consider this when designing your web pages.
-                    </p>
-                </div>
-                <div class="resources">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li>[1] <a href="https://webaim.org/techniques/screenreader/" title="Goes to Webaim.org's discussion on Screen Readers." rel="nofollow" target="_blank">Screen Readers</a></li>
-                        <li>[2] <a href="https://www.w3schools.com/html/html_accessibility.asp" title="Goes to the W3 Schools overview for Accessibility." rel="nofollow" target="_blank">Accessibility</a></li>
-                    </ul>
-                </div>
-            </article>
-            <article>
-                <div class="topic">
-                    <h4><a id="layout">Layout Container</a></h4>
-                    <p>
-                        Utilizing a layout for your website is important to help guide users to your content. Often content is displayed similarly to how magazines and newspapers layout their content. 
-                        There are main headings and footers for consistency and navigation. Important information is placed between these sections in relevant ways. It's also important that navigation is 
-                        easy between different sections of your website. Several new HTML5 elements help with creating layouts. These are: header, nav, section, article, aside, details, summary, and footer.
-                    </p>
-                    <p>
-                        There are several different techniques for creating a layout. These range from basic tables, floats, a flexbox, modern frameworks, and grid views. Tables are generally not 
-                        recommended because they weren't even designed to be a layout tool [1]. Other options provide more modern and flexible alternatives which is important when considering mobile 
-                        devices and varying screen size and resolution.
-                    </p>
-                    <p>
-                        This page itself uses several of the aforementioned elements including section, article, and nav. Each topic on this page is defined as an article. These are wrapped 
-                        in a section element. I'm also using a nav element for navigation to the right of the content in the scrolling sidebar among a few other locations.
-                    </p>
-                    <h5>Frameworks</h5>
-                    <p>
-                        There are several popular CSS frameworks such as Bootstrap and Foundation. These frameworks supply their own set of HTML and CSS element for you to use in consistent and reliable 
-                        ways. Both of the mentioned frameworks are modern and mobile friendly and take out a lot of the work in setting up device agnostic websites.
-                    </p>
-                    <h5>Floats</h5>
-                    <p>
-                        The float property can help build layouts as well and it's quite possible you will run across this property when dealing with styling at some point or another. It can be confusing 
-                        so spending some time reviewing it could be helpful. Ultimately the property "floats" the content of an element to the left or right and is commonly used to wrap text around images [2].
-                    </p>
-                    <p>
-                        The clear property specifies what elements can float beside the cleared element and on which side [2]. It has several properties: none, left, right, both, and inherit. You generally 
-                        want to clear the same direction as the content is being floated. If you float content to the right, then you should clear the content to the right. This would mean that no floating 
-                        elements are allowed on the right side of the element [2]. Sometimes content is too large for an element so a clearfix must be applied. If there is overflow the containing element will 
-                        expand to enclose the large content. The code samples below are examples of two ways to create a clearfix as described by W3 Schools [2].
-                    </p>
-                    <pre>
-    .clearfix {
-        overflow: auto;
-    }
+                    </div>
+                </article>
+                <article>
+                    <div class="topic">
+                        <h4><a id="seo">Search Engine Optimization</a></h4>
+                        <p>
+                            Optimizing a web page to increase its search index on search engines, such as Google and Bing, is important in grabbing a consumer's eye. Not often is it that someone reviews 
+                            several pages of search result to find what they're looking for. Algorithms are very good at locating what it is exactly that person is looking for and it usually appears toward 
+                            the top of the results. Plus there are more widgets now which provide greater functionality to the user upfront (such as when searching for airline tickets for example) users 
+                            don't have to look very far to find what they need.
+                        </p>
+                        <p>
+                            In order to be relevant a web page must take into consideration "SEO" techniques to increase their chances of being ranked higher and found. This includes using the correct HTML 
+                            elements and attributes (such as title and alt), having relevant words and content, as well as how many other web pages link back to yours which is important as a search engine's 
+                            "crawler" investigates websites and links across the internet.
+                        </p>
+                        <p>
+                            If a website has the same content in more than one location it will help to use the rel=canonical attribute so search engines can redirect users to the page you would rather them 
+                            see. This helps search engines organize the ranks appropriately and increases the SEO. Another technique similar to this is a 301 redirect. 301 is the status code for content that 
+                            has moved permanently to another URL. Other codes include 302 which is either for "moved" or "found" content. In HTTP version 1.0 it meant "moved temporarily" but in version 1.1 it's 
+                            been updated to mean "found". 307 became the replacement for "moved temporarily" in version 1.1. Meta Refresh is another redirect which is generally used with countdown times and 
+                            "click here" links if the redirect doesn't occur. However it's not recommended for SEO and is slower.
+                        </p>
+                        <p>
+                            Link equity is another ranking factor which refers to links passing "value and authority" from one page to another. If a very valuable site links to another site then the search 
+                            engine can presume the content on the linked site is valuable as well. Links need to be relevant to the original content, crawlable (via the robots.txt file), located in prominent 
+                            places (e.g. within the main content as opposed to a footer), and use the appropriate HTTP status codes (e.g. 200 and 301). These factors play into a links value and equity.
+                        </p>
+                        <p>
+                            The robots.txt file is the first file a crawler will parse once it reaches a website. This file can tell the crawler which pages to skip which can be important so internal pages 
+                            (those of which a user interacts with once logged into the site) are not crawled and indexed. Google has even commented that internal search results pages are considered spam so these 
+                            should be excluded in this way.
+                        </p>
+                        <p>
+                            Schema Markup is another aspect of SEO. It's a "semantic vocabulary of tags (or microdata) that you can add to your HTML to improve the way search engines read and represent your 
+                            pages" in search results according to Moz.com. Moz.com continues by describing the differences between Schema, microdata, and structured data:
+                        </p>
+                        <p>
+                            <ul>
+                                <li>
+                                    Structured data is a system of pairing a name with a value that helps search engines categorize and index your content. Microdata is one form of structured data that works 
+                                    with HTML5. Schema.org is a project that provides a particular set of agreed-upon definitions for microdata tags.
+                                </li>
+                            </ul>
+                        </p>
+                        <p>
+                            Schema can be used to enhance the search results descriptions with content such as reviews, organizational information, and information about a person or book for example. 
+                            The major search engines use this data to enhance the results page but it's unclear if using the markup actually helps with search ranking but appears to increase the website's 
+                            click-through rate as users are more apt to click a link with a more descriptive result.
+                        </p>
+                        <p>
+                            HTML defines the semantics of a web page, and Schema helps to give context to the data. For example a header tag with the text "avatar" may refer to a movie, an image, or some 
+                            other content. Using Schema helps better define the content which helps search engines determine how to display the data in search results.
+                        </p>
+                        <p>
+                            The official Schema.org documentation explains that "microdata is a set of tags introduced in HTML5" which allow us to markup HTML with this additional data.
+                        </p>
+                        <h5>Schema Example</h5>
+                        <p>
+                            Some of the important tags to remember are: itemscope, itemtype, and itemprop. These can be added to HTML elements to signify different things. itemscope should be applied to 
+                            the wrapping HTML element for a given group of information. The itemtype is used to describe what that group of information is, for example a movie. itemprop is used to more 
+                            fully define other information about the item, for example an author's name and a genre. Below is a concrete example of apply Schema to a div describing a book.
+                        </p>
+                        <pre>
+        &lt;div itemscope itemtype="http://schema.org/Book">
+            &lt;h1 itemprop="name">Design Patterns: Elements of Reusable Object-Oriented Software&lt;/h1>
+            &lt;span>Written by:&lt;span itemprop="author">Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides&lt;/span>&lt;/span>
+            &lt;span itemprop="genre">Software Engineering&lt;/span>
+        &lt;/div>
+                        </pre>
+                        <p>The most generic type is "thing" which has the following properties:</p>
+                        <table>
+                            <tr>
+                                <th>Name</th>
+                                <th>Type</th>
+                                <th>Description</th>
+                            </tr>
+                            <tr>
+                                <td>additionalType</td>
+                                <td>URL</td>
+                                <td>Defines additional types for the data, usually from external vocabularies in microdata syntax.</td>
+                            </tr>
+                            <tr>
+                                <td>alternateName</td>
+                                <td>Text</td>
+                                <td>An alias.</td>
+                            </tr>
+                            <tr>
+                                <td>description</td>
+                                <td>Text</td>
+                                <td>A meaningful description.</td>
+                            </tr>
+                            <tr>
+                                <td>disambiguationDescription</td>
+                                <td>Text</td>
+                                <td>Additional descriptive data which can be used to distinguish the item from other items.</td>
+                            </tr>
+                            <tr>
+                                <td>identifier</td>
+                                <td>PropertyValue, Text, or URL</td>
+                                <td>An identifying value, such as ISBNs, GTIN codes, UUIDs, etc.</td>
+                            </tr>
+                            <tr>
+                                <td>image</td>
+                                <td>ImageObject or URL</td>
+                                <td>An image of the item.</td>
+                            </tr>
+                            <tr>
+                                <td>mainEntityOfPage</td>
+                                <td>CreativeWork or URL</td>
+                                <td>Provides a page where the thing is the main item being described.</td>
+                            </tr>
+                            <tr>
+                                <td>name</td>
+                                <td>Text</td>
+                                <td>The name of the item.</td>
+                            </tr>
+                            <tr>
+                                <td>potentialAction</td>
+                                <td>Action</td>
+                                <td>An Action which can be performed on the thing.</td>
+                            </tr>
+                            <tr>
+                                <td>sameAs</td>
+                                <td>URL</td>
+                                <td>A link to a web page which describes the item, for example a Wikipedia entry.</td>
+                            </tr>
+                            <tr>
+                                <td>subjectOf</td>
+                                <td>CreativeWork or Event</td>
+                                <td>A CreativeWork or Event about this thing.</td>
+                            </tr>
+                            <tr>
+                                <td>url</td>
+                                <td>URL</td>
+                                <td>The URL of the thing.</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://moz.com/beginners-guide-to-seo" title="Goes to a beginner's guide to searh engine optimization on MOZ.com." rel="nofollow" target="_blank">Beginner's Guide to SEO</a></li>
+                            <li>[2] <a href="https://en.wikipedia.org/wiki/Search_engine_optimization" title="Goes to the Wikipedia entry on searh engine optimization." rel="nofollow" target="_blank">Wikipedia Entry for SEO</a></li>
+                            <li>[3] <a href="https://support.google.com/webmasters/answer/6062608?hl=en" title="Goes to a Google support page for the robots.txt file." rel="nofollow" target="_blank">Learn about robots.txt files</a></li>
+                            <li>[4] <a href="https://moz.com/learn/seo/schema-structured-data" title="Goes to an overview of Schema.org on MOZ.com." rel="nofollow" target="_blank">Schema.org Markup</a></li>
+                            <li>[5] <a href="https://schema.org/docs/full.html" title="Goes to a full hierarchy of tags on Schema.org." rel="nofollow" target="_blank">Schema.org - Full Hierarchy</a></li>
+                            <li>[6] <a href="https://schema.org/docs/gs.html" title="Goes to the Getting Started page on Schema.org." rel="nofollow" target="_blank">Schema.org - Getting Started</a></li>
+                            <li>[7] <a href="https://schema.org/Thing" title="Goes to the Schema.org description of the generic type Thing." rel="nofollow" target="_blank">Schema.org - Thing reference</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article>
+                    <div class="topic">
+                        <h4><a id="accessibility">Screen Readers</a></h4>
+                        <p>
+                            Using semantic HTML is very important when considering accessibility and screen readers. The browser and accessibility tools will key off of the semantic HTML to help someone 
+                            navigate your website. Using the wrong element to accomplish something, such as using a div element to create a button, can be confusing to people and other agents.
+                        </p>
+                        <p>
+                            Using the correct ARIA and semantic HTML is also helpful in navigating a page because users can quickly navigate between links, forms, headings, paragraphs, sections and other 
+                            elements. Along with that being descriptive within an opening sentence in a new paragraph for instance helps users skip content they aren't interested in much like someone would 
+                            who can visually review the content.
+                        </p>
+                        <p>
+                            Screen readers convert text to speech to help people navigate and understand a website. These users may have disabilities ranging from visual impairment to cognitive disabilities. 
+                            Being sure to define the language the website is presented in is very important. This can be done within the html tag by defining a lang attribute. It's also possible to wrap smaller 
+                            sections of text in the span element and apply the lang attribute to the span (though lang can be applied to many other elements as well).
+                        </p>
+                        <p>
+                            The proper use of headings is helpful as well because search engines use these to index a web page's structure and content. People are drawn to the headlines which direct them to 
+                            different sections of relevant content.
+                        </p>
+                        <p>
+                            Alternative text is important to have on images. This helps give context to the page when a screen reader encounters an image. Screen readers will read the text in the alt attribute 
+                            for the user so be sure the text is descriptive. It's also useful to users when an image link is broken because the alt text will display for them.
+                        </p>
+                        <p>
+                            Finally it is important that links are spelled out and descriptive to the user. "Click here" means nothing but links such as "book airline tickets here" helps to put things into 
+                            perspective. Remember we can add title attributes to elements such as the anchor tag. Doing so is helpful because the information can be displayed as a tooltip to the user when 
+                            mousing over the link.
+                        </p>
+                        <p>
+                            It's important to remember that content described through a screen reader is much line an automated telephone directory. The content is "linearized" to the listener so, while some 
+                            users can quickly navigate a web page visually, those users who utilize a screen reader must do so by listening to each option before understanding what actions are available. 
+                            Consider this when designing your web pages.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://webaim.org/techniques/screenreader/" title="Goes to Webaim.org's discussion on Screen Readers." rel="nofollow" target="_blank">Screen Readers</a></li>
+                            <li>[2] <a href="https://www.w3schools.com/html/html_accessibility.asp" title="Goes to the W3 Schools overview for Accessibility." rel="nofollow" target="_blank">Accessibility</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article>
+                    <div class="topic">
+                        <h4><a id="layout">Layout Container</a></h4>
+                        <p>
+                            Utilizing a layout for your website is important to help guide users to your content. Often content is displayed similarly to how magazines and newspapers layout their content. 
+                            There are main headings and footers for consistency and navigation. Important information is placed between these sections in relevant ways. It's also important that navigation is 
+                            easy between different sections of your website. Several new HTML5 elements help with creating layouts. These are: header, nav, section, article, aside, details, summary, and footer.
+                        </p>
+                        <p>
+                            There are several different techniques for creating a layout. These range from basic tables, floats, a flexbox, modern frameworks, and grid views. Tables are generally not 
+                            recommended because they weren't even designed to be a layout tool [1]. Other options provide more modern and flexible alternatives which is important when considering mobile 
+                            devices and varying screen size and resolution.
+                        </p>
+                        <p>
+                            This page itself uses several of the aforementioned elements including section, article, and nav. Each topic on this page is defined as an article. These are wrapped 
+                            in a section element. I'm also using a nav element for navigation to the right of the content in the scrolling sidebar among a few other locations.
+                        </p>
+                        <h5>Frameworks</h5>
+                        <p>
+                            There are several popular CSS frameworks such as Bootstrap and Foundation. These frameworks supply their own set of HTML and CSS element for you to use in consistent and reliable 
+                            ways. Both of the mentioned frameworks are modern and mobile friendly and take out a lot of the work in setting up device agnostic websites.
+                        </p>
+                        <h5>Floats</h5>
+                        <p>
+                            The float property can help build layouts as well and it's quite possible you will run across this property when dealing with styling at some point or another. It can be confusing 
+                            so spending some time reviewing it could be helpful. Ultimately the property "floats" the content of an element to the left or right and is commonly used to wrap text around images [2].
+                        </p>
+                        <p>
+                            The clear property specifies what elements can float beside the cleared element and on which side [2]. It has several properties: none, left, right, both, and inherit. You generally 
+                            want to clear the same direction as the content is being floated. If you float content to the right, then you should clear the content to the right. This would mean that no floating 
+                            elements are allowed on the right side of the element [2]. Sometimes content is too large for an element so a clearfix must be applied. If there is overflow the containing element will 
+                            expand to enclose the large content. The code samples below are examples of two ways to create a clearfix as described by W3 Schools [2].
+                        </p>
+                        <pre>
+        .clearfix {
+            overflow: auto;
+        }
 
-    .clearfix::after {
-        content: "";
-        clear: both;
-        display: table;
-    }
-                    </pre>
-                    <h5>Flexbox</h5>
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+                        </pre>
+                        <h5>Flexbox</h5>
+                        <p>
+                            The CSS Flexbox is a new layout mode available in CSS3. It's only supported in more modern browsers with no support in IE10 and earlier [1]. The flexbox helps ensure that elements 
+                            "behave predictably when the page layout must accommodate different screen sizes and different display devices" [1]. The flexbox allows content within a container to "flex" into a 
+                            dynamic size. The container is able to alter the height and width of its items to fill the available space [3]. It is also direction-agnostic where block is vertically-based and inline 
+                            is horizontally-based [3].
+                        </p>
+                        <p>
+                            The flexbox has several parts because it encompasses the whole widget rather than a single item. There is the parent container known as the "flex container" and the elements within 
+                            that container known as "flex items" [3]. The following examples color the containing element brown and the child items as light-yellow and each apply characteristics of the flexbox 
+                            differently.
+                        </p>
+                        <h5>Flex Container Row. This wraps and is justified to the end.</h5>
+                        <div class="flex-container-row flex-container">
+                            <div class="flex-item">
+                                Flex Item One
+                            </div>
+                            <div class="flex-item">
+                                Flex Item Two. Lorem ipsum dolor sit amet.
+                            </div>
+                            <div class="flex-item">
+                                Flex Item Three
+                            </div>
+                        </div>
+                        <h5>Flex Container Row with an alignment. The items are stretched and centered.</h5>
+                        <div class="flex-container-row-align flex-container">
+                            <div class="flex-item-row-align flex-item">
+                                Flex Item One
+                            </div>
+                            <div class="flex-item-row-align flex-item">
+                                Flex Item Two. Lorem ipsum dolor sit amet.
+                            </div>
+                            <div class="flex-item-row-align flex-item">
+                                Flex Item Three
+                            </div>
+                            <div class="flex-item-row-align flex-item">
+                                Flex Item Four
+                            </div>
+                            <div class="flex-item-row-align flex-item">
+                                Flex Item Five. Lorem ipsum dolor sit amet.
+                            </div>
+                            <div class="flex-item-row-align flex-item">
+                                Flex Item Six
+                            </div>
+                        </div>
+                        <h5>Flex Container Column. This wraps and the direction is reversed.</h5>
+                        <div class="flex-container-column flex-container">
+                            <div class="flex-item">
+                                Flex Item One. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                            </div>
+                            <div class="flex-item">
+                                Flex Item Two
+                            </div>
+                            <div class="flex-item">
+                                Flex Item Three
+                            </div>
+                        </div>
+                        <h5>Flex Container Flow. This is a revered row has a reverse wrap.</h5>
+                        <div class="flex-container-flow flex-container">
+                            <div class="flex-item">
+                                Flex Item One
+                            </div>
+                            <div class="flex-item">
+                                Flex Item Two
+                            </div>
+                            <div class="flex-item">
+                                Flex Item Three. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
+                            </div>
+                        </div>
+                        <p>
+                            All of the above examples use CSS properties of the container element. The following uses properties of the items themselves. It's possible to change the order of the items by defining 
+                            an ordering index using the order property. You can see an example of this in the next sample.
+                        </p>
+                        <h5>Flex Item Order. Order was used to arrange these items.</h5>
+                        <div class="flex-order flex-container">
+                            <div class="flex-order-item-last flex-item">
+                                This is defined first, but is ordered last.
+                            </div>
+                            <div class="flex-order-item-first flex-item">
+                                This is defined second, but is ordered first.
+                            </div>
+                            <div class="flex-order-item-second flex-item">
+                                This is defined last, but is ordered second.
+                            </div>
+                        </div>
+                        <p>
+                            flex-grow and flex-shrink are used to expand or reduce the size of an item if necessary. These are proportional numbers so if an item has a flex-grow value of 2 and the other items 
+                            have 1 the item set to 2 would take up about half the size of the container [3].
+                        </p>
+                        <h5>Flex Item Grow and Shrink. Proportions were used to size the items.</h5>
+                        <div class="flex-container">
+                            <div class="flex-grow-item flex-item">
+                                One
+                            </div>
+                            <div class="flex-grow-item flex-item">
+                                One
+                            </div>
+                            <div class="flex-grow-item-large flex-item">
+                                Three
+                            </div>
+                            <div class="flex-shrink-item flex-item">
+                                Shrink
+                            </div>
+                        </div>
+                        <p>
+                            flex-basis is used to "set the default size of an element before the remaining space is distributed" [3]. flex is a combination of flex-grow, flex-shrink, and flex-basis. 
+                            CSS-Tricks.com recommends using this shorthand version because it knows how to intelligently set the properties. The default is 0 1 auto [3].
+                        </p>
+                        <h5>Flex. flex defines the grow, shrink, and basis of these items.</h5>
+                        <div class="flex-container">
+                            <div class="flex-flex-item flex-item">
+                                One
+                            </div>
+                            <div class="flex-flex-item flex-item">
+                                One
+                            </div>
+                            <div class="flex-flex-item-large flex-item">
+                                Four
+                            </div>
+                            <div class="flex-flex-item flex-item">
+                                One
+                            </div>
+                        </div>
+                        <p>
+                            Finally it's possible for items to align themselves. The align-self property allows an element to be aligned using the same values as the container align-items property 
+                            (e.g. flex-start, flex-end, stretch, and center).
+                        </p>
+                        <h5>Flex Item Align-Self. All of these items rearranged themselves along the cross axis by overriding the property set by the parent container.</h5>
+                        <div class="flex-container-align-center flex-container">
+                            <div class="flex-align-item-end flex-item">
+                                flex-end
+                            </div>
+                            <div class="flex-align-item-start flex-item">
+                                flex-start
+                            </div>
+                            <div class="flex-align-item-start flex-item">
+                                flex-start
+                            </div>
+                            <div class="flex-align-item-stretch flex-item">
+                                stretch
+                            </div>
+                        </div>
+                        <h5>Grid</h5>
+                        <p>
+                            The CSS Grid allows a designer to organize content is a grid-based layout using rows and columns. Frameworks such as Bootstrap and Foundation have their own implementations which 
+                            help make modern web pages responsive. Generally a grid is broken into twelve columns and CSS styles are generated to size content based on those columns. For example one could define 
+                            CSS classes for content which may span between one and all twelve columns. Each of these would be given a width proportionate to its size. This can be taken further to add style based 
+                            on small, medium, and large screen sizes (which you will find the frameworks support).
+                        </p>
+                    </div>           
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://www.w3schools.com/html/html_layout.asp" title="Goes to the W3 Schools overview for HTML Layouts." rel="nofollow" target="_blank">W3 Schools - HTML Layouts</a></li>
+                            <li>[2] <a href="https://www.w3schools.com/css/css_float.asp" title="Goes to the W3 Schools overview on CSS Float and Clear." rel="nofollow" target="_blank">W3 Schools - CSS Layout - float and clear</a></li>
+                            <li>[3] <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" title="Goes to the CSS-Tricks.com article on Flexbox." rel="nofollow" target="_blank">CSS-Tricks.com - A Complete Guide to Flexbox</a></li>
+                            <li>[4] <a href="https://www.w3schools.com/css/css_rwd_grid.asp" title="Goes to the W3 Schools overview of the CSS Grid." rel="nofollow" target="_blank">W3 Schools - Grid-View</a></li>                    
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <section>                
+                <article>
+                    <div class="topic">                    
+                        <h4><a id="ui-controls">UI Controls</a></h4>
+                        <p>
+                            Understanding the Document Object Model is important when building a web site. Modern frameworks like Angular and React manipulate the DOM for you to make creating user interfaces easier. 
+                            The DOM (as it's known) is what connects web pages to scripts and programming languages [1]. "The DOM represents a document with a logical tree" [1]. This tree can be traversed 
+                            and updated using JavaScript and libraries such as jQuery as well as with the DOM interface.
+                        </p>
+                        <p>
+                            In the following sections we'll explore manipulating the DOM and adding or modifying HTML. We'll also see use of different media controls and learn more about the HTML5 Canvas and Scaled Vector Graphics (SVGs).
+                        </p>
+                        <nav>
+                            <a href="#modify-html" title="Goes to the article on adding and modifying HTML programmatically.">Programmatically modify HTML</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" title="Goes to the MDN over of the Document Object Model." rel="nofollow" target="_blank">MDN - Document Object Model</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <article>
+                    <div class="topic">                    
+                        <h4><a id="modify-html">Programmatically modify HTML</a></h4>
+                        <p>
+                            Understanding the fundamentals of manipulating the DOM is important. It's what modern frameworks and libraries are built upon. Aidan Ryan has a good overview of this particular section of the exam on his blog. 
+                            To quote him, "The document object is a node that represents the entire HTML document (including the head). Everything in the DOM is a node. It's important to differentiate between nodes and elements: all 
+                            elements are nodes, but not all nodes are elements. For example, a div element may have an id attribute - the attribute is a node, but not an element [2]."
+                        </p>
+                        <div class="modify-dom-examples">
+                            <div>
+                                Here are some examples of the DOM API:
+                                <ul>
+                                    <li>Grab a single element by ID: <pre>document.getElementById('elementId')</pre></li>
+                                    <li>Gather a list of elements by the tag name: <pre>document.getElementsByTagName('div')</pre></li>
+                                    <li>Gather an array of elements by name: <pre>document.getElementsByName('name')</pre></li>
+                                    <li>Gather an array of elements by CSS class: <pre>document.getElementsByClassName('class')</pre></li>
+                                </ul>
+                            </div>
+                            <div>
+                                Here are the equivalent examples using jQuery:
+                                <ul>
+                                    <li>Grab a single element by ID: <pre>$('#elementId')</pre></li>
+                                    <li>Gather a list of elements by the tag name: <pre>$('div')</pre></li>
+                                    <li>Gather an array of elements by name: <pre>$('[name="name"]')</pre></li>
+                                    <li>Gather an array of elements by CSS class: <pre>$('.class') </pre></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div id="ui-controls-practice" class="ui-controls-practice">
+                            <p>
+                                This paragraph is contained within a div. Below demonstrates the use of the above methods on this particular div and its containing children.
+                            </p>
+                            <p>
+                                This paragraph will also be targeted using the DOM API. Check the list of P tags below.
+                            </p>
+                            <label for="ui-controls-input">Test Input: </label>
+                            <input type="text" id="ui-controls-input" name="ui-controls-input" value="Practice" />
+                            <div id="grab-by-id"></div>
+                            <div id="grab-by-tag"></div>
+                            <div id="grab-by-name"></div>
+                            <div id="grab-by-class"></div>
+                        </div>
+                        <p>
+                            The Node class is "an interface from which a number of DOM API object types inherit" [3]. Those being: Document, Element, Attr, CharacterData (which Text, Comment, 
+                            and CDATASection all inherit from), ProcessingInstruction, DocumentFragment, DocumentType, Notation, Entity, EntityReference [3]. Because these all inherit from the 
+                            same Node interface they are able to be treated the same way.
+                        </p>
+                        <p>
+                            Some of the notable properties include:
+                            <ul>
+                                <li>Node.nodeType: returns an unsigned short representing the type of the node (e.g. ELEMENT_NODE: 1, ATTRIBUTE_NODE: 2, TEXT_NODE: 3, ENTITY_NODE: 6, DOCUMENT_NODE: 9, DOCUMENT_TYPE_NODE: 10).</li>
+                                <li>Node.nodeName: returns a DOMString containing the name of the Node. Differs depending on the node type. For example HTMLElement will contain the name of the corresponding tag, like 'audio', for an HTMLAudioElement, or Text will return a '#text' string.</li>
+                                <li>Node.nodeValue: returns or sets the value of the current node.</li>
+                                <li>Node.parentNode: returns a Node that is the parent of the current node. Returns null if no parent is available (e.g. if the parent is not an Element).</li>
+                                <li>Node.previousSibling: returns a Node representing the previous node in the tree, null if there isn't a node available.</li>
+                                <li>Node.nextSibling: returns a Node representing the next node in the tree, null if there isn't a node available.</li>
+                            </ul>
+                            The jQuery equivalents to firstChild, lastChild, nextSibling, and previousSibling are below:
+                            <ul>
+                                <li><pre>var element = $('#container');</pre></li>
+                                <li><pre>element.children(':first');</pre></li>
+                                <li><pre>element.children(':last')</pre></li>
+                                <li><pre>element.next();</pre></li>
+                                <li><pre>element.prev();;</pre></li>
+                            </ul>
+                        </p>
+                        <p>
+                            Elements can have attributes which provide additional information about them. They are set like name="value" pairs within the starting tag. Some examples of attributes 
+                            include: src, alt, title, rel, width, height, style, lang, id, class, for, name, onresize. There are many more and you can view a list on the W3 School.com website following 
+                            this <a href="https://www.w3schools.com/tags/ref_attributes.asp" rel="nofollow" target="_blank" title="Goes to the attribute list on W3Schools.com">link</a> [4].
+                        </p>
+                        <p>
+                            Attributes are not considered children of a node [2]. We can access them using the DOM API like so (there is no jQuery equivalent but you can build your own):
+    <pre>
+        var div = document.getElementById('divId');
+        var attributes = div.attributes;
+    </pre>
+                            Attributes can be updated, removed, and accessed using either jQuery or the DOM API as Aidan Ryan demonstrates on his blog [2]:
+    <pre>
+        var div = document.getElementById('divId');
+        var val = div.attributes['id'].value;
+        val = div.getAttribute('id');
+        var valNode = div.getAttributeNode('id');
+        div.attributes['id'].value = 'newValue';
+        div.setAttribute('id', 'newValue');
+        
+        var jqDiv = $('#divId');
+        var jqVal = jqDiv.attr('id');
+        jqdiv.attr('id', 'newValue');
+
+        var hasId = element.hasAttribute('id');
+        var jqHasId = (element.attr('id') !== undefined);
+
+        element.removeAttribute('id');
+        element.removeAttributeNode(element.getAttributeNode('id'));
+        jqElement.removeAttr('id');
+    </pre>
+                        </p>
+                        <p>
+                            The next step after being able to access a DOM node it be make changes to it or the overall structure of the page itself. 
+                        </p>
+                        <div id="ui-controls-mod-practice" class="ui-controls-practice">
+                            <div class="controls">
+                                <label for="ui-controls-new-text">New Text: </label>
+                                <input type="text" id="ui-controls-new-text" name="ui-controls-new-text" placeholder="Enter some text!" />
+                                <button type="button" onClick="setNewText()">Change last parapgraph text</button>
+                                <button type="button" onClick="addNewParagraph()">Add a new paragraph of text</button>
+                                <button type="button" onClick="removeFirstParagraph()">Remove the first paragraph of text</button>
+                                <button type="button" onClick="replaceAllParagraphs()">Replace each paragraph with an image</button>
+                            </div>
+                            <p>This paragraph's text will be replaced with whatever you enter. Just click the button to see the text change.</p>
+                        </div>
+                    </div>
                     <p>
-                        The CSS Flexbox is a new layout mode available in CSS3. It's only supported in more modern browsers with no support in IE10 and earlier [1]. The flexbox helps ensure that elements 
-                        "behave predictably when the page layout must accommodate different screen sizes and different display devices" [1]. The flexbox allows content within a container to "flex" into a 
-                        dynamic size. The container is able to alter the height and width of its items to fill the available space [3]. It is also direction-agnostic where block is vertically-based and inline 
-                        is horizontally-based [3].
+                        Finally, as Aidan Ryan concludes on his blog, for both the DOM API and jQuery an element can only exist in one place in the DOM. So to move a node using these techniques
+                        removes it from its old position and places it in the new one. jQuery provides the following methods which target a particular node and pass the new content as a parameter:
+                        after, before, append, prepend, replaceWith, wrap, wrapInner, wrapAll. The following related methods in jQuery target the new content and pass the targeted selector in as 
+                        a parameter: insertAfter, insertBefore, appendTo, prependTo, replaceAll. Lastly remove targets just the specific content to be removed from the DOM.
                     </p>
-                    <p>
-                        The flexbox has several parts because it encompasses the whole widget rather than a single item. There is the parent container known as the "flex container" and the elements within 
-                        that container known as "flex items" [3]. The following examples color the containing element brown and the child items as light-yellow and each apply characteristics of the flexbox 
-                        differently.
-                    </p>
-                    <h5>Flex Container Row. This wraps and is justified to the end.</h5>
-                    <div class="flex-container-row flex-container">
-                        <div class="flex-item">
-                            Flex Item One
-                        </div>
-                        <div class="flex-item">
-                            Flex Item Two. Lorem ipsum dolor sit amet.
-                        </div>
-                        <div class="flex-item">
-                            Flex Item Three
-                        </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" title="Goes to the MDN over of the Document Object Model." rel="nofollow" target="_blank">MDN - Document Object Model</a></li>
+                            <li>[2] <a href="http://www.aidanjryan.com/blog/2013/01/22/microsoft-exam-70-480-study-guide-continued/" title="Goes to Aidan Ryan's blog post discussing the UI Controls portion of the Microsoft exam." rel="nofollow" target="_blank">UI Controls Study Guide by Aidan Ryan</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" title="Goes to the MDN article on DOM Nodes" rel="nofollow" target="_blank">DOM Node Properties</a></li>
+                            <li>[4] <a href="https://www.w3schools.com/tags/ref_attributes.asp" rel="nofollow" target="_blank" title="Goes to the attribute list on W3Schools.com">HTML Attributes</a></li>
+                        </ul>
                     </div>
-                    <h5>Flex Container Row with an alignment. The items are stretched and centered.</h5>
-                    <div class="flex-container-row-align flex-container">
-                        <div class="flex-item-row-align flex-item">
-                            Flex Item One
-                        </div>
-                        <div class="flex-item-row-align flex-item">
-                            Flex Item Two. Lorem ipsum dolor sit amet.
-                        </div>
-                        <div class="flex-item-row-align flex-item">
-                            Flex Item Three
-                        </div>
-                        <div class="flex-item-row-align flex-item">
-                            Flex Item Four
-                        </div>
-                        <div class="flex-item-row-align flex-item">
-                            Flex Item Five. Lorem ipsum dolor sit amet.
-                        </div>
-                        <div class="flex-item-row-align flex-item">
-                            Flex Item Six
-                        </div>
-                    </div>
-                    <h5>Flex Container Column. This wraps and the direction is reversed.</h5>
-                    <div class="flex-container-column flex-container">
-                        <div class="flex-item">
-                            Flex Item One. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-                        </div>
-                        <div class="flex-item">
-                            Flex Item Two
-                        </div>
-                        <div class="flex-item">
-                            Flex Item Three
-                        </div>
-                    </div>
-                    <h5>Flex Container Flow. This is a revered row has a reverse wrap.</h5>
-                    <div class="flex-container-flow flex-container">
-                        <div class="flex-item">
-                            Flex Item One
-                        </div>
-                        <div class="flex-item">
-                            Flex Item Two
-                        </div>
-                        <div class="flex-item">
-                            Flex Item Three. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
-                        </div>
-                    </div>
-                    <p>
-                        All of the above examples use CSS properties of the container element. The following uses properties of the items themselves. It's possible to change the order of the items by defining 
-                        an ordering index using the order property. You can see an example of this in the next sample.
-                    </p>
-                    <h5>Flex Item Order. Order was used to arrange these items.</h5>
-                    <div class="flex-order flex-container">
-                        <div class="flex-order-item-last flex-item">
-                            This is defined first, but is ordered last.
-                        </div>
-                        <div class="flex-order-item-first flex-item">
-                            This is defined second, but is ordered first.
-                        </div>
-                        <div class="flex-order-item-second flex-item">
-                            This is defined last, but is ordered second.
-                        </div>
-                    </div>
-                    <p>
-                        flex-grow and flex-shrink are used to expand or reduce the size of an item if necessary. These are proportional numbers so if an item has a flex-grow value of 2 and the other items 
-                        have 1 the item set to 2 would take up about half the size of the container [3].
-                    </p>
-                    <h5>Flex Item Grow and Shrink. Proportions were used to size the items.</h5>
-                    <div class="flex-container">
-                        <div class="flex-grow-item flex-item">
-                            One
-                        </div>
-                        <div class="flex-grow-item flex-item">
-                            One
-                        </div>
-                        <div class="flex-grow-item-large flex-item">
-                            Three
-                        </div>
-                        <div class="flex-shrink-item flex-item">
-                            Shrink
-                        </div>
-                    </div>
-                    <p>
-                        flex-basis is used to "set the default size of an element before the remaining space is distributed" [3]. flex is a combination of flex-grow, flex-shrink, and flex-basis. 
-                        CSS-Tricks.com recommends using this shorthand version because it knows how to intelligently set the properties. The default is 0 1 auto [3].
-                    </p>
-                    <h5>Flex. flex defines the grow, shrink, and basis of these items.</h5>
-                    <div class="flex-container">
-                        <div class="flex-flex-item flex-item">
-                            One
-                        </div>
-                        <div class="flex-flex-item flex-item">
-                            One
-                        </div>
-                        <div class="flex-flex-item-large flex-item">
-                            Four
-                        </div>
-                        <div class="flex-flex-item flex-item">
-                            One
-                        </div>
-                    </div>
-                    <p>
-                        Finally it's possible for items to align themselves. The align-self property allows an element to be aligned using the same values as the container align-items property 
-                        (e.g. flex-start, flex-end, stretch, and center).
-                    </p>
-                    <h5>Flex Item Align-Self. All of these items rearranged themselves along the cross axis by overriding the property set by the parent container.</h5>
-                    <div class="flex-container-align-center flex-container">
-                        <div class="flex-align-item-end flex-item">
-                            flex-end
-                        </div>
-                        <div class="flex-align-item-start flex-item">
-                            flex-start
-                        </div>
-                        <div class="flex-align-item-start flex-item">
-                            flex-start
-                        </div>
-                        <div class="flex-align-item-stretch flex-item">
-                            stretch
-                        </div>
-                    </div>
-                    <h5>Grid</h5>
-                    <p>
-                        The CSS Grid allows a designer to organize content is a grid-based layout using rows and columns. Frameworks such as Bootstrap and Foundation have their own implementations which 
-                        help make modern web pages responsive. Generally a grid is broken into twelve columns and CSS styles are generated to size content based on those columns. For example one could define 
-                        CSS classes for content which may span between one and all twelve columns. Each of these would be given a width proportionate to its size. This can be taken further to add style based 
-                        on small, medium, and large screen sizes (which you will find the frameworks support).
-                    </p>
-                </div>           
-                <div class="resources">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li>[1] <a href="https://www.w3schools.com/html/html_layout.asp" title="Goes to the W3 Schools overview for HTML Layouts." rel="nofollow" target="_blank">W3 Schools - HTML Layouts</a></li>
-                        <li>[2] <a href="https://www.w3schools.com/css/css_float.asp" title="Goes to the W3 Schools overview on CSS Float and Clear." rel="nofollow" target="_blank">W3 Schools - CSS Layout - float and clear</a></li>
-                        <li>[3] <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" title="Goes to the CSS-Tricks.com article on Flexbox." rel="nofollow" target="_blank">CSS-Tricks.com - A Complete Guide to Flexbox</a></li>
-                        <li>[4] <a href="https://www.w3schools.com/css/css_rwd_grid.asp" title="Goes to the W3 Schools overview of the CSS Grid." rel="nofollow" target="_blank">W3 Schools - Grid-View</a></li>                    
-                    </ul>
-                </div>
-            </article>
+                </article>
+            </section>
         </section>
     </body>
 </html>
