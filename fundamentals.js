@@ -46,15 +46,19 @@ function setNewText() {
 
 function addNewParagraph() {
     //DOM API
-    var newNode = document.createElement('p');
+    const newNode = document.createElement('p');
     newNode.setAttribute('class', 'programmatic-paragraph');
     newNode.appendChild(document.createTextNode('This is a new paragraph added programmatically, hello world!'));
 
     //jQuery
-    const div = $('#ui-controls-mod-practice');
+    let div = $('#ui-controls-mod-practice');
     div.append(newNode);
 }
 
 function removeFirstParagraph() {
     $('#ui-controls-mod-practice').children('p:first').remove();
+}
+
+function replaceAllParagraphs() {
+    $('<img src="https://www.google.com/images/srpr/logo3w.png"/>').replaceAll('#ui-controls-mod-practice p')
 }
