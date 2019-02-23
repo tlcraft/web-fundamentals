@@ -43,3 +43,18 @@ function setNewText() {
     const textInput = $('#ui-controls-new-text');
     paragraph.text(textInput.val());
 }
+
+function addNewParagraph() {
+    //DOM API
+    var newNode = document.createElement('p');
+    newNode.setAttribute('class', 'programmatic-paragraph');
+    newNode.appendChild(document.createTextNode('This is a new paragraph added programmatically, hello world!'));
+
+    //jQuery
+    const div = $('#ui-controls-mod-practice');
+    div.append(newNode);
+}
+
+function removeFirstParagraph() {
+    $('#ui-controls-mod-practice').children('p:first').remove();
+}
