@@ -805,13 +805,33 @@
                 </article>
                 <article>
                     <div class="topic">
-                        <h4><a id="media-controls">Meida Controls</a></h4>
+                        <h4><a id="media-controls">Media Controls</a></h4>
                         <p>
                             People consume a lot of media from the web and over the years there have been different advances allowing people to do just that. As MDN explains, in the early days of
                             the web video files were too large to be consumed given bandwidth and other technological limitations [3]. As the web grew extensions like Flash provided a way to consume
                             media and quickly became popular. These extensions have issues with security among other things but now with HTML5 and current browsers we can utilize the video and audio 
                             tags to provide media playback natively within the browser. We can also utilize services like YouTube for the hosting and streaming of content.
                         </p>
+                        <h5>Audio</h5>
+                        <p>
+                            Both the video and audio tag support the following attributes [1]:
+                        </p>
+                        <ul>
+                            <li>src: the URL for the audio or video content</li>
+                            <li>autoplay: a boolean determining if the content should play automatically or not</li>
+                            <li>loop: a boolean for replaying the content automatically or not</li>
+                            <li>controls: a boolean telling the browser to show media controls for the content</li>
+                            <li>preload: how much data should be preloaded before the content can begin (none, metadata only, or automatic amount determined by the browser)</li>
+                            <li>muted: a boolean specifying if the content should be muted or not</li>
+                        </ul>
+                        <p>
+                            The audio element supports three audio file types: MP3, WAV, and OGG. You can provide multiple source files for the different file types as well as a fallback message if 
+                            the user's browser doesn't support the audio tag (for example IE 8 and below). Here is an example of an audio element (Music: www.bensound.com):
+                        </p>
+                        <audio controls="controls" preload="auto">
+                            <source src="https://www.bensound.org/bensound-music/bensound-summer.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
