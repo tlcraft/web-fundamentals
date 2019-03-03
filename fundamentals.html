@@ -844,6 +844,23 @@
                         <video controls="controls" src="https://d2v9y0dukr6mq2.cloudfront.net/video/preview/hawaii-beautiful-scenic-roadway-aerial_-yrjn2-s__PM.mp4" type="video/mp4" preload="auto">
                             <p>Your browser doesn't support HTML5 video. Here is a <a href="https://videos.pexels.com/videos/woman-in-front-of-the-computer-857851" title="Goes to the video hosted on Pexels.com." rel="nofollow" target="_blank">link to the video</a> instead.</p>
                         </video>
+                        <p>
+                            The ability to provide fallback sources is important because different browsers may only support certain file types (which is true for older browser versions). As the years go by 
+                            more and more standards are supported but providing fallbacks is always a good practice. Some attributes need to be supplied for different browsers to play the media correctly.
+                            For example the MIME type must be provided for audio media to play correctly in Firefox.
+                        </p>
+                        <p>
+                            There are a number of events that are related to media playback. These include [1][4]:
+                        </p>
+                        <ul>
+                            <li>canplay: The browser can play the media but possibly not through its entirety (canplaythrough estimates the browser won't have to buffer the media).</li>
+                            <li>playing: Playback is ready after being paused or stopped due to lack of data.</li>
+                            <li>ended: Playback has stopped because the end of the media has been reached.</li>
+                            <li>timeupdate: The currentTime attribute has been updated.</li>
+                            <li>play: Playback has started.</li>
+                            <li>pause: Playback has paused.</li>
+                            <li>volumechange: The volume of the media has changed.</li>
+                        </ul>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
