@@ -165,3 +165,7 @@ table th {
     display: block;
     width: 300px;
 }
+
+.example-canvas {
+    border: 1px solid black;
+}

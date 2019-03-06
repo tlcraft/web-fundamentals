@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     console.log("DOM fully loaded and parsed");
     uiControlsExample();
+    drawOnCanvas();
 });
 
 function uiControlsExample() {
@@ -61,4 +62,19 @@ function removeFirstParagraph() {
 
 function replaceAllParagraphs() {
     $('<img src="https://www.google.com/images/srpr/logo3w.png"/>').replaceAll('#ui-controls-mod-practice p')
+}
+
+function drawOnCanvas() {
+    const canvas = document.getElementById('example-canvas');
+    if(isCanvasSupported(canvas)) {
+        const context = canvas.getContext('2d');
+        context.fillStyle = 'grey';
+        context.fillRect(10, 10, 100, 100);
+        context.fillStyle = 'white';
+        context.fillRect(25, 25, 70, 70);
+    }
+}
+
+function isCanvasSupported(canvas) {
+    return canvas.getContext && canvas.getContext('2d');
 }
