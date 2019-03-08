@@ -72,6 +72,15 @@ function drawOnCanvas() {
         context.fillRect(10, 10, 100, 100);
         context.fillStyle = 'white';
         context.fillRect(25, 25, 70, 70);
+
+        context.fillStyle = 'red';
+        context.fillRect(130, 10, 100, 100);
+        context.clearRect(140, 40, 40, 40);
+        context.fillStyle = 'rgba(55, 25, 10, 0.5)';
+        context.fillRect(170, 30, 20, 20);
+        
+    } else {
+        //  canvas is unsupported
     }
 }
 
