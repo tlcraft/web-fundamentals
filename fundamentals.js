@@ -66,33 +66,49 @@ function replaceAllParagraphs() {
 
 function drawOnCanvas() {
     const canvas = document.getElementById('example-canvas');
-    if(isCanvasSupported(canvas)) {
-        const context = canvas.getContext('2d');
-        context.fillStyle = 'grey';
-        context.fillRect(10, 10, 100, 100);
-        context.fillStyle = 'white';
-        context.fillRect(25, 25, 70, 70);
-
-        context.fillStyle = 'red';
-        context.fillRect(130, 10, 100, 100);
-        context.clearRect(140, 40, 40, 40);
-        context.fillStyle = 'rgba(55, 25, 10, 0.5)';
-        context.fillRect(170, 30, 20, 20);
-
-        context.beginPath();
-        context.moveTo(250, 50);
-        context.bezierCurveTo(275, 125, 255, 75, 290, 10);
-        context.stroke();
-
-        context.strokeStyle = 'rgb(125, 10, 160)';
-        context.moveTo(10, 120);
-        context.quadraticCurveTo(75, 160, 250, 120);
-        context.stroke();
+    if(is2DCanvasSupported(canvas)) {
+        drawGreyWhiteBoxes(canvas);
+        drawRedBox(canvas);
+        drawBezierCurve(canvas);
+        drawQuadraticCurve(canvas);
     } else {
-        //  canvas is unsupported
+        //  canvas 2D is unsupported
     }
 }
 
-function isCanvasSupported(canvas) {
+function drawGreyWhiteBoxes(canvas) {
+    const context = canvas.getContext('2d');
+    context.fillStyle = 'grey';
+    context.fillRect(10, 10, 100, 100);
+    context.fillStyle = 'white';
+    context.fillRect(25, 25, 70, 70);
+}
+
+function drawRedBox(canvas) {
+    const context = canvas.getContext('2d');
+    context.fillStyle = 'red';
+    context.fillRect(130, 10, 100, 100);
+    context.clearRect(140, 40, 40, 40);
+    context.fillStyle = 'rgba(55, 25, 10, 0.5)';
+    context.fillRect(170, 30, 20, 20);
+}
+
+function drawBezierCurve(canvas) {
+    const context = canvas.getContext('2d');
+    context.beginPath();
+    context.moveTo(250, 50);
+    context.bezierCurveTo(275, 125, 255, 75, 290, 10);
+    context.stroke();
+}
+
+function drawQuadraticCurve(canvas) {
+    const context = canvas.getContext('2d');
+    context.strokeStyle = 'rgb(125, 10, 160)';
+    context.moveTo(10, 120);
+    context.quadraticCurveTo(75, 160, 250, 120);
+    context.stroke();
+}
+
+function is2DCanvasSupported(canvas) {
     return canvas.getContext && canvas.getContext('2d');
 }
