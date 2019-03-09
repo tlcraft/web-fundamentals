@@ -80,8 +80,13 @@ function drawOnCanvas() {
         context.fillRect(170, 30, 20, 20);
 
         context.beginPath();
-        context.moveTo(50, 50);
-        context.bezierCurveTo(25, 25, 175, 175, 40, 10);
+        context.moveTo(250, 50);
+        context.bezierCurveTo(275, 125, 255, 75, 290, 10);
+        context.stroke();
+
+        context.strokeStyle = 'rgb(125, 10, 160)';
+        context.moveTo(10, 120);
+        context.quadraticCurveTo(75, 160, 250, 120);
         context.stroke();
     } else {
         //  canvas is unsupported
