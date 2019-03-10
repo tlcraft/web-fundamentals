@@ -71,6 +71,7 @@ function drawOnCanvas() {
         drawRedBox(canvas);
         drawBezierCurve(canvas);
         drawQuadraticCurve(canvas);
+        drawText(canvas);
     } else {
         //  canvas 2D is unsupported
     }
@@ -107,6 +108,23 @@ function drawQuadraticCurve(canvas) {
     context.moveTo(10, 120);
     context.quadraticCurveTo(75, 160, 250, 120);
     context.stroke();
+}
+
+function drawText(canvas) {
+    const context = canvas.getContext('2d');
+    context.font = "18px Helvetica";
+    context.textAlign = "right";
+    context.textBaseline = "Alphabetic";
+    context.fillText("Hello world!", 350, 150);
+    
+    const gradient = context.createLinearGradient(0, 0, canvas.width, 0);
+    gradient.addColorStop(0.4, "red");
+    gradient.addColorStop(0.6, "green");
+    gradient.addColorStop(0.8, "rgb(255, 255, 255");
+    gradient.addColorStop(1.0, "blue");
+
+    context.fillStyle = gradient;
+    context.fillText("Good-bye World!", 350, 180);
 }
 
 function is2DCanvasSupported(canvas) {
