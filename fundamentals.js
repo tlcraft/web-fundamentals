@@ -1,5 +1,5 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("DOM fully loaded and parsed");
+document.addEventListener('DOMContentLoaded', function(event) {
+    console.log('DOM fully loaded and parsed');
     uiControlsExample();
     drawOnCanvas();
 });
@@ -72,6 +72,7 @@ function drawOnCanvas() {
         drawBezierCurve(canvas);
         drawQuadraticCurve(canvas);
         drawText(canvas);
+        clickCanvas(canvas);
     } else {
         //  canvas 2D is unsupported
     }
@@ -112,19 +113,39 @@ function drawQuadraticCurve(canvas) {
 
 function drawText(canvas) {
     const context = canvas.getContext('2d');
-    context.font = "18px Helvetica";
-    context.textAlign = "right";
-    context.textBaseline = "Alphabetic";
-    context.fillText("Hello world!", 350, 150);
+    context.font = '18px Helvetica';
+    context.textAlign = 'right';
+    context.textBaseline = 'Alphabetic';
+    context.fillText('Hello world!', 350, 150);
     
     const gradient = context.createLinearGradient(0, 0, canvas.width, 0);
-    gradient.addColorStop(0.4, "red");
-    gradient.addColorStop(0.6, "green");
-    gradient.addColorStop(0.8, "rgb(255, 255, 255");
-    gradient.addColorStop(1.0, "blue");
+    gradient.addColorStop(0.4, 'red');
+    gradient.addColorStop(0.6, 'green');
+    gradient.addColorStop(0.8, 'rgb(255, 255, 255)');
+    gradient.addColorStop(1.0, 'blue');
 
     context.fillStyle = gradient;
-    context.fillText("Good-bye World!", 350, 180);
+    context.fillText('Good-bye World!', 350, 180);
+}
+
+// Reference: https://stackoverflow.com/a/9880302/8094831
+function clickCanvas(canvas) {
+    const context = canvas.getContext('2d');
+    const canvasLeft = canvas.offsetLeft;
+    const canvasTop = canvas.offsetTop;
+
+    const gradient = context.createLinearGradient(0, 0, canvas.width, 0);
+    gradient.addColorStop(0.0, 'hsl(150, 90%, 28%)');
+    gradient.addColorStop(0.4, 'hsl(48, 100%, 48%)');
+    gradient.addColorStop(0.7, 'rgb(0, 0, 0)');
+    gradient.addColorStop(1.0, 'purple');
+
+    canvas.addEventListener('click', function(clickEvent) {
+        const x = clickEvent.pageX - canvasLeft;
+        const y = clickEvent.pageY - canvasTop;
+        context.fillStyle = gradient;
+        context.fillRect(x, y, 10, 10);
+    }, false);
 }
 
 function is2DCanvasSupported(canvas) {
