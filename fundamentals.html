@@ -886,19 +886,24 @@
                             Each of these tools has pros and cans so use each depending on your need. Ben Sinca lists several key differences between the two. Canvas is resolution dependent, 
                             has no support for event handlers, has poor text rendering capabilities, can be saved as an image (png or jpg), and is well suited for graphical  games [3]. He writes that
                             SVGs are resolution independent, support event handlers, are best suited for apps with large rendering areas, slow rendering can be complex, and that they are not 
-                            suited for games [3].
+                            suited for games [3]. As Aidan Ryan describes it in his blog post, canvas is more of a "fire and forget" or "immediate" model of rendering whereas SVGs have a 
+                            "retained mode" which allows us to change and re-render the graphics [1].
                         </p>
                         <h5>Canvas</h5>
                         <p>
                             Canvas allows us to draw lines, rectangles, curves and other elements. The origin is in the upper left with the x axis along the top and the y axis
-                            being vertical. Positive values along the x axis move to the right, and for the y axis move down the screen. Below is an example of a canvas.
+                            being vertical. Positive values along the x axis move to the right, and for the y axis move down the screen. In order to interact with the canvas you must
+                            get the context in which you intend to draw with, for example 3D or 2D. This context is what you interact with and call methods on in order to draw. 
+                            The context has style attributes which can be set to change colors and gradients and methods for drawing lines and shapes like boxes and curves. 
+                            Below is an example of a canvas with multiple different examples from text to shapes and lines.
                         </p>
                         <canvas id="example-canvas" class="example-canvas" width="400" height="200"></canvas>
                         <h5>Scalable Vector Graphics - SVGs</h5>
                         <p>
                             SVGs are great for graphics and icons when you need to consider resolution and screen sizes of multiple devices. Font Awesome is a website which provides a large set 
-                            of vector icons that can be freely used on websites. They also have an SVG Framework that utilizes SVGs which is a great example of all of this in action. Below is a 
-                            simple example of an SVG using the Codewars.com logo.
+                            of vector icons that can be freely used on websites. They also have an SVG Framework that utilizes SVGs which is a great example of all of this in action. SVGs can be 
+                            modified with CSS as well as their own attributes [1]. They can even be modified using the DOM API and pseudo-classes can trigger changes too [1]. Below is a 
+                            simple example of an SVG using the Codewars.com logo. There are also a couple of examples of different shapes below that.
                         </p>
                         <svg width="120px" height="120px" viewBox="0 0 480 480" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <!-- Generator: Sketch 40.3 (33839) - http://www.bohemiancoding.com/sketch -->
