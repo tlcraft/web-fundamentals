@@ -1,6 +1,7 @@
-document.addEventListener("DOMContentLoaded", function(event) {
-    console.log("DOM fully loaded and parsed");
+document.addEventListener('DOMContentLoaded', function(event) {
+    console.log('DOM fully loaded and parsed');
     uiControlsExample();
+    drawOnCanvas();
 });
 
 function uiControlsExample() {
@@ -61,4 +62,92 @@ function removeFirstParagraph() {
 
 function replaceAllParagraphs() {
     $('<img src="https://www.google.com/images/srpr/logo3w.png"/>').replaceAll('#ui-controls-mod-practice p')
+}
+
+function drawOnCanvas() {
+    const canvas = document.getElementById('example-canvas');
+    if(is2DCanvasSupported(canvas)) {
+        drawGreyWhiteBoxes(canvas);
+        drawRedBox(canvas);
+        drawBezierCurve(canvas);
+        drawQuadraticCurve(canvas);
+        drawText(canvas);
+        clickCanvas(canvas);
+    } else {
+        //  canvas 2D is unsupported
+    }
+}
+
+function drawGreyWhiteBoxes(canvas) {
+    const context = canvas.getContext('2d');
+    context.fillStyle = 'grey';
+    context.fillRect(10, 10, 100, 100);
+    context.fillStyle = 'white';
+    context.fillRect(25, 25, 70, 70);
+}
+
+function drawRedBox(canvas) {
+    const context = canvas.getContext('2d');
+    context.fillStyle = 'red';
+    context.fillRect(130, 10, 100, 100);
+    context.clearRect(140, 40, 40, 40);
+    context.fillStyle = 'rgba(55, 25, 10, 0.5)';
+    context.fillRect(170, 30, 20, 20);
+}
+
+function drawBezierCurve(canvas) {
+    const context = canvas.getContext('2d');
+    context.beginPath();
+    context.moveTo(250, 50);
+    context.bezierCurveTo(275, 125, 255, 75, 290, 10);
+    context.stroke();
+}
+
+function drawQuadraticCurve(canvas) {
+    const context = canvas.getContext('2d');
+    context.strokeStyle = 'rgb(125, 10, 160)';
+    context.moveTo(10, 120);
+    context.quadraticCurveTo(75, 160, 250, 120);
+    context.stroke();
+}
+
+function drawText(canvas) {
+    const context = canvas.getContext('2d');
+    context.font = '18px Helvetica';
+    context.textAlign = 'right';
+    context.textBaseline = 'Alphabetic';
+    context.fillText('Hello world!', 350, 150);
+    
+    const gradient = context.createLinearGradient(0, 0, canvas.width, 0);
+    gradient.addColorStop(0.4, 'red');
+    gradient.addColorStop(0.6, 'green');
+    gradient.addColorStop(0.8, 'rgb(255, 255, 255)');
+    gradient.addColorStop(1.0, 'blue');
+
+    context.fillStyle = gradient;
+    context.fillText('Good-bye World!', 350, 180);
+}
+
+// Reference: https://stackoverflow.com/a/9880302/8094831
+function clickCanvas(canvas) {
+    const context = canvas.getContext('2d');
+    const canvasLeft = canvas.offsetLeft;
+    const canvasTop = canvas.offsetTop;
+
+    const gradient = context.createLinearGradient(0, 0, canvas.width, 0);
+    gradient.addColorStop(0.0, 'hsl(150, 90%, 28%)');
+    gradient.addColorStop(0.4, 'hsl(48, 100%, 48%)');
+    gradient.addColorStop(0.7, 'rgb(0, 0, 0)');
+    gradient.addColorStop(1.0, 'purple');
+
+    canvas.addEventListener('click', function(clickEvent) {
+        const x = clickEvent.pageX - canvasLeft;
+        const y = clickEvent.pageY - canvasTop;
+        context.fillStyle = gradient;
+        context.fillRect(x, y, 10, 10);
+    }, false);
+}
+
+function is2DCanvasSupported(canvas) {
+    return canvas.getContext && canvas.getContext('2d');
 }

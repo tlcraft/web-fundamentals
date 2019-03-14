@@ -165,3 +165,26 @@ table th {
     display: block;
     width: 300px;
 }
+
+.example-canvas {
+    border: 1px solid black;
+}
+
+svg.draw {
+    width: 300px;
+    height: 300px;
+    border: #666 5px solid;
+}
+
+.black-stroke {
+    stroke: black;
+    stroke-width: 2;
+}
+
+.orange-fill {
+    fill: orange;
+}
+
+.blue-fill {
+    fill: blue;
+}
