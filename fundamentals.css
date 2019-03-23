@@ -188,3 +188,16 @@ svg.draw {
 .blue-fill {
     fill: blue;
 }
+
+.title-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.toggle {
+    cursor: pointer;
+    text-decoration-line: underline;
+    color: blue;
+}
