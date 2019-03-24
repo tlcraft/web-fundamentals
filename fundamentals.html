@@ -963,13 +963,33 @@
                             The styling we'll focus on in this section will be to change the location of an element, applying transforms, and showing and hiding elements. We can apply
                             these techniques to this page and help clean up the user experience and interface to make the page more accessible and easier to navigate.
                         </p>
+                        <nav>
+                            <a href="#show-hide" title="Goes to the article on showing and hiding elements.">Show and Hide Elements</a>
+                        </nav>
+                    </div>                    
+                </article>
+                <div class="title-bar">
+                    <h4><a id="show-hide">Show and Hide Elements</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            There are several ways to show and hide an element. That being manually writing the code yourself or using an existing method from a framework like jQuery [1][2].
+                            Ultimately we want to change the display attribute of the element to none which will hide the element and its children. In my example on this page I'm using 
+                            the jQuery .toggle method [1]. This method has many different parameters which can customize the show and hide logic, for example a duration parameter for the length
+                            of time to show or hide the element. However it's easy enough to use to just toggle the display. This is good for information that you'd like to hide from the user
+                            and to let them decide to view it (and vice versa). This helps remove noise from the page and allows the user to focus on the content that they are interested in. I'm using 
+                            it on this page to collapse the content of each article to help reduce the length of the page.
+                        </p>
                     </div>
                     <div class="resources">
-                        <h4>Resources</h4>
-                        <ul>
-                            
-                        </ul>
-                    </div>
+                            <h4>Resources</h4>
+                            <ul>
+                                <li>[1] <a href="http://api.jquery.com/toggle/" title="Goes to the jQuery documentation for the toggle method." rel="nofollow" target="_blank">jQuery's toggle method</a></li>
+                                <li>[2] <a href="https://css-tricks.com/snippets/javascript/showhide-element/" title="Goes to the CSS-Tricks example of toggling an element." rel="nofollow" target="_blank">CSS-Tricks Toggle example</a></li>
+                            </ul>
+                        </div>
                 </article>  
         </section>
     </body>
