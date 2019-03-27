@@ -196,7 +196,7 @@ svg.draw {
     align-items: center;
 }
 
-.toggle {
+.toggle, .toggleAll {
     cursor: pointer;
     text-decoration-line: underline;
     color: blue;
