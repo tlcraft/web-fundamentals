@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(event) {
-    var showElements = true;
+    let showElements = true;
 
     $('.toggle').click(function() {
         $(this).closest('div.title-bar').next('article').toggle();
