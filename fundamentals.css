@@ -173,7 +173,7 @@ table th {
 svg.draw {
     width: 300px;
     height: 300px;
-    border: #666 5px solid;
+    border: 5px solid #666;
 }
 
 .black-stroke {
@@ -200,4 +200,19 @@ svg.draw {
     cursor: pointer;
     text-decoration-line: underline;
     color: blue;
+}
+
+.transform-example {
+    border: 1px solid black;
+    height: 50px;
+}
+
+.move {
+    background-color: red;
+    height: 10px;
+    width: 10px;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    transform: translate(100px) skew(10deg);
 }
