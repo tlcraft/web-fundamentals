@@ -204,15 +204,34 @@ svg.draw {
 
 .transform-example {
     border: 1px solid black;
-    height: 50px;
+    height: 100px;
+    position: relative;
 }
 
-.move {
+.transform-box {
+    color: white;
+    height: 30px;
+    width: 50px;
+    position: absolute;
+}
+
+.red-box {
     background-color: red;
-    height: 10px;
-    width: 10px;
-    position: relative;
     left: 10px;
     top: 5px;
     transform: translate(100px) skew(10deg);
+}
+
+.blue-box {
+    background-color: blue;
+    right: 20px;
+    bottom: 20px;
+    transform: translate(-50px, -30px) skewY(10deg) rotateX(45deg);
+}
+
+.green-box {
+    background-color: green;
+    left: 300px;
+    bottom: 80px;
+    transform: matrix(1, -1, 1, 1, 60, 50);
 }
