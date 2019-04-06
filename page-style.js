@@ -19,8 +19,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 function openTopic(link) {
     var id = link.attr('href');
-    var article = $(id).closest('div.title-bar').next('article');
-    if(!article.is(":visible")) {
-        article.toggle();
+    if(id !== '#') {
+        var article = $(id).closest('div.title-bar').next('article');
+        if(!article.is(":visible")) {
+            article.toggle();
+        }
     }
 }
