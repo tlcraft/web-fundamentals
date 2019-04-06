@@ -9,7 +9,7 @@
         <script type="text/javascript" src="fundamentals.js" async></script>
     </head>
     <body>
-        <nav class="side-nav">
+        <nav class="side-nav topics-nav">
             <a href="#" title="Goes to the top of this page.">Back to the top</a>
             <a href="#html-topics" title="Goes to the list of HTML topics at the top of the page.">HTML Topics List</a>
             <a href="#semantics" title="Goes to the article on Semantic HTML.">- Semantic Markup</a>
@@ -221,12 +221,12 @@
                 <h2>HTML</h2>
                 <span class="toggleAll">Show / Hide All</span>              
             </div> 
-            <section>
-                <nav class="section-topics">
-                    <a href="#semantics" title="Goes to the article on Semantic HTML.">Semantic HTML</a> |
-                    <a href="#ui-controls" title="Goes to the article on UI Controls.">UI Controls</a> | 
-                    <a href="#style-programmatically" title="Goes to the article on styling content programmatically.">Style Programmatically</a>
-                </nav>
+            <nav class="topics-nav">
+                <a href="#semantics" title="Goes to the article on Semantic HTML.">Semantic HTML</a> |
+                <a href="#ui-controls" title="Goes to the article on UI Controls.">UI Controls</a> | 
+                <a href="#style-programmatically" title="Goes to the article on styling content programmatically.">Style Programmatically</a>
+            </nav>
+            <section>                
                 <div class="title-bar">
                     <h4><a id="semantics">Semantic HTML</a></h4>
                     <span class="toggle">Show / Hide</span>              
@@ -247,7 +247,7 @@
                         <p>
                             The following sections describe how semantic HTML plays an important role in Search Engine Optimization, Screen Readers, and Layout Containers.
                         </p>
-                        <nav>
+                        <nav class="topics-nav">
                             <a href="#seo" title="Goes to the article on Search Engine Optimization.">SEO</a> |
                             <a href="#accessibility" title="Goes to the article on Screen Readers.">Screen Readers</a> |
                             <a href="#layout" title="Goes to the article on Layout Containers.">Layout Containers</a>
@@ -683,7 +683,7 @@
                         <p>
                             In the following sections we'll explore manipulating the DOM and adding or modifying HTML. We'll also see use of different media controls and learn more about the HTML5 Canvas and Scaled Vector Graphics (SVGs).
                         </p>
-                        <nav>
+                        <nav class="topics-nav">
                             <a href="#modify-html" title="Goes to the article on adding and modifying HTML programmatically.">Programmatically modify HTML</a> |
                             <a href="#media-controls" title="Goes to the article on HTML media controls.">Media Controls</a> |
                             <a href="#canvas-svg" title="Goes to the article on HTML5 Canvas and SVGs.">HTML5 Canvas and SVGs</a>
@@ -990,7 +990,7 @@
                             The styling we'll focus on in this section will be to change the location of an element, applying transforms, and showing and hiding elements. We can apply
                             these techniques to this page and help clean up the user experience and interface to make the page more accessible and easier to navigate.
                         </p>
-                        <nav>
+                        <nav class="topics-nav">
                             <a href="#change-element-location" title="Goes to the article on changing an element's location.">Change location of an Element</a> |
                             <a href="#apply-transform" title="Goes to the article on applying a transform.">Apply a Transform</a> |
                             <a href="#show-hide" title="Goes to the article on showing and hiding elements.">Show and Hide Elements</a>
@@ -1004,16 +1004,33 @@
                 <article>
                     <div class="topic">
                         <p>
-                            The location of an element can be controlled by the CSS properties position, top, right, bottom, and left. The position property has five values which affect the location
-                            of the element. These are static, relative, fixed, absolute, and sticky. Elements are static by default and are not affected by the top, right, bottom, or left properties [2].
+                            The location of an element can be controlled by the CSS properties position, top, right, bottom, and left. The position property has six values which affect the location
+                            of the element. These are static, relative, fixed, absolute, inherit and sticky [4]. Elements are static by default and are not affected by the top, right, bottom, or left properties [2].
                             The top, right, bottom, and left properties affect how a child element is placed in relation to its nearest positioned ancestor [3]. They also affect the element differently
                             depending on the position used.
+                        </p>
+                        <p>
+                            The relative position allows us to use the right/left/top/bottom/z-index properties to move the targeted element in the specified direction. Absolute position allows as to manipulate an element
+                            as if you could place it anywhere on the page. Fixed is very similar to absolute but isn't affected by scrolling where absolute is. Sticky is still experimental and acts much like relative position.
+                            However once the viewport reaches a set value the element will stay fixed in location. Inherit is used to force the position property to cascade down to the targeted children. The position property
+                            doesn't cascade by default. [4]
+                        </p>
+                        <p>
+                            Using left, right, bottom, and the other related properties on a relative positioned element adjust the targeted element in those directions. If styling a child element they move in relation to their
+                            parent as long as both elements have a position set. Otherwise the child may move in relation to the document and not its parent element. The example below styles the overall parent div as relative.
+                            Then the inner div with duplicate child divs is positioned absolutely in relation to the parent container.
                         </p>
                         <div class="position-example">
                             <div class="position-box top-left">Top Left</div>
                             <div class="position-box top-right">Top Right</div>
                             <div class="position-box bottom-left">Bottom Left</div>
                             <div class="position-box bottom-right">Bottom Right</div>
+                            <div class="absolute-position-example">
+                                <div class="position-box top-left">Top Left</div>
+                                <div class="position-box top-right">Top Right</div>
+                                <div class="position-box bottom-left">Bottom Left</div>
+                                <div class="position-box bottom-right">Bottom Right</div>
+                            </div>
                         </div>
                     </div>
                     <div class="resources">
@@ -1022,6 +1039,7 @@
                             <li>[1] <a href="http://www.aidanjryan.com/blog/2013/01/23/microsoft-exam-70-480-study-guide-continued-objective-1-remainder/" title="Goes to Aidan Ryan's blog post discussing the programmatic styling portion of the Microsoft exam." rel="nofollow" target="_blank">Programmatic Styling by Aidan Ryan</a></li>                           
                             <li>[2] <a href="https://www.w3schools.com/css/css_positioning.asp" title="Goes to the W3 School.com article on the position property." rel="nofollow" target="_blank">W3 Schools.com article on the position property.</a></li>
                             <li>[3] <a href="https://www.w3schools.com/cssref/pr_pos_right.asp" title="Goes to the W3 School.com article on the right property." rel="nofollow" target="_blank">W3 Schools.com article on the right property.</a></li>
+                            <li>[4] <a href="https://css-tricks.com/almanac/properties/p/position/" title="Goes to the CSS-Tricks.com article on the position property." rel="nofollow" target="_blank">CSS-Tricks.com article on the position property.</a></li>
                         </ul>
                     </div>
                 </article>  

@@ -10,15 +10,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
         $(this).closest('section').children('section').children('article').toggle(showElements);
     }); 
     
-    $('.topics a').click(function() {
-        openTopic($(this));
-    });
-    
-    $('.side-nav a').click(function() {
-        openTopic($(this));
-    });
-    
-    $('.section-topics a').click(function() {
+    $('.topics-nav a').click(function() {
         openTopic($(this));
     });
 
