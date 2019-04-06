@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function(event) {
     let showElements = true;
 
-    $('.toggle').click(function() {
-        $(this).closest('div.title-bar').next('article').toggle();
-    });
+    $('.title-bar').click(function() {
+        $(this).next('article').toggle();
+    });    
 
     $('.toggleAll').click(function() {
         showElements = !showElements;
