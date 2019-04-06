@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="fundamentals.css">
         <script type="text/javascript" src="jquery-3.3.1.min.js" async></script>
         <script type="text/javascript" src="page-style.js" async></script>
+        <script type="text/javascript" src="storage.js" async></script>
         <script type="text/javascript" src="fundamentals.js" async></script>
     </head>
     <body>
@@ -1165,6 +1166,15 @@
                             page viewing history. In some cases companies have opted to disable the use of storage features where others allow full control even in the private mode. Being aware
                             of this and how different vendors operate when implementing storage features is important to keep in mind. [1]
                         </p>
+                        <p>
+                            Web Storage Example:
+                        </p>
+                        <div class="storage-example">
+                            <label for="storage-text">Text: </label>
+                            <input type="text" id="storage-text" name="storage-text" placeholder="Enter some text:" />
+                            <button type="button" onClick="save()">Save</button>
+                            <button type="button" onClick="load()">Load Saved Value</button>
+                        </div>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
