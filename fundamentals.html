@@ -1153,13 +1153,24 @@
                 <article>
                     <div class="topic">
                         <p>
-                            
+                            The Web Storage API extends the Window object and provides two properties. Those being the Window.sessionStorage and Window.localStorage. These properties
+                            allow access to the session and local Storage objects for saving data. There is also a StorageEvent which fires when persisted data changes. [1]
+                        </p>
+                        <p>
+                            There are other storage options as well. For instance, Mozilla has mozStorage which interfaces with SQLite. There is also the Storage API which "defines a
+                            common, shared standard to be used by all APIs and technologies that store content-accessible data for individual Web sites" [2].
+                        </p>
+                        <p>
+                            The standards around storage are still being developed. For instance, most browsers have private modes which aren't supposed to save data about your session and 
+                            page viewing history. In some cases companies have opted to disable the use of storage features where others allow full control even in the private mode. Being aware
+                            of this and how different vendors operate when implementing storage features is important to keep in mind. [1]
                         </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" title="Goes to the MDN article for the Web Storage API." rel="nofollow" target="_blank">MDN - Web Storage API</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_API" title="Goes to the MDN article for the Storage API." rel="nofollow" target="_blank">MDN - Storage API</a></li>
                         </ul>
                     </div>
                 </article>
