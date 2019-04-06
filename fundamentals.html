@@ -4,15 +4,17 @@
         <meta charset="utf-8"/>
         <title>HTML, CSS, and JS Review</title>
         <link rel="stylesheet" href="fundamentals.css">
-        <script type="text/javascript" src="fundamentals.js" async></script>
         <script type="text/javascript" src="jquery-3.3.1.min.js" async></script>
+        <script type="text/javascript" src="page-style.js" async></script>
+        <script type="text/javascript" src="fundamentals.js" async></script>
     </head>
     <body>
-        <nav class="side-nav">
+        <nav class="side-nav topics-nav">
             <a href="#" title="Goes to the top of this page.">Back to the top</a>
             <a href="#html-topics" title="Goes to the list of HTML topics at the top of the page.">HTML Topics List</a>
             <a href="#semantics" title="Goes to the article on Semantic HTML.">- Semantic Markup</a>
-            <a href="#ui-controls" title="Goes to the article on UI Controls.">- UI Controls</a>            
+            <a href="#ui-controls" title="Goes to the article on UI Controls.">- UI Controls</a>         
+            <a href="#style-programmatically" title="Goes to the article on styling content programmatically."> - Style Programmatically</a>   
             <a href="#css-topics" title="Goes to the list of CSS topics at the top of the page.">CSS Topics List</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
@@ -45,7 +47,7 @@
                 <h2>Topics</h2>
                 <ul>
                     <li><a href="#semantics" title="Goes to the article on Semantic HTML.">Semantic Markup</a></li>
-                    <ul>                                
+                    <ul>  
                         <li><a href="#seo" title="Goes to the article on Search Engine Optimization.">Search Engine Optimization</a></li>
                         <li><a href="#accessibility" title="Goes to the article on Screen Readers.">Screen Readers</a></li>
                         <li><a href="#layout" title="Goes to the article on Layout Containers.">Create a Layout Container incorporating the elements: Section, Article, Nav, Header, Footer, Aside</a></li>
@@ -54,13 +56,13 @@
                     <ul>
                         <li><a href="#modify-html" title="Goes to the article on adding and modifying HTML programmatically.">Programmatically add and modify HTML</a></li>
                         <li><a href="#media-controls" title="Goes to the article on HTML media controls.">Media Controls</a></li>
-                        <li><a href="#canvas-svg" title="Goes to the article on HTML5 Canvas and SVGs.">HTML5 Canvas and SVGs</a></li>                        
+                        <li><a href="#canvas-svg" title="Goes to the article on HTML5 Canvas and SVGs.">HTML5 Canvas and SVGs</a></li>           
                     </ul>
-                    <li>Style Programmatically</li>
+                    <li><a href="#style-programmatically" title="Goes to the article on styling content programmatically.">Style Programmatically</a></li>
                     <ul>
-                        <li>Change location of an element</li>
-                        <li>Apply a transform</li>
-                        <li>Show and Hide elements</li>
+                        <li><a href="#change-element-location" title="Goes to the article on changing an element's location.">Change location of an Element</a></li>                   
+                        <li><a href="#apply-transform" title="Goes to the article on applying a transform.">Apply a Transform</a></li>
+                        <li><a href="#show-hide" title="Goes to the article on showing and hiding elements.">Show and Hide Elements</a></li>
                     </ul>
                     <li>HTML5 APIs</li>
                     <ul>
@@ -215,15 +217,22 @@
             </article>            
         </section>
         <section id="html-examples">
-            <h2>HTML</h2>
-            <section>
-                <nav>
-                    <a href="#semantics" title="Goes to the article on Semantic HTML.">Semantic HTML</a> |
-                    <a href="#ui-controls" title="Goes to the article on UI Controls.">UI Controls</a>
-                </nav>
+            <div class="title-bar">
+                <h2>HTML</h2>
+                <span class="toggleAll">Show / Hide All</span>              
+            </div> 
+            <nav class="topics-nav">
+                <a href="#semantics" title="Goes to the article on Semantic HTML.">Semantic HTML</a> |
+                <a href="#ui-controls" title="Goes to the article on UI Controls.">UI Controls</a> | 
+                <a href="#style-programmatically" title="Goes to the article on styling content programmatically.">Style Programmatically</a>
+            </nav>
+            <section>                
+                <div class="title-bar">
+                    <h4><a id="semantics">Semantic HTML</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
                 <article>
-                    <div class="topic">                    
-                        <h4><a id="semantics">Semantic HTML</a></h4>
+                    <div class="topic">
                         <p>
                             Semantics refers to the meaning of something. When using HTML one should think about the information within the template and the organization of that information rather than 
                             its appearance. Once the data is organized it can later be styled using CSS for presentation purposes. The semantics of a web page are important to programmatically traverse the 
@@ -238,7 +247,7 @@
                         <p>
                             The following sections describe how semantic HTML plays an important role in Search Engine Optimization, Screen Readers, and Layout Containers.
                         </p>
-                        <nav>
+                        <nav class="topics-nav">
                             <a href="#seo" title="Goes to the article on Search Engine Optimization.">SEO</a> |
                             <a href="#accessibility" title="Goes to the article on Screen Readers.">Screen Readers</a> |
                             <a href="#layout" title="Goes to the article on Layout Containers.">Layout Containers</a>
@@ -251,9 +260,12 @@
                         </ul>
                     </div>
                 </article>
+                <div class="title-bar">
+                    <h4><a id="seo">Search Engine Optimization</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
                 <article>
-                    <div class="topic">
-                        <h4><a id="seo">Search Engine Optimization</a></h4>
+                    <div class="topic">                        
                         <p>
                             Optimizing a web page to increase its search index on search engines, such as Google and Bing, is important in grabbing a consumer's eye. Not often is it that someone reviews 
                             several pages of search result to find what they're looking for. Algorithms are very good at locating what it is exactly that person is looking for and it usually appears toward 
@@ -401,9 +413,12 @@
                         </ul>
                     </div>
                 </article>
+                <div class="title-bar">
+                    <h4><a id="accessibility">Screen Readers</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
                 <article>
                     <div class="topic">
-                        <h4><a id="accessibility">Screen Readers</a></h4>
                         <p>
                             Using semantic HTML is very important when considering accessibility and screen readers. The browser and accessibility tools will key off of the semantic HTML to help someone 
                             navigate your website. Using the wrong element to accomplish something, such as using a div element to create a button, can be confusing to people and other agents.
@@ -445,9 +460,12 @@
                         </ul>
                     </div>
                 </article>
+                <div class="title-bar">
+                    <h4><a id="layout">Layout Container</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>  
                 <article>
-                    <div class="topic">
-                        <h4><a id="layout">Layout Container</a></h4>
+                    <div class="topic">                        
                         <p>
                             Utilizing a layout for your website is important to help guide users to your content. Often content is displayed similarly to how magazines and newspapers layout their content. 
                             There are main headings and footers for consistency and navigation. Important information is placed between these sections in relevant ways. It's also important that navigation is 
@@ -650,10 +668,13 @@
                     </div>
                 </article>
             </section>
-            <section>                
+            <section> 
+                <div class="title-bar">
+                    <h4><a id="ui-controls">UI Controls</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>               
                 <article>
-                    <div class="topic">                    
-                        <h4><a id="ui-controls">UI Controls</a></h4>
+                    <div class="topic">
                         <p>
                             Understanding the Document Object Model is important when building a website. Modern frameworks like Angular and React manipulate the DOM for you to make creating user interfaces easier. 
                             The DOM (as it's known) is what connects web pages to scripts and programming languages [1]. "The DOM represents a document with a logical tree" [1]. This tree can be traversed 
@@ -662,7 +683,7 @@
                         <p>
                             In the following sections we'll explore manipulating the DOM and adding or modifying HTML. We'll also see use of different media controls and learn more about the HTML5 Canvas and Scaled Vector Graphics (SVGs).
                         </p>
-                        <nav>
+                        <nav class="topics-nav">
                             <a href="#modify-html" title="Goes to the article on adding and modifying HTML programmatically.">Programmatically modify HTML</a> |
                             <a href="#media-controls" title="Goes to the article on HTML media controls.">Media Controls</a> |
                             <a href="#canvas-svg" title="Goes to the article on HTML5 Canvas and SVGs.">HTML5 Canvas and SVGs</a>
@@ -675,9 +696,12 @@
                         </ul>
                     </div>
                 </article>
+                <div class="title-bar">
+                    <h4><a id="modify-html">Programmatically modify HTML</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
                 <article>
-                    <div class="topic">                    
-                        <h4><a id="modify-html">Programmatically modify HTML</a></h4>
+                    <div class="topic">               
                         <p>
                             Understanding the fundamentals of manipulating the DOM is important. It's what modern frameworks and libraries are built upon. Aidan Ryan has a good overview of this particular section of the exam on his blog. 
                             To quote him, "The document object is a node that represents the entire HTML document (including the head). Everything in the DOM is a node. It's important to differentiate between nodes and elements: all 
@@ -804,9 +828,12 @@
                         </ul>
                     </div>
                 </article>
+                <div class="title-bar">
+                    <h4><a id="media-controls">Media Controls</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
                 <article>
-                    <div class="topic">
-                        <h4><a id="media-controls">Media Controls</a></h4>
+                    <div class="topic">                        
                         <p>
                             People consume a lot of media from the web and over the years there have been different advances allowing people to do just that. As MDN explains, in the early days of
                             the web video files were too large to be consumed given bandwidth and other technological limitations [3]. As the web grew extensions like Flash provided a way to consume
@@ -873,9 +900,12 @@
                         </ul>
                     </div>
                 </article>
+                <div class="title-bar">
+                    <h4><a id="canvas-svg">HTML5 Canvas and SVGs</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
                 <article>
-                    <div class="topic">
-                        <h4><a id="canvas-svg">HTML5 Canvas and SVGs</a></h4>
+                    <div class="topic">                        
                         <h5>Graphics</h5>
                         <p>
                             Scalable Vector Graphics and the Canvas element are two different ways to add graphics and animation to a website. SVGs are scalable so the resolution doesn't degrade as an image scales. 
@@ -943,6 +973,140 @@
                     </div>
                 </article>
             </section>
+            <section>
+                <div class="title-bar">
+                    <h4><a id="style-programmatically">Style Programmatically</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>                    
+                    <div class="topic">
+                        <p>
+                            Updating your website user interface programmatically as a user interacts with it is an important part of creating an engaging experience. Dynamic websites
+                            can provide a much more rich experience for the user. It may be the difference in attracting and keeping people on your site for longer periods of time.
+                            That can be important if you are building a website which intends to captivate an audience and engage them long-term. Updating the UI based on user selections,
+                            or from reacting to different events, is certainly a nice touch but in the current age of media is more or less expected. 
+                        </p>
+                        <p>
+                            The styling we'll focus on in this section will be to change the location of an element, applying transforms, and showing and hiding elements. We can apply
+                            these techniques to this page and help clean up the user experience and interface to make the page more accessible and easier to navigate.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#change-element-location" title="Goes to the article on changing an element's location.">Change location of an Element</a> |
+                            <a href="#apply-transform" title="Goes to the article on applying a transform.">Apply a Transform</a> |
+                            <a href="#show-hide" title="Goes to the article on showing and hiding elements.">Show and Hide Elements</a>
+                        </nav>
+                    </div>                    
+                </article>
+                <div class="title-bar">
+                    <h4><a id="change-element-location">Change location of an element</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            The location of an element can be controlled by the CSS properties position, top, right, bottom, and left. The position property has six values which affect the location
+                            of the element. These are static, relative, fixed, absolute, inherit and sticky [4]. Elements are static by default and are not affected by the top, right, bottom, or left properties [2].
+                            The top, right, bottom, and left properties affect how a child element is placed in relation to its nearest positioned ancestor [3]. They also affect the element differently
+                            depending on the position used.
+                        </p>
+                        <p>
+                            The relative position allows us to use the right/left/top/bottom/z-index properties to move the targeted element in the specified direction. Absolute position allows as to manipulate an element
+                            as if you could place it anywhere on the page. Fixed is very similar to absolute but isn't affected by scrolling where absolute is. Sticky is still experimental and acts much like relative position.
+                            However once the viewport reaches a set value the element will stay fixed in location. Inherit is used to force the position property to cascade down to the targeted children. The position property
+                            doesn't cascade by default. [4]
+                        </p>
+                        <p>
+                            Using left, right, bottom, and the other related properties on a relative positioned element adjust the targeted element in those directions. If styling a child element they move in relation to their
+                            parent as long as both elements have a position set. Otherwise the child may move in relation to the document and not its parent element. The example below styles the overall parent div as relative.
+                            Then the inner div with duplicate child divs is positioned absolutely in relation to the parent container.
+                        </p>
+                        <div class="position-example">
+                            <div class="position-box top-left">Top Left</div>
+                            <div class="position-box top-right">Top Right</div>
+                            <div class="position-box bottom-left">Bottom Left</div>
+                            <div class="position-box bottom-right">Bottom Right</div>
+                            <div class="absolute-position-example">
+                                <div class="position-box top-left">Top Left</div>
+                                <div class="position-box top-right">Top Right</div>
+                                <div class="position-box bottom-left">Bottom Left</div>
+                                <div class="position-box bottom-right">Bottom Right</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://www.aidanjryan.com/blog/2013/01/23/microsoft-exam-70-480-study-guide-continued-objective-1-remainder/" title="Goes to Aidan Ryan's blog post discussing the programmatic styling portion of the Microsoft exam." rel="nofollow" target="_blank">Programmatic Styling by Aidan Ryan</a></li>                           
+                            <li>[2] <a href="https://www.w3schools.com/css/css_positioning.asp" title="Goes to the W3 School.com article on the position property." rel="nofollow" target="_blank">W3 Schools.com article on the position property.</a></li>
+                            <li>[3] <a href="https://www.w3schools.com/cssref/pr_pos_right.asp" title="Goes to the W3 School.com article on the right property." rel="nofollow" target="_blank">W3 Schools.com article on the right property.</a></li>
+                            <li>[4] <a href="https://css-tricks.com/almanac/properties/p/position/" title="Goes to the CSS-Tricks.com article on the position property." rel="nofollow" target="_blank">CSS-Tricks.com article on the position property.</a></li>
+                        </ul>
+                    </div>
+                </article>  
+                <div class="title-bar">
+                    <h4><a id="apply-transform">Apply a Transform</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            One way to apply a transform to an element is to use CSS. CSS3 allows for lateral, rotation, scaling, and skewing transforms of elements. This can be done in both 2D and
+                            3D [1]. The transform property can apply several functions including: scale, skewX, shewY, translate, rotate, matrix, perspective [2]. Multiple transforms can be applied to an element. 
+                            For example: transform: translate(-50px, -30px) skewY(10deg) rotateX(45deg); applies a translation, skewY and rotateX to the targeted element. A space-separated list of transform allows
+                            you to add multiple types. There is also an order to which they are applied [2].
+                        </p>
+                        <p>
+                            Scaling an element applies the scaling to font-size, padding, height, and width properties too [2]. Translate moves the element on the x and/or y axis. 
+                            Rotate unsurprisingly will rotate the element by a number of degrees (i.e. 10deg). Skewing the element can be done vertically or horizontally. There are x and y variants and a skew
+                            method which applies the skew in both directions given arguments for both x and y. Rotations can be applied on the x, y, or z axis. The matrix transform can be used to apply multiple
+                            transforms at once. There are tools which can help group your transforms into a single matrix. This can help reduce file size in some cases but is hard to read [2]. There are also 3D 
+                            variants for each of these properties which incorporate the z axis for manipulating elements in 3D space. This can be helpful in game development. The matrix transform is probably
+                            also heavily used for games and mathematically intense graphical programs.
+                        </p>
+                        <div class="transform-example">
+                            <div class="red-box transform-box">Red</div>
+                            <div class="blue-box transform-box">Blue</div>
+                            <div class="green-box transform-box">Green</div>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://www.aidanjryan.com/blog/2013/01/23/microsoft-exam-70-480-study-guide-continued-objective-1-remainder/" title="Goes to Aidan Ryan's blog post discussing the programmatic styling portion of the Microsoft exam." rel="nofollow" target="_blank">Programmatic Styling by Aidan Ryan</a></li>
+                            <li>[2] <a href="https://css-tricks.com/almanac/properties/t/transform/" title="Goes to the CSS-Tricks.com article on the transform property." rel="nofollow" target="_blank">CSS-Tricks.com - Transform Property</a></li>
+                            <li>[3] <a href="https://3dtransforms.desandro.com/" title="Goes to David DeSandro's introduction article on 3D transforms." rel="nofollow" target="_blank">David DeSandro's introduction to 3D Transforms</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="show-hide">Show and Hide Elements</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            There are several ways to show and hide an element. That being manually writing the code yourself or using an existing method from a framework like jQuery [1][2].
+                            Ultimately we want to change the display attribute of the element to none which will hide the element and its children. In my example on this page I'm using 
+                            the jQuery .toggle method [1]. This method has many different parameters which can customize the show and hide logic, for example a duration parameter for the length
+                            of time to show or hide the element. However it's easy enough to use to just toggle the display. This is good for information that you'd like to hide from the user
+                            and to let them decide to view it (and vice versa). This helps remove noise from the page and allows the user to focus on the content that they are interested in. I'm using 
+                            it on this page to collapse the content of each article to help reduce the length of the page.
+                        </p>
+                        <p>
+                            It's also possible to use the CSS property visibility to show and hide an element. This property can hide the element but doesn't actually remove the space it takes up
+                            from the document (as opposed to display: none). These properties can be accessed programmatically using the DOM API and jQuery as well. You can access these properties
+                            using the DOM API by accessing the .style of an element. jQuery has a hide() method which will hide the selected element. [3]
+                        </p>
+                    </div>
+                    <div class="resources">
+                            <h4>Resources</h4>
+                            <ul>
+                                <li>[1] <a href="http://api.jquery.com/toggle/" title="Goes to the jQuery documentation for the toggle method." rel="nofollow" target="_blank">jQuery's toggle method</a></li>
+                                <li>[2] <a href="https://css-tricks.com/snippets/javascript/showhide-element/" title="Goes to the CSS-Tricks example of toggling an element." rel="nofollow" target="_blank">CSS-Tricks Toggle example</a></li>
+                                <li>[3] <a href="http://www.aidanjryan.com/blog/2013/01/23/microsoft-exam-70-480-study-guide-continued-objective-1-remainder/" title="Goes to Aidan Ryan's blog post discussing the programmatic styling portion of the Microsoft exam." rel="nofollow" target="_blank">Programmatic Styling by Aidan Ryan</a></li>
+                            </ul>
+                        </div>
+                </article>  
         </section>
     </body>
 </html>

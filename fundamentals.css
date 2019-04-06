@@ -173,7 +173,7 @@ table th {
 svg.draw {
     width: 300px;
     height: 300px;
-    border: #666 5px solid;
+    border: 5px solid #666;
 }
 
 .black-stroke {
@@ -187,4 +187,99 @@ svg.draw {
 
 .blue-fill {
     fill: blue;
+}
+
+.title-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: lightgrey;
+    padding: 0 20px;
+    margin: 10px 0;
+}
+
+.toggle, .toggleAll {
+    cursor: pointer;
+    text-decoration-line: underline;
+    color: blue;
+}
+
+.absolute-position-example {
+    border: 1px dotted blue;
+    height: 200px;
+    position: absolute;
+    left: 50px;
+    right: 50px;
+    top: 100px;
+    bottom: 50px;
+}
+
+.position-example {
+    border: 1px solid black;
+    height: 400px;
+    position: relative;
+}
+
+.position-box {
+    height: 50px;
+    width: 130px;
+    color: white;
+    text-align: center;
+    background-color: purple;
+    position: absolute;
+}
+
+.top-left {
+    left: 5px;
+    top: 5px;
+}
+
+.bottom-left {
+    left: 35px;
+    bottom: 45px;
+}
+
+.top-right {
+    right: 0px;
+    top: 0px;
+}
+
+.bottom-right {
+    right: 15px;
+    bottom: 5px;
+}
+
+.transform-example {
+    border: 1px solid black;
+    height: 100px;
+    position: relative;
+}
+
+.transform-box {
+    color: white;
+    height: 30px;
+    width: 50px;
+    position: absolute;
+}
+
+.red-box {
+    background-color: red;
+    left: 10px;
+    top: 40px;
+    transform: translate(100px) skew(10deg, 10deg) scale(2);
+}
+
+.blue-box {
+    background-color: blue;
+    right: 20px;
+    bottom: 20px;
+    transform: translate(-50px, -30px) skewY(10deg) rotateX(45deg);
+}
+
+.green-box {
+    background-color: green;
+    left: 300px;
+    bottom: 80px;
+    transform: matrix(1, -1, 1, 1, 60, 50) rotateX(55deg);
 }
