@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="fundamentals.css">
         <script type="text/javascript" src="jquery-3.3.1.min.js" async></script>
         <script type="text/javascript" src="page-style.js" async></script>
+        <script type="text/javascript" src="storage.js" async></script>
+        <script type="text/javascript" src="geolocation.js" async></script>
         <script type="text/javascript" src="fundamentals.js" async></script>
     </head>
     <body>
@@ -14,7 +16,8 @@
             <a href="#html-topics" title="Goes to the list of HTML topics at the top of the page.">HTML Topics List</a>
             <a href="#semantics" title="Goes to the article on Semantic HTML.">- Semantic Markup</a>
             <a href="#ui-controls" title="Goes to the article on UI Controls.">- UI Controls</a>         
-            <a href="#style-programmatically" title="Goes to the article on styling content programmatically."> - Style Programmatically</a>   
+            <a href="#style-programmatically" title="Goes to the article on styling content programmatically."> - Style Programmatically</a>
+            <a href="#html5-apis" title="Goes to the article on HTML5 APIs.">- HTML5 APIs</a>  
             <a href="#css-topics" title="Goes to the list of CSS topics at the top of the page.">CSS Topics List</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
@@ -37,7 +40,7 @@
                 <a href="https://www.microsoft.com/en-us/learning/exam-70-480.aspx" topic="Goes to the Microsoft HTML, CSS, and JS exam overview." rel="nofollow" target="_blank">link</a>.
             </p>
         </section>
-        <section class="topics">
+        <section class="topics-nav">
             <article id="html-topics">
                 <h1>HTML</h1>
                 <p>
@@ -64,10 +67,10 @@
                         <li><a href="#apply-transform" title="Goes to the article on applying a transform.">Apply a Transform</a></li>
                         <li><a href="#show-hide" title="Goes to the article on showing and hiding elements.">Show and Hide Elements</a></li>
                     </ul>
-                    <li>HTML5 APIs</li>
+                    <li><a href="#html5-apis" title="Goes to the article on HTML5 APIs.">HTML5 APIs</a></li>
                     <ul>
-                        <li>Storage APIs</li>
-                        <li>Geolocation API</li>
+                        <li><a href="#storage" title="Goes to the article on the Web Storage API.">Web Storage API</a></li>
+                        <li><a href="#geolocation" title="Goes to the article on the Geolocation API.">Geolocation API</a></li>
                     </ul>
                     <li>Variable Scope and Lifetimes</li>
                     <ul>
@@ -224,7 +227,8 @@
             <nav class="topics-nav">
                 <a href="#semantics" title="Goes to the article on Semantic HTML.">Semantic HTML</a> |
                 <a href="#ui-controls" title="Goes to the article on UI Controls.">UI Controls</a> | 
-                <a href="#style-programmatically" title="Goes to the article on styling content programmatically.">Style Programmatically</a>
+                <a href="#style-programmatically" title="Goes to the article on styling content programmatically.">Style Programmatically</a> |
+                <a href="#html5-apis" title="Goes to the article on HTML5 APIs.">HTML5 APIs</a>
             </nav>
             <section>                
                 <div class="title-bar">
@@ -692,7 +696,7 @@
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
-                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" title="Goes to the MDN over of the Document Object Model." rel="nofollow" target="_blank">MDN - Document Object Model</a></li>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" title="Goes to the MDN article over of the Document Object Model." rel="nofollow" target="_blank">MDN - Document Object Model</a></li>
                         </ul>
                     </div>
                 </article>
@@ -821,7 +825,7 @@
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
-                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" title="Goes to the MDN over of the Document Object Model." rel="nofollow" target="_blank">MDN - Document Object Model</a></li>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model" title="Goes to the MDN article over of the Document Object Model." rel="nofollow" target="_blank">MDN - Document Object Model</a></li>
                             <li>[2] <a href="http://www.aidanjryan.com/blog/2013/01/22/microsoft-exam-70-480-study-guide-continued/" title="Goes to Aidan Ryan's blog post discussing the UI Controls portion of the Microsoft exam." rel="nofollow" target="_blank">UI Controls Study Guide by Aidan Ryan</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" title="Goes to the MDN article on DOM Nodes" rel="nofollow" target="_blank">DOM Node Properties</a></li>
                             <li>[4] <a href="https://www.w3schools.com/tags/ref_attributes.asp" rel="nofollow" target="_blank" title="Goes to the attribute list on W3Schools.com">HTML Attributes</a></li>
@@ -1099,14 +1103,129 @@
                         </p>
                     </div>
                     <div class="resources">
-                            <h4>Resources</h4>
-                            <ul>
-                                <li>[1] <a href="http://api.jquery.com/toggle/" title="Goes to the jQuery documentation for the toggle method." rel="nofollow" target="_blank">jQuery's toggle method</a></li>
-                                <li>[2] <a href="https://css-tricks.com/snippets/javascript/showhide-element/" title="Goes to the CSS-Tricks example of toggling an element." rel="nofollow" target="_blank">CSS-Tricks Toggle example</a></li>
-                                <li>[3] <a href="http://www.aidanjryan.com/blog/2013/01/23/microsoft-exam-70-480-study-guide-continued-objective-1-remainder/" title="Goes to Aidan Ryan's blog post discussing the programmatic styling portion of the Microsoft exam." rel="nofollow" target="_blank">Programmatic Styling by Aidan Ryan</a></li>
-                            </ul>
-                        </div>
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://api.jquery.com/toggle/" title="Goes to the jQuery documentation for the toggle method." rel="nofollow" target="_blank">jQuery's toggle method</a></li>
+                            <li>[2] <a href="https://css-tricks.com/snippets/javascript/showhide-element/" title="Goes to the CSS-Tricks example of toggling an element." rel="nofollow" target="_blank">CSS-Tricks Toggle example</a></li>
+                            <li>[3] <a href="http://www.aidanjryan.com/blog/2013/01/23/microsoft-exam-70-480-study-guide-continued-objective-1-remainder/" title="Goes to Aidan Ryan's blog post discussing the programmatic styling portion of the Microsoft exam." rel="nofollow" target="_blank">Programmatic Styling by Aidan Ryan</a></li>
+                        </ul>
+                    </div>
                 </article>  
+            </section>
+            <section>
+                <div class="title-bar">
+                    <h4><a id="html5-apis">HTML5 APIs</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            The Web Storage API and the Geolocation API are important HTML5 APIs to become familiar with. There are however many, many more than these two.
+                            MDN has a great list of those available [3].
+                        </p>
+                        <p>
+                            The Web Storage API allows for the storing of key/value pairs. This can be utilized in a more intuitive way than traditional cookies [1]. The storage API has 
+                            two ways to store data. Either in session or local storage. The first persists data for the duration of the browsing session (until the browser is 
+                            closed). The second stores data between sessions (when the browser is closed and reopened later) [1]. These can be useful if you want to track a small 
+                            amount of data and not want to use a traditional database solution you provide yourself.
+                        </p>
+                        <p>
+                            The geolocation API is popular because many applications react to a user's known location. Apps use location to display things on the screen, or alert users of
+                            information. Consider an app like Google Maps for instance which can help you navigate from your current location to anywhere else in the world. Privacy is always
+                            a concern so the user is asked for permission before the data can be gathered and used.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#storage" title="Goes to the article on the Web Storage API.">Web Storage API</a> |
+                            <a href="#geolocation" title="Goes to the article on the Geolocation API.">Geolocation API</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" title="Goes to the MDN article for the Web Storage API." rel="nofollow" target="_blank">MDN - Web Storage API</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation" title="Goes to the MDN article for the Geolocation API." rel="nofollow" target="_blank">MDN - Geolocation API</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/API" title="Goes to the MDN listing of all the Web APIs." rel="nofollow" target="_blank">MDN - All Web APIs</a></li>
+                        </ul>
+                    </div>
+                </article>  
+                <div class="title-bar">
+                    <h4><a id="storage">Web Storage API</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            The Web Storage API extends the Window object and provides two properties. Those being the Window.sessionStorage and Window.localStorage. These properties
+                            allow access to the session and local Storage objects for saving data. There is also a StorageEvent which fires when persisted data changes. [1]
+                        </p>
+                        <p>
+                            There are other storage options as well. For instance, Mozilla has mozStorage which interfaces with SQLite. There is also the Storage API which "defines a
+                            common, shared standard to be used by all APIs and technologies that store content-accessible data for individual Web sites" [2].
+                        </p>
+                        <p>
+                            The standards around storage are still being developed. For instance, most browsers have private modes which aren't supposed to save data about your session and 
+                            page viewing history. In some cases companies have opted to disable the use of storage features where others allow full control even in the private mode. Being aware
+                            of this and how different vendors operate when implementing storage features is important to keep in mind. [1]
+                        </p>
+                        <p>
+                            Web Storage Example:
+                        </p>
+                        <div class="storage-example">
+                            <div class="localStorage">
+                                <label for="local-storage-text">Text: </label>
+                                <input type="text" id="local-storage-text" name="local-storage-text" placeholder="Enter some text:" />
+                                <button type="button" onClick="save()">Save</button>
+                                <button type="button" onClick="load()">Load Saved Value</button>
+                            </div>
+                            <div class="sessionStorage">
+                                <label for="session-storage-text">Text: </label>
+                                <input type="text" id="session-storage-text" name="session-storage-text" placeholder="Enter some text:" />
+                                <button type="button" onClick="saveSession()">Save</button>
+                                <button type="button" onClick="loadSession()">Load Saved Value</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API" title="Goes to the MDN article for the Web Storage API." rel="nofollow" target="_blank">MDN - Web Storage API</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Storage_API" title="Goes to the MDN article for the Storage API." rel="nofollow" target="_blank">MDN - Storage API</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="geolocation">Geolocation API</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            The Geolocation interface represents an object able to programmatically obtain the position of the device [1]. This is important if an app can 
+                            utilize a user's location for interactions or display (such as with a Map application). The Navigator object implements the geolocation interface
+                            and this data can be obtained from the navigator.geolocation property [1].
+                        </p>
+                        <p>
+                            There are three methods to be aware of. Those are getCurrentPosition(), watchPosition(), and clearWatch(). The getCurrentPosition() method returns
+                            the device's location by returning a Position object. Position objects have a coords and timestamp property of type Coordinates and DOMTimeStamp 
+                            respectively. The Coordinate object has several properties including latitude, longitude, altitude, accuracy, heading, and speed [2].
+                        </p>
+                        <p>
+                            The watchPosition() method returns a long value which represents a newly established callback function to be invoked whenever the device location
+                            changes [1]. This method takes two callback function as arguments. One for success and one for failure. The third argument is an optional 
+                            PositionOptions object for configuring the location watch. The clearWatch() method removes the callback handler that was set with the 
+                            watchPosition() method [1]. clearWatch() accepts an id argument.
+                        </p>
+                        <div id="geolocation-example"></div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation" title="Goes to the MDN article for the Geolocation API." rel="nofollow" target="_blank">MDN - Geolocation API</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Coordinates" title="Goes to the MDN article for the Coordinates Object." rel="nofollow" target="_blank">MDN - Coordinates</a></li>
+                        </ul>
+                    </div>
+                </article>  
+            </section>
         </section>
     </body>
 </html>
