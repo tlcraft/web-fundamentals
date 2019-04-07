@@ -1170,10 +1170,18 @@
                             Web Storage Example:
                         </p>
                         <div class="storage-example">
-                            <label for="storage-text">Text: </label>
-                            <input type="text" id="storage-text" name="storage-text" placeholder="Enter some text:" />
-                            <button type="button" onClick="save()">Save</button>
-                            <button type="button" onClick="load()">Load Saved Value</button>
+                            <div class="localStorage">
+                                <label for="local-storage-text">Text: </label>
+                                <input type="text" id="local-storage-text" name="local-storage-text" placeholder="Enter some text:" />
+                                <button type="button" onClick="save()">Save</button>
+                                <button type="button" onClick="load()">Load Saved Value</button>
+                            </div>
+                            <div class="sessionStorage">
+                                <label for="session-storage-text">Text: </label>
+                                <input type="text" id="session-storage-text" name="session-storage-text" placeholder="Enter some text:" />
+                                <button type="button" onClick="saveSession()">Save</button>
+                                <button type="button" onClick="loadSession()">Load Saved Value</button>
+                            </div>
                         </div>
                     </div>
                     <div class="resources">
