@@ -1199,13 +1199,27 @@
                 <article>
                     <div class="topic">
                         <p>
-                            
+                            The Geolocation interface represents an object able to programmatically obtain the position of the device [1]. This is important if an app can 
+                            utilize a user's location for interactions or display (such as with a Map application). The Navigator object implements the geolocation interface
+                            and this data can be obtained from the navigator.geolocation property [1].
+                        </p>
+                        <p>
+                            There are three methods to be aware of. Those are getCurrentPosition(), watchPosition(), and clearWatch(). The getCurrentPosition() method returns
+                            the device's location by returning a Position object. Position objects have a coords and timestamp property of type Coordinates and DOMTimeStamp 
+                            respectively. The Coordinate object has several properties including latitude, longitude, altitude, accuracy, heading, and speed [2].
+                        </p>
+                        <p>
+                            The watchPosition() method returns a long value which represents a newly established callback function to be invoked whenever the device location
+                            changes [1]. This method takes two callback function as arguments. One for success and one for failure. The third argument is an optional 
+                            PositionOptions object for configuring the location watch. The clearWatch() method removes the callback handler that was set with the 
+                            watchPosition() method [1]. clearWatch() accepts an id argument.
                         </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Geolocation" title="Goes to the MDN article for the Geolocation API." rel="nofollow" target="_blank">MDN - Geolocation API</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Coordinates" title="Goes to the MDN article for the Coordinates Object." rel="nofollow" target="_blank">MDN - Coordinates</a></li>
                         </ul>
                     </div>
                 </article>  
