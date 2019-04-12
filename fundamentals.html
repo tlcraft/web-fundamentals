@@ -1261,7 +1261,11 @@
                 <article>
                     <div class="topic">
                         <p>
-                            
+                            var is the most common way to declare and initialize a variable. var declarations are processed before any code is executed in a process called
+                            hoisting. var variables have a scope within their current execution context [1]. This scope is either globally (when declared outside of a function)
+                            or within the scope of the enclosing function that declares it [1]. Re-declaring a var won't wipe its value [1]. Undeclared variables (those without 
+                            the var keyword as one example) are globally scoped. Undeclared variables don't exist until the code that assigns to them is executed [1]. Undeclared
+                            variables are able to be deleted while declared variables are not. Using strict mode and always declaring variables is recommended.
                         </p>
                     </div>
                     <div class="resources">
