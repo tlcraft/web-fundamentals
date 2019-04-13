@@ -1267,6 +1267,11 @@
                             the var keyword as one example) are globally scoped. Undeclared variables don't exist until the code that assigns to them is executed [1]. Undeclared
                             variables are able to be deleted while declared variables are not. Using strict mode and always declaring variables is recommended.
                         </p>
+                        <p>
+                            var hoisting ensures that all variables are processed before code execution. Because variables are able to be declared at any point in the code you
+                            can even declare them after their use and the program will still function. It's because of hoisting that this works. However it's recommended to always 
+                            declare your variables at the top of their scope. [1] 
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
