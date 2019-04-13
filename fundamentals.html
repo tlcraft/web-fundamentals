@@ -1277,6 +1277,12 @@
                             "let allows you to declare variables that are limited to block, statement, or expression scope in which it is used" [2]. This is different than var
                             because var defines the variable globally or locally within a function regardless of block scope [2].
                         </p>
+                        <p>
+                            const is a keyword that functions very similarly to let. You must initialize the variable at the time of declaration because const represents
+                            a variable that cannot be reassigned. It is read-only. However if you assign an object to a const variable the properties of that object can 
+                            change values. "A constant cannot share its name with a function or a variable in the same scope" and it is affected by the temporal dead zone
+                            (as let is as well) [3]. 
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
