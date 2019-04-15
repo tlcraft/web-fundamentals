@@ -1283,6 +1283,11 @@
                             change values. "A constant cannot share its name with a function or a variable in the same scope" and it is affected by the temporal dead zone
                             (as let is as well) [3]. 
                         </p>
+                        <p>
+                            The temporal dead zone refers the time between declaring a variable and initializing it (once the initialization is terminated). let variables 
+                            are hoisted up like var variables however var variables are inherently initialized as undefined where let variables are not. So accessing them 
+                            prior to initialization will throw a reference error. Using typoeof on a variable in the temporal dead zone will also throw a reference error. [2]
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
