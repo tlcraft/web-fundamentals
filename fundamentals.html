@@ -1305,7 +1305,14 @@
                 <article>
                     <div class="topic">
                         <p>
-                           
+                           If a variable is defined outside of a block (i.e. code encapsulated with curly braces {}) then that variable has a global scope (which is not true 
+                           when using var) [3]. This is actually only true for web browsers; it's different when using JavaScipt with Node.js for example [2]. It's not recommended
+                           to use the global scope. Naming collisions is one reason (if a variable name is used more than once in other parts of the code). 
+                        </p>
+                        <p>
+                            Local scope refers to variables defined within a particular block of code or function (i.e. within curly braces {}). For function scope, variables
+                            defined within the function are only accessible from within that function at the time it's called. Using const or let within a block (inside curly braces
+                            but not a function) causes these variables to be only accessible from within that block.
                         </p>
                     </div>
                     <div class="resources">
@@ -1313,6 +1320,7 @@
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Goes to the MDN article for the let keyword." rel="nofollow" target="_blank">MDN - let</a></li>
                             <li>[2] <a href="https://css-tricks.com/javascript-scope-closures/" title="Goes to the CSS-Tricks.com article for JS scope and closures." rel="nofollow" target="_blank">CSS-Tricks.com - JS Scope and Closures</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block" title="Goes to the MDN article for block statements." rel="nofollow" target="_blank">MDN - block statement</a></li>
                         </ul>
                     </div>
                 </article>
