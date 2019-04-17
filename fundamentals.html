@@ -1270,7 +1270,9 @@
                         <p>
                             var hoisting ensures that all variables are processed before code execution. Because variables are able to be declared at any point in the code you
                             can even declare them after their use and the program will still function. It's because of hoisting that this works. However it's recommended to always 
-                            declare your variables at the top of their scope. [1] It's as if the variable declaraions are hoisted above the executing code.
+                            declare your variables at the top of their scope. [1] It's as if the variable declarations are hoisted above the executing code. Functions are also
+                            hoisted up so that they are available when called. However if they are defined as expressions (i.e. var f => function(){}) they are not hoisted and 
+                            can cause undefined errors [4].
                         </p>
                         <p>
                             let is another keyword used to declare and initialize a variable. Like var multiple variables can be declared in one statement separated by commas.
@@ -1295,6 +1297,7 @@
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var" title="Goes to the MDN article for the var keyword." rel="nofollow" target="_blank">MDN - var</a></li>
                             <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Goes to the MDN article for the let keyword." rel="nofollow" target="_blank">MDN - let</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" title="Goes to the MDN article for the const keyword." rel="nofollow" target="_blank">MDN - const</a></li>
+                            <li>[4] <a href="https://css-tricks.com/javascript-scope-closures/" title="Goes to the CSS-Tricks.com article for JS scope and closures." rel="nofollow" target="_blank">CSS-Tricks.com - JS Scope and Closures</a></li>
                         </ul>
                     </div>
                 </article>
