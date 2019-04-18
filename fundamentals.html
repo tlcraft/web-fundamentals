@@ -1317,6 +1317,18 @@
                             defined within the function are only accessible from within that function at the time it's called. Using const or let within a block (inside curly braces
                             but not a function) causes these variables to be only accessible from within that block.
                         </p>
+                        <p>
+                            Functions don't have access to one another's variables even if one is calling another [3]. However, because of lexical scoping, when defining a 
+                            function within another one, the inner function can access the outer function's variables and up to the global scope. While the more global something is 
+                            the less it has access to inner variables and functions.
+                        </p>
+                        <p>
+                            Closures are a related topic. This is when a function returns another function. This can be helpful when you need access to a function at a later time in 
+                            your code and that function does asynchronous work for instance (and also that you might want to reuse this process over and over again) [3]. Closures
+                            can also be used to return private variables and these functions are known to be privileged functions [3]. CSS-Tricks.com's article linked below has
+                            a good example of closures and privileged functions. Closures retain the scope of the variables created within them which is how they are able to 
+                            function.
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
