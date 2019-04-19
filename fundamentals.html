@@ -1346,7 +1346,10 @@
                 <article>
                     <div class="topic">
                         <p>
-                           
+                           this represents the JavaScript context object in which the current code is executing [1]. When outside of a function this refers to the global object whether
+                           in strict mode or not [1]. There are other differences between this in strict and non-strict mode. The value of this is determined by how a function is called.
+                           this can't be set during execution and may be different each time the function is called [1]. bind() has been introduced to set the value of this for a function
+                           regardless of how it's called [1].
                         </p>
                     </div>
                     <div class="resources">
