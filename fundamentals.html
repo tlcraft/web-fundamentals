@@ -1354,6 +1354,11 @@
                         <p>
                             When not in strict mode, and when a value of this isn't set by a function call, this will default to the global context [1]. When in strict mode this will 
                             default to whatever it was set to right before the call [1]. The value of this can be passed from one context to another using the call() or apply() method [1].
+                            When the value passed as this to call or apply is not an object, internally a call to ToObject will convert the input (for example a primitive) to an object.
+                        </p>
+                        <p>
+                            bind was introduced in ECMAScript 5. This binds the context of this to whatever argument was passed into bind. It is permanently bound regardless of how the 
+                            function is called later.
                         </p>
                     </div>
                     <div class="resources">
