@@ -1351,6 +1351,10 @@
                            this can't be set during execution and may be different each time the function is called [1]. bind() has been introduced to set the value of this for a function
                            regardless of how it's called [1].
                         </p>
+                        <p>
+                            When not in strict mode, and when a value of this isn't set by a function call, this will default to the global context [1]. When in strict mode this will 
+                            default to whatever it was set to right before the call [1]. The value of this can be passed from one context to another using the call() or apply() method [1].
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
