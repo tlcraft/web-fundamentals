@@ -1363,7 +1363,9 @@
                             for the first argument [1].
                         </p>
                         <p>
-                            When a function is called as a method of an object, this refers to the calling object itself [1].
+                            When a function is called as a method of an object, this refers to the calling object itself [1]. This is true whether the function was defined inline with the
+                            object definition or assigned later separately [1]. This is also true for an object's prototype chain. Objects will inherit functions from their prototype 
+                            and this will refer to the concrete object [1]. This is also true when a function is invoked as a getter or a setter--this is bound to the object [1].
                         </p>
                     </div>
                     <div class="resources">
