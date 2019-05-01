@@ -1367,6 +1367,11 @@
                             object definition or assigned later separately [1]. This is also true for an object's prototype chain. Objects will inherit functions from their prototype 
                             and this will refer to the concrete object [1]. This is also true when a function is invoked as a getter or a setter--this is bound to the object [1].
                         </p>
+                        <p>
+                            When this is used in a constructor it is bound to the new object being constructed. The variables assigned with the new statement will have the properties set
+                            on this during construction. If an object is returned from the constructor method then that object is bound to the variable assigned with the new statement.
+                            In that case any references to this in the constructor are essentially dead code as it has no affects [1].
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
