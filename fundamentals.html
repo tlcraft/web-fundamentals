@@ -1382,7 +1382,21 @@
                             Events are fired in response to action taken by the user or program. As users interact with a web page for example it can be useful to know that they clicked
                             a button. In response to clicking that button a user may be logged in or a modal might display with relevant information. There are many different types of events.
                             For instance keyboard keys being pressed, clicking, on form submission, on load of a page, or when errors occur. Programming around events is important in 
-                            any program with user interaction and is not limited to the web. 
+                            any program with user interaction and is not limited to the web. The MDN - DOM Event Reference below lists all of the different events that can occur in the browswer [3].
+                        </p>
+                        <p>
+                            Each event has an "event handler" which is "registered" when a block of code is defined to be run in response to an event [2]. Listeners wait for an event to occur
+                            and the handler runs specific code in response. "It's important to note that web events are not part of the core JavaScript language. They are defined as part of the
+                            JavaScript APIs built into browser" [2].
+                        </p>
+                        <p>
+                            Event handlers can be registered to elements using JavaScript. First one needs a reference to the element and from there we can assign
+                            functions to the various event handler properties (i.e. onblur, onkeypress, onmouseover). We are also able to assign event handlers inline
+                            within the HTML code (as event handler HTML attributes), however that's not recommended [2]. This is because it can quickly become unmanageable 
+                            and inefficient [2]. The current mechanism is to use the addEventListener() and removeEventListener() functions to add and remove event handlers.
+                            This lets us easily add and remove different event handlers for different purposes. These methods also allow us to apply multiple event handlers
+                            to the same event handler property. Trying to assign two different functions to the same property normally overwrites the first because the 
+                            event property is assigned a new value. Using addEventListener we can get around this limitation.
                         </p>
                     </div>
                     <div class="resources">
