@@ -1372,6 +1372,10 @@
                             on this during construction. If an object is returned from the constructor method then that object is bound to the variable assigned with the new statement.
                             In that case any references to this in the constructor are essentially dead code as it has no affects [1].
                         </p>
+                        <p>
+                            For DOM events this is set to the element the event fired from, although some browsers don't follow that convention for listeners added with methods other than 
+                            addEventListener [1]. When inline event handlers are used this is set to the DOM element on which the listener is placed [1].
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
