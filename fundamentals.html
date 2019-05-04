@@ -1345,6 +1345,7 @@
                 </div>
                 <article>
                     <div class="topic">
+                        <h5>this</h5>
                         <p>
                            this represents the JavaScript context object in which the current code is executing [1]. When outside of a function this refers to the global object whether
                            in strict mode or not [1]. There are other differences between this in strict and non-strict mode. The value of this is determined by how a function is called.
@@ -1375,6 +1376,13 @@
                         <p>
                             For DOM events this is set to the element the event fired from, although some browsers don't follow that convention for listeners added with methods other than 
                             addEventListener [1]. When inline event handlers are used this is set to the DOM element on which the listener is placed [1].
+                        </p>
+                        <h5>Events</h5>
+                        <p>
+                            Events are fired in response to action taken by the user or program. As users interact with a web page for example it can be useful to know that they clicked
+                            a button. In response to clicking that button a user may be logged in or a modal might display with relevant information. There are many different types of events.
+                            For instance keyboard keys being pressed, clicking, on form submission, on load of a page, or when errors occur. Programming around events is important in 
+                            any program with user interaction and is not limited to the web. 
                         </p>
                     </div>
                     <div class="resources">
