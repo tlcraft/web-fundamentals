@@ -1424,6 +1424,11 @@
                             instead. The event would then bubble to the items [2]. This can be helpful if child elements are dynamically changing. The event delegation technique allows the 
                             parent to handle the event and determine if a child is affected or not, then responds appropriately.
                         </p>
+                        <p>
+                            Here's a historical note MDN points out "why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than 
+                            they are now, Netscape only used event capturing, and Internet Explorer used only event bubbling. When the W3C decided to try to standardize the behavior and reach a 
+                            consensus, they ended up with this system that included both, which is the one modern browsers implemented." [2]
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
