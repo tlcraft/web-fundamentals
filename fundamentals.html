@@ -1398,6 +1398,16 @@
                             to the same event handler property. Trying to assign two different functions to the same property normally overwrites the first because the 
                             event property is assigned a new value. Using addEventListener we can get around this limitation.
                         </p>
+                        <p>
+                            Event handlers often pass in the event object to the handler method. This is generally seen in the parameter list named as "e". This event object has a 
+                            reference to the element that the event just occurred upon. You can access this object through the event object's "target" property. [2]
+                        </p>
+                        <p>
+                            Preventing default behavior is something that you will run across from time to time. One example that MDN describes is preventing a form from being 
+                            submitted when a user clicks the submit button. You would want to prevent the user from submitting a bad form and to instead display validation information
+                            before actually submitting the data to the server. Whenever you have custom logic you would like to apply and circumvent the default behavior use the event
+                            object's "preventDefault()" method to stop it from occurring. [2]
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
