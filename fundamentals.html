@@ -1408,6 +1408,22 @@
                             before actually submitting the data to the server. Whenever you have custom logic you would like to apply and circumvent the default behavior use the event
                             object's "preventDefault()" method to stop it from occurring. [2]
                         </p>
+                        <p>
+                            Bubbling and capturing are two more advanced event topics that are important to understand. If an element causes two events to fire and each affects one another 
+                            negatively this will need to be addresses in your code. For example, if an element should hide when an area of the screen is clicked but also play a video 
+                            in response to a similar event that is also triggered at the same time (as MDN uses in their example [2]). When events are fired there are two phases.
+                            The capturing of the event phase which runs an event handler if one is registered in response. The capturing phase checks each ancestor of the element triggering
+                            the event and works its way from the outer most ancestor (the html element) down to the closest parent until it stops at the original element. In the bubbling 
+                            phase the opposite occurs. It checks to see if the element that triggered the event has an event handler which should respond and moves up the hierarchy (all 
+                            the way up to the html element). By default event handlers are registered during the bubbling phase [2]. To prevent issues like this the "stopPropagation()" 
+                            method can be used. It will stop the bubbling up process so other handlers are not run. This can be invoked by calling the stopPropagation() method on the event object.
+                        </p>
+                        <p>
+                            Event delegation is another related concept. Instead of registering handlers on child objects you can instead register an event on a parent element. For
+                            example if you have a series of list items. If you wanted a message to pop up when an item is clicked you could register an event listener on the parent element 
+                            instead. The event would then bubble to the items [2]. This can be helpful if child elements are dynamically changing. The event delegation technique allows the 
+                            parent to handle the event and determine if a child is affected or not, then responds appropriately.
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
