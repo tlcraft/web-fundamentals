@@ -17,7 +17,8 @@
             <a href="#semantics" title="Goes to the article on Semantic HTML.">- Semantic Markup</a>
             <a href="#ui-controls" title="Goes to the article on UI Controls.">- UI Controls</a>         
             <a href="#style-programmatically" title="Goes to the article on styling content programmatically."> - Style Programmatically</a>
-            <a href="#html5-apis" title="Goes to the article on HTML5 APIs.">- HTML5 APIs</a>  
+            <a href="#html5-apis" title="Goes to the article on HTML5 APIs.">- HTML5 APIs</a>
+            <a href="#js-scope" title="Goes to the article on JS variable scope.">- Variable Scope</a> 
             <a href="#css-topics" title="Goes to the list of CSS topics at the top of the page.">CSS Topics List</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
@@ -72,11 +73,11 @@
                         <li><a href="#storage" title="Goes to the article on the Web Storage API.">Web Storage API</a></li>
                         <li><a href="#geolocation" title="Goes to the article on the Geolocation API.">Geolocation API</a></li>
                     </ul>
-                    <li>Variable Scope and Lifetimes</li>
+                    <li><a href="#js-scope" title="Goes to the article on JS variable scope.">Variable Scope and Lifetimes</a></li>
                     <ul>
-                        <li>var, let, const</li>
-                        <li>global and local scope</li>
-                        <li>this and events</li>
+                        <li><a href="#declaration-keywords" title="Goes to the article on the var, let, and const.">var, let, const</a></li>
+                        <li><a href="#variable-scope" title="Goes to the article on global and local scope.">global and local scope</a></li>
+                        <li><a href="#this-events" title="Goes to the article on 'this' and events.">this and events</a></li>
                     </ul>
                     <li>Objects and Methods</li>
                     <ul>
@@ -1225,6 +1226,219 @@
                         </ul>
                     </div>
                 </article>  
+            </section>
+            <section>
+                <div class="title-bar">
+                    <h4><a id="js-scope">Variable Scope and Lifetimes</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            JavaScript behaves differently than many other programming languages you may be used to. Because it is loosely and dynamically typed
+                            variables can be assigned anything you wish and be reassigned to different types later on in your program. The scope at which your
+                            variable is available is also important to keep in mind. The keywords var, let, and const operate differently when declaring a variable and 
+                            open up your variables to different scopes. Along with that, the keyword this changes its value when the scope changes and so it can be
+                            confusing when dealing with events.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#declaration-keywords" title="Goes to the article on the var, let, and const.">var, let, const</a> |
+                            <a href="#variable-scope" title="Goes to the article on global and local scope.">global and local scope</a> |
+                            <a href="#this-events" title="Goes to the article on 'this' and events.">this and events</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            
+                        </ul>
+                    </div>
+                </article>            
+                <div class="title-bar">
+                    <h4><a id="declaration-keywords">var, let, const</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            var is the most common way to declare and initialize a variable. var declarations are processed before any code is executed in a process called
+                            hoisting. var variables have a scope within their current execution context [1]. This scope is either globally (when declared outside of a function)
+                            or within the scope of the enclosing function that declares it [1]. Re-declaring a var won't wipe its value [1]. Undeclared variables (those without 
+                            the var keyword as one example) are globally scoped. Undeclared variables don't exist until the code that assigns to them is executed [1]. Undeclared
+                            variables are able to be deleted while declared variables are not. Using strict mode and always declaring variables is recommended.
+                        </p>
+                        <p>
+                            var hoisting ensures that all variables are processed before code execution. Because variables are able to be declared at any point in the code you
+                            can even declare them after their use and the program will still function. It's because of hoisting that this works. However it's recommended to always 
+                            declare your variables at the top of their scope. [1] It's as if the variable declarations are hoisted above the executing code. Functions are also
+                            hoisted up so that they are available when called. However if they are defined as expressions (i.e. var f => function(){}) they are not hoisted and 
+                            can cause undefined errors [4].
+                        </p>
+                        <p>
+                            let is another keyword used to declare and initialize a variable. Like var multiple variables can be declared in one statement separated by commas.
+                            "let allows you to declare variables that are limited to block, statement, or expression scope in which it is used" [2]. This is different than var
+                            because var defines the variable globally or locally within a function regardless of block scope [2].
+                        </p>
+                        <p>
+                            const is a keyword that functions very similarly to let. You must initialize the variable at the time of declaration because const represents
+                            a variable that cannot be reassigned. It is read-only. However if you assign an object to a const variable the properties of that object can 
+                            change values. "A constant cannot share its name with a function or a variable in the same scope" and it is affected by the temporal dead zone
+                            (as let is as well) [3]. 
+                        </p>
+                        <p>
+                            The temporal dead zone refers the time between declaring a variable and initializing it (once the initialization is terminated). let variables 
+                            are hoisted up like var variables however var variables are inherently initialized as undefined where let variables are not. So accessing them 
+                            prior to initialization will throw a reference error. Using typoeof on a variable in the temporal dead zone will also throw a reference error. [2]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/var" title="Goes to the MDN article for the var keyword." rel="nofollow" target="_blank">MDN - var</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Goes to the MDN article for the let keyword." rel="nofollow" target="_blank">MDN - let</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/const" title="Goes to the MDN article for the const keyword." rel="nofollow" target="_blank">MDN - const</a></li>
+                            <li>[4] <a href="https://css-tricks.com/javascript-scope-closures/" title="Goes to the CSS-Tricks.com article for JS scope and closures." rel="nofollow" target="_blank">CSS-Tricks.com - JS Scope and Closures</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="variable-scope">global and local scope</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                           If a variable is defined outside of a block (i.e. code encapsulated with curly braces {}) then that variable has a global scope (which is not true 
+                           when using var) [3]. This is actually only true for web browsers; it's different when using JavaScipt with Node.js for example [2]. It's not recommended
+                           to use the global scope. Naming collisions is one reason (if a variable name is used more than once in other parts of the code). 
+                        </p>
+                        <p>
+                            Local scope refers to variables defined within a particular block of code or function (i.e. within curly braces {}). For function scope, variables
+                            defined within the function are only accessible from within that function at the time it's called. Using const or let within a block (inside curly braces
+                            but not a function) causes these variables to be only accessible from within that block.
+                        </p>
+                        <p>
+                            Functions don't have access to one another's variables even if one is calling another [3]. However, because of lexical scoping, when defining a 
+                            function within another one, the inner function can access the outer function's variables and up to the global scope. While the more global something is 
+                            the less it has access to inner variables and functions.
+                        </p>
+                        <p>
+                            Closures are a related topic. This is when a function returns another function. This can be helpful when you need access to a function at a later time in 
+                            your code and that function does asynchronous work for instance (and also that you might want to reuse this process over and over again) [3]. Closures
+                            can also be used to return private variables and these functions are known to be privileged functions [3]. CSS-Tricks.com's article linked below has
+                            a good example of closures and privileged functions. Closures retain the scope of the variables created within them which is how they are able to 
+                            function.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/let" title="Goes to the MDN article for the let keyword." rel="nofollow" target="_blank">MDN - let</a></li>
+                            <li>[2] <a href="https://css-tricks.com/javascript-scope-closures/" title="Goes to the CSS-Tricks.com article for JS scope and closures." rel="nofollow" target="_blank">CSS-Tricks.com - JS Scope and Closures</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block" title="Goes to the MDN article for block statements." rel="nofollow" target="_blank">MDN - block statement</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="this-events">this and events</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <h5>this</h5>
+                        <p>
+                           this represents the JavaScript context object in which the current code is executing [1]. When outside of a function this refers to the global object whether
+                           in strict mode or not [1]. There are other differences between this in strict and non-strict mode. The value of this is determined by how a function is called.
+                           this can't be set during execution and may be different each time the function is called [1]. bind() has been introduced to set the value of this for a function
+                           regardless of how it's called [1].
+                        </p>
+                        <p>
+                            When not in strict mode, and when a value of this isn't set by a function call, this will default to the global context [1]. When in strict mode this will 
+                            default to whatever it was set to right before the call [1]. The value of this can be passed from one context to another using the call() or apply() method [1].
+                            When the value passed as this to call or apply is not an object, internally a call to ToObject will convert the input (for example a primitive) to an object.
+                        </p>
+                        <p>
+                            bind was introduced in ECMAScript 5. This binds the context of this to whatever argument was passed into bind. It is permanently bound regardless of how the 
+                            function is called later. For arrow functions "this will retain the value of the enclosing lexical context's this" [1]. If you use call, bind, or apply
+                            with arrow functions the this argument (the first argument) will be ignored. When using those methods with an arrow function null should be passed in
+                            for the first argument [1].
+                        </p>
+                        <p>
+                            When a function is called as a method of an object, this refers to the calling object itself [1]. This is true whether the function was defined inline with the
+                            object definition or assigned later separately [1]. This is also true for an object's prototype chain. Objects will inherit functions from their prototype 
+                            and this will refer to the concrete object [1]. This is also true when a function is invoked as a getter or a setter--this is bound to the object [1].
+                        </p>
+                        <p>
+                            When this is used in a constructor it is bound to the new object being constructed. The variables assigned with the new statement will have the properties set
+                            on this during construction. If an object is returned from the constructor method then that object is bound to the variable assigned with the new statement.
+                            In that case any references to this in the constructor are essentially dead code as it has no affects [1].
+                        </p>
+                        <p>
+                            For DOM events this is set to the element the event fired from, although some browsers don't follow that convention for listeners added with methods other than 
+                            addEventListener [1]. When inline event handlers are used this is set to the DOM element on which the listener is placed [1].
+                        </p>
+                        <h5>Events</h5>
+                        <p>
+                            Events are fired in response to action taken by the user or program. As users interact with a web page for example it can be useful to know that they clicked
+                            a button. In response to clicking that button a user may be logged in or a modal might display with relevant information. There are many different types of events.
+                            For instance keyboard keys being pressed, clicking, on form submission, on load of a page, or when errors occur. Programming around events is important in 
+                            any program with user interaction and is not limited to the web. The MDN - DOM Event Reference below lists all of the different events that can occur in the browswer [3].
+                        </p>
+                        <p>
+                            Each event has an "event handler" which is "registered" when a block of code is defined to be run in response to an event [2]. Listeners wait for an event to occur
+                            and the handler runs specific code in response. "It's important to note that web events are not part of the core JavaScript language. They are defined as part of the
+                            JavaScript APIs built into browser" [2].
+                        </p>
+                        <p>
+                            Event handlers can be registered to elements using JavaScript. First one needs a reference to the element and from there we can assign
+                            functions to the various event handler properties (i.e. onblur, onkeypress, onmouseover). We are also able to assign event handlers inline
+                            within the HTML code (as event handler HTML attributes), however that's not recommended [2]. This is because it can quickly become unmanageable 
+                            and inefficient [2]. The current mechanism is to use the addEventListener() and removeEventListener() functions to add and remove event handlers.
+                            This lets us easily add and remove different event handlers for different purposes. These methods also allow us to apply multiple event handlers
+                            to the same event handler property. Trying to assign two different functions to the same property normally overwrites the first because the 
+                            event property is assigned a new value. Using addEventListener we can get around this limitation.
+                        </p>
+                        <p>
+                            Event handlers often pass in the event object to the handler method. This is generally seen in the parameter list named as "e". This event object has a 
+                            reference to the element that the event just occurred upon. You can access this object through the event object's "target" property. [2]
+                        </p>
+                        <p>
+                            Preventing default behavior is something that you will run across from time to time. One example that MDN describes is preventing a form from being 
+                            submitted when a user clicks the submit button. You would want to prevent the user from submitting a bad form and to instead display validation information
+                            before actually submitting the data to the server. Whenever you have custom logic you would like to apply and circumvent the default behavior use the event
+                            object's "preventDefault()" method to stop it from occurring. [2]
+                        </p>
+                        <p>
+                            Bubbling and capturing are two more advanced event topics that are important to understand. If an element causes two events to fire and each affects one another 
+                            negatively this will need to be addresses in your code. For example, if an element should hide when an area of the screen is clicked but also play a video 
+                            in response to a similar event that is also triggered at the same time (as MDN uses in their example [2]). When events are fired there are two phases.
+                            The capturing of the event phase which runs an event handler if one is registered in response. The capturing phase checks each ancestor of the element triggering
+                            the event and works its way from the outer most ancestor (the html element) down to the closest parent until it stops at the original element. In the bubbling 
+                            phase the opposite occurs. It checks to see if the element that triggered the event has an event handler which should respond and moves up the hierarchy (all 
+                            the way up to the html element). By default event handlers are registered during the bubbling phase [2]. To prevent issues like this the "stopPropagation()" 
+                            method can be used. It will stop the bubbling up process so other handlers are not run. This can be invoked by calling the stopPropagation() method on the event object.
+                        </p>
+                        <p>
+                            Event delegation is another related concept. Instead of registering handlers on child objects you can instead register an event on a parent element. For
+                            example if you have a series of list items. If you wanted a message to pop up when an item is clicked you could register an event listener on the parent element 
+                            instead. The event would then bubble to the items [2]. This can be helpful if child elements are dynamically changing. The event delegation technique allows the 
+                            parent to handle the event and determine if a child is affected or not, then responds appropriately.
+                        </p>
+                        <p>
+                            Here's a historical note MDN points out "why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than 
+                            they are now, Netscape only used event capturing, and Internet Explorer used only event bubbling. When the W3C decided to try to standardize the behavior and reach a 
+                            consensus, they ended up with this system that included both, which is the one modern browsers implemented." [2]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this" title="Goes to the MDN article for the this keyword." rel="nofollow" target="_blank">MDN - this</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" title="Goes to the MDN introduction for JS events." rel="nofollow" target="_blank">MDN - JS Events Introduction</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/Events" title="Goes to the MDN DOM event reference." rel="nofollow" target="_blank">MDN - DOM Event Reference</a></li>
+                        </ul>
+                    </div>
+                </article>
             </section>
         </section>
     </body>
