@@ -82,8 +82,8 @@
                     </ul>
                     <li><a href="#obj-methods" title="Goes to the article on JS objects and methods.">Objects and Methods</a></li>
                     <ul>
-                        <li>Native Objects</li>
-                        <li>Custom Objects</li>
+                        <li><a href="#built-in-js" title="Goes to the article on Native JS Objectss.">Native Objects</a></li>
+                        <li><a href="#custom-js" title="Goes to the article on Custom JS Objectss.">Custom Objects</a></li>
                         <li>Prototypes</li>
                         <li>Inheritance</li>
                         <li>Implement native objects with custom methods</li>
@@ -1458,7 +1458,8 @@
                             situation.
                         </p>
                         <nav class="topics-nav">
-                            <a href="#built-in-js" title="Goes to the article on Native JS Objectss.">Native Objects</a>
+                            <a href="#built-in-js" title="Goes to the article on Native JS Objectss.">Native Objects</a> |
+                            <a href="#custom-js" title="Goes to the article on Custom JS Objectss.">Custom Objects</a>
                         </nav>
                     </div>
                     <div class="resources">
@@ -1492,6 +1493,27 @@
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects" title="Goes to the MDN article for the available global objects built into JS." rel="nofollow" target="_blank">MDN - Global Objects</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="custom-js">Custom Objects</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            A JS object is a collection of properties and a property is an association between a key and a value [1]. These values can be primitives
+                            or even whole functions. You can create a new object like so: var myObject = new Object(); and then you can assign properties and values to it
+                            using dot-notation. For example, myObject.name = "My new object"; If you declare a property with no value it will have the value of undefined. Most of the time
+                            properties will be accessed using dot-notation however you can also access and set them using bracket notation. For example myObject['name'] 
+                            will return "My new object" which we defined earlier. Objects are sometimes called associative arrays [1].
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" title="Goes to the MDN article for working with JS objects." rel="nofollow" target="_blank">MDN - Working with Objects</a></li>
                         </ul>
                     </div>
                 </article>
