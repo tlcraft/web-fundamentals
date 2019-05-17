@@ -1507,7 +1507,11 @@
                             or even whole functions. You can create a new object like so: var myObject = new Object(); and then you can assign properties and values to it
                             using dot-notation. For example, myObject.name = "My new object"; If you declare a property with no value it will have the value of undefined. Most of the time
                             properties will be accessed using dot-notation however you can also access and set them using bracket notation. For example myObject['name'] 
-                            will return "My new object" which we defined earlier. Objects are sometimes called associative arrays [1].
+                            will return "My new object" which we defined earlier. Objects are sometimes called associative arrays [1]. You can even iterate over objects
+                            like an array to access the different property values (for example MDN uses a for...in loop to print out each property and its value) [1]. There 
+                            are actually three built-in ways in ECMAScript 5 to enumerate the properties of an object. The for...in loop (includes all enumerable prototype chain properties), the 
+                            Object.keys(o) method (which does not include prototype properties), and the Object.getOwnPropertyNames(o) method which returns all property names on a given object
+                            (enumerable or not) [1]. 
                         </p>
                     </div>
                     <div class="resources">
