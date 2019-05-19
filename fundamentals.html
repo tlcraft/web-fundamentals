@@ -1527,6 +1527,11 @@
                             different way (for example by hard coding initial values or by calling other methods which return a value). The keyword this is used to assign values to the 
                             object's properties. For example, function Person(name) { this.name = name; }; This constructor creates a Person object and takes one argument which is assigned to the property name.
                         </p>
+                        <p>
+                            Remember that we can add properties to objects by simply using dot notation. For example person.age = 10; This would add the age property to the existing
+                            object named person. However it won't affect other existing Person objects, only this one [1]. To affect all Person objects the Person constructor would
+                            need to be updated to include the new property.
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
