@@ -1513,6 +1513,20 @@
                             Object.keys(o) method (which does not include prototype properties), and the Object.getOwnPropertyNames(o) method which returns all property names on a given object
                             (enumerable or not) [1]. 
                         </p>
+                        <p>
+                            There are several ways to create new objects. You can use the object initializer or create a constructor method. It's easy to new up an object using the
+                            initializer. Remember that objects are just collections of properties. You can define these by hand by declaring key and value pairs. For example: 
+                            const myObject = { propertyOne: valueOne, propertyTwo: valueTwo }; The values can be any type (for example a number or a string value). These objects are of 
+                            type Object (as if a call to new Object() were made) [1]. Object initializers are expressions and each time it's called this results in a new object being created [1].
+                            These distinct objects won't compare to each other as being equal [1].
+                        </p>
+                        <p>
+                            You can also defined object types by defining constructor methods. By convention we capitalize constructor methods. We can then use the new keyword to create
+                            a new instance of the object. To create a constructor simply define a function with a capitalized name which represent the object type. Within this method
+                            you can assign properties to the new object and assign values to them either by taking in arguments and assigning them to the properties or by assigning them in a 
+                            different way (for example by hard coding initial values or by calling other methods which return a value). The keyword this is used to assign values to the 
+                            object's properties. For example, function Person(name) { this.name = name; }; This constructor creates a Person object and takes one argument which is assigned to the property name.
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
