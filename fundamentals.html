@@ -1535,7 +1535,8 @@
                         </p>
                         <p>
                             Finally we can create objects using the Object.create method. "This method can be very useful, because it allows you to choose the prototype object for the object you want to create,
-                             without having to define a constructor function" [1].
+                             without having to define a constructor function" [1]. Create makes a new object using the given object parameter as the prototype. So the new object's __proto__ property will
+                             refer to the passed in object and its available members [2].
                         </p>
                         <p>
                             As was described earlier object properties can be accessed by either dot notation or bracket notation. You are also able to index into object properties
@@ -1548,6 +1549,7 @@
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" title="Goes to the MDN article for working with JS objects." rel="nofollow" target="_blank">MDN - Working with Objects</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes" title="Goes to the MDN article for Object Prototypes." rel="nofollow" target="_blank">MDN - Object Prototypes</a></li>
                         </ul>
                     </div>
                 </article>
@@ -1567,7 +1569,9 @@
                         <p>
                             All objects inherit properties and methods from the Object prototype by default. So each object has members like watch and valueOf [1]. When a member that's inherited is called
                             the browser first checks to see if the current object has a matching member to call, otherwise it goes up the chain of prototypes until it finds a match [1]. These members (properties
-                            and methods) are not copied to the child objects, they are accessed by walking up the prototype chain [1].
+                            and methods) are not copied to the child objects, they are accessed by walking up the prototype chain [1]. The methods and properties that are inherited from the prototype object are 
+                            only the members on the prototype object, and not one defined directly on the parent object itself. So for example as MDN explains, Object.keys() and Object.is() are not available
+                            to the inheriting class because those are defined on the Object constructor itself. However members such as watch() and valueOf() are because these are defined on the prototype object.
                         </p>
                     </div>
                     <div class="resources">
