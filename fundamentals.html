@@ -1564,6 +1564,11 @@
                             chain. "The properties and methods are defined on the prototype property on the objects' constructor function, not on the object instances themselves" [1]. By walking up
                             this chain we can access the various properties and methods available to us [1].
                         </p>
+                        <p>
+                            All objects inherit properties and methods from the Object prototype by default. So each object has members like watch and valueOf [1]. When a member that's inherited is called
+                            the browser first checks to see if the current object has a matching member to call, otherwise it goes up the chain of prototypes until it finds a match [1]. These members (properties
+                            and methods) are not copied to the child objects, they are accessed by walking up the prototype chain [1].
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
