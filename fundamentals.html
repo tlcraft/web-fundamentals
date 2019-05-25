@@ -1529,6 +1529,13 @@
                             object's properties. For example, function Person(name) { this.name = name; }; This constructor creates a Person object and takes one argument which is assigned to the property name.
                         </p>
                         <p>
+                            Constructor methods can be called from the objects themselves because the constructor is a method attached to the object. So you are able to create a new Person object with the following 
+                            syntax: var anotherPerson = new personOne.constructor('New Name'); Just remember to use the new keyword and pass in required parameters. This can be useful if you don't have access to the original
+                            constructor for whatever reason [2]. It can also be useful if you want to know the name of the original object that it is an instance of. You can find this using the name property, like 
+                            anotherPerson.constructor.name. However this value can change for a variety of reasons (for example transpilers, binding, and inheritance) so using the instanceof operator 
+                            is better in some cases as explain by MDN [2].
+                        </p>
+                        <p>
                             Remember that we can add properties to objects by simply using dot notation. For example person.age = 10; This would add the age property to the existing
                             object named person. However it won't affect other existing Person objects, only this one [1]. To affect all Person objects the Person constructor would
                             need to be updated to include the new property.
