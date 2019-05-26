@@ -1580,6 +1580,13 @@
                             only the members on the prototype object, and not one defined directly on the parent object itself. So for example as MDN explains, Object.keys() and Object.is() are not available
                             to the inheriting class because those are defined on the Object constructor itself. However members such as watch() and valueOf() are because these are defined on the prototype object.
                         </p>
+                        <p>
+                            To modify the prototype chain of an object simply access the prototype property and add a property or method using dot notation. For example: person.prototype.fullName = function() { 
+                            return this.firstName + ' ' + this.lastName; }. This will add a method called fullName to all Person objects. This is true even if you've already created an object of type Person. Its prototype will be 
+                            updated and the new method will be available. You can also do this for properties but that is only useful for static fields since these are shared among all instances of 
+                            an object type. MDN explains that using the constructor method to define properties and then adding methods to the object's prototype separately is a good practice to separate and group the logic [1].
+                            Being able to modify an object's prototype, which affects all instances of the same type, is quite a powerful and useful feature.
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
