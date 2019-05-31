@@ -1621,6 +1621,14 @@
                             are defined on the constructors themselves which are only available on the constructor. And finally ones that are on a constructor's prototype which are accessibly by
                             instances and inheriting objects. [1]
                         </p>
+                        <p>
+                            ECMAScript2015 added class syntax which is much like what you would find in languages such as Java, C#, and C++. If you have a background with those OO languages you will quickly understand
+                            the class syntax in ECMAScript2015. Classes have a constructor method, class methods, and properties. MDN explains that underneath it all the class syntax is being converted to prototypical 
+                            inheritance models (class syntax is just "syntactic sugar" to reduce code and feel more consistent with other languages many developers utilize) [1]. To inherit using this syntax we
+                            use the extends keyword. For example: class Warrior extends Character { constructor() { super(); } } The call to super is important and must be done first. This way the parent
+                            class will be able to initialize 'this' and correctly set up our references [1]. Remember to pass along any required parameters to the parent's constructor by passing them 
+                            into the call to super().
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
