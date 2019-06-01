@@ -1627,7 +1627,21 @@
                             inheritance models (class syntax is just "syntactic sugar" to reduce code and feel more consistent with other languages many developers utilize) [1]. To inherit using this syntax we
                             use the extends keyword. For example: class Warrior extends Character { constructor() { super(); } } The call to super is important and must be done first. This way the parent
                             class will be able to initialize 'this' and correctly set up our references [1]. Remember to pass along any required parameters to the parent's constructor by passing them 
-                            into the call to super().
+                            into the call to super(). Adding getters and setters is also common depending on the intended use of your object. These return and set values of instance fields and ECMAScript2015 has syntax 
+                            for creating them. To add a getter and setter to the Warrior class from above use the following syntax:
+                        </p>
+                        <pre>
+                            get attackPower() { 
+                                return this._attackPower; 
+                            }
+
+                            set attackPower(power) {
+                                this._attackPower = power;
+                            }
+                        </pre>
+                        <p>
+                            Getters and setters are common patterns for setting and returning a class field value. This paradigm has been around for a long time. Not every field needs a getter or a setter and if you are adding these
+                            you might want to spend a little more time considering why you are adding them and if another mechanism would be better (as far as encapsulation and abstraction goes). [1]
                         </p>
                     </div>
                     <div class="resources">
