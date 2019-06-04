@@ -1663,12 +1663,18 @@
                 </div>
                 <article>
                     <div class="topic">
-
+                        To extend native object behavior it's as simple as modifying the native object's prototype chain. There can be downsides to doing this though. By extending native
+                        objects you are changing or adding behavior to something many people understand as working one way. When new contributors work with your code you will need to teach them
+                        of these changes. The other downside is that as time goes on the native objects may grow to include the same functionality that you've added yourself. So you might run into collisions
+                        to native functionality as the language evolves. When adding properties one good thing to keep in mind is to use non-enumerable properties. This way your additional 
+                        functionality will be hidden from the regular means to view all of an object's properties (for example a for loop or Object.keys()). To do so use the Object.defineProperty method
+                        and set the property to enumerable: false. This prevents things like JSON.stringify(object) from seeing your new properties. [1][2]
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://stackoverflow.com/a/14034242/8094831" title="Goes to a Stack Overflow discussion about extending native JS objects and drawbacks from doing so." rel="nofollow" target="_blank">Stack Overflow - Extending JS Native Objects a Bad Practice</a></li>
+                            <li>[2] <a href="http://zduck.com/2013/non-enumerable-properties-in-javascript/" title="Goes to Joshua Poehls' blog post on non-enumerable properties in JS" rel="nofollow" target="_blank">Joshua Poehls' Blog - Non-enumerable properties in JavaSCript</a></li>
                         </ul>
                     </div>
                 </article>
