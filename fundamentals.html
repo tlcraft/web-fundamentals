@@ -19,6 +19,7 @@
             <a href="#style-programmatically" title="Goes to the article on styling content programmatically."> - Style Programmatically</a>
             <a href="#html5-apis" title="Goes to the article on HTML5 APIs.">- HTML5 APIs</a>
             <a href="#js-scope" title="Goes to the article on JS variable scope.">- Variable Scope</a> 
+            <a href="#obj-methods" title="Goes to the article on JS objects and methods.">- Objects and Methods</a>
             <a href="#css-topics" title="Goes to the list of CSS topics at the top of the page.">CSS Topics List</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
@@ -79,13 +80,13 @@
                         <li><a href="#variable-scope" title="Goes to the article on global and local scope.">global and local scope</a></li>
                         <li><a href="#this-events" title="Goes to the article on 'this' and events.">this and events</a></li>
                     </ul>
-                    <li>Objects and Methods</li>
+                    <li><a href="#obj-methods" title="Goes to the article on JS objects and methods.">Objects and Methods</a></li>
                     <ul>
-                        <li>Native Objects</li>
-                        <li>Custom Objects</li>
-                        <li>Prototypes</li>
-                        <li>Inheritance</li>
-                        <li>Implement native objects with custom methods</li>
+                        <li><a href="#built-in-js" title="Goes to the article on Native JS Objectss.">Native Objects</a></li>
+                        <li><a href="#custom-js" title="Goes to the article on Custom JS Objectss.">Custom Objects</a></li>
+                        <li><a href="#object-prototypes" title="Goes to the article on JS Object Prototypes.">Object Prototypes</a></li>
+                        <li><a href="#js-inheritance" title="Goes to the article on Inheritance in JavaScript.">Inheritance in JavaScript</a></li>
+                        <li><a href="#extending-native-js" title="Goes to the article on extending native objects in JavaScript.">Extending Native Objects</a></li>
                     </ul>
                     <li>Input Validation</li>
                     <ul>
@@ -229,7 +230,9 @@
                 <a href="#semantics" title="Goes to the article on Semantic HTML.">Semantic HTML</a> |
                 <a href="#ui-controls" title="Goes to the article on UI Controls.">UI Controls</a> | 
                 <a href="#style-programmatically" title="Goes to the article on styling content programmatically.">Style Programmatically</a> |
-                <a href="#html5-apis" title="Goes to the article on HTML5 APIs.">HTML5 APIs</a>
+                <a href="#html5-apis" title="Goes to the article on HTML5 APIs.">HTML5 APIs</a> |
+                <a href="#js-scope" title="Goes to the article on JS variable scope.">Variable Scope</a> |
+                <a href="#obj-methods" title="Goes to the article on JS objects and methods.">Objects and Methods</a>
             </nav>
             <section>                
                 <div class="title-bar">
@@ -1440,6 +1443,242 @@
                     </div>
                 </article>
             </section>
+            <section>
+                <div class="title-bar">
+                    <h4><a id="obj-methods">Objects and Methods</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            Objects are an important building block in programming. Knowing what objects exist in a language is important because often times
+                            they are there for a reason. They encapsulate actions and processes that many programmers utilize frequently. Being able to extend 
+                            the default functionality with your own custom functions is an important technique as well. JavaScript has its own way of doing such 
+                            things in its use of prototypes. However there are certain things considered to be bad practice and should be avoided depending on your
+                            situation.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#built-in-js" title="Goes to the article on Native JS Objectss.">Native Objects</a> |
+                            <a href="#custom-js" title="Goes to the article on Custom JS Objectss.">Custom Objects</a> |
+                            <a href="#object-prototypes" title="Goes to the article on JS Object Prototypes.">Object Prototypes</a> |
+                            <a href="#js-inheritance" title="Goes to the article on Inheritance in JavaScript.">Inheritance in JavaScript</a> |
+                            <a href="#extending-native-js" title="Goes to the article on extending native objects in JavaScript.">Extending Native Objects</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects" title="Goes to the MDN article for the available global objects built into JS." rel="nofollow" target="_blank">MDN - Global Objects</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" title="Goes to the MDN article for working with JS objects." rel="nofollow" target="_blank">MDN - Working with Objects</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes" title="Goes to the MDN article for Object Prototypes." rel="nofollow" target="_blank">MDN - Object Prototypes</a></li>
+                            <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance" title="Goes to the MDN article for inheritance in JS." rel="nofollow" target="_blank">MDN - Inheritance in JavaScript</a></li>
+                            <li>[5] <a href="https://stackoverflow.com/a/14034242/8094831" title="Goes to a Stack Overflow discussion about extending native JS objects and drawbacks from doing so." rel="nofollow" target="_blank">Stack Overflow - Extending JS Native Objects a Bad Practice</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="built-in-js">Native Objects</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            There are many global objects in JavaScript. These objects are in the global scope [1]. The resource link below goes to MDN's listing of
+                            all the global objects in various categories. To name a few there are values such as Infinity, NaN, undefined, null, and globalThis. There
+                            are funcation such as eval(), isFinite(), isNaN(), parseFloat(), decodeURI(), escape(), and unescape(). There are fundamental objects like
+                            Object, Function, Boolean, Error, and ReferenceError. Other types include Number, BigInt, Math, Date, String, RegExp, Array, Map, Set, 
+                            WeakMap, and WeakSet. There are control abstractions like Promise, Generator, GeneratorFunction, and AsyncFunction. There is Reflect and Proxy
+                            for reflection. There are internationalization objects like Intl and Intl.DateTimeFormat. And finally WebAssembly objects like WebAssembly, 
+                            WebAssembly.Module, and WebAssembly.Instance.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects" title="Goes to the MDN article for the available global objects built into JS." rel="nofollow" target="_blank">MDN - Global Objects</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="custom-js">Custom Objects</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            A JS object is a collection of properties and a property is an association between a key and a value [1]. These values can be primitives
+                            or even whole functions. You can create a new object like so: var myObject = new Object(); and then you can assign properties and values to it
+                            using dot-notation. For example, myObject.name = "My new object"; If you declare a property with no value it will have the value of undefined. Most of the time
+                            properties will be accessed using dot-notation however you can also access and set them using bracket notation. For example myObject['name'] 
+                            will return "My new object" which we defined earlier. Objects are sometimes called associative arrays [1]. You can even iterate over objects
+                            like an array to access the different property values (for example MDN uses a for...in loop to print out each property and its value) [1]. There 
+                            are actually three built-in ways in ECMAScript 5 to enumerate the properties of an object. The for...in loop (includes all enumerable prototype chain properties), the 
+                            Object.keys(o) method (which does not include prototype properties), and the Object.getOwnPropertyNames(o) method which returns all property names on a given object
+                            (enumerable or not) [1]. 
+                        </p>
+                        <p>
+                            There are several ways to create new objects. You can use the object initializer or create a constructor method. It's easy to new up an object using the
+                            initializer. Remember that objects are just collections of properties. You can define these by hand by declaring key and value pairs. For example: 
+                            const myObject = { propertyOne: valueOne, propertyTwo: valueTwo }; The values can be any type (for example a number or a string value). These objects are of 
+                            type Object (as if a call to new Object() were made) [1]. Object initializers are expressions and each time it's called this results in a new object being created [1].
+                            These distinct objects won't compare to each other as being equal [1].
+                        </p>
+                        <p>
+                            You can also defined object types by defining constructor methods. By convention we capitalize constructor methods. We can then use the new keyword to create
+                            a new instance of the object. To create a constructor simply define a function with a capitalized name which represent the object type. Within this method
+                            you can assign properties to the new object and assign values to them either by taking in arguments and assigning them to the properties or by assigning them in a 
+                            different way (for example by hard coding initial values or by calling other methods which return a value). The keyword this is used to assign values to the 
+                            object's properties. For example, function Person(name) { this.name = name; }; This constructor creates a Person object and takes one argument which is assigned to the property name.
+                        </p>
+                        <p>
+                            Constructor methods can be called from the objects themselves because the constructor is a method attached to the object. So you are able to create a new Person object with the following 
+                            syntax: var anotherPerson = new personOne.constructor('New Name'); Just remember to use the new keyword and pass in required parameters. This can be useful if you don't have access to the original
+                            constructor for whatever reason [2]. It can also be useful if you want to know the name of the original object that it is an instance of. You can find this using the name property, like 
+                            anotherPerson.constructor.name. However this value can change for a variety of reasons (for example transpilers, binding, and inheritance) so using the instanceof operator 
+                            is better in some cases as explain by MDN [2].
+                        </p>
+                        <p>
+                            Remember that we can add properties to objects by simply using dot notation. For example person.age = 10; This would add the age property to the existing
+                            object named person. However it won't affect other existing Person objects, only this one [1]. To affect all Person objects the Person constructor would
+                            need to be updated to include the new property.
+                        </p>
+                        <p>
+                            Finally we can create objects using the Object.create method. "This method can be very useful, because it allows you to choose the prototype object for the object you want to create,
+                             without having to define a constructor function" [1]. Create makes a new object using the given object parameter as the prototype. So the new object's __proto__ property will
+                             refer to the passed in object and its available members [2].
+                        </p>
+                        <p>
+                            As was described earlier object properties can be accessed by either dot notation or bracket notation. You are also able to index into object properties
+                            using bracket notation (for example myObject[2] = "Hello World!"). Once you define a property by either indexing or using a property name you can only access
+                            it using the same technique (so you couldn't access the last property using dot notation as in myObject.2). The exception is array-like objects reflected from HTML [1].
+                            "For example, if the second FORM tag in a document has a NAME attribute of "myForm", you can refer to the form as document.forms[1] or document.forms["myForm"] or document.forms.myForm" [1].
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_Objects" title="Goes to the MDN article for working with JS objects." rel="nofollow" target="_blank">MDN - Working with Objects</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes" title="Goes to the MDN article for Object Prototypes." rel="nofollow" target="_blank">MDN - Object Prototypes</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="object-prototypes">Object Prototypes</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            As MDN explains, "prototypes are the mechanism by which JavaScript objects inherit features from one another" [1]. JS is a prototype based language. 
+                            This means that inheritance is achieved through the use of prototype objects. These are templates that the "child" object can inherit methods and properties
+                            from. The "base" prototype objects may inherit functionality from yet another prototype which can link many classes together. This is often referred to as the prototype
+                            chain. "The properties and methods are defined on the prototype property on the objects' constructor function, not on the object instances themselves" [1]. By walking up
+                            this chain we can access the various properties and methods available to us [1].
+                        </p>
+                        <p>
+                            All objects inherit properties and methods from the Object prototype by default. So each object has members like watch and valueOf [1]. When a member that's inherited is called
+                            the browser first checks to see if the current object has a matching member to call, otherwise it goes up the chain of prototypes until it finds a match [1]. These members (properties
+                            and methods) are not copied to the child objects, they are accessed by walking up the prototype chain [1]. The methods and properties that are inherited from the prototype object are 
+                            only the members on the prototype object, and not one defined directly on the parent object itself. So for example as MDN explains, Object.keys() and Object.is() are not available
+                            to the inheriting class because those are defined on the Object constructor itself. However members such as watch() and valueOf() are because these are defined on the prototype object.
+                        </p>
+                        <p>
+                            To modify the prototype chain of an object simply access the prototype property and add a property or method using dot notation. For example: person.prototype.fullName = function() { 
+                            return this.firstName + ' ' + this.lastName; }. This will add a method called fullName to all Person objects. This is true even if you've already created an object of type Person. Its prototype will be 
+                            updated and the new method will be available. You can also do this for properties but that is only useful for static fields since these are shared among all instances of 
+                            an object type. MDN explains that using the constructor method to define properties and then adding methods to the object's prototype separately is a good practice to separate and group the logic [1].
+                            Being able to modify an object's prototype, which affects all instances of the same type, is quite a powerful and useful feature.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes" title="Goes to the MDN article for Object Prototypes." rel="nofollow" target="_blank">MDN - Object Prototypes</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="js-inheritance">Inheritance in JavaScript</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            Inheritance in JS is accomplished within constructor methods. We have to utilize the call() method with the constructor. The child object defines a constructor which 
+                            calls the parent object's call method. Call takes a parameter which specifies that value of 'this' when the function runs. The rest of the parameters are the 
+                            values the parent's constructor accepts as arguments.
+                        </p>
+                        <p>
+                            As MDN explains there is more to do to properly set up inheritance. We also need to set the child's prototype to be an object of the parent's type.
+                            For example,  Warrior.prototype = Object.create(Person.prototype); The create method will return an object which has a prototype of the same type as the parameter passed in.
+                            By doing this we'll ensure the child prototype has all the methods available from the parent object's prototype. The last thing we must do is make sure that the child constructor
+                            returns an object of its type, and not its parent's type. We accomplish this by adding one more line of code: Object.defineProperty(Warrior.prototype, 'constructor', {
+                            value: Warrior, enumerable: false, writable: true }); This will ensure we create an object of the desired type. Finally to define new functionality for an existing method 
+                            inherited from the parent object simply define the same method on the child's prototype. All of what has been discussed is just one way to implement inheritance. Frameworks
+                            and new features of ECMAScript allow for classes and other common constructs like extends. [1]
+                        </p>
+                        <p>
+                            As MDN summarizes, there are three major groups of object members to remember. Ones defined inside of a constructor method that are given to object instances. Ones that
+                            are defined on the constructors themselves which are only available on the constructor. And finally ones that are on a constructor's prototype which are accessibly by
+                            instances and inheriting objects. [1]
+                        </p>
+                        <p>
+                            ECMAScript2015 added class syntax which is much like what you would find in languages such as Java, C#, and C++. If you have a background with those OO languages you will quickly understand
+                            the class syntax in ECMAScript2015. Classes have a constructor method, class methods, and properties. MDN explains that underneath it all the class syntax is being converted to prototypical 
+                            inheritance models (class syntax is just "syntactic sugar" to reduce code and feel more consistent with other languages many developers utilize) [1]. To inherit using this syntax we
+                            use the extends keyword. For example: class Warrior extends Character { constructor() { super(); } } The call to super is important and must be done first. This way the parent
+                            class will be able to initialize 'this' and correctly set up our references [1]. Remember to pass along any required parameters to the parent's constructor by passing them 
+                            into the call to super(). Adding getters and setters is also common depending on the intended use of your object. These return and set values of instance fields and ECMAScript2015 has syntax 
+                            for creating them. To add a getter and setter to the Warrior class from above use the following syntax:
+                        </p>
+                        <pre>
+                            get attackPower() { 
+                                return this._attackPower; 
+                            }
+
+                            set attackPower(power) {
+                                this._attackPower = power;
+                            }
+                        </pre>
+                        <p>
+                            Getters and setters are common patterns for setting and returning a class field value. This paradigm has been around for a long time. Not every field needs a getter or a setter and if you are adding these
+                            you might want to spend a little more time considering why you are adding them and if another mechanism would be better (as far as encapsulation and abstraction goes). [1]
+                        </p>
+                        <p>
+                            Inheritance is a powerful tool which allows for reuse. Functionality that we want to be reused among related but subtly different objects can be inherited from a base class and then
+                            extended for custom behavior. Too much inheritance can add unnecessary complexity to a project. Depending on your need composition may be a better choice as well. In the end inheritance 
+                            is just another tool in your toolbox and shouldn't be the hammer for all of your problems. There are a lot of benefits from using it but it has its place like any other tool. [1]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Inheritance" title="Goes to the MDN article for inheritance in JS." rel="nofollow" target="_blank">MDN - Inheritance in JavaScript</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="extending-native-js">Extending Native Objects</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        To extend native object behavior it's as simple as modifying the native object's prototype chain. There can be downsides to doing this though. By extending native
+                        objects you are changing or adding behavior to something many people understand as working one way. When new contributors work with your code you will need to teach them
+                        of these changes. The other downside is that as time goes on the native objects may grow to include the same functionality that you've added yourself. So you might run into collisions
+                        to native functionality as the language evolves. When adding properties one good thing to keep in mind is to use non-enumerable properties. This way your additional 
+                        functionality will be hidden from the regular means to view all of an object's properties (for example a for loop or Object.keys()). To do so use the Object.defineProperty method
+                        and set the property to enumerable: false. This prevents things like JSON.stringify(object) from seeing your new properties. [1][2]
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://stackoverflow.com/a/14034242/8094831" title="Goes to a Stack Overflow discussion about extending native JS objects and drawbacks from doing so." rel="nofollow" target="_blank">Stack Overflow - Extending JS Native Objects a Bad Practice</a></li>
+                            <li>[2] <a href="http://zduck.com/2013/non-enumerable-properties-in-javascript/" title="Goes to Joshua Poehls' blog post on non-enumerable properties in JS" rel="nofollow" target="_blank">Joshua Poehls' Blog - Non-enumerable properties in JavaSCript</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>  
         </section>
     </body>
 </html>
