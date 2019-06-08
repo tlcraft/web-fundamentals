@@ -1713,7 +1713,14 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            There are different ways to validate form data. On the client-side we can use JavaScript and create custom validations. We are also able to use built-in form validation. While not as customizable
+                            built-in form validation is more performant than custom JS validation. On the server-side we always want to validate incoming data before further processing or saving occurs.
+                            If the data isn't in the right format, or appears to be malicious we certainly don't want to save it. Be sure to always validate and sanitize your data. [1]
+                        </p>
+                        <p>
+                            To use HTML5's built-in validations we need to use different attributes to mark the forms. These allow us to specify if the input is requireD, has any limits, or is formatted correctly for example.
+                            When an element is valid MDN explains that there are several things we can rely upon. First, the element will match the :valid CSS pseudo-class. Second, the browser will be able to submit the form (unless 
+                            custom JS for example is preventing it). When the element is invalid it will match the :invalid CSS pseudo-class and the browser will display an error if the user tries to submit the form.
                         </p>
                     </div>
                     <div class="resources">
