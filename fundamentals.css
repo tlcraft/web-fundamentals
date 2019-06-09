@@ -289,3 +289,11 @@ svg.draw {
     height: 50px;
     padding: 20px;
 }
+
+.input-types-attributes input:invalid {
+    border: 2px dashed red;
+}
+  
+ .input-types-attributes input:valid {
+    border: 2px solid black;
+}

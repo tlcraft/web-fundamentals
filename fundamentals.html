@@ -1711,7 +1711,7 @@
                     <span class="toggle">Show / Hide</span>              
                 </div>
                 <article>
-                    <div class="topic">
+                    <div class="topic input-types-attributes">
                         <p>
                             There are different ways to validate form data. On the client-side we can use JavaScript and create custom validations. We are also able to use built-in form validation. While not as customizable
                             built-in form validation is more performant than custom JS validation. On the server-side we always want to validate incoming data before further processing or saving occurs.
@@ -1722,6 +1722,15 @@
                             When an element is valid MDN explains that there are several things we can rely upon. First, the element will match the :valid CSS pseudo-class. Second, the browser will be able to submit the form (unless 
                             custom JS for example is preventing it). When the element is invalid it will match the :invalid CSS pseudo-class and the browser will display an error if the user tries to submit the form.
                         </p>
+                        <p>
+                            Below is a simple form example using a text input box and a submit button. Using the same CSS that MDN uses in their input example the input's border is a red dashed line when the field is invalid.
+                            Once the input has some text value the border becomes a solid black line. These are controlled by the pseudo-classes :invalid and :valid targeting the input element.
+                        </p>
+                        <form>
+                            <label for="validate-name">Please enter your name.</label>
+                            <input id="validate-name" type="text" required placeholder="Enter your name!"/>
+                            <button>Submit</button>
+                        </form>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
