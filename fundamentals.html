@@ -1731,12 +1731,23 @@
                             <input id="validate-name" type="text" required placeholder="Enter your name!"/>
                             <button>Submit</button>
                         </form>
+                        <p>
+                            The following example uses the pattern attribute to match the input to a specific pattern that's expected. For example you could use the pattern to check for email addresses. The textarea element doesn't 
+                            support the pattern attribute and using the email input type automatically takes care of the validation for us so we don't have to supply our own email regex [1].
+                        </p>
+                        <form>
+                            <label for="validate-email">Please enter your email.</label>
+                            <input id="validate-email" type="text" required placeholder="Enter your email!" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b"/>
+                            <input type="email" required />
+                            <button>Submit</button>
+                        </form>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                                 <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" title="Goes to an MDN article discussing form data validation." rel="nofollow" target="_blank">MDN - Form data validation</a></li>
                                 <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="Goes to an MDN article over input types and attributes." rel="nofollow" target="_blank">MDN - The Input element</a></li>
+                                <li>[3] <a href="https://stackoverflow.com/a/1373724/8094831" title="Goes to a Stack Overflow post on Regex for email addresses." rel="nofollow" target="_blank">Stack Overflow - Email Regex example</a></li>
                         </ul>
                     </div>
                 </article>
