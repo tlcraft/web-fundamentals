@@ -1748,6 +1748,12 @@
                             CSS, and the other is that these depend on the browser locale so it's possible that the web page could be displayed in one language and the validation message be displayed in another [1]. In order to 
                             add the validation we must use JavaScript using the constraint validation API [1]. The email example above uses this for custom messages. These are displayed when the input changes and then the button is clicked.
                         </p>
+                        <p> 
+                            The constraint validation API has three important methods. checkValidity() which returns true if there are no validation problems and false otherwise. It also causes the element to fire an invalid event.
+                            HTMLFormElement.reportValidity() returns true if the element and its children are valid. It returns false when they are invalid and invalid events are fired for each validation error. The setCustomValidity()
+                            method is used to set custom validation messages or clear existing ones and it was used in the email example above [1]. Finally we can use pure JS to add validation but it requires a lot more work than newer 
+                            techniques which do much of the work for us. You would want to consider alternatives before adding your own JS code or consider why you must write custom logic (which might be a requirement in some situations) [1].
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
