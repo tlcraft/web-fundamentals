@@ -20,6 +20,7 @@
             <a href="#html5-apis" title="Goes to the article on HTML5 APIs.">- HTML5 APIs</a>
             <a href="#js-scope" title="Goes to the article on JS variable scope.">- Variable Scope</a> 
             <a href="#obj-methods" title="Goes to the article on JS objects and methods.">- Objects and Methods</a>
+            <a href="#input-validation" title="Goes to the article on input validation.">- Input Validation</a>
             <a href="#css-topics" title="Goes to the list of CSS topics at the top of the page.">CSS Topics List</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
@@ -88,9 +89,9 @@
                         <li><a href="#js-inheritance" title="Goes to the article on Inheritance in JavaScript.">Inheritance in JavaScript</a></li>
                         <li><a href="#extending-native-js" title="Goes to the article on extending native objects in JavaScript.">Extending Native Objects</a></li>
                     </ul>
-                    <li>Input Validation</li>
+                    <li><a href="#input-validation" title="Goes to the article on input validation.">Input Validation</a></li>
                     <ul>
-                        <li>HTML5 input types and attributes</li>
+                        <li><a href="#input-types-attributes"  title="Goes to the article on HTML5 input types and attributes.">HTML5 Input Types and Attributes</a></li>
                     </ul>
                 </ul>
             </article>
@@ -232,7 +233,8 @@
                 <a href="#style-programmatically" title="Goes to the article on styling content programmatically.">Style Programmatically</a> |
                 <a href="#html5-apis" title="Goes to the article on HTML5 APIs.">HTML5 APIs</a> |
                 <a href="#js-scope" title="Goes to the article on JS variable scope.">Variable Scope</a> |
-                <a href="#obj-methods" title="Goes to the article on JS objects and methods.">Objects and Methods</a>
+                <a href="#obj-methods" title="Goes to the article on JS objects and methods.">Objects and Methods</a> |
+                <a href="#input-validation" title="Goes to the article on input validation.">Input Validation</a>
             </nav>
             <section>                
                 <div class="title-bar">
@@ -1678,7 +1680,97 @@
                         </ul>
                     </div>
                 </article>
-            </section>  
+            </section>
+            <section>
+                <div class="title-bar">
+                    <h4><a id="input-validation">Input Validation</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic">
+                        <p>
+                            Validating user input is a critical part of software development. With security becoming an even more important part of the development process making sure to validate and clean
+                            user input is an important step in that process. Apart from wanting to make sure the user enters in meaningful data we must also be concerned with malicious attacks. SQL or JavaScript
+                            injection can cause havoc to a software system if input is not sanitized before saving. In this section we'll explore HTML5's input types and attributes which can be used to validate
+                            form data.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#input-types-attributes" title="Goes to the article on HTML5 input types and attributes.">HTML5 input types and attributes</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" title="Goes to an MDN article discussing form data validation." rel="nofollow" target="_blank">MDN - Form data validation</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="Goes to an MDN article over input types and attributes." rel="nofollow" target="_blank">MDN - The Input element</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="input-types-attributes">HTML5 Input Types and Attributes</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div>
+                <article>
+                    <div class="topic input-types-attributes">
+                        <p>
+                            There are different ways to validate form data. On the client-side we can use JavaScript and create custom validations. We are also able to use built-in form validation. While not as customizable
+                            built-in form validation is more performant than custom JS validation. On the server-side we always want to validate incoming data before further processing or saving occurs.
+                            If the data isn't in the right format, or appears to be malicious we certainly don't want to save it. Be sure to always validate and sanitize your data. [1]
+                        </p>
+                        <p>
+                            To use HTML5's built-in validations we need to use different attributes to mark the forms. These allow us to specify if the input is requireD, has any limits, or is formatted correctly for example.
+                            When an element is valid MDN explains that there are several things we can rely upon. First, the element will match the :valid CSS pseudo-class. Second, the browser will be able to submit the form (unless 
+                            custom JS for example is preventing it). When the element is invalid it will match the :invalid CSS pseudo-class and the browser will display an error if the user tries to submit the form.
+                        </p>
+                        <p>
+                            Below is a simple form example using a text input box and a submit button. Using the same CSS that MDN uses in their input example the input's border is a red dashed line when the field is invalid.
+                            Once the input has some text value the border becomes a solid black line. These are controlled by the pseudo-classes :invalid and :valid targeting the input element.
+                        </p>
+                        <form>
+                            <label for="validate-name">Please enter your name.</label>
+                            <input id="validate-name" type="text" required placeholder="Enter your name!"/>
+                            <button>Submit</button>
+                        </form>
+                        <p>
+                            The following example uses the pattern attribute to match the input to a specific pattern that's expected. For example you could use the pattern to check for email addresses. The textarea element doesn't 
+                            support the pattern attribute and using the email input type automatically takes care of the validation for us so we don't have to supply our own email regex [1].
+                        </p>
+                        <form>
+                            <label for="validate-email">Please enter your email.</label>
+                            <input id="validate-email" type="text" required placeholder="Enter your email!" pattern="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum)\b"/>
+                            <label for="validate-alt-email">Please enter your alternate email.</label>
+                            <input id="validate-alt-email" type="email" required placeholder="Enter your alternate email!"/>
+                            <button>Submit</button>
+                        </form>
+                        <p>
+                            Other examples of validation include restricting the minimum and maximum input length of input or textarea elements, adding similar min and max restrictions for number input types, or limiting date ranges 
+                            on month input types. Along with all of this built-in validation we can create custom validation messages. There are two drawbacks according to MDN, one is that there is no standard way to style them using 
+                            CSS, and the other is that these depend on the browser locale so it's possible that the web page could be displayed in one language and the validation message be displayed in another [1]. In order to 
+                            add the validation we must use JavaScript using the constraint validation API [1]. The email example above uses this for custom messages. These are displayed when the input changes and then the button is clicked.
+                        </p>
+                        <p> 
+                            The constraint validation API has three important methods. checkValidity() which returns true if there are no validation problems and false otherwise. It also causes the element to fire an invalid event.
+                            HTMLFormElement.reportValidity() returns true if the element and its children are valid. It returns false when they are invalid and invalid events are fired for each validation error. The setCustomValidity()
+                            method is used to set custom validation messages or clear existing ones and it was used in the email example above [1]. Finally we can use pure JS to add validation but it requires a lot more work than newer 
+                            techniques which do much of the work for us. You would want to consider alternatives before adding your own JS code or consider why you must write custom logic (which might be a requirement in some situations) [1].
+                        </p>
+                        <p>
+                            Finally there are a number of different input types. These range from classic types like button, text, radio, and checkbox to types like color, email, search, date, and url. The full list can be 
+                            found using the MDN link below [2]. Common attributes among all input types include autocomplete, autofocus, disabled, form, list, name, readonly, required, tabindex, type, and value. Each input type
+                            has additional attributes specific for its own use. Using labels is highly recommended (this also helps with accessibility) and while placeholder text can be helpful be sure to use these for examples of valid input, 
+                            not as prompts for information (though many pages do this) [2].
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                                <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" title="Goes to an MDN article discussing form data validation." rel="nofollow" target="_blank">MDN - Form data validation</a></li>
+                                <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="Goes to an MDN article over input types and attributes." rel="nofollow" target="_blank">MDN - The Input element</a></li>
+                                <li>[3] <a href="https://stackoverflow.com/a/1373724/8094831" title="Goes to a Stack Overflow post on Regex for email addresses." rel="nofollow" target="_blank">Stack Overflow - Email Regex example</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
         </section>
     </body>
 </html>

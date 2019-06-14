@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     console.log('DOM fully loaded and parsed');
     uiControlsExample();
     drawOnCanvas();
+    formValidation();
 });
 
 function uiControlsExample() {
@@ -150,4 +151,26 @@ function clickCanvas(canvas) {
 
 function is2DCanvasSupported(canvas) {
     return canvas.getContext && canvas.getContext('2d');
+}
+
+// Custom form validation message
+function formValidation() {
+    var email = document.getElementById('validate-email');
+    var altEmail = document.getElementById('validate-alt-email');
+  
+    email.addEventListener('input', function (event) {
+        if (email.validity.patternMismatch) {
+            email.setCustomValidity('This is the wrong format, please enter in an email address.');
+        } else {
+            email.setCustomValidity('');
+        }
+    });
+
+    altEmail.addEventListener('input', function (event) {
+        if (altEmail.validity.typeMismatch) {
+            altEmail.setCustomValidity('Please enter in an email address. Example: john@gmail.com');
+        } else {
+            altEmail.setCustomValidity('');
+        }
+    });
 }
