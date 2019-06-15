@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
         openTopic($(this));
     });
 
-    $('.toggleAll').click();
+    $('.toggleAll').click();   
+    $('#css-examples .toggleAll').click();
 });
 
 function openTopic(link) {
