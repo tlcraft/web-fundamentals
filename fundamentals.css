@@ -301,3 +301,8 @@ svg.draw {
  .input-types-attributes input:valid {
     border: 2px solid black;
 }
+
+.red-georgia {
+    color: red;
+    font-family: Georgia;
+}
