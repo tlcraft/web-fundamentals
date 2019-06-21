@@ -304,5 +304,9 @@ svg.draw {
 
 .red-georgia {
     color: red;
-    font-family: Georgia;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.small-text {
+    font-size: smaller;
 }

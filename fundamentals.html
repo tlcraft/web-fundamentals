@@ -1822,8 +1822,18 @@
                             Hexadecimal value for instance (among others). Font families allow you to change the font of text. You can supply fallback fonts in case the user doesn't have a specific font installed on their computer.
                             Some fonts are "web safe" meaning that these are supported across all systems and are great default fonts to choose from. These include Arial, Georgia, and Times New Roman. [1]
                         </p>
+                        <p>
+                            Font size takes a value in various units and scales the text appropriately. Examples of acceptable units include percentages, pixels (px), ems, rems, and even named values (like xx-small, large, and relative 
+                            size like smaller and larger). Font size can also take several global values such as inherit, initial, and unset. Commonly used units include px, ems, and rems. Pixels specify
+                            how high you want the text to be. It's an absolute unit in most situations. ems are "equal to the font size set on the parent element of the current element (more specifically, the width
+                            of a capital letter M contained inside the parent element) [1]. It's possible to scale other things using ems. Finally rems are like ems "except that 1rem is equal to the font size set on the
+                            root element of the document (i.e. html), not the parent element" [1]. By default font-size is inherited and is defaulted to 16px as a standard [1]. 1em is 16px by default but these scale to 
+                            whatever the font-size is set to which make them powerful in CSS. MDN notes that it can be helpful to work off of rems and to default the font-size to 10px so that the math is easier to work with
+                            when styling other sections of the page [1].
+                        </p>
                         <p class="text-styles">
-                            Here's an example of styling text. <span class="red-georgia">This text is colored and has a Georgia font family.</span>
+                            Here's an example of styling text. <span class="red-georgia">This text is colored and has a Georgia font family. If your browser doesn't support Georgia it will fallback to Times New Roman, then to Times, and 
+                            finally to a serif font.</span><span class="small-text">These fallbacks are also known as a font stack.</span>
                         </p>
                     </div>
                     <div class="resources">
