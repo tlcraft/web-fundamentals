@@ -317,6 +317,8 @@ svg.draw {
     text-align: center;
     border-radius: 10px;
     max-width: 200px;
+    font-size: 10px;
+    padding: 5px;
 }
 
 .title {
@@ -326,23 +328,34 @@ svg.draw {
 .stage {
     font-size: x-small;
     flex: 1;
+    text-shadow: 1px 1px 1px black;
 }
 
 .name {
     flex: 2;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 2px black;
 }
 
 .hitPoints {
     color: red;
     flex: 1;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px red;
 }
 
 .attack {
     font-size: larger;
-    font-family: sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.attack-description {
+    hyphens: manual;
+    padding: 0 35px 0 35px;
 }
 
 .dex {
     font-size: xx-small;
+    font-family: 'Times New Roman', Times, serif;
     margin: 5px;
 }
