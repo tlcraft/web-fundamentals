@@ -335,6 +335,7 @@ svg.draw {
     flex: 2;
     font-size: 1.8em;
     text-shadow: 1px 1px 2px black;
+    font-style: italic;
 }
 
 .hitPoints {
@@ -342,20 +343,25 @@ svg.draw {
     flex: 1;
     font-size: 1.5em;
     text-shadow: 1px 1px 2px red;
+    font-weight: 700;
 }
 
 .attack {
     font-size: larger;
     font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
 .attack-description {
     hyphens: manual;
     padding: 0 35px 0 35px;
+    text-decoration: underline;
 }
 
 .dex {
     font-size: xx-small;
     font-family: 'Times New Roman', Times, serif;
     margin: 5px;
+    font-weight: bolder;
 }
