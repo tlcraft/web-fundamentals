@@ -365,3 +365,8 @@ svg.draw {
     margin: 5px;
     font-weight: bolder;
 }
+
+.justify {
+    max-width: 10em;
+    text-align: justify;
+}
