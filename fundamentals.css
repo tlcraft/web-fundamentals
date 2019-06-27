@@ -380,3 +380,26 @@ svg.draw {
 .font-css-example {
     font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
 }
+
+.more-text-styling-fun {
+    text-indent: 10px;
+    font-size: 10px;
+    text-align: right;
+}
+
+.more-text-styling-fun .first {
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-shadow: 3px 3px 3px gold;
+}
+
+.more-text-styling-fun .second {
+    font-size: 1.5em;
+    font-weight: bolder;
+    letter-spacing: 4px;
+}
+
+.more-text-styling-fun .last {
+    font: normal extra-condensed 1em/1 "Times New Roman", Times, serif;
+    word-spacing: 5px;
+}
