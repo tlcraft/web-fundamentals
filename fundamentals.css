@@ -367,6 +367,16 @@ svg.draw {
 }
 
 .justify {
-    max-width: 10em;
+    max-width: 15em;
     text-align: justify;
+    line-height: 2;
+}
+
+.spacing {
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
+
+.font-css-example {
+    font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
 }

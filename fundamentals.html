@@ -1863,9 +1863,23 @@
                             It's also possible to align text using the text-align property. This property has several values including left, right, center, and justify. These align text like a word processor. Text is either
                             moved to the left, right or centered in the middle of the element. Justify spreads out the text varying the gaps in between letters to fill the width of the element. The following example is justified.
                         </p>
+                        <p>
+                            The line-height property is used to adjust the spacing between lines. This property can take most length and size units but can also take a unitless value which multiplies
+                            the font-size value [1]. MDN notes that generally a spacing of 1.5 or 2 is preferred. You can see an example of this below. You can also adjust the spacing between words and letters
+                            specifically by using the letter-spacing and word-spacing properties. Again these take most length and size units.
+                        </p>
                         <p class="justify">
-                            This text has been justified to fill the element. Notice the gaps in between the letters so that all of the lines of text have the same width. This can look bad depending on the styles of the 
-                            other elements around it. Ultimately consider user readability and experience when styling anything.
+                            This text has been justified to fill the element. Notice the gaps in between the letters so that all of the lines of text have the same width. <span class="spacing">This can look bad depending on the styles of the 
+                            other elements around it.</span> Ultimately consider user readability and experience when styling anything.
+                        </p>
+                        <p>
+                            MDN lists a number of additional properties that you can use to style your text including font-variant, font-kerning, font-stretch, text-indent, text-overflow, white-space, and text-align-last just to 
+                            name a few. There is also a shorthand way to add many font styling properties together on one line. The font property allows for this and only requires a font-size and font-family. The order of the values is: font-variant, 
+                            font-weight, font-stretch, font-size, line-height, and font-family [1]. MDN explains that a forward slash must be placed between the font-size and line-height properties. Here is MDN's example: font: italic 
+                            normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+                        </p>
+                        <p class="font-css-example">
+                            Here's how MDN's font example looks!
                         </p>
                     </div>
                     <div class="resources">
