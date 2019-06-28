@@ -403,3 +403,12 @@ svg.draw {
     font: normal extra-condensed 1em/1 "Times New Roman", Times, serif;
     word-spacing: 5px;
 }
+
+@font-face {
+    font-family: 'Comic Sans';
+    src: local("Comic Sans MS");
+}
+
+.font-face {
+    font-family: 'Comic Sans'
+}
