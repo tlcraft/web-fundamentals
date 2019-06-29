@@ -15,6 +15,10 @@ body {
     padding: 5px;
 }
 
+.main-section {
+    border: 5px solid black;
+}
+
 .side-nav {
     position: fixed;
     z-index: 1;
@@ -296,4 +300,115 @@ svg.draw {
   
  .input-types-attributes input:valid {
     border: 2px solid black;
+}
+
+.red-georgia {
+    color: red;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.small-text {
+    font-size: smaller;
+}
+
+.card {
+    border: 3px solid black;
+    background-color: yellow;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 200px;
+    font-size: 10px;
+    padding: 5px;
+}
+
+.title {
+    display: flex;
+}
+
+.stage {
+    font-size: x-small;
+    flex: 1;
+    text-shadow: 1px 1px 1px black;
+}
+
+.name {
+    flex: 2;
+    font-size: 1.8em;
+    text-shadow: 1px 1px 2px black;
+    font-style: italic;
+}
+
+.hitPoints {
+    color: red;
+    flex: 1;
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px red;
+    font-weight: 700;
+}
+
+.attack {
+    font-size: larger;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.attack-description {
+    hyphens: manual;
+    padding: 0 35px 0 35px;
+    text-decoration: underline;
+}
+
+.dex {
+    font-size: xx-small;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 5px;
+    font-weight: bolder;
+}
+
+.justify {
+    max-width: 15em;
+    text-align: justify;
+    line-height: 2;
+}
+
+.spacing {
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
+
+.font-css-example {
+    font: italic normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+}
+
+.more-text-styling-fun {
+    text-indent: 10px;
+    font-size: 10px;
+    text-align: right;
+}
+
+.more-text-styling-fun .first {
+    font-size: 1.5em;
+    line-height: 1.5;
+    text-shadow: 3px 3px 3px gold;
+}
+
+.more-text-styling-fun .second {
+    font-size: 1.5em;
+    font-weight: bolder;
+    letter-spacing: 4px;
+}
+
+.more-text-styling-fun .last {
+    font: normal extra-condensed 1em/1 "Times New Roman", Times, serif;
+    word-spacing: 5px;
+}
+
+@font-face {
+    font-family: 'Comic Sans';
+    src: local("Comic Sans MS");
+}
+
+.font-face {
+    font-family: 'Comic Sans'
 }

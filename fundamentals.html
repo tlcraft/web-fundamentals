@@ -16,12 +16,13 @@
             <a href="#html-topics" title="Goes to the list of HTML topics at the top of the page.">HTML Topics List</a>
             <a href="#semantics" title="Goes to the article on Semantic HTML.">- Semantic Markup</a>
             <a href="#ui-controls" title="Goes to the article on UI Controls.">- UI Controls</a>         
-            <a href="#style-programmatically" title="Goes to the article on styling content programmatically."> - Style Programmatically</a>
+            <a href="#style-programmatically" title="Goes to the article on styling content programmatically.">- Style Programmatically</a>
             <a href="#html5-apis" title="Goes to the article on HTML5 APIs.">- HTML5 APIs</a>
             <a href="#js-scope" title="Goes to the article on JS variable scope.">- Variable Scope</a> 
             <a href="#obj-methods" title="Goes to the article on JS objects and methods.">- Objects and Methods</a>
             <a href="#input-validation" title="Goes to the article on input validation.">- Input Validation</a>
             <a href="#css-topics" title="Goes to the list of CSS topics at the top of the page.">CSS Topics List</a>
+            <a href="#text-properties" title="Goes to the article on HTML Text Properties.">- HTML Text Properties</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
         <section class="introduction">
@@ -103,13 +104,13 @@
                 </p>
                 <h2>Topics</h2>
                 <ul>
-                    <li>HTML Text Properties</li>
+                    <li><a href="#text-properties" title="Goes to the article on HTML Text Properties.">HTML Text Properties</a></li>
                     <ul>                                
-                        <li>Style Text</li>
+                        <li><a href="#style-text" title="Goes to the article on how to style text.">Style Text</a></li>
                         <ul>
-                            <li>Style text font, WOFF, @font-face, size, understudy fonts</li>
+                            <li>Style text appearance and font, including WOFF, @font-face, size, understudy fonts</li>
                             <li>Text alignment, spacing, and indentation</li>
-                            <li>Test hyphenations and drop shadow</li>
+                            <li>Text hyphenations and drop shadow</li>
                         </ul>
                     </ul>
                     <li>HTML Box Properties</li>
@@ -223,7 +224,7 @@
             </article>            
         </section>
         <section id="html-examples">
-            <div class="title-bar">
+            <div class="title-bar  main-section">
                 <h2>HTML</h2>
                 <span class="toggleAll">Show / Hide All</span>              
             </div> 
@@ -1767,6 +1768,156 @@
                                 <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" title="Goes to an MDN article discussing form data validation." rel="nofollow" target="_blank">MDN - Form data validation</a></li>
                                 <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="Goes to an MDN article over input types and attributes." rel="nofollow" target="_blank">MDN - The Input element</a></li>
                                 <li>[3] <a href="https://stackoverflow.com/a/1373724/8094831" title="Goes to a Stack Overflow post on Regex for email addresses." rel="nofollow" target="_blank">Stack Overflow - Email Regex example</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <section id="css-examples">
+            <div class="title-bar main-section">
+                <h2>CSS</h2>
+                <span class="toggleAll">Show / Hide All</span>              
+            </div> 
+            <nav class="topics-nav">
+                <a href="#text-properties" title="Goes to the article on HTML Text Properties.">HTML Text Properties</a>
+            </nav>
+            <section>                
+                <div class="title-bar">
+                    <h4><a id="text-properties">HTML Text Properties</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            CSS has a vast amount of things to learn because of all of its capabilities. Styling HTML elements is important in UI and UX design and there is a ton out there to learn. 
+                            One of the fundamental things to start with though is text styling. Ultimately web pages convey information and text is the most utilized way of doing that. Taking concepts 
+                            from print we can style text in ways that make it helpful to the readers. Using clear headers and consistent font throughout helps our eyes navigate the page and content. 
+                            In this section we'll look at several ways to style text.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#style-text" title="Goes to the article on how to style text.">Style Text</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals" title="Goes to the MDN article on the fundamentals of text and font styling." rel="nofollow" target="_blank">MDN - Fundamental Text and Font styling</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/WOFF" title="Goes to the MDN article on the Web Open Font Format." rel="nofollow" target="_blank">MDN - The Web Open Font Format (WOFF)</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" title="Goes to the MDN article on font face." rel="nofollow" target="_blank">MDN - @font-face</a></li>
+                            <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule" title="Goes to the MDN article on CSS at-rules." rel="nofollow" target="_blank">MDN - CSS at-rules</a></li>
+                            <li>[5] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/hyphens" title="Goes to the MDN article on CSS hyphens." rel="nofollow" target="_blank">MDN - CSS hyphens</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="style-text">Style Text</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            As MDN explains styling text with CSS generally falls into one of two categories. Font styles which affect the font size, thickness, and color and text layout styles which
+                            affect the spacing of the letters, the space between lines, and alignment. Text within an element is all styled together (unless you wrap specific text in another element and target
+                            it specifically--like wrapping it in a span element for example). [1] As stated it's possible to color text using the color CSS property. This can be a word like 'red' or an RBG or 
+                            Hexadecimal value for instance (among others). Font families allow you to change the font of text. You can supply fallback fonts in case the user doesn't have a specific font installed on their computer.
+                            Some fonts are "web safe" meaning that these are supported across all systems and are great default fonts to choose from. These include Arial, Georgia, and Times New Roman. [1]
+                        </p>
+                        <p>
+                            Font size takes a value in various units and scales the text appropriately. Examples of acceptable units include percentages, pixels (px), ems, rems, and even named values (like xx-small, large, and relative 
+                            size like smaller and larger). Font size can also take several global values such as inherit, initial, and unset. Commonly used units include px, ems, and rems. Pixels specify
+                            how high you want the text to be. It's an absolute unit in most situations. ems are "equal to the font size set on the parent element of the current element (more specifically, the width
+                            of a capital letter M contained inside the parent element) [1]. It's possible to scale other things using ems. Finally rems are like ems "except that 1rem is equal to the font size set on the
+                            root element of the document (i.e. html), not the parent element" [1]. By default font-size is inherited and is defaulted to 16px as a standard [1]. 1em is 16px by default but these scale to 
+                            whatever the font-size is set to which make them powerful in CSS. MDN notes that it can be helpful to work off of rems and to default the font-size to 10px so that the math is easier to work with
+                            when styling other sections of the page [1].
+                        </p>
+                        <p class="text-styles">
+                            Here's an example of styling text. <span class="red-georgia">This text is colored and has a Georgia font family. If your browser doesn't support Georgia it will fallback to Times New Roman, then to Times, and 
+                            finally to a serif font.</span><span class="small-text">These fallbacks are also known as a font stack.</span>
+                        </p>
+                        <p>
+                            Below is another example of styling text which changes the font-size, font-family, and color of the text. It also includes an example of hyphenation and drop shadow around text. Hyphens can be
+                            applied manually or automatically by the browser. You can add hyphenation points that render all the time (& hyphen ;) or that are invisible until rendered (& shy ;). When adding shadows you are able
+                            to specify the horizontal and vertical positioning of the shadow as well as its radius and color. 
+                        </p>
+                        <div class="card">
+                            <div class="title">
+                                <p class="stage">Basic Pokemon</p>
+                                <p class="name">Pikachu</p>
+                                <p class="hitPoints">40 HP</p>
+                            </div>
+                            <p class="attack">Gnaw - 10</p>                            
+                            <p class="attack">Thunder Jolt - 30</p>
+                            <p class="attack-description">Flip a coin. If tails, Pikachu do&shy;es 10 damage to itself.</p>
+                            <p class="dex">When several of these Pokemon gather, their electricity can cause lightning storms.</p>
+                        </div>
+                        <p>
+                            MDN explains that there are four common properties that alter the weight and emphasis of text [1]. Those are font-style, font-weight, text-transform, and text-decoration. font-style is 
+                            used to make the text italicized. There are three settings. Normal where the text is displayed in its default state, italic which will display the font's italic version, and oblique
+                            which will slant the normal version of the font. If an italic version doesn't exist the font will be oblique by default. font-weight sets how bold the text is. This can take one of many 
+                            different values such as normal or bold, or even lighter or bolder (which set the font one step more or less bold compared to the parent's value). Finally it can take a numeric value from 
+                            100 to 900. text-transform allows you to transform the font by uppercasing it, lowercasing it, capitalizing it, or applying a full-width style. text-decoration allows you to add lines around
+                            or through the text (such as underneath, over or through). Multiple text decorations can be applied at once. I've added examples of these above in the Pokemon example.
+                        </p>
+                        <p>
+                            It's also possible to align text using the text-align property. This property has several values including left, right, center, and justify. These align text like a word processor. Text is either
+                            moved to the left, right or centered in the middle of the element. Justify spreads out the text varying the gaps in between letters to fill the width of the element. The following example is justified.
+                        </p>
+                        <p>
+                            The line-height property is used to adjust the spacing between lines. This property can take most length and size units but can also take a unitless value which multiplies
+                            the font-size value [1]. MDN notes that generally a spacing of 1.5 or 2 is preferred. You can see an example of this below. You can also adjust the spacing between words and letters
+                            specifically by using the letter-spacing and word-spacing properties. Again these take most length and size units.
+                        </p>
+                        <p class="justify">
+                            This text has been justified to fill the element. Notice the gaps in between the letters so that all of the lines of text have the same width. <span class="spacing">This can look bad depending on the styles of the 
+                            other elements around it.</span> Ultimately consider user readability and experience when styling anything.
+                        </p>
+                        <p>
+                            MDN lists a number of additional properties that you can use to style your text including font-variant, font-kerning, font-stretch, text-indent, text-overflow, white-space, and text-align-last just to 
+                            name a few. There is also a shorthand way to add many font styling properties together on one line. The font property allows for this and only requires a font-size and font-family. The order of the values is: font-variant, 
+                            font-weight, font-stretch, font-size, line-height, and font-family [1]. MDN explains that a forward slash must be placed between the font-size and line-height properties. Here is MDN's example: font: italic 
+                            normal bold normal 3em/1.5 Helvetica, Arial, sans-serif;
+                        </p>
+                        <p class="font-css-example">
+                            Here's how MDN's font example looks!
+                        </p>
+                        <p>
+                            And below is another example that incorporates familiar and new CSS styles for fun, check out the style sheet!
+                        </p>
+                        <div class="more-text-styling-fun">
+                            <p class="first">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sed fringilla nunc. In posuere fringilla dignissim. 
+                                Duis ullamcorper enim ac mauris egestas pretium. Mauris a erat rutrum, placerat nibh scelerisque, placerat neque. 
+                                Duis semper nibh ut luctus blandit. Morbi ullamcorper eu diam vitae ultricies. 
+                            </p>
+                            <p class="second"> 
+                                In auctor at elit at imperdiet. Donec scelerisque quam ac tortor scelerisque pellentesque. Praesent lacus ante, laoreet eget 
+                                aliquet vel, ultricies sit amet quam. Aenean leo erat, condimentum in elit at, rhoncus aliquet risus. Duis venenatis faucibus 
+                                libero, id mattis neque laoreet vitae.
+                            </p>
+                            <p class="last">
+                                Curabitur varius laoreet commodo. Maecenas posuere elit eget massa condimentum, sed tincidunt turpis auctor.
+                            </p>
+                        </div>
+                        <h5>@font-face</h5>
+                        <p>
+                            Earlier we discussed web safe fonts. If you decide to use a unique font you can use the CSS @font-face at-rule to load the font either from the user's local computer (if they have it installed)
+                            or from a URL which will download the font for the user [3]. It's a good idea to provide several options in case the user doesn't have a font installed or for when a font just isn't available. 
+                            @font-face can use the following file types: woff, woff2, truetype, opentype, embedded-opentype, and svg [3]. woff refers to the Web Open Font Format developed by Mozilla together with Type Supply, LettError,
+                            and other organizations [2]. This format is similar to others and uses the same sfnt structure that is used by TrueType, OpenType, and Open Font Format but includes additional metadata and
+                            private-use data structures [2]. Some of the benefits include compressed data for using less bandwidth and that generally vendors like the format and are willing to support it (where they 
+                            might not license their TrueType or OpenType format fonts). There are two WOFF formats. WOFF and WOFF2 differ mainly in the algorithms used for compression according to MDN [2].
+                        </p>
+                        <p class="font-face">
+                            Here's some text styled with a font using the @font-face property.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals" title="Goes to the MDN article on the fundamentals of text and font styling." rel="nofollow" target="_blank">MDN - Fundamental Text and Font styling</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/WOFF" title="Goes to the MDN article on the Web Open Font Format." rel="nofollow" target="_blank">MDN - The Web Open Font Format (WOFF)</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" title="Goes to the MDN article on font face." rel="nofollow" target="_blank">MDN - @font-face</a></li>
                         </ul>
                     </div>
                 </article>
