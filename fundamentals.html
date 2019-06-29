@@ -1902,7 +1902,11 @@
                         <h5>@font-face</h5>
                         <p>
                             Earlier we discussed web safe fonts. If you decide to use a unique font you can use the CSS @font-face at-rule to load the font either from the user's local computer (if they have it installed)
-                            or from a URL which will download the font for the user.
+                            or from a URL which will download the font for the user [3]. It's a good idea to provide several options in case the user doesn't have a font installed or for when a font just isn't available. 
+                            @font-face can use the following file types: woff, woff2, truetype, opentype, embedded-opentype, and svg [3]. woff refers to the Web Open Font Format developed by Mozilla together with Type Supply, LettError,
+                            and other organizations [2]. This format is similar to others and uses the same sfnt structure that is used by TrueType, OpenType, and Open Font Format but includes additional metadata and
+                            private-use data structures [2]. Some of the benefits include compressed data for using less bandwidth and that generally vendors like the format and are willing to support it (where they 
+                            might not license their TrueType or OpenType format fonts). There are two WOFF formats. WOFF and WOFF2 differ mainly in the algorithms used for compression according to MDN [2].
                         </p>
                         <p class="font-face">
                             Here's some text styled with a font using the @font-face property.
@@ -1912,6 +1916,8 @@
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals" title="Goes to the MDN article on the fundamentals of text and font styling." rel="nofollow" target="_blank">MDN - Fundamental Text and Font styling</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/WOFF" title="Goes to the MDN article on the Web Open Font Format." rel="nofollow" target="_blank">MDN - The Web Open Font Format (WOFF)</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" title="Goes to the MDN article on font face." rel="nofollow" target="_blank">MDN - @font-face</a></li>
                         </ul>
                     </div>
                 </article>
