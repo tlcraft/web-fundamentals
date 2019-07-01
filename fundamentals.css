@@ -412,3 +412,7 @@ svg.draw {
 .font-face {
     font-family: 'Comic Sans'
 }
+
+.box-model-image {
+    margin-bottom: 15px;
+}
