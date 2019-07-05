@@ -423,3 +423,11 @@ svg.draw {
     margin: 20px;
     padding: 20px; 
 }
+
+.background {
+    background-image: url("background.png");
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+}
