@@ -1971,7 +1971,7 @@
                         </p>
                         <p>
                             Margin collapsing is something that occurs between sibling elements (those on the same level in the DOM). If the top and bottom margins are set between two elements these
-                            are merged into one single margin. The value will be whichever margin is largest of the two. Margins of floating and absolutely positioned elements never collapse [2]. Margins 
+                            are merged into one single margin. The value will be whichever margin is the largest of the two. Margins of floating and absolutely positioned elements never collapse [2]. Margins 
                             will be collapsed when there is no border, padding, inline content, height, min-height, block formatting context or clearance (see clear) set for an element in general. Ultimately
                             if there is no reason for the space to exist (for example an empty block) it will be collapsed.
                         </p>
@@ -1991,7 +1991,8 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Other effects include adding transparency to an element, adding background images, gradients, shadows, and clipping.
+                            Other effects include adding transparency to an element, adding background images, gradients, shadows, and clipping. According to MDN by default the background-color and image properteis extend
+                            to the edge of the border of an element [1]. This can be adjusted using the background-clip property.
                         </p>
                         <div class="background">
                             <p class="background-info">This element has a background image and I have adjusted its opactiy.</p>
