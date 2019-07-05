@@ -431,3 +431,7 @@ svg.draw {
     text-align: center;
     margin: auto;
 }
+
+.background-info {
+    padding-top: 85px;
+}
