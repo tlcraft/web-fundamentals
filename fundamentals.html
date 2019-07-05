@@ -1969,11 +1969,18 @@
                         <p class="blue-box-example">
                             This element has been styling with a blue dashed border, curved corners, and with a margin and padding. Inspect the element with Dev Tools to see more.
                         </p>
+                        <p>
+                            Margin collapsing is something that occurs between sibling elements (those on the same level in the DOM). If the top and bottom margins are set between two elements these
+                            are merged into one single margin. The value will be whichever margin is largest of the two. Margins of floating and absolutely positioned elements never collapse [2]. Margins 
+                            will be collapsed when there is no border, padding, inline content, height, min-height, block formatting context or clearance (see clear) set for an element in general. Ultimately
+                            if there is no reason for the space to exist (for example an empty block) it will be collapsed.
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model" title="Goes to the MDN article on the box model." rel="nofollow" target="_blank">MDN - The box model</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" title="Goes to the MDN article on margin collapsing.">MDN - Margin Collapsing</a></li>
                         </ul>
                     </div>
                 </article>
