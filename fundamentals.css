@@ -430,6 +430,7 @@ svg.draw {
     height: 200px;
     text-align: center;
     margin: auto;
+    opacity: 0.6;
 }
 
 .background-info {
