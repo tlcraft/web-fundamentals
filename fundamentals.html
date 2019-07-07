@@ -2002,11 +2002,24 @@
                         <div class="background">
                             <p class="background-info">This element has a background image and I have adjusted its opactiy.</p>
                         </div>
+                        <p>
+                            Backgrounds can be clipped using the background-clip property. This has four keywords:
+                            <ul>
+                                <li>border-box (which extends all the way to the outside edge of the element's border, this is also the default value used) [2]</li>
+                                <li>padding-box (which extends up to the padding of an element)</li>
+                                <li>content-box (which goes to the outside edge of the element's content)</li>
+                                <li>text (which effectively changes the text's color to be that of the background image by clipping it to the foreground of the text itself)</li>
+                            </ul>
+                            There are also severl global values which are inherit, initial, and unset.
+                        </p>
+                        <p class="background-text-clipping">This element has a background-clip set to content-box, so the image is clipped to the content of the element only.</p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model" title="Goes to the MDN article on the box model." rel="nofollow" target="_blank">MDN - The box model</a></li>
+                            <li>[2] <a href="https://css-tricks.com/almanac/properties/b/background-clip/" title="Goes to the CSS-Tricks.com article on the background-clip property." rel="nofollow" target="_blank">CSS-Tricks.com - The background-clip property</a>
+                            </li>
                         </ul>
                     </div>
                 </article>

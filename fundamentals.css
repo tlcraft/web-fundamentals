@@ -436,3 +436,10 @@ svg.draw {
 .background-info {
     padding-top: 85px;
 }
+
+.background-text-clipping {
+    padding: 30px;
+    border: solid 5px rgba(0, 0, 0, 0.5);
+    background-image: url("background.png");
+    background-clip: content-box;
+}
