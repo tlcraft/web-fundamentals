@@ -443,3 +443,8 @@ svg.draw {
     background-image: url("background.png");
     background-clip: content-box;
 }
+
+.shadow-gradient {
+    box-shadow: 2px 2px 2px #666;
+    background: linear-gradient(0.30turn, #ff87a6, #abf8e1, #f5cd3a);
+}
