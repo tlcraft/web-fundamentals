@@ -448,3 +448,21 @@ svg.draw {
     box-shadow: 2px 2px 2px #666;
     background-image: linear-gradient(to right, #ff87a6 10%, #abf8e1 40%, #f5cd3a);
 }
+
+.radial-gradient {
+    min-height: 50px;
+    background-image: radial-gradient(skyblue, green);
+}
+
+.radial-gradient-circle {
+    min-height: 50px;
+    background-image: radial-gradient(circle at bottom left, skyblue, green);
+}
+
+.conic-gradient {
+
+}
+
+.repeating-gradient {
+
+}
