@@ -2029,7 +2029,7 @@
                             Other gradient types include radial, conic, and repeating gradients.
                             <ul>
                                 <li>Radial: start at a single point and radiate outwards from that point.</li>
-                                <li>Conic: similar to radial however the gradient goes around in a circle rather than from a defined point in the center.</li>
+                                <li>Conic: similar to radial however the gradient goes around in a circle rather than from a defined point in the center. (This is unsupported at this time.)</li>
                                 <li>Repeating: these have radial and linear variants. Repeating gradients essentially create a pattern that is repeated over and over.</li>
                             </ul>
                             Below are examples of each.
@@ -2043,11 +2043,11 @@
                         <p class="radial-gradient-circle">
                             This element has a circular radial gradient starting at the bottom left corner.
                         </p>
-                        <p class="conic-gradient">
-                            This element has a conic gradient.
-                        </p>
                         <p class="repeating-gradient">
                             This element has a repeating linear gradient.
+                        </p>
+                        <p>
+                            It's important to add fallbacks in case a particular browser doesn't support gradients. Ultimately supplying a picture can be a last resort.
                         </p>
                     </div>
                     <div class="resources">

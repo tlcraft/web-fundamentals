@@ -459,10 +459,15 @@ svg.draw {
     background-image: radial-gradient(circle at bottom left, skyblue, green);
 }
 
-.conic-gradient {
-
-}
-
 .repeating-gradient {
-
+    font-weight: 900;
+    font-size: 3em;
+    background-image: 
+        repeating-linear-gradient(
+        70deg,
+        rgb(100, 100, 253),
+        rgb(125, 125, 250) 20px,
+        rgb(247, 190, 86) 20px,
+        rgb(245, 182, 65) 40px /* determines size */
+        );
 }
