@@ -464,10 +464,9 @@ svg.draw {
     font-size: 3em;
     background-image: 
         repeating-linear-gradient(
-        70deg,
-        rgb(100, 100, 253),
-        rgb(125, 125, 250) 20px,
-        rgb(247, 190, 86) 20px,
-        rgb(245, 182, 65) 40px /* determines size */
+            70deg,
+            rgb(100, 100, 253),
+            rgb(247, 190, 86) 7%,
+            rgb(100, 100, 253) 15% /* Takes up 15% of element so this repeats about 7 times (to 100%) */
         );
 }
