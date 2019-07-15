@@ -470,3 +470,7 @@ svg.draw {
             rgb(100, 100, 253) 15% /* Takes up 15% of element so this repeats about 7 times (to 100%) */
         );
 }
+
+.filter-example {
+    filter: grayscale(0.8) blur(2px);
+}
