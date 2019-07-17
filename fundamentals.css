@@ -471,6 +471,22 @@ svg.draw {
         );
 }
 
-.filter-example {
-    filter: grayscale(0.8) blur(2px);
+.filter-example-1 {
+    margin: 2px;
+    filter: grayscale(0.8) blur(2px) brightness(90%);
+}
+
+.filter-example-2 {
+    margin: 2px;
+    filter: contrast(90%) drop-shadow(15px 15px 5px #aa11ff) opacity(0.4);
+}
+
+.filter-example-3 {
+    margin: 2px;
+    filter: invert(1) sepia(1);
+}
+
+.filter-example-4 {
+    margin: 2px;
+    filter: saturate(55%) hue-rotate(90deg);
 }
