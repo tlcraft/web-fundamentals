@@ -23,6 +23,7 @@
             <a href="#input-validation" title="Goes to the article on input validation.">- Input Validation</a>
             <a href="#css-topics" title="Goes to the list of CSS topics at the top of the page.">CSS Topics List</a>
             <a href="#text-properties" title="Goes to the article on HTML Text Properties.">- HTML Text Properties</a>
+            <a href="#box-properties" title="Goes to the article on HTML Box Properties.">- HTML Box Properties</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
         <section class="introduction">
@@ -113,10 +114,10 @@
                             <li>Text hyphenations and drop shadow</li>
                         </ul>
                     </ul>
-                    <li>HTML Box Properties</li>
+                    <li><a href="#box-properties" title="Goes to the article on HTML Box Properties.">HTML Box Properties</a></li>
                     <ul>
-                        <li>Size, borders, rounded corners, outline, padding, and margin</li>
-                        <li>Graphical effects, transparency, opacity, background images, gradients, shadow, and clipping</li>
+                        <li><a href="#box-properties-styling" title="Goes to the article on how to style the box model.">Size, borders, rounded corners, outline, padding, and margin</a></li>
+                        <li><a href="#box-properties-graphical" title="Goes to the article on graphical styling effects.">Graphical effects, transparency, opacity, background images, gradients, shadow, and clipping</a></li>
                         <li>Establish and change an element's position</li>
                     </ul>
                     <li>Flexible layout</li>
@@ -1779,7 +1780,8 @@
                 <span class="toggleAll">Show / Hide All</span>              
             </div> 
             <nav class="topics-nav">
-                <a href="#text-properties" title="Goes to the article on HTML Text Properties.">HTML Text Properties</a>
+                <a href="#text-properties" title="Goes to the article on HTML Text Properties.">HTML Text Properties</a> |
+                <a href="#box-properties" title="Goes to the article on HTML Box Properties.">HTML Box Properties</a>
             </nav>
             <section>                
                 <div class="title-bar">
@@ -1918,6 +1920,176 @@
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals" title="Goes to the MDN article on the fundamentals of text and font styling." rel="nofollow" target="_blank">MDN - Fundamental Text and Font styling</a></li>
                             <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/WOFF" title="Goes to the MDN article on the Web Open Font Format." rel="nofollow" target="_blank">MDN - The Web Open Font Format (WOFF)</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" title="Goes to the MDN article on font face." rel="nofollow" target="_blank">MDN - @font-face</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="box-properties">HTML Box Properties</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            As MDN notes, "the CSS box model is the foundation of layout on the Web" [1]. Every element is basically a box that can be scaled and styled in various ways. Each has its own
+                            default set of properties (for example a div has a block display property by default). Each element has content, padding, a border, and a margin "built up around one another like the
+                            layers of an onion" [1]. You can see this by opening the dev tools of your browser and inspecting an element. The dev tools usually have a diagram which depicts this sort of thing. 
+                            Below is an example of this.
+                        </p>
+                        <h5>Box Model from Dev Tools</h5>
+                        <p>
+                            This image is for the box model of the resources title below.
+                        </p>
+                        <img class="box-model-image" src="box-model-example.png" alt="This image depicts the box model of an element." />
+                        <nav class="topics-nav">
+                            <a href="#box-properties-styling" title="Goes to the article on how to style the box model.">Size, borders, rounded corners, outline, padding, and margin</a> |
+                            <a href="#box-properties-graphical" title="Goes to the article on graphical styling effects.">Graphical effects, transparency, opacity, background images, gradients, shadow, and clipping</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model" title="Goes to the MDN article on the box model." rel="nofollow" target="_blank">MDN - The box model</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="box-properties-styling">Size, borders, rounded corners, outline, padding, and margin</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Each element has a size, border, padding and margins that can be sized and styled. The size of an element can be adjusted using the width and height properties. There 
+                            are also min and max properties for the width and height. Padding is used to separate content within an element from the sides of the border. Likewise, margin is used to
+                            separate other elements from the outside of an element's border. You can style the top, right, bottom, and left values separately. There is also shorthand for doing parallel 
+                            sides or all at once. The border can be styled to have rounded corners (by giving the border a radius) and the style can be adjusted (to display a solid line or a dashed
+                            border for instance).
+                        </p>
+                        <h5>Styling an element</h5>
+                        <p class="blue-box-example">
+                            This element has been styling with a blue dashed border, curved corners, and with a margin and padding. Inspect the element with Dev Tools to see more.
+                        </p>
+                        <p>
+                            Margin collapsing is something that occurs between sibling elements (those on the same level in the DOM). If the top and bottom margins are set between two elements these
+                            are merged into one single margin. The value will be whichever margin is the largest of the two. Margins of floating and absolutely positioned elements never collapse [2]. Margins 
+                            will be collapsed when there is no border, padding, inline content, height, min-height, block formatting context or clearance (see clear) set for an element in general. Ultimately
+                            if there is no reason for the space to exist (for example an empty block) it will be collapsed.
+                        </p>
+                        <p>
+                            The overflow property controls how content that overflows an element behaves. If you set absolute values for the width and height it's possible that in some cases the
+                            content will overflow the box. You can set the overflow property to one of three values: auto (which hides the content and adds scroll bars), hidden (which just hides the content 
+                            that overflows), or visible (which shows the content overflowing from the element and is generally the default behavior) [1].
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model" title="Goes to the MDN article on the box model." rel="nofollow" target="_blank">MDN - The box model</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Mastering_margin_collapsing" title="Goes to the MDN article on margin collapsing.">MDN - Margin Collapsing</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="box-properties-graphical">Graphical effects, transparency, opacity, background images, gradients, shadow, and clipping</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <h5>Graphical Effects</h5>
+                        <p>
+                            The filter-function can be used to change the appearance of an input image and is used in the filter and background-filter properties [5]. This function "applies
+                            graphical effects like blur and color shift to an element." [6] These can be used to adjust images, backgrounds, and borders as MDN explains [6]. The full list of filter 
+                            functions includes [5]:
+                            <ul>
+                                <li>blur: blurs an image (radius length)</li>
+                                <li>brightness: can make the image brighter or darker (amount number or percentage)</li>
+                                <li>contrast: changes the contrast of the image (amount number or percentage)</li>
+                                <li>drop-shadow: adds a shadow to the image (length offset x and y, blur radius length, spread-radius length, and a color)</li>
+                                <li>grayscale: converts an image to greyscale (amount number or percentage)</li>
+                                <li>hue-rotate: adjusts the hue of an image (angle)</li>
+                                <li>invert: inverts the colors of the image (amount number or percentage)</li>
+                                <li>opacity: adjusts the transparency of the image (amount number or percentage)</li>
+                                <li>saturate: adjusts the saturation of the image (amount number or percentage)</li>
+                                <li>sepia: converts the image to sepia (which is a reddish-brown color which can "warm" the image) (amount number or percentage)</li>
+                            </ul>
+                        </p>
+                        <p>
+                            Below are examples of some of these functions.
+                        </p>
+                        <img class="filter-example-1" src="rock.jpg" alt="A greyscale blurry image of a rock wall." />
+                        <img class="filter-example-2" src="rock.jpg" alt="A transparent image of a rock wall." />
+                        <img class="filter-example-3" src="rock.jpg" alt="An inverted, sepia image of a rock wall." />
+                        <img class="filter-example-4" src="rock.jpg" alt="A saturated image of a rock wall." />
+                        <p>
+                            Other effects include adding transparency to an element, adding background images, gradients, shadows, and clipping. According to MDN by default the background-color and image properteis extend
+                            to the edge of the border of an element [1]. This can be adjusted using the background-clip property. The background color also defaults to transparent, meaning that other background elements will
+                            show through. You can also set this specifically if an element already has a color defined for instance.
+                        </p>
+                        <div class="background">
+                            <p class="background-info">This element has a background image and I have adjusted its opactiy.</p>
+                        </div>
+                        <p>
+                            Backgrounds can be clipped using the background-clip property. This has four keywords:
+                            <ul>
+                                <li>border-box (which extends all the way to the outside edge of the element's border, this is also the default value used) [2]</li>
+                                <li>padding-box (which extends up to the padding of an element)</li>
+                                <li>content-box (which goes to the outside edge of the element's content)</li>
+                                <li>text (which effectively changes the text's color to be that of the background image by clipping it to the foreground of the text itself)</li>
+                            </ul>
+                            There are also severl global values which are inherit, initial, and unset.
+                        </p>
+                        <p class="background-text-clipping">This element has a background-clip set to content-box, so the image is clipped to the content of the element only.</p>
+                        <p>
+                            Other graphical effects include gradients and shadows. We saw text shadows earlier but you can also add shadows to elements with the box-shadow property. And 
+                            another way to do gradients is with the linear-gradient property.
+                        </p>
+                        <h5>Gradients</h5>
+                        <p>
+                            Linear gradients use the background-image property but can also be declared using the shorthand background property [3]. The gradient defaults to top-to-bottom but can 
+                            be set to left-to-right or any angle you'd like [3]. The angle can be specified using a degree value (i.e. 45deg) or by using keywords like "to top right" which would start
+                            the gradient in the bottom left. You are also able to specify multiple colors and can even add "color stops" for hard edges rather than the fading effect. [3]
+                            Gradients produce special image objects of the same name (i.e. the Gradient data type) so these can be used where images can be used [4].
+                        </p>
+                        <p class="shadow-gradient">
+                            This element has a box-shadow and a gradient applied to it!
+                        </p>
+                        <p>
+                            Other gradient types include radial, conic, and repeating gradients.
+                            <ul>
+                                <li>Radial: start at a single point and radiate outwards from that point.</li>
+                                <li>Conic: similar to radial however the gradient goes around in a circle rather than from a defined point in the center. (This is unsupported at this time.)</li>
+                                <li>Repeating: these have radial and linear variants. Repeating gradients essentially create a pattern that is repeated over and over.</li>
+                            </ul>
+                            Below are examples of each.
+                        </p>
+                        <p class="radial-gradient">
+                            This element has a radial gradient. It defaults to an ellipse in the center of the element. You can change the shape to a circle by specifying that in the gradient. 
+                            Other starting point options include points such as top left. The gradient can stretch to different points of the element by using the following values: closest-corner, 
+                            closest-side, farthest-corner, and farthest-side. As CSS-Tricks explains: "You can think of it like: 'I want this radial gradient to fade from the center point to the __(i.e. closest-side)_, and everywhere 
+                            else fills in to accommodate that.' A radial gradient doesn't have to start at the default center either, you can specify a certain point by using "at ______" as part of the first parameter" [3].
+                        </p>
+                        <p class="radial-gradient-circle">
+                            This element has a circular radial gradient starting at the bottom left corner.
+                        </p>
+                        <p>
+                            Repeating gradients take the same arguments as linear and radial gradients but repeat the values in all directions [4].
+                        </p>
+                        <p class="repeating-gradient">
+                            This element has a repeating linear gradient.
+                        </p>
+                        <p>
+                            It's important to add fallbacks in case a particular browser doesn't support gradients. Ultimately supplying a picture can be a last resort.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Box_model" title="Goes to the MDN article on the box model." rel="nofollow" target="_blank">MDN - The box model</a></li>
+                            <li>[2] <a href="https://css-tricks.com/almanac/properties/b/background-clip/" title="Goes to the CSS-Tricks.com article on the background-clip property." rel="nofollow" target="_blank">CSS-Tricks.com - The background-clip property</a></li>
+                            <li>[3] <a href="https://css-tricks.com/css3-gradients/" title="Goes to the CSS-Tricks.com article on linear-gradients" rel="nofollow" target="_blank">CSS-Tricks.com - Linear Gradients</a></li>
+                            <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/repeating-linear-gradient" title="Goes to the MDN article on repeating-linear-gradients" rel="nofollow" target="_blank">MDN - repeating-linear-gradients</a></li>
+                            <li>[5] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter-function" title="Goes to the MDN article on the filter-function" rel="nofollow" target="_blank">MDN - filter-function</a></li>
+                            <li>[6] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/filter" title="Goes to the MDN article on the filter property." rel="nofollow" target="_blank">MDN - filter property</a></li>
                         </ul>
                     </div>
                 </article>

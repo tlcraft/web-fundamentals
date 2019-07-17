@@ -412,3 +412,81 @@ svg.draw {
 .font-face {
     font-family: 'Comic Sans'
 }
+
+.box-model-image {
+    margin-bottom: 15px;
+}
+
+.blue-box-example {
+    border: dashed 4px blue;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 20px; 
+}
+
+.background {
+    background-image: url("background.png");
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    margin: auto;
+    opacity: 0.6;
+}
+
+.background-info {
+    padding-top: 85px;
+}
+
+.background-text-clipping {
+    padding: 30px;
+    border: solid 5px rgba(0, 0, 0, 0.5);
+    background-image: url("background.png");
+    background-clip: content-box;
+}
+
+.shadow-gradient {
+    box-shadow: 2px 2px 2px #666;
+    background-image: linear-gradient(to right, #ff87a6 10%, #abf8e1 40%, #f5cd3a);
+}
+
+.radial-gradient {
+    min-height: 50px;
+    background-image: radial-gradient(skyblue, green);
+}
+
+.radial-gradient-circle {
+    min-height: 50px;
+    background-image: radial-gradient(circle at bottom left, skyblue, green);
+}
+
+.repeating-gradient {
+    font-weight: 900;
+    font-size: 3em;
+    background-image: 
+        repeating-linear-gradient(
+            70deg,
+            rgb(100, 100, 253),
+            rgb(247, 190, 86) 7%,
+            rgb(100, 100, 253) 15% /* Takes up 15% of element so this repeats about 7 times (to 100%) */
+        );
+}
+
+.filter-example-1 {
+    margin: 2px;
+    filter: grayscale(0.8) blur(2px) brightness(90%);
+}
+
+.filter-example-2 {
+    margin: 2px;
+    filter: contrast(90%) drop-shadow(15px 15px 5px #aa11ff) opacity(0.4);
+}
+
+.filter-example-3 {
+    margin: 2px;
+    filter: invert(1) sepia(1);
+}
+
+.filter-example-4 {
+    margin: 2px;
+    filter: saturate(55%) hue-rotate(90deg);
+}
