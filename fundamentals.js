@@ -181,11 +181,17 @@ let distance = 100;
 
 function moveBanner() {
     const bannerText = document.getElementById('banner-text');
+    left = left + distance;
 
-    if (left <= 0 || (left + 400) >= window.innerWidth) {
+    if(left <= 0) {
+        left = 5;
         distance *= -1;
     }
 
-    left = left + distance;
+    if ((left + 400) >= 1000) {
+        left = 600;
+        distance *= -1;
+    }
+
     bannerText.style.left = left + 'px';
 };

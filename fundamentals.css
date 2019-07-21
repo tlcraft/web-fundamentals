@@ -492,13 +492,13 @@ svg.draw {
 }
 
 .banner {
-    border-top: 2px solid limegreen;
-    border-bottom: 2px solid limegreen;
+    border: 2px solid limegreen;
     height: 70px;
+    width: 1000px;
 }
 
 .banner-text{
-    position: absolute;
+    position: relative;
     font-size: large;
     color: darkred;
     font-weight: 900;
