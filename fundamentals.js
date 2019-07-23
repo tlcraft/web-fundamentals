@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     uiControlsExample();
     drawOnCanvas();
     formValidation();
+    setInterval(moveBanner, 600);
 });
 
 function uiControlsExample() {
@@ -174,3 +175,23 @@ function formValidation() {
         }
     });
 }
+
+let left = 5;
+let distance = 100;
+
+function moveBanner() {
+    const bannerText = document.getElementById('banner-text');
+    left = left + distance;
+
+    if(left <= 0) {
+        left = 5;
+        distance *= -1;
+    }
+
+    if ((left + 400) >= 1000) {
+        left = 600;
+        distance *= -1;
+    }
+
+    bannerText.style.left = left + 'px';
+};

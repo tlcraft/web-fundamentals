@@ -490,3 +490,26 @@ svg.draw {
     margin: 2px;
     filter: saturate(55%) hue-rotate(90deg);
 }
+
+.banner {
+    border: 2px solid limegreen;
+    height: 70px;
+    width: 1000px;
+}
+
+.banner-text{
+    position: relative;
+    font-size: large;
+    color: darkred;
+    font-weight: 900;
+    left: 5px;
+    width: 400px;
+}
+
+.margin-padding-position {
+    position: relative;
+    padding: 10px;
+    margin: 10px;
+    left: 45px;
+    top: 15px;
+}
