@@ -513,3 +513,8 @@ svg.draw {
     left: 45px;
     top: 15px;
 }
+
+.multi-column {
+    column-count: 5;
+    column-width: 200px;
+}

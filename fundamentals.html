@@ -2164,7 +2164,20 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            Multi-column layouts can be helpful for users to consume content by displaying the content similarly to how newspapers do in columns. This way people don't have to 
+                            read long lines of text which sometimes causes readers to lose track of their place. Multi-column layouts shorten the text and make it easier to keep track of. [1] 
+                        </p>
+                        <p class="multi-column">
+                            The two CSS properties to be aware of are column-count and column-width. These adjust the number of columns of text within an element and the line length (the width)
+                            for each column [1]. This paragraph has four columns with a width set to 200 pixels. Whichever property ends up restricting the content the most will be displayed. 
+                            You can also use the single property column to specify one or both of these values. The height of each column is balanced so you won't have to set this value manually.
+                            That's actually specified in the CCS3 Column specification [1]. However as MDN explains you can actually specify a maximum height to determine when the text 
+                            will overflow into another column. You can use the height or max-height properties to set this. Finally the column-gap property can be used to adjust the gap between
+                            each column (this has a default value of 1em) [1]. 
+                        </p>
+                        <p>
+                            A few other properties to be aware of are: column-rule which behaves like the border property. column-fill and column-span which determines if the content will be 
+                            balanced between the columns or not, and for span, how far a particular element will span across the columns (like a header).
                         </p>
                     </div>
                     <div class="resources">
