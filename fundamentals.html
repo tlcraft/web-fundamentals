@@ -2182,6 +2182,20 @@
                                 <li>main/cross-start and end: flex items are placed into the container beginning from the main-start and cross-start sides and extending toward the main-end and cross-end sides.</li>
                             </ul>
                         </p>
+                        <p>
+                            There are two flex display properties. flex which generates a flex container that is block-level and inline-flex that generates a flex container that is inline-level [1]. While the flex
+                            property behaves similarly to a block display there are differences. For instance the float and clear properties have no effect. Likewise for vertical-align. This is also true for the pseudo-elements
+                            ::first-line and ::first-letter.
+                        </p>
+                        <p>
+                            Anonymous flex items are created from text runs that are not wrapped in an element. White space is removed and the text is placed inside of an unstylable anonymous 
+                            block container flex item [1].
+                        </p>
+                        <div class="flexible-box-model">
+                            <div class="flex-item">Flex Item One</div>
+                            <div class="flex-item">Flex Item Two</div>
+                            <div class="flex-item">Flex Item Three</div>
+                        </div>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
