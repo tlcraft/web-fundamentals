@@ -554,3 +554,32 @@ svg.draw {
     -ms-wrap-flow: both;
     border: 2px solid yellow;
 }
+
+.grid-container {
+    display: inline-grid;
+    grid: [row1-start] "header header header" 30px [row1-end]
+          [row2-start] "body body body" 60px [row2-end]
+          [row3-start] "footer footer footer" 30px [row3-end]
+          / auto 200px auto;
+    background-color: lightblue;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 10px;
+}
+
+.grid-item {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.grid-container .header {
+    grid-area: header;
+}
+
+.grid-container .body {
+    grid-area: body;
+}
+
+.grid-container .footer {
+    grid-area: footer;
+}
