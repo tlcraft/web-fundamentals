@@ -311,14 +311,12 @@
                             Schema Markup is another aspect of SEO. It's a "semantic vocabulary of tags (or microdata) that you can add to your HTML to improve the way search engines read and represent your 
                             pages" in search results according to Moz.com. Moz.com continues by describing the differences between Schema, microdata, and structured data:
                         </p>
-                        <p>
-                            <ul>
-                                <li>
-                                    Structured data is a system of pairing a name with a value that helps search engines categorize and index your content. Microdata is one form of structured data that works 
-                                    with HTML5. Schema.org is a project that provides a particular set of agreed-upon definitions for microdata tags.
-                                </li>
-                            </ul>
-                        </p>
+                        <ul>
+                            <li>
+                                Structured data is a system of pairing a name with a value that helps search engines categorize and index your content. Microdata is one form of structured data that works 
+                                with HTML5. Schema.org is a project that provides a particular set of agreed-upon definitions for microdata tags.
+                            </li>
+                        </ul>
                         <p>
                             Schema can be used to enhance the search results descriptions with content such as reviews, organizational information, and information about a person or book for example. 
                             The major search engines use this data to enhance the results page but it's unclear if using the markup actually helps with search ranking but appears to increase the website's 
@@ -761,23 +759,25 @@
                         </p>
                         <p>
                             Some of the notable properties include:
-                            <ul>
-                                <li>Node.nodeType: returns an unsigned short representing the type of the node (e.g. ELEMENT_NODE: 1, ATTRIBUTE_NODE: 2, TEXT_NODE: 3, ENTITY_NODE: 6, DOCUMENT_NODE: 9, DOCUMENT_TYPE_NODE: 10).</li>
-                                <li>Node.nodeName: returns a DOMString containing the name of the Node. Differs depending on the node type. For example HTMLElement will contain the name of the corresponding tag, like 'audio', for an HTMLAudioElement, or Text will return a '#text' string.</li>
-                                <li>Node.nodeValue: returns or sets the value of the current node.</li>
-                                <li>Node.parentNode: returns a Node that is the parent of the current node. Returns null if no parent is available (e.g. if the parent is not an Element).</li>
-                                <li>Node.previousSibling: returns a Node representing the previous node in the tree, null if there isn't a node available.</li>
-                                <li>Node.nextSibling: returns a Node representing the next node in the tree, null if there isn't a node available.</li>
-                            </ul>
-                            The jQuery equivalents to firstChild, lastChild, nextSibling, and previousSibling are below:
-                            <ul>
-                                <li><pre>var element = $('#container');</pre></li>
-                                <li><pre>element.children(':first');</pre></li>
-                                <li><pre>element.children(':last')</pre></li>
-                                <li><pre>element.next();</pre></li>
-                                <li><pre>element.prev();;</pre></li>
-                            </ul>
                         </p>
+                        <ul>
+                            <li>Node.nodeType: returns an unsigned short representing the type of the node (e.g. ELEMENT_NODE: 1, ATTRIBUTE_NODE: 2, TEXT_NODE: 3, ENTITY_NODE: 6, DOCUMENT_NODE: 9, DOCUMENT_TYPE_NODE: 10).</li>
+                            <li>Node.nodeName: returns a DOMString containing the name of the Node. Differs depending on the node type. For example HTMLElement will contain the name of the corresponding tag, like 'audio', for an HTMLAudioElement, or Text will return a '#text' string.</li>
+                            <li>Node.nodeValue: returns or sets the value of the current node.</li>
+                            <li>Node.parentNode: returns a Node that is the parent of the current node. Returns null if no parent is available (e.g. if the parent is not an Element).</li>
+                            <li>Node.previousSibling: returns a Node representing the previous node in the tree, null if there isn't a node available.</li>
+                            <li>Node.nextSibling: returns a Node representing the next node in the tree, null if there isn't a node available.</li>
+                        </ul>
+                        <p>
+                            The jQuery equivalents to firstChild, lastChild, nextSibling, and previousSibling are below:
+                        </p>
+                        <ul>
+                            <li><pre>var element = $('#container');</pre></li>
+                            <li><pre>element.children(':first');</pre></li>
+                            <li><pre>element.children(':last')</pre></li>
+                            <li><pre>element.next();</pre></li>
+                            <li><pre>element.prev();;</pre></li>
+                        </ul>
                         <p>
                             Elements can have attributes which provide additional information about them. They are set like name="value" pairs within the starting tag. Some examples of attributes 
                             include: src, alt, title, rel, width, height, style, lang, id, class, for, name, onresize. There are many more and you can view a list on the W3 School.com website following 
@@ -963,17 +963,17 @@
                         <svg class="draw" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <radialGradient id="gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                                    <stop offset="0%" style="stop-color:rgb(100,250,20); stop-opacity:0"/>
-                                    <stop offset="100%" style="stop-color:rgb(100,100,0); stop-opacity:1"/>
+                                    <stop offset="0%" style="stop-color:rgb(100,250,20); stop-opacity:0"></stop>
+                                    <stop offset="100%" style="stop-color:rgb(100,100,0); stop-opacity:1"></stop>
                                 </radialGradient>
                             </defs>
-                            <circle class="orange-fill black-stroke" cx="250" cy="150" r="35" />
-                            <rect class="blue-fill black-stroke" x="3" y="3" width="35" height="60"/>
-                            <line class="black-stroke" x1="0" y1="0" x2="300" y2="300" />
-                            <ellipse cx="150" cy="150" rx="30" ry="50" fill="url(#gradient)" />
-                            <polygon points="40,10 300,20, 170,50" fill="green" />
-                            <polyline points="3,3 3,20 20,20 20,40 40,40 40,60" fill="red" />
-                            <polygon points="10,150, 50,260, 70,185" style="fill:lightblue; stroke: red; stroke-width: 2" />
+                            <circle class="orange-fill black-stroke" cx="250" cy="150" r="35"></circle>
+                            <rect class="blue-fill black-stroke" x="3" y="3" width="35" height="60"></rect>
+                            <line class="black-stroke" x1="0" y1="0" x2="300" y2="300"></line>
+                            <ellipse cx="150" cy="150" rx="30" ry="50" fill="url(#gradient)"></ellipse>
+                            <polygon points="40,10 300,20, 170,50" fill="green"></polygon>
+                            <polyline points="3,3 3,20 20,20 20,40 40,40 40,60" fill="red"></polyline>
+                            <polygon points="10,150, 50,260, 70,185" style="fill:lightblue; stroke: red; stroke-width: 2"></polygon>
                         </svg>
                     </div>
                     <div class="resources">
@@ -2003,19 +2003,19 @@
                             The filter-function can be used to change the appearance of an input image and is used in the filter and background-filter properties [5]. This function "applies
                             graphical effects like blur and color shift to an element." [6] These can be used to adjust images, backgrounds, and borders as MDN explains [6]. The full list of filter 
                             functions includes [5]:
-                            <ul>
-                                <li>blur: blurs an image (radius length)</li>
-                                <li>brightness: can make the image brighter or darker (amount number or percentage)</li>
-                                <li>contrast: changes the contrast of the image (amount number or percentage)</li>
-                                <li>drop-shadow: adds a shadow to the image (length offset x and y, blur radius length, spread-radius length, and a color)</li>
-                                <li>grayscale: converts an image to greyscale (amount number or percentage)</li>
-                                <li>hue-rotate: adjusts the hue of an image (angle)</li>
-                                <li>invert: inverts the colors of the image (amount number or percentage)</li>
-                                <li>opacity: adjusts the transparency of the image (amount number or percentage)</li>
-                                <li>saturate: adjusts the saturation of the image (amount number or percentage)</li>
-                                <li>sepia: converts the image to sepia (which is a reddish-brown color which can "warm" the image) (amount number or percentage)</li>
-                            </ul>
                         </p>
+                        <ul>
+                            <li>blur: blurs an image (radius length)</li>
+                            <li>brightness: can make the image brighter or darker (amount number or percentage)</li>
+                            <li>contrast: changes the contrast of the image (amount number or percentage)</li>
+                            <li>drop-shadow: adds a shadow to the image (length offset x and y, blur radius length, spread-radius length, and a color)</li>
+                            <li>grayscale: converts an image to greyscale (amount number or percentage)</li>
+                            <li>hue-rotate: adjusts the hue of an image (angle)</li>
+                            <li>invert: inverts the colors of the image (amount number or percentage)</li>
+                            <li>opacity: adjusts the transparency of the image (amount number or percentage)</li>
+                            <li>saturate: adjusts the saturation of the image (amount number or percentage)</li>
+                            <li>sepia: converts the image to sepia (which is a reddish-brown color which can "warm" the image) (amount number or percentage)</li>
+                        </ul>
                         <p>
                             Below are examples of some of these functions.
                         </p>
@@ -2032,15 +2032,14 @@
                             <p class="background-info">This element has a background image and I have adjusted its opactiy.</p>
                         </div>
                         <p>
-                            Backgrounds can be clipped using the background-clip property. This has four keywords:
-                            <ul>
-                                <li>border-box (which extends all the way to the outside edge of the element's border, this is also the default value used) [2]</li>
-                                <li>padding-box (which extends up to the padding of an element)</li>
-                                <li>content-box (which goes to the outside edge of the element's content)</li>
-                                <li>text (which effectively changes the text's color to be that of the background image by clipping it to the foreground of the text itself)</li>
-                            </ul>
-                            There are also severl global values which are inherit, initial, and unset.
+                            Backgrounds can be clipped using the background-clip property. This has four keywords which are described below. There are also several global values which are inherit, initial, and unset.
                         </p>
+                        <ul>
+                            <li>border-box (which extends all the way to the outside edge of the element's border, this is also the default value used) [2]</li>
+                            <li>padding-box (which extends up to the padding of an element)</li>
+                            <li>content-box (which goes to the outside edge of the element's content)</li>
+                            <li>text (which effectively changes the text's color to be that of the background image by clipping it to the foreground of the text itself)</li>
+                        </ul>
                         <p class="background-text-clipping">This element has a background-clip set to content-box, so the image is clipped to the content of the element only.</p>
                         <p>
                             Other graphical effects include gradients and shadows. We saw text shadows earlier but you can also add shadows to elements with the box-shadow property. And 
@@ -2057,14 +2056,13 @@
                             This element has a box-shadow and a gradient applied to it!
                         </p>
                         <p>
-                            Other gradient types include radial, conic, and repeating gradients.
-                            <ul>
-                                <li>Radial: start at a single point and radiate outwards from that point.</li>
-                                <li>Conic: similar to radial however the gradient goes around in a circle rather than from a defined point in the center. (This is unsupported at this time.)</li>
-                                <li>Repeating: these have radial and linear variants. Repeating gradients essentially create a pattern that is repeated over and over.</li>
-                            </ul>
-                            Below are examples of each.
+                            Other gradient types include radial, conic, and repeating gradients. Below are examples of each.
                         </p>
+                        <ul>
+                            <li>Radial: start at a single point and radiate outwards from that point.</li>
+                            <li>Conic: similar to radial however the gradient goes around in a circle rather than from a defined point in the center. (This is unsupported at this time.)</li>
+                            <li>Repeating: these have radial and linear variants. Repeating gradients essentially create a pattern that is repeated over and over.</li>
+                        </ul>
                         <p class="radial-gradient">
                             This element has a radial gradient. It defaults to an ellipse in the center of the element. You can change the shape to a circle by specifying that in the gradient. 
                             Other starting point options include points such as top left. The gradient can stretch to different points of the element by using the following values: closest-corner, 
@@ -2174,14 +2172,14 @@
                         </p>
                         <p>
                             Section 2 of the official documentation outlines various terms to know when discussing the flexbox layout [1]. 
-                            <ul>
-                                <li>main size: the width or height of a flex container or flex item, whichever is in the main dimension.</li>
-                                <li>cross size: this functions the same as the main size but for the cross axis.</li>
-                                <li>main axis: the primary axis which flex items are laid out on, this extends from the main-start to the main-end.</li>
-                                <li>cross axis: the axis which is perpendicular to the main axis. This extends from the cross-start to the cross-end.</li>
-                                <li>main/cross-start and end: flex items are placed into the container beginning from the main-start and cross-start sides and extending toward the main-end and cross-end sides.</li>
-                            </ul>
                         </p>
+                        <ul>
+                            <li>main size: the width or height of a flex container or flex item, whichever is in the main dimension.</li>
+                            <li>cross size: this functions the same as the main size but for the cross axis.</li>
+                            <li>main axis: the primary axis which flex items are laid out on, this extends from the main-start to the main-end.</li>
+                            <li>cross axis: the axis which is perpendicular to the main axis. This extends from the cross-start to the cross-end.</li>
+                            <li>main/cross-start and end: flex items are placed into the container beginning from the main-start and cross-start sides and extending toward the main-end and cross-end sides.</li>
+                        </ul>
                         <p>
                             There are two flex display properties. flex which generates a flex container that is block-level and inline-flex that generates a flex container that is inline-level [1]. While the flex
                             property behaves similarly to a block display there are differences. For instance the float and clear properties have no effect. Likewise for vertical-align. This is also true for the pseudo-elements
@@ -2256,15 +2254,22 @@
                         <p>
                             We know that floating items allows content to flow around them to the left or right. As infocodidy.com explains exclusions "provide a way to overcome this limitation with float" [1]. You apply exclusions
                             by setting the wrap-flow CSS property. The possible options include:
-                            <ul>
-                                <li>auto: Default value. The element will be over top of the inline element.</li>
-                                <li>both: Wraps the element smoothly on both sides.</li>
-                                <li>start: The element will wrap only on the starting edge and the ending edge will be empty.</li>
-                                <li>end: The element will wrap only on the ending edge and the starting edge will be empty.</li>
-                                <li>maximum: The element will wrap on the largest side.</li>
-                                <li>clear: The inline content will wrap on the top and bottom but leave the start and end edges empty.</li>
-                            </ul>
                         </p>
+                        <ul>
+                            <li>auto: Default value. The element will be over top of the inline element.</li>
+                            <li>both: Wraps the element smoothly on both sides.</li>
+                            <li>start: The element will wrap only on the starting edge and the ending edge will be empty.</li>
+                            <li>end: The element will wrap only on the ending edge and the starting edge will be empty.</li>
+                            <li>maximum: The element will wrap on the largest side.</li>
+                            <li>clear: The inline content will wrap on the top and bottom but leave the start and end edges empty.</li>
+                        </ul>
+                        <div class="float-exclusion">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lectus orci, tempus quis velit eu, volutpat lobortis metus. In placerat blandit sapien id pretium.</p>
+                            <p class="left">Float left. Sed tempor nunc eget justo congue, eu tristique ex lacinia. Donec ultrices lorem vitae condimentum faucibus.</p>
+                            <p class="clear">Clear left. Duis et nunc imperdiet, interdum purus ut, dignissim nisl.</p>
+                            <p class="exclusion">Exclusion. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+                            <p>Phasellus lectus orci, tempus quis velit eu, volutpat lobortis metus. In placerat blandit sapien id pretium.</p>
+                        </div>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
