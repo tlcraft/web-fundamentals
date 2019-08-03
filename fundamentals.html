@@ -2254,13 +2254,23 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            We know that floating items allows content to flow around them to the left or right. As infocodidy.com explains exclusions "provide a way to overcome this limitation with float" [1]. You apply exclusions
+                            by setting the wrap-flow CSS property. The possible options include:
+                            <ul>
+                                <li>auto: Default value. The element will be over top of the inline element.</li>
+                                <li>both: Wraps the element smoothly on both sides.</li>
+                                <li>start: The element will wrap only on the starting edge and the ending edge will be empty.</li>
+                                <li>end: The element will wrap only on the ending edge and the starting edge will be empty.</li>
+                                <li>maximum: The element will wrap on the largest side.</li>
+                                <li>clear: The inline content will wrap on the top and bottom but leave the start and end edges empty.</li>
+                            </ul>
                         </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="http://www.infocodify.com/css/position_floating_exclusions" title="Goes to the infocodify.com article covering position, floating, and exclusions." rel="nofollow" target="_blank">Infocodify.com - Using position, floating, and exclusions in overall layout</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-wrap-flow" title="Goes to the MDN article covering the -ms-wrap-flow property." rel="nofollow" target="_blank">MDN - -ms-wrap-flow</a></li>
                         </ul>
                     </div>
                 </article>
