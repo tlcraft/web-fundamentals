@@ -2293,21 +2293,21 @@
                             Again we discussed this topic within the Layout Container section above. Here are some more details.
                         </p>
                         <p>
-                            In the past using HTML tables for layout was common. It provided a way to organize content but is not very flexible and is cumbersome. Now we have ways to 
-                            achieve similar results to using tables but in a much more modern way which is responsive to a user's screen size. We can use CSS to define that we will use 
+                            In the past using HTML tables for layout was common. It provided a way to organize content but it is not very flexible and is cumbersome. Now we have ways to 
+                            achieve similar results but in a much more modern way which is responsive to a user's screen size. We can use CSS to define that we will use 
                             a grid layout and then we can define the number of columns and rows to use within the grid. This is now fully baked into native CSS. At one point Microsoft 
                             had specific extensions of their own use within IE and Edge (i.e. -ms-grid).
                         </p>
                         <p>
                             A grid can either be block-level or inline (which is set using grid or inline-grid for the display property). Grid items are not affected by some properties like 
-                            float, display: inline-block, display: table-cell, vertical-align, or column-* [3]. When defining the columns and row you can name each line of the grid if you'd like.
+                            float, display: inline-block, display: table-cell, vertical-align, or column-* [3]. When defining the columns and rows you can name each line of the grid if you'd like.
                             The column and row properties define the size and spacing of the grid. You can even use fractional units using the fr unit [3]. Fractional parts are calculated after
-                            any non-flexible items to determine the correction space available.
+                            any non-flexible items to determine the correct space available.
                         </p>
                         <p>
                             The grid-area property specifies a name for an item and the grid-template-areas property can reference these grid-area names to define a template and
                             determine if elements span multiple spaces (which is set by repeating the name of an area multiple times in a row) [3]. grid-areas can also define a particular
-                            area within the grid which uses four values (grid-row-start, grid-column-start, grid-row-end, grid-column-end). When defining a grid-template-areas you must be
+                            area within the grid which uses four values (grid-row-start, grid-column-start, grid-row-end, grid-column-end). When defining grid-template-areas you must be
                             sure that the template lists the same number of cells in each declaration. Empty cells can be specified with a period.
                         </p>
                         <p>
@@ -2317,7 +2317,7 @@
                         </p>
                         <p>
                             There are also controls for setting the space between the grids. You can do this by setting the grid-column-gap and grid-row-gap properties. There are ways to justify 
-                            the content using the justify-items property (center, stretch, start, and end) and you can align items with the align-items property (stretch, center, start, and end) [3].
+                            the content using the justify-items property (center, stretch, start, and end) and you can align items with the align-items property (center, stretch, start, and end) [3].
                             The entire contents of the grid can also be justified or aligned using the justify-content and align-content properties.
                         </p>
                         <p>
@@ -2349,7 +2349,10 @@
                 </div> 
                 <article>
                     <div class="topic">
-                       
+                        <p>
+                            Infocodify.com explains that regions are "a new CSS3 construct that allows you to have content flow through various regions in a webpage" [1]. In order to use regions the layout must implement two things, those being a content source 
+                            and regions which will display the content. This content can come from another webpage with the use of an iframe or from another element on the page and Infocodify's article explains that at the time it didn't work in all browsers [1].
+                        </p>                       
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
