@@ -533,3 +533,21 @@ svg.draw {
 .flexible-box-model > .absolute-flex {
     position: absolute;
 }
+
+.float-exclusion {
+    padding: 10px;
+    border: 1px solid red;
+    max-width: 300px;
+}
+
+.float-exclusion > .left {
+    float: left;
+}
+
+.float-exclusion > .clear {
+    clear: both;
+}
+
+.float-exclusion > .exclusion {
+    -ms-wrap-flow: both;
+}

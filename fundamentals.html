@@ -785,11 +785,14 @@
                         </p>
                         <p>
                             Attributes are not considered children of a node [2]. We can access them using the DOM API like so (there is no jQuery equivalent but you can build your own):
+                        </p>
     <pre>
         var div = document.getElementById('divId');
         var attributes = div.attributes;
     </pre>
+                        <p>
                             Attributes can be updated, removed, and accessed using either jQuery or the DOM API as Aidan Ryan demonstrates on his blog [2]:
+                        </p>
     <pre>
         var div = document.getElementById('divId');
         var val = div.attributes['id'].value;
@@ -809,7 +812,6 @@
         element.removeAttributeNode(element.getAttributeNode('id'));
         jqElement.removeAttr('id');
     </pre>
-                        </p>
                         <p>
                             The next step after being able to access a DOM node it be make changes to it or the overall structure of the page itself. 
                         </p>
