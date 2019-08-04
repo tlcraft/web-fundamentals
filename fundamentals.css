@@ -70,10 +70,10 @@ table th {
     margin: var(--flex-margin);
 }
 
-.flex-container-row {    
+.flex-container-row {
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-end;    
+    justify-content: flex-end;
 }
 
 .flex-container-row-align {
@@ -297,7 +297,7 @@ svg.draw {
 .input-types-attributes input:invalid {
     border: 2px dashed red;
 }
-  
+
  .input-types-attributes input:valid {
     border: 2px solid black;
 }
@@ -421,7 +421,7 @@ svg.draw {
     border: dashed 4px blue;
     border-radius: 10px;
     margin: 20px;
-    padding: 20px; 
+    padding: 20px;
 }
 
 .background {
@@ -462,7 +462,7 @@ svg.draw {
 .repeating-gradient {
     font-weight: 900;
     font-size: 3em;
-    background-image: 
+    background-image:
         repeating-linear-gradient(
             70deg,
             rgb(100, 100, 253),
@@ -512,4 +512,74 @@ svg.draw {
     margin: 10px;
     left: 45px;
     top: 15px;
+}
+
+.multi-column {
+    column-count: 5;
+    column-width: 200px;
+}
+
+.flexible-box-model {
+    display: inline-flex;
+    border: 2px solid black;
+}
+
+.flexible-box-model > .flex-item {
+    border: 2px solid blue;
+    font-weight: normal;
+    background-color: transparent;
+}
+
+.flexible-box-model > .absolute-flex {
+    position: absolute;
+}
+
+.float-exclusion {
+    padding: 10px;
+    border: 2px solid red;
+    max-width: 400px;
+}
+
+.float-exclusion .left {
+    float: left;
+    border: 2px solid blue;
+}
+
+.float-exclusion .clear {
+    clear: left;
+    border: 2px solid green;
+}
+
+.float-exclusion .exclusion {
+    -ms-wrap-flow: both;
+    border: 2px solid yellow;
+}
+
+.grid-container {
+    display: inline-grid;
+    grid: [row1-start] "header header header" 30px [row1-end]
+          [row2-start] "body body body" 60px [row2-end]
+          [row3-start] "footer footer footer" 30px [row3-end]
+          / auto 200px auto;
+    background-color: lightblue;
+    align-items: center;
+    justify-items: center;
+    grid-gap: 10px;
+}
+
+.grid-item {
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.grid-container .header {
+    grid-area: header;
+}
+
+.grid-container .body {
+    grid-area: body;
+}
+
+.grid-container .footer {
+    grid-area: footer;
 }

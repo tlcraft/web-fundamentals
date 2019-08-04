@@ -24,6 +24,7 @@
             <a href="#css-topics" title="Goes to the list of CSS topics at the top of the page.">CSS Topics List</a>
             <a href="#text-properties" title="Goes to the article on HTML Text Properties.">- HTML Text Properties</a>
             <a href="#box-properties" title="Goes to the article on HTML Box Properties.">- HTML Box Properties</a>
+            <a href="#flexible-layout" title="Goes to the article on Flexible layouts.">- Flexible layout</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
         <section class="introduction">
@@ -38,7 +39,7 @@
                 <li><a href="https://www.w3.org/Style/CSS/read.en.html" title="Goes to the W3.org page describing how to understand the CSS specifications." rel="nofollow" target="_blank">Understanding CSS Specifications</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" title="Goes to the MDN article on CSS3." rel="nofollow" target="_blank">CSS3</a></li>
                 <li><a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm" title="Goes to the ECMA standards page for EMCA-262." rel="nofollow" target="_blank">ECMAScript 262</a></li>
-                <li><a href="https://css-tricks.com/" title="Goes to css-tricks.com." rel="nofollow" target="_blank">CSS-Tricks</a></li>
+                <li><a href="https://css-tricks.com/" title="Goes to CSS-Tricks.com." rel="nofollow" target="_blank">CSS-Tricks</a></li>
             </ul>
             <p>
                 The focus will be on covering the topics outlined on the Microsoft HTML, CSS, and JS exam which you can review following this 
@@ -120,13 +121,13 @@
                         <li><a href="#box-properties-graphical" title="Goes to the article on graphical styling effects.">Graphical effects, transparency, opacity, background images, gradients, shadow, and clipping</a></li>
                         <li><a href="#element-position" title="Goes to the article on how to position elements.">Establish and change an element's position</a></li>
                     </ul>
-                    <li>Flexible layout</li>
+                    <li><a href="#flexible-layout" title="Goes to the article on Flexible layouts.">Flexible layout</a></li>
                     <ul>
-                        <li>Flexible Box Model</li>
-                        <li>Multi-column layout</li>
-                        <li>Position floating and exclusions</li>
-                        <li>Grid alignment</li>
-                        <li>Regions, grouping, and nesting layout</li>
+                        <li><a href="#flexible-box" title="Goes to the article on the flexible box model.">Flexible Box Model</a></li>
+                        <li><a href="#multi-column" title="Goes to the article on multi-column layouts.">Multi-column layouts</a></li>
+                        <li><a href="#floating-exclusions" title="Goes to the article on position floating and exclusions.">Position floating and exclusions</a></li>
+                        <li><a href="#grid-alignment" title="Goes to the article on grid alignment.">Grid alignment</a></li>
+                        <li><a href="#regions-grouping-nesting" title="Goes to the article on regions, grouping, and nesting layouts.">Regions, grouping, and nesting layouts</a></li>
                     </ul>
                     <li>Animated and Adaptive UI</li>
                     <ul>
@@ -310,14 +311,12 @@
                             Schema Markup is another aspect of SEO. It's a "semantic vocabulary of tags (or microdata) that you can add to your HTML to improve the way search engines read and represent your 
                             pages" in search results according to Moz.com. Moz.com continues by describing the differences between Schema, microdata, and structured data:
                         </p>
-                        <p>
-                            <ul>
-                                <li>
-                                    Structured data is a system of pairing a name with a value that helps search engines categorize and index your content. Microdata is one form of structured data that works 
-                                    with HTML5. Schema.org is a project that provides a particular set of agreed-upon definitions for microdata tags.
-                                </li>
-                            </ul>
-                        </p>
+                        <ul>
+                            <li>
+                                Structured data is a system of pairing a name with a value that helps search engines categorize and index your content. Microdata is one form of structured data that works 
+                                with HTML5. Schema.org is a project that provides a particular set of agreed-upon definitions for microdata tags.
+                            </li>
+                        </ul>
                         <p>
                             Schema can be used to enhance the search results descriptions with content such as reviews, organizational information, and information about a person or book for example. 
                             The major search engines use this data to enhance the results page but it's unclear if using the markup actually helps with search ranking but appears to increase the website's 
@@ -760,23 +759,25 @@
                         </p>
                         <p>
                             Some of the notable properties include:
-                            <ul>
-                                <li>Node.nodeType: returns an unsigned short representing the type of the node (e.g. ELEMENT_NODE: 1, ATTRIBUTE_NODE: 2, TEXT_NODE: 3, ENTITY_NODE: 6, DOCUMENT_NODE: 9, DOCUMENT_TYPE_NODE: 10).</li>
-                                <li>Node.nodeName: returns a DOMString containing the name of the Node. Differs depending on the node type. For example HTMLElement will contain the name of the corresponding tag, like 'audio', for an HTMLAudioElement, or Text will return a '#text' string.</li>
-                                <li>Node.nodeValue: returns or sets the value of the current node.</li>
-                                <li>Node.parentNode: returns a Node that is the parent of the current node. Returns null if no parent is available (e.g. if the parent is not an Element).</li>
-                                <li>Node.previousSibling: returns a Node representing the previous node in the tree, null if there isn't a node available.</li>
-                                <li>Node.nextSibling: returns a Node representing the next node in the tree, null if there isn't a node available.</li>
-                            </ul>
-                            The jQuery equivalents to firstChild, lastChild, nextSibling, and previousSibling are below:
-                            <ul>
-                                <li><pre>var element = $('#container');</pre></li>
-                                <li><pre>element.children(':first');</pre></li>
-                                <li><pre>element.children(':last')</pre></li>
-                                <li><pre>element.next();</pre></li>
-                                <li><pre>element.prev();;</pre></li>
-                            </ul>
                         </p>
+                        <ul>
+                            <li>Node.nodeType: returns an unsigned short representing the type of the node (e.g. ELEMENT_NODE: 1, ATTRIBUTE_NODE: 2, TEXT_NODE: 3, ENTITY_NODE: 6, DOCUMENT_NODE: 9, DOCUMENT_TYPE_NODE: 10).</li>
+                            <li>Node.nodeName: returns a DOMString containing the name of the Node. Differs depending on the node type. For example HTMLElement will contain the name of the corresponding tag, like 'audio', for an HTMLAudioElement, or Text will return a '#text' string.</li>
+                            <li>Node.nodeValue: returns or sets the value of the current node.</li>
+                            <li>Node.parentNode: returns a Node that is the parent of the current node. Returns null if no parent is available (e.g. if the parent is not an Element).</li>
+                            <li>Node.previousSibling: returns a Node representing the previous node in the tree, null if there isn't a node available.</li>
+                            <li>Node.nextSibling: returns a Node representing the next node in the tree, null if there isn't a node available.</li>
+                        </ul>
+                        <p>
+                            The jQuery equivalents to firstChild, lastChild, nextSibling, and previousSibling are below:
+                        </p>
+                        <ul>
+                            <li><pre>var element = $('#container');</pre></li>
+                            <li><pre>element.children(':first');</pre></li>
+                            <li><pre>element.children(':last')</pre></li>
+                            <li><pre>element.next();</pre></li>
+                            <li><pre>element.prev();;</pre></li>
+                        </ul>
                         <p>
                             Elements can have attributes which provide additional information about them. They are set like name="value" pairs within the starting tag. Some examples of attributes 
                             include: src, alt, title, rel, width, height, style, lang, id, class, for, name, onresize. There are many more and you can view a list on the W3 School.com website following 
@@ -784,11 +785,14 @@
                         </p>
                         <p>
                             Attributes are not considered children of a node [2]. We can access them using the DOM API like so (there is no jQuery equivalent but you can build your own):
+                        </p>
     <pre>
         var div = document.getElementById('divId');
         var attributes = div.attributes;
     </pre>
+                        <p>
                             Attributes can be updated, removed, and accessed using either jQuery or the DOM API as Aidan Ryan demonstrates on his blog [2]:
+                        </p>
     <pre>
         var div = document.getElementById('divId');
         var val = div.attributes['id'].value;
@@ -808,7 +812,6 @@
         element.removeAttributeNode(element.getAttributeNode('id'));
         jqElement.removeAttr('id');
     </pre>
-                        </p>
                         <p>
                             The next step after being able to access a DOM node it be make changes to it or the overall structure of the page itself. 
                         </p>
@@ -962,17 +965,17 @@
                         <svg class="draw" xmlns="http://www.w3.org/2000/svg">
                             <defs>
                                 <radialGradient id="gradient" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
-                                    <stop offset="0%" style="stop-color:rgb(100,250,20); stop-opacity:0"/>
-                                    <stop offset="100%" style="stop-color:rgb(100,100,0); stop-opacity:1"/>
+                                    <stop offset="0%" style="stop-color:rgb(100,250,20); stop-opacity:0"></stop>
+                                    <stop offset="100%" style="stop-color:rgb(100,100,0); stop-opacity:1"></stop>
                                 </radialGradient>
                             </defs>
-                            <circle class="orange-fill black-stroke" cx="250" cy="150" r="35" />
-                            <rect class="blue-fill black-stroke" x="3" y="3" width="35" height="60"/>
-                            <line class="black-stroke" x1="0" y1="0" x2="300" y2="300" />
-                            <ellipse cx="150" cy="150" rx="30" ry="50" fill="url(#gradient)" />
-                            <polygon points="40,10 300,20, 170,50" fill="green" />
-                            <polyline points="3,3 3,20 20,20 20,40 40,40 40,60" fill="red" />
-                            <polygon points="10,150, 50,260, 70,185" style="fill:lightblue; stroke: red; stroke-width: 2" />
+                            <circle class="orange-fill black-stroke" cx="250" cy="150" r="35"></circle>
+                            <rect class="blue-fill black-stroke" x="3" y="3" width="35" height="60"></rect>
+                            <line class="black-stroke" x1="0" y1="0" x2="300" y2="300"></line>
+                            <ellipse cx="150" cy="150" rx="30" ry="50" fill="url(#gradient)"></ellipse>
+                            <polygon points="40,10 300,20, 170,50" fill="green"></polygon>
+                            <polyline points="3,3 3,20 20,20 20,40 40,40 40,60" fill="red"></polyline>
+                            <polygon points="10,150, 50,260, 70,185" style="fill:lightblue; stroke: red; stroke-width: 2"></polygon>
                         </svg>
                     </div>
                     <div class="resources">
@@ -1781,7 +1784,8 @@
             </div> 
             <nav class="topics-nav">
                 <a href="#text-properties" title="Goes to the article on HTML Text Properties.">HTML Text Properties</a> |
-                <a href="#box-properties" title="Goes to the article on HTML Box Properties.">HTML Box Properties</a>
+                <a href="#box-properties" title="Goes to the article on HTML Box Properties.">HTML Box Properties</a> |
+                <a href="#flexible-layout" title="Goes to the article on Flexible layouts.">Flexible layout</a>
             </nav>
             <section>                
                 <div class="title-bar">
@@ -2001,19 +2005,19 @@
                             The filter-function can be used to change the appearance of an input image and is used in the filter and background-filter properties [5]. This function "applies
                             graphical effects like blur and color shift to an element." [6] These can be used to adjust images, backgrounds, and borders as MDN explains [6]. The full list of filter 
                             functions includes [5]:
-                            <ul>
-                                <li>blur: blurs an image (radius length)</li>
-                                <li>brightness: can make the image brighter or darker (amount number or percentage)</li>
-                                <li>contrast: changes the contrast of the image (amount number or percentage)</li>
-                                <li>drop-shadow: adds a shadow to the image (length offset x and y, blur radius length, spread-radius length, and a color)</li>
-                                <li>grayscale: converts an image to greyscale (amount number or percentage)</li>
-                                <li>hue-rotate: adjusts the hue of an image (angle)</li>
-                                <li>invert: inverts the colors of the image (amount number or percentage)</li>
-                                <li>opacity: adjusts the transparency of the image (amount number or percentage)</li>
-                                <li>saturate: adjusts the saturation of the image (amount number or percentage)</li>
-                                <li>sepia: converts the image to sepia (which is a reddish-brown color which can "warm" the image) (amount number or percentage)</li>
-                            </ul>
                         </p>
+                        <ul>
+                            <li>blur: blurs an image (radius length)</li>
+                            <li>brightness: can make the image brighter or darker (amount number or percentage)</li>
+                            <li>contrast: changes the contrast of the image (amount number or percentage)</li>
+                            <li>drop-shadow: adds a shadow to the image (length offset x and y, blur radius length, spread-radius length, and a color)</li>
+                            <li>grayscale: converts an image to greyscale (amount number or percentage)</li>
+                            <li>hue-rotate: adjusts the hue of an image (angle)</li>
+                            <li>invert: inverts the colors of the image (amount number or percentage)</li>
+                            <li>opacity: adjusts the transparency of the image (amount number or percentage)</li>
+                            <li>saturate: adjusts the saturation of the image (amount number or percentage)</li>
+                            <li>sepia: converts the image to sepia (which is a reddish-brown color which can "warm" the image) (amount number or percentage)</li>
+                        </ul>
                         <p>
                             Below are examples of some of these functions.
                         </p>
@@ -2030,15 +2034,14 @@
                             <p class="background-info">This element has a background image and I have adjusted its opactiy.</p>
                         </div>
                         <p>
-                            Backgrounds can be clipped using the background-clip property. This has four keywords:
-                            <ul>
-                                <li>border-box (which extends all the way to the outside edge of the element's border, this is also the default value used) [2]</li>
-                                <li>padding-box (which extends up to the padding of an element)</li>
-                                <li>content-box (which goes to the outside edge of the element's content)</li>
-                                <li>text (which effectively changes the text's color to be that of the background image by clipping it to the foreground of the text itself)</li>
-                            </ul>
-                            There are also severl global values which are inherit, initial, and unset.
+                            Backgrounds can be clipped using the background-clip property. This has four keywords which are described below. There are also several global values which are inherit, initial, and unset.
                         </p>
+                        <ul>
+                            <li>border-box (which extends all the way to the outside edge of the element's border, this is also the default value used) [2]</li>
+                            <li>padding-box (which extends up to the padding of an element)</li>
+                            <li>content-box (which goes to the outside edge of the element's content)</li>
+                            <li>text (which effectively changes the text's color to be that of the background image by clipping it to the foreground of the text itself)</li>
+                        </ul>
                         <p class="background-text-clipping">This element has a background-clip set to content-box, so the image is clipped to the content of the element only.</p>
                         <p>
                             Other graphical effects include gradients and shadows. We saw text shadows earlier but you can also add shadows to elements with the box-shadow property. And 
@@ -2055,14 +2058,13 @@
                             This element has a box-shadow and a gradient applied to it!
                         </p>
                         <p>
-                            Other gradient types include radial, conic, and repeating gradients.
-                            <ul>
-                                <li>Radial: start at a single point and radiate outwards from that point.</li>
-                                <li>Conic: similar to radial however the gradient goes around in a circle rather than from a defined point in the center. (This is unsupported at this time.)</li>
-                                <li>Repeating: these have radial and linear variants. Repeating gradients essentially create a pattern that is repeated over and over.</li>
-                            </ul>
-                            Below are examples of each.
+                            Other gradient types include radial, conic, and repeating gradients. Below are examples of each.
                         </p>
+                        <ul>
+                            <li>Radial: start at a single point and radiate outwards from that point.</li>
+                            <li>Conic: similar to radial however the gradient goes around in a circle rather than from a defined point in the center. (This is unsupported at this time.)</li>
+                            <li>Repeating: these have radial and linear variants. Repeating gradients essentially create a pattern that is repeated over and over.</li>
+                        </ul>
                         <p class="radial-gradient">
                             This element has a radial gradient. It defaults to an ellipse in the center of the element. You can change the shape to a circle by specifying that in the gradient. 
                             Other starting point options include points such as top left. The gradient can stretch to different points of the element by using the following values: closest-corner, 
@@ -2124,6 +2126,251 @@
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" title="Goes to the MDN article on the position property." rel="nofollow" target="_blank">MDN - position</a></li>
                             <li>[2] <a href="https://books.google.com/books?id=X1hEBAAAQBAJ&printsec=frontcover#v=onepage&q&f=false" title="Goes to the Google Books version of the Exam Reference guide." rel="nofollow" target="_blank">Google Books - Exam Ref 70-480</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <section>                
+                <div class="title-bar">
+                    <h4><a id="flexible-layout">Flexible layout</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            As we've discussed earlier having a flexible layout is important because in this day and age people use all sorts of devices when connecting to the web. From smartphones, 
+                            to televisions, to desktop computers. Each of these have very different screen sizes so having a flexible design in your layout lends itself toward the user experience. 
+                            In this section we'll revisit some of the earlier topics and add additional details about layouts.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#flexible-box" title="Goes to the article on the flexible box model.">Flexible Box Model</a> |
+                            <a href="#multi-column" title="Goes to the article on multi-column layouts.">Multi-column layouts</a> |
+                            <a href="#floating-exclusions" title="Goes to the article on position floating and exclusions.">Position floating and exclusions</a> |
+                            <a href="#grid-alignment" title="Goes to the article on grid alignment.">Grid alignment</a> |
+                            <a href="#regions-grouping-nesting" title="Goes to the article on regions, grouping, and nesting layouts.">Regions, grouping, and nesting layouts</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="flexible-box">Flexible Box Model</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            We've already seen examples of the flexbox display type and many of its properties above in the Layout Container section. Here are some more details from the 
+                            W3C documentation.
+                        </p>
+                        <p>
+                            As the official documentation explains, the flex layout allows content to be laid out to flow in any direction (left, right, up or down), allows for rearranging the element ordering, 
+                            allows elements to dynamically resize given the allowable space, can be laid out along either a horizontal (main axis) or vertical (cross axis) and can also be
+                            aligned in relation to siblings along the cross axis [1].
+                        </p>
+                        <p>
+                            Section 2 of the official documentation outlines various terms to know when discussing the flexbox layout [1]. 
+                        </p>
+                        <ul>
+                            <li>main size: the width or height of a flex container or flex item, whichever is in the main dimension.</li>
+                            <li>cross size: this functions the same as the main size but for the cross axis.</li>
+                            <li>main axis: the primary axis which flex items are laid out on, this extends from the main-start to the main-end.</li>
+                            <li>cross axis: the axis which is perpendicular to the main axis. This extends from the cross-start to the cross-end.</li>
+                            <li>main/cross-start and end: flex items are placed into the container beginning from the main-start and cross-start sides and extending toward the main-end and cross-end sides.</li>
+                        </ul>
+                        <p>
+                            There are two flex display properties. flex which generates a flex container that is block-level and inline-flex that generates a flex container that is inline-level [1]. While the flex
+                            property behaves similarly to a block display there are differences. For instance the float and clear properties have no effect. Likewise for vertical-align. This is also true for the pseudo-elements
+                            ::first-line and ::first-letter.
+                        </p>
+                        <p>
+                            Anonymous flex items are created from text runs that are not wrapped in an element. White space is removed and the text is placed inside of an unstylable anonymous 
+                            block container flex item [1].
+                        </p>
+                        <div class="flexible-box-model">
+                            <div class="flex-item">Flex Item One</div>
+                            <div class="flex-item absolute-flex">Flex Item Two</div>
+                            <div class="flex-item">Flex Item Three</div>
+                            Anonymous Item Four
+                        </div>
+                        <p>
+                            Other notes include that absolute positioned flex items are positioned as if they are the sole item in the container. These don't fall into the flex layout of the container. Margins of adjacent 
+                            flex items do not collapse. Items that are collapsed (visibility: collapse) leave the cross width intact so that the UI is consistent. [1]
+                        </p>
+                        <p>
+                            A note on the order property and accessibility from the documentation points out that the order property only affects the visual display and does not affect non-visual media (such as speech) [1]. 
+                            It also doesn't affect the default traversal order of sequential navigation modes. [1] 
+                        </p>
+                        <p>
+                            Flex lines are used to layout the flex items. These can be single or multiple lines. This depends on if you allow the items to wrap around or not. [1] Much more details on the flex box model
+                            can be found within the documentation linked below.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://www.w3.org/TR/css-flexbox-1/" title="Goes to the W3C's documentation on flexible box layout." rel="nofollow" target="_blank">W3C - Flexible Box Layout</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="multi-column">Multi-column layouts</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Multi-column layouts can be helpful for users to consume content by displaying the content similarly to how newspapers do in columns. This way people don't have to 
+                            read long lines of text which sometimes causes readers to lose track of their place. Multi-column layouts shorten the text and make it easier to keep track of. [1] 
+                        </p>
+                        <p class="multi-column">
+                            The two CSS properties to be aware of are column-count and column-width. These adjust the number of columns of text within an element and the line length (the width)
+                            for each column [1]. This paragraph has four columns with a width set to 200 pixels. Whichever property ends up restricting the content the most will be displayed. 
+                            You can also use the single property column to specify one or both of these values. The height of each column is balanced so you won't have to set this value manually.
+                            That's actually specified in the CCS3 Column specification [1]. However as MDN explains you can actually specify a maximum height to determine when the text 
+                            will overflow into another column. You can use the height or max-height properties to set this. Finally the column-gap property can be used to adjust the gap between
+                            each column (this has a default value of 1em) [1]. 
+                        </p>
+                        <p>
+                            A few other properties to be aware of are: column-rule which behaves like the border property. column-fill and column-span which determines if the content will be 
+                            balanced between the columns or not, and for span, how far a particular element will span across the columns (like a header).
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Columns/Using_multi-column_layouts" title="Goes to the MDN article on using multi-column layouts." rel="nofollow" target="_blank">MDN - Multi-column layouts</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="floating-exclusions">Position floating and exclusions</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            We know that floating items allows content to flow around them to the left or right. As infocodidy.com explains exclusions "provide a way to overcome this limitation with float" [1]. You apply exclusions
+                            by setting the wrap-flow CSS property. The possible options include:
+                        </p>
+                        <ul>
+                            <li>auto: Default value. The element will be over top of the inline element.</li>
+                            <li>both: Wraps the element smoothly on both sides.</li>
+                            <li>start: The element will wrap only on the starting edge and the ending edge will be empty.</li>
+                            <li>end: The element will wrap only on the ending edge and the starting edge will be empty.</li>
+                            <li>maximum: The element will wrap on the largest side.</li>
+                            <li>clear: The inline content will wrap on the top and bottom but leave the start and end edges empty.</li>
+                        </ul>
+                        <p>
+                            Below is an example of the wrap-flow property. This is a Microsoft extension so to view it try opening the page in Edge or IE.
+                        </p>
+                        <div class="float-exclusion">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus lectus orci, tempus quis velit eu, volutpat lobortis metus. In placerat blandit sapien id pretium.
+                                <span class="left">Float left. Sed tempor nunc eget justo congue, eu tristique ex lacinia. Donec ultrices lorem vitae condimentum faucibus.</span>
+                                <span class="exclusion">Exclusion both. Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span>
+                                <span class="clear">Clear left. Duis et nunc imperdiet, interdum purus ut, dignissim nisl.</span>
+                                <span>Phasellus lectus orci, tempus quis velit eu, volutpat lobortis metus. In placerat blandit sapien id pretium.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://www.infocodify.com/css/position_floating_exclusions" title="Goes to the infocodify.com article covering position, floating, and exclusions." rel="nofollow" target="_blank">Infocodify.com - Using position, floating, and exclusions in overall layout</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-wrap-flow" title="Goes to the MDN article covering the -ms-wrap-flow property." rel="nofollow" target="_blank">MDN - -ms-wrap-flow</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="grid-alignment">Grid Alignment</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Again we discussed this topic within the Layout Container section above. Here are some more details.
+                        </p>
+                        <p>
+                            In the past using HTML tables for layout was common. It provided a way to organize content but it is not very flexible and is cumbersome. Now we have ways to 
+                            achieve similar results but in a much more modern way which is responsive to a user's screen size. We can use CSS to define that we will use 
+                            a grid layout and then we can define the number of columns and rows to use within the grid. This is now fully baked into native CSS. At one point Microsoft 
+                            had specific extensions of their own use within IE and Edge (i.e. -ms-grid).
+                        </p>
+                        <p>
+                            A grid can either be block-level or inline (which is set using grid or inline-grid for the display property). Grid items are not affected by some properties like 
+                            float, display: inline-block, display: table-cell, vertical-align, or column-* [3]. When defining the columns and rows you can name each line of the grid if you'd like.
+                            The column and row properties define the size and spacing of the grid. You can even use fractional units using the fr unit [3]. Fractional parts are calculated after
+                            any non-flexible items to determine the correct space available.
+                        </p>
+                        <p>
+                            The grid-area property specifies a name for an item and the grid-template-areas property can reference these grid-area names to define a template and
+                            determine if elements span multiple spaces (which is set by repeating the name of an area multiple times in a row) [3]. grid-areas can also define a particular
+                            area within the grid which uses four values (grid-row-start, grid-column-start, grid-row-end, grid-column-end). When defining grid-template-areas you must be
+                            sure that the template lists the same number of cells in each declaration. Empty cells can be specified with a period.
+                        </p>
+                        <p>
+                            grid-templates are shorthand for grid-template-rows, grid-template-columns, and grid-template-areas. You can specify the rows and columns and default the areas to none, 
+                            or even set all three properties with a slightly more complex syntax [3]. However CSS-Tricks.com recommends using the grid property instead because it implicitly resets the
+                            grid-auto-columns, grid-auto-rows, and grid-auto-flow properties.
+                        </p>
+                        <p>
+                            There are also controls for setting the space between the grids. You can do this by setting the grid-column-gap and grid-row-gap properties. There are ways to justify 
+                            the content using the justify-items property (center, stretch, start, and end) and you can align items with the align-items property (center, stretch, start, and end) [3].
+                            The entire contents of the grid can also be justified or aligned using the justify-content and align-content properties.
+                        </p>
+                        <p>
+                            The grid-auto-flow properties tell the grid to either fill in more rows, columns, or empty space automatically (row, column, or dense values). The grid property is shorthand for
+                            several properties including grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and grid-auto-flow.
+                        </p>
+                        <p>
+                            Grid items have a number of properties that allow you to set where they each begin and end (for example grid-column-start, grid-column-end and equivalent row properties) [3]. 
+                            These also have properties to justify and align their content.
+                        </p>
+                        <div class="grid-container">
+                            <div class="header grid-item">Header Area</div>
+                            <div class="body grid-item">Main Content</div>
+                            <div class="footer grid-item">Footer Area</div>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://www.infocodify.com/css/grid_layout" title="Goes to the infocodify.com article covering grid alignment." rel="nofollow" target="_blank">Infocodify.com - Implementing a layout using grid alignment</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout" title="Goes to the MDN article covering the CSS grid layout." rel="nofollow" target="_blank">MDN - CSS Grid Layout</a></li>
+                            <li>[3] <a href="https://css-tricks.com/snippets/css/complete-guide-grid/" title="Goes to the CSS-Tricks.com guide over the CSS grid." rel="nofollow" target="_blank">CSS-Tricks.com - A Complete Guide to Grid</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="regions-grouping-nesting">Regions, grouping, and nesting layouts</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Infocodify.com explains that regions are "a new CSS3 construct that allows you to have content flow through various regions in a webpage" [1]. In order to use regions the layout must implement two things, those being a content source 
+                            and regions which will display the content. This content can come from another webpage with the use of an iframe or from another element on the page and Infocodify's article explains that at the time it didn't work in all browsers [1].
+                            Ultimately this allows content to fill in these defined regions similarly to how a magazine or newspaper is laid out, where content is laid out in grids and columns and the articles flow from page to page in some cases. Using regions
+                            allows you to add other elements in-between them and to pull your content from one source but have it placed on the page across the defined regions. The regions which the content flows over are called a 
+                            region chain.
+                        </p>
+                        <p>
+                            You are also able to control where content breaks and moves to a new region with the break-before, break-after, and break-inside properties. You can use these to be sure
+                            a heading isn't the last line of a region and instead gets displayed in a new region with the beginning of its content. For instance this could be achieved by setting the 
+                            break-after and break-inside properties for heading tags to 'avoid', as WebPlatform describes, to be sure the headings are placed within a single region and don't end up alone [4].
+                            The region-fragment property determines how the last region behaves. If the content were to break in the last region the overflow will not be rendered because there are no other regions for the 
+                            content to flow to, but it would act as though it was flowing into the next region and a break would occur.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://www.infocodify.com/css/regions_grouping_nesting" title="Goes to the infocodify.com article covering regions, grouping, and nesting." rel="nofollow" target="_blank">Infocodify.com - Regions, grouping, and nesting</a></li>
+                            <li>[2] <a href="https://www.sitepoint.com/a-beginners-guide-css-regions/" title="Goes to the sitepoint.com article covering regions." rel="nofollow" target="_blank">Sitepoint.com - A Beginner’s Guide to CSS Regions</a></li>
+                            <li>[3] <a href="https://www.w3.org/TR/css-regions-1/" title="Goes to the W3C's article covering regions." rel="nofollow" target="_blank">W3C - CSS Regions</a></li>
+                            <li>[4] <a href="https://webplatform.github.io/docs/tutorials/css-regions/" title="Goes to the WebPlatform article covering regions." rel="nofollow" target="_blank">WebPlatform - Using CSS Regions to flow content through a layout</a></li>
                         </ul>
                     </div>
                 </article>
