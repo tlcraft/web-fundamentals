@@ -2363,6 +2363,14 @@
                             The region-fragment property determines how the last region behaves. If the content were to break in the last region the overflow will not be rendered because there are no other regions for the 
                             content to flow to, but it would act as though it was flowing into the next region and a break would occur.
                         </p>
+                        <h5>Nesting and Grouping</h5>
+                        <p>
+                            Nesting and grouping help organize and reduce CSS. As HTMLDog.com explains, if the CSS and HTML are structured well you won't need to rely on element IDs or classes to target specific elements. Instead
+                            you can give an ID or class to a top level element and target the child elements like h1 or p rather than needing to target the h1 and p tags by specific names. For example
+                            .parent h1 { color: red; } and .parent p { color: blue; }. This is what is referred to as nesting, the child tags are nested within their parent. Grouping allows you to target
+                            different elements which all need to be styled similarly. For instance h3, .example, p { color: green; } will target header 3s, elements with the .example class, and paragraph elements
+                            and set their color to green. This is shorter than targeting and styling each of those separately. [5]
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
@@ -2371,6 +2379,7 @@
                             <li>[2] <a href="https://www.sitepoint.com/a-beginners-guide-css-regions/" title="Goes to the sitepoint.com article covering regions." rel="nofollow" target="_blank">Sitepoint.com - A Beginner’s Guide to CSS Regions</a></li>
                             <li>[3] <a href="https://www.w3.org/TR/css-regions-1/" title="Goes to the W3C's article covering regions." rel="nofollow" target="_blank">W3C - CSS Regions</a></li>
                             <li>[4] <a href="https://webplatform.github.io/docs/tutorials/css-regions/" title="Goes to the WebPlatform article covering regions." rel="nofollow" target="_blank">WebPlatform - Using CSS Regions to flow content through a layout</a></li>
+                            <li>[5] <a href="https://htmldog.com/guides/css/intermediate/grouping/" title="Goes to the HTMLDog.com article covering grouping and nesting CSS." rel="nofollow" target="_blank">HTML Dog - Grouping and Nesting</a></li>
                         </ul>
                     </div>
                 </article>
