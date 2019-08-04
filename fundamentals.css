@@ -583,3 +583,44 @@ svg.draw {
 .grid-container .footer {
     grid-area: footer;
 }
+
+.transition-example {
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.transition-example > .box {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    background: green;
+    transition-property: background-color width height left top;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.transition-example > .box-transition {
+    position: relative;
+    top: 100px;
+    left: 100px;
+    width: 75px;
+    height: 75px;
+    background: yellowgreen;
+    transition-property: background-color width height left top;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
+
+.transition-hover >.hover-example {
+    font-size: 1em;
+    transition-property: font-size;
+    transition-duration: 0.3s;
+}
+
+.transition-hover >.hover-example:hover {
+    font-size: 1.5em;
+}
+

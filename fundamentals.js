@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     drawOnCanvas();
     formValidation();
     setInterval(moveBanner, 600);
+    setInterval(updateTransition, 5000);
 });
 
 function uiControlsExample() {
@@ -195,3 +196,16 @@ function moveBanner() {
 
     bannerText.style.left = left + 'px';
 };
+
+function updateTransition() {
+    let box = document.querySelector('.transition-example div.box');
+
+    if (box) {
+        box.className = "box-transition";
+    } else {
+        box = document.querySelector('.transition-example div.box-transition');
+        box.className = "box";
+    }
+
+    return box;
+}
