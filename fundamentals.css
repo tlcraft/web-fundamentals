@@ -751,3 +751,7 @@ svg.draw {
 .pseudo-element-demo::selection {
     color: cyan;
 }
+
+.pseudo-class-demo:hover {
+    color: red;
+}
