@@ -25,6 +25,7 @@
             <a href="#text-properties" title="Goes to the article on HTML Text Properties.">- HTML Text Properties</a>
             <a href="#box-properties" title="Goes to the article on HTML Box Properties.">- HTML Box Properties</a>
             <a href="#flexible-layout" title="Goes to the article on Flexible layouts.">- Flexible layout</a>
+            <a href="#animated-adaptive-ui" title="Goes to the article on animated and adaptive UIs.">- Animated and Adaptive UI</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
         <section class="introduction">
@@ -129,15 +130,15 @@
                         <li><a href="#grid-alignment" title="Goes to the article on grid alignment.">Grid alignment</a></li>
                         <li><a href="#regions-grouping-nesting" title="Goes to the article on regions, grouping, and nesting layouts.">Regions, grouping, and nesting layouts</a></li>
                     </ul>
-                    <li>Animated and Adaptive UI</li>
+                    <li><a href="#animated-adaptive-ui" title="Goes to the article on animated and adaptive UIs.">Animated and Adaptive UI</a></li>
                     <ul>
-                        <li>CSS Transitions</li>
-                        <li>3D and 2D transformations</li>
-                        <li>Media Queries</li>
+                        <li><a href="#css-transitions" title="Goes to the article on CSS transitions.">CSS Transitions</a></li>
+                        <li><a href="#css-transformations" title="Goes to the article on CSS transformations.">3D and 2D transformations</a></li>
+                        <li><a href="#media-queries" title="Goes to the article on media queries.">Media Queries</a></li>
                         <ul>
                             <li>device adaptations for output formats, displays, and representations</li>
                         </ul>
-                        <li>Hide and Show logic</li>
+                        <li><a href="#hide-show-logic" title="Goes to the article on hide and show logic.">Hide and Show logic</a></li>
                     </ul>
                     <li>CSS and jQuery Selectors</li>
                     <ul>
@@ -2351,7 +2352,7 @@
                     <div class="topic">
                         <p>
                             Infocodify.com explains that regions are "a new CSS3 construct that allows you to have content flow through various regions in a webpage" [1]. In order to use regions the layout must implement two things, those being a content source 
-                            and regions which will display the content. This content can come from another webpage with the use of an iframe or from another element on the page and Infocodify's article explains that at the time it didn't work in all browsers [1].
+                            and regions which will display the content. This content can come from another web page with the use of an iframe or from another element on the page and Infocodify's article explains that at the time it didn't work in all browsers [1].
                             Ultimately this allows content to fill in these defined regions similarly to how a magazine or newspaper is laid out, where content is laid out in grids and columns and the articles flow from page to page in some cases. Using regions
                             allows you to add other elements in-between them and to pull your content from one source but have it placed on the page across the defined regions. The regions which the content flows over are called a 
                             region chain.
@@ -2380,6 +2381,190 @@
                             <li>[3] <a href="https://www.w3.org/TR/css-regions-1/" title="Goes to the W3C's article covering regions." rel="nofollow" target="_blank">W3C - CSS Regions</a></li>
                             <li>[4] <a href="https://webplatform.github.io/docs/tutorials/css-regions/" title="Goes to the WebPlatform article covering regions." rel="nofollow" target="_blank">WebPlatform - Using CSS Regions to flow content through a layout</a></li>
                             <li>[5] <a href="https://htmldog.com/guides/css/intermediate/grouping/" title="Goes to the HTMLDog.com article covering grouping and nesting CSS." rel="nofollow" target="_blank">HTML Dog - Grouping and Nesting</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <section>                
+                <div class="title-bar">
+                    <h4><a id="animated-adaptive-ui">Animated and Adaptive UI</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            When interacting with a website or application people expect feedback from the application to know that it's working and processing information. It's also expected that if someone navigates to a website
+                            on their phone, desktop, or tablet that the site will still be functional. Using animation techniques is one way to enhance the user experience and differentiate your application
+                            from competitors and media queries are essential for adjusting a website to a given screen size and resolution. 
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#css-transitions" title="Goes to the article on CSS transitions.">CSS Transitions</a> |
+                            <a href="#css-transformations" title="Goes to the article on CSS transformations.">3D and 2D transformations</a> |
+                            <a href="#media-queries" title="Goes to the article on media queries.">Media Queries</a> |
+                            <a href="#hide-show-logic" title="Goes to the article on hide and show logic.">Hide and Show logic</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="css-transitions">CSS Transitions</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            CSS transitions change the style of an element over a period of time. This can be helpful to illustrate to users that their actions have taken affect and the application
+                            is processing in some way as one example. We have control over how the style changes and how long the transition takes to complete. You can chain together multiple styles
+                            with time intervals in a list. These are controlled by the following properties: transition-property, transition-duration, and transition-delay. There is 
+                            also a transition-timing-function for determining "how intermediate values for properties are computed" [2]. The effects can be triggered from events such as hovering over an
+                            element or by using JavaScript.
+                        </p>
+                        <p>
+                            The transition-property lists the CSS properties which will change and only those listed will be affected. The transition-duration specifies how long the transition takes to complete.
+                            The transition-delay specifies how long to wait before applying the transition once the trigger occurs. Finally the transition-timing-function has several possible values 
+                            including: ease, ease-in, ease-out, linear, step-start, step-end, steps (which specifies how many steps to take during the transition). It's also important to consider accessibility 
+                            and to allow users to turn off the animations if they so choose.
+                        </p>
+                        <div class="transition-example">
+                            <div id="transition-box" class="box"></div>
+                        </div>
+                        <div class="transition-hover">
+                            <p class="hover-example">
+                                Hovering over this element causes it to transition!
+                            </p>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://www.infocodify.com/css/transitions" title="Goes to the infocodify.com article covering animating objects by applying CSS transitions." rel="nofollow" target="_blank">Infocodify.com - Animating objects by applying CSS transitions</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transitions/Using_CSS_transitions" title="Goes to the MDN article covering CSS transitions." rel="nofollow" target="_blank">MDN - Using CSS transitions</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="css-transformations">3D and 2D transformations</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            CSS Transformations can change the shape and position of an element. Again this is something that can enhance the user experience at times, though accessibility is also a concern to plan for.
+                            Some of the transformations include skewing, scaling, and rotating an element. This includes both 2D and 3D transformations. We actually looked at these earlier within the
+                            Media Controls section. MDN points out that only elements positioned by the box model can be transformed and that a good rule of thumb to determine this is if the element has 
+                            a display: block [2].
+                        </p>
+                        <p>
+                            We saw the use of the transform property earlier. There is also a transform-origin property which specifies the position of the origin [2]. By default this is at the center of the element but you can 
+                            set it separately if needed. This is used with rotation, skew, or scaling transforms. For 3D transforms there are other properties to consider. The property perspective changes how much depth is applied
+                            to the element, effectively pulling it away from the viewer. This helps to establish the impression of the 3D effect. There is also a perspective-origin property which changes the perspective given positional 
+                            values like top, left, or percentages like 50% 50% (which is centered). Below is an example from MDN [2].
+                        </p>
+                        <div class="css-3d-transform demo-area">
+                            <div class="container">
+                                <div class="cube top-left">
+                                    <div class="face front">1</div>
+                                    <div class="face back">2</div>
+                                    <div class="face right">3</div>
+                                    <div class="face left">4</div>
+                                    <div class="face top">5</div>
+                                    <div class="face bottom">6</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://www.infocodify.com/css/transformations" title="Goes to the infocodify.com article on applying 3-D and 2-D transformations." rel="nofollow" target="_blank">Infocodify.com - Applying 3-D and 2-D transformations</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms" title="Goes to the MDN article covering CSS transformations." rel="nofollow" target="_blank">MDN - Using CSS transformations</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="media-queries">Media Queries</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Media queries are used to alter which CSS styles are applied based on screen size and device constraints. So your web page can be styled one way for desktops but differently
+                            for phones for example. It also allows the UI to change dynamically if you were to resize a browser window for instance to either decrease or increase the viewport.
+                            You can supply many different media queries to be sure your application works for a variety of devices, or if you need to add specific styles for a particular size 
+                            in order to fix the user experience. You can even load the style sheets based on these queries rather than placing all the different styles into a single CSS file.
+                            This way you load the correct styles from an organized file targeting the designated size and constraints. A style sheet will download regardless but only apply if the media
+                            query is true [2].
+                        </p>
+                        <p>
+                            MDN explains that media queries are useful for conditionally applying styles with @media or @input rules, targeting media for the style, link, and source tag and other 
+                            HTML elements with a media attribute, and for testing and monitoring media states using Window.matchMedia() and MediaQueryList.addListener() methods [2].
+                        </p>
+                        <p>
+                            Media types include all, print (printers), screen, and speech (synthesizers). This value defaults to all. Print is intended for paged material. Media types describe the general category
+                            of a device [2].
+                        </p>
+                        <p>
+                            Media features include width, height, aspect-ratio, orientation, resolution, scan, grid, update, color, among many others. These help determine what device the user
+                            is viewing the media with. These are used within the query to target specific features and requirements. You can apply logical operators. These are and, not, only and 
+                            , (comma). And combines media features within a query and is also used to joining media features with media types. Not negates a media query. You must specify a media type
+                            when using not. Only applies the style when the entire media query matches the device and can be helpful "for preventing older browser from applying a style" [2]. When using only
+                            you must also supply a media type. The comma "combines multiple media queries into a single rule" so it behaves like an OR operator [2].
+                        </p>
+                        <p>
+                            In practice you'll create media queries based on various conditions which will make use of the logical operators. Furthermore you'll be able to group the queries
+                            with commas to create different situations where a particular style should be applied. Remember that not is applied last, to a specific media query (meaning it won't apply to 
+                            a comma separated list, only the query it is attached to) [2]. Media queries are also evolving and have had different iterations known as levels which improve upon the syntax
+                            and change features. For instance in level 4 you can use less than and greater then (or equal to) operators to specify ranges rather than check for a min- and max- value (i.e. 
+                            @media (5em <= width <= 10em) { ... }). Below is a simple example of a media query in action, adjust the browser size to watch the color change.
+                        </p>
+                        <div class="media-query-demo">
+                            This element changes based on media queries.
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://www.infocodify.com/css/media_queries" title="Goes to the infocodify.com article on adjusting UI based on media queries." rel="nofollow" target="_blank">Infocodify.com - Adjusting UI based on media queries</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries" title="Goes to the MDN article on using media queries." rel="nofollow" target="_blank">MDN - Using media queries</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="hide-show-logic">Hide and Show logic</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            You can show and hide elements using one of several different CSS properties. These include display, visibility, and disabled. The display and visibility
+                            properties allow you to hide an element. These work similarly however when using the visibility property to hide an element (hidden) the document will still behave
+                            as though the element is within the DOM structure. So the space it is taking up is not removed. If you want to also remove the space the element takes up
+                            set the display property to none which will completely hide the element. If you would rather disable the element and leave it visible on the screen the disabled
+                            attribute will allow you to disable actions from being performed (such as for input). Elements become greyed out but still react to mouse events. It also
+                            cannot be focused and the command event will not fire [4]. It's only allowed for form controls.
+                        </p>
+                        <p>
+                            Display has many possible values including: block, inline, run-in, flow, flex, grid, etc. As MDN explains display sets the inner and outer display types of an element [2].
+                            "The outer type sets an element's participation in flow layout; the inner type sets the layout of children" [2].
+                        </p>
+                        <p>
+                            Visibility has several values including: visible (the element is displayed), hidden (the element is not drawn but affects the layout), and collapse. Collapse is
+                            useful for tables to quickly hide a column or row but to not affect spacing. If applied to flex items the item and space are removed. For other elements it is as if 
+                            the element was hidden. [3]
+                        </p>
+                        <div class="disply-none">This is not visible.</div>
+                        <div class="visibility">This is not visible but within the structure of the page.</div>
+                        <input type="text" disabled="disabled" placeholder="This is disabled."/>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://www.infocodify.com/css/hiding_disabling" title="Goes to the infocodify.com article on hiding or disabling controls." rel="nofollow" target="_blank">Infocodify.com - Hiding or disabling controls</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" title="Goes to the MDN article on the display property." rel="nofollow" target="_blank">MDN - display</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility" title="Goes to the MDN article on the visibility property." rel="nofollow" target="_blank">MDN - visibility</a></li>
+                            <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disabled" title="Goes to the MDN article on the disabled attribute." rel="nofollow" target="_blank">MDN - disabled</a></li>
                         </ul>
                     </div>
                 </article>
