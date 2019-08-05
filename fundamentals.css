@@ -739,3 +739,11 @@ svg.draw {
     color: purple;
     font-size: 2em;
 }
+
+.pseudo-element-demo::first-line {
+    color: orange;
+}
+
+.pseudo-element-demo::first-letter {
+    color: black;
+}
