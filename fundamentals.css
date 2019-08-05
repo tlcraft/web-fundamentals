@@ -747,3 +747,7 @@ svg.draw {
 .pseudo-element-demo::first-letter {
     color: black;
 }
+
+.pseudo-element-demo::selection {
+    color: cyan;
+}
