@@ -26,6 +26,7 @@
             <a href="#box-properties" title="Goes to the article on HTML Box Properties.">- HTML Box Properties</a>
             <a href="#flexible-layout" title="Goes to the article on Flexible layouts.">- Flexible layout</a>
             <a href="#animated-adaptive-ui" title="Goes to the article on animated and adaptive UIs.">- Animated and Adaptive UI</a>
+            <a href="#selectors" title="Goes to the article on CSS and jQuery selectors.">- CSS and jQuery Selectors</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
         <section class="introduction">
@@ -140,11 +141,11 @@
                         </ul>
                         <li><a href="#hide-show-logic" title="Goes to the article on hide and show logic.">Hide and Show logic</a></li>
                     </ul>
-                    <li>CSS and jQuery Selectors</li>
+                    <li><a href="#selectors" title="Goes to the article on CSS and jQuery selectors.">CSS and jQuery Selectors</a></li>
                     <ul>
-                        <li>Different types of selectors</li>
-                        <li>Define element, style, and attribute selectors</li>
-                        <li>Find elements with pseudo-elements and classes</li>
+                        <li><a href="#selector-types" title="Goes to the article on selector types.">Different types of selectors</a></li>
+                        <li><a href="#attribute-selectors" title="Goes to the article on element, style, and attribute selectors.">Define element, style, and attribute selectors</a></li>
+                        <li><a href="#pseudo-elements" title="Goes to the article on pseudo-elements and classes.">Find elements with pseudo-elements and classes</a></li>
                     </ul>
                     <li>CSS File Structure</li>
                     <ul>
@@ -2565,6 +2566,140 @@
                             <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" title="Goes to the MDN article on the display property." rel="nofollow" target="_blank">MDN - display</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility" title="Goes to the MDN article on the visibility property." rel="nofollow" target="_blank">MDN - visibility</a></li>
                             <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disabled" title="Goes to the MDN article on the disabled attribute." rel="nofollow" target="_blank">MDN - disabled</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <section>                
+                <div class="title-bar">
+                    <h4><a id="selectors">CSS and jQuery Selectors</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            In order to apply logic or styles we need to be able to locate elements on the page. We can do this in several ways and frameworks like jQuery can make the syntax easier to use and read.
+                            This is true for CSS as well which can target elements for instance by class or id. We can also create pseudo-classes to represent different things.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#selector-types" title="Goes to the article on selector types.">Different types of selectors</a> |
+                            <a href="#attribute-selectors" title="Goes to the article on element, style, and attribute selectors.">Define element, style, and attribute selectors</a> |
+                            <a href="#pseudo-elements" title="Goes to the article on pseudo-elements and classes.">Find elements with pseudo-elements and classes</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="selector-types">Different types of selectors</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            There are various types of selectors. It's possible to select elements given their tag, or elements by id or class attributes (#id and .class). There are also
+                            ways to select elements given their attributes. JavaScript and jQuery provide APIs for selecting based on these same properties as we've seen throughout these notes 
+                            in the Programmatically modify HTML section. You can also select all elements with the wildcard *.
+                        </p>
+                        <p>
+                            Additionally there are combinators. These are:
+                        </p>
+                        <ul>
+                            <li>A + B : adjacent siblings - the second element follows the first immediately and they share the same parent</li>
+                            <li>A ~ B : general siblings - the second element follows the first at some point and they share the same parent</li>
+                            <li>A > B : child - elements must be direct children of the parent element</li>
+                            <li>A B : descendant - elements must be children of the parent element</li>
+                            <li>A || B : column - elements must be within the scope of a column - this is experimental</li>
+                        </ul>
+                        <p>
+                            Of course there are also pseudo-elements and -classes which we'll see below.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors" title="Goes to the MDN article on CSS selectors." rel="nofollow" target="_blank">MDN - CSS seletors</a></li>
+                            <li>[2] <a href="https://api.jquery.com/category/selectors/" title="Goes to the jQuery.com article on selectors." rel="nofollow" target="_blank">jQuery - Seletors</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="attribute-selectors">Define element, style, and attribute selectors</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Elements can be selected by creating a selector targeting a specific tag. For example you can apply a style to all divs by creating a CSS selector: div { styles here }. This applies to JavaScript
+                            and jQuery as well given their APIs. All divs would be targeted. To be more specific you can add ids and classes to elements. These attributes are helpful for targeting 
+                            specific or related groups of elements. You can also target attributes given specific values or preferences.
+                        </p>
+                        <p>
+                            Attributes can be selected using the following patterns.
+                        </p>
+                        <ul>
+                            <li>[attr] - a specific attribute</li>
+                            <li>[attr=value] - a specific attribute set with a specific value</li>
+                            <li>[attr~=value] - a specific attribute with a list of words where one is the defined value</li>
+                            <li>[attr|=value] - an attribute with the defined value or that value after a hyphen (this is often used to match language subcodes [2])</li>
+                            <li>[attr=^=value] - an attribute whose value begins with the defined value</li>
+                            <li>[attr$=value] - an attribute whose value ends with the defined value</li>
+                            <li>[attr*=value] - an attribute whose value contains the value specified</li>
+                            <li>[attr operator value i] - the i or I causes the value to be case-insensitive</li>
+                            <li>[attr operator value s] - an experimental value for case-sensitivity</li>
+                        </ul>
+                        <p>
+                            Note that ordered lists need to have the case-sensitive type modifier defined due to how HTML treats the type attribute. This has to do with the type attribute being used with the input element. [2]
+                        </p>
+                        <div class="attribute-demo">
+                            <p class="attribute-class">This paragraph has a class defined and so it is styled.</p>
+                            <p>This paragraph does not have a class defined and so it is not styled.</p>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://www.infocodify.com/css/selectors" title="Goes to the infocodify.com article on defining selectors." rel="nofollow" target="_blank">Infocodify.com - Defining element, style, and attribute selectors</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" title="Goes to the MDN article on attribute selectors." rel="nofollow" target="_blank">MDN - Attribute seletors</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="pseudo-elements">Find elements with pseudo-elements and classes</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Pseudo-elements let you style specific parts of the selected element. These are keywords that target things like the first line of an element (::first-line).
+                            The list of pseudo-elements includes: ::after, ::first-line, ::selection, ::backdrop (experimental), ::grammar-error (experimental), ::slotted(), ::before, 
+                            ::marker (experimental), ::spelling-error (experimental), ::cue, ::part (experimental), ::first-letter, and ::placeholder (experimental) [4]. Double colons :: are
+                            used to distinguish pseudo-elements from pseudo-classes though most browsers support both single or double colons because this wasn't originally part of the 
+                            W3C specification [4].
+                        </p>
+                        <p class="pseudo-element-demo">
+                            This paragraph's first line is styled. This is because I've targeted it with the pseudo-element ::first-line. The first letter has also been styled using a pseudo-element.
+                            With enough text to fill a line the part of the sentence that wraps to the following line(s) ends up with no styling and is colored black. The first line is orange and the first 
+                            letter is styled black specifically. Try highlighting the text as well. This turns cyan from the pseudo-element ::selection.
+                        </p>
+                        <p>
+                            Pseudo-classes work similarly to pseudo-elements. These allow you to style an element given contextual information, like if a link has been visited, if an element is disabled,
+                            if a box if checked, or if the mouse is hovering over an element. Some of the pseudo-classes include: :active, :nth-last-of-type(), :host, :only-child, :hover, :default, :out-of-range,
+                            :disabled, :read-only, :empty, :last-child, :first-child, :valid, and :visited. For the full list see the MDN link below.
+                        </p>
+                        <p class="pseudo-class-demo">
+                            This paragraph has been styled with pseudo-classes. Try hovering over the text. <a href="http://www.google.com" title="Goes to Google.com" rel="nofollow" target="_blank">This link is colored green as well.
+                            That will change once you visit the link.</a>
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="http://www.infocodify.com/css/pseudo_elements" title="Goes to the infocodify.com article on finding elements with pseudo-elements." rel="nofollow" target="_blank">Infocodify.com - Finding elements by using pseudo-elements</a></li>
+                            <li>[2] <a href="http://www.infocodify.com/css/pseudo_classes" title="Goes to the infocodify.com article on finding elements with pseudo-classes." rel="nofollow" target="_blank">Infocodify.com - Finding elements by using pseudo-classes</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" title="Goes to the MDN article on pseudo-classes." rel="nofollow" target="_blank">MDN - Pseudo-classes</a></li>
+                            <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" title="Goes to the MDN article on pseudo-elements." rel="nofollow" target="_blank">MDN - Pseudo-elements</a></li>
                         </ul>
                     </div>
                 </article>

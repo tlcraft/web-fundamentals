@@ -734,3 +734,32 @@ svg.draw {
 .visibility {
     visibility: hidden;
 }
+
+.attribute-demo [class$=-class] {
+    color: purple;
+    font-size: 2em;
+}
+
+.pseudo-element-demo::first-line {
+    color: orange;
+}
+
+.pseudo-element-demo::first-letter {
+    color: black;
+}
+
+.pseudo-element-demo::selection {
+    color: cyan;
+}
+
+.pseudo-class-demo:hover {
+    color: red;
+}
+
+.pseudo-class-demo a:link {
+    color: green;
+}
+
+.pseudo-class-demo a:visited {
+    color: aqua;
+}
