@@ -2616,13 +2616,37 @@
                 <article>
                     <div class="topic">
                         <p>
-                            
+                            Elements can be selected by creating a selector targeting a specific tag. For example you can apply a style to all divs by creating a CSS selector: div { styles here }. This applies to JavaScript
+                            and jQuery as well given their APIs. All divs would be targeted. To be more specific you can add ids and classes to elements. These attributes are helpful for targeting 
+                            specific or related groups of elements. You can also target attributes given specific values or preferences.
                         </p>
+                        <p>
+                            Attributes can be selected using the following patterns.
+                        </p>
+                        <ul>
+                            <li>[attr] - a specific attribute</li>
+                            <li>[attr=value] - a specific attribute set with a specific value</li>
+                            <li>[attr~=value] - a specific attribute with a list of words where one is the defined value</li>
+                            <li>[attr|=value] - an attribute with the defined value or that value after a hyphen (this is often used to match language subcodes [2])</li>
+                            <li>[attr=^=value] - an attribute whose value begins with the defined value</li>
+                            <li>[attr$=value] - an attribute whose value ends with the defined value</li>
+                            <li>[attr*=value] - an attribute whose value contains the value specified</li>
+                            <li>[attr operator value i] - the i or I causes the value to be case-insensitive</li>
+                            <li>[attr operator value s] - an experimental value for case-sensitivity</li>
+                        </ul>
+                        <p>
+                            Note that ordered lists need to have the case-sensitive type modifier defined due to how HTML treats the type attribute. This has to do with the type attribute being used with the input element. [2]
+                        </p>
+                        <div class="attribute-demo">
+                            <p class="attribute-class">This paragraph has a class defined and so it is styled.</p>
+                            <p>This paragraph does not have a class defined and so it is not styled.</p>
+                        </div>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="http://www.infocodify.com/css/selectors" title="Goes to the infocodify.com article on defining selectors." rel="nofollow" target="_blank">Infocodify.com - Defining element, style, and attribute selectors</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" title="Goes to the MDN article on attribute selectors." rel="nofollow" target="_blank">MDN - Attribute seletors</a></li>
                         </ul>
                     </div>
                 </article>

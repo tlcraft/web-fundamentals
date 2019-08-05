@@ -734,3 +734,8 @@ svg.draw {
 .visibility {
     visibility: hidden;
 }
+
+.attribute-demo [class$=-class] {
+    color: purple;
+    font-size: 2em;
+}
