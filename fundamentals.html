@@ -2538,13 +2538,33 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            You can show and hide elements using one of several different CSS properties. These include display, visibility, and disabled. The display and visibility
+                            properties allow you to hide an element. These work similarly however when using the visibility property to hide an element (hidden) the document will still behave
+                            as though the element is within the DOM structure. So the space it is taking up is not removed. If you want to also remove the space the element takes up
+                            set the display property to none which will completely hide the element. If you would rather disable the element and leave it visible on the screen the disabled
+                            attribute will allow you to disable actions from being performed (such as for input). Elements become greyed out but still react to mouse events. It also
+                            cannot be focused and the command event will not fire [4]. It's only allowed for form controls.
                         </p>
+                        <p>
+                            Display has many possible values including: block, inline, run-in, flow, flex, grid, etc. As MDN explains display sets the inner and outer display types of an element [2].
+                            "The outer type sets an element's participation in flow layout; the inner type sets the layout of children" [2].
+                        </p>
+                        <p>
+                            Visibility has several values including: visible (the element is displayed), hidden (the element is not drawn but affects the layout), and collapse. Collapse is
+                            useful for tables to quickly hide a column or row but to not affect spacing. If applied to flex items the item and space are removed. For other elements it is as if 
+                            the element was hidden. [3]
+                        </p>
+                        <div class="disply-none">This is not visible.</div>
+                        <div class="visibility">This is not visible but within the structure of the page.</div>
+                        <input type="text" disabled="disabled" placeholder="This is disabled."/>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="http://www.infocodify.com/css/hiding_disabling" title="Goes to the infocodify.com article on hiding or disabling controls." rel="nofollow" target="_blank">Infocodify.com - Hiding or disabling controls</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/display" title="Goes to the MDN article on the display property." rel="nofollow" target="_blank">MDN - display</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility" title="Goes to the MDN article on the visibility property." rel="nofollow" target="_blank">MDN - visibility</a></li>
+                            <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Attribute/disabled" title="Goes to the MDN article on the disabled attribute." rel="nofollow" target="_blank">MDN - disabled</a></li>
                         </ul>
                     </div>
                 </article>

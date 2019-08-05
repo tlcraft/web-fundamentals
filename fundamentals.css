@@ -726,3 +726,11 @@ svg.draw {
         background-color: black;
     }
 }
+
+.disply-none {
+    display: none;
+}
+
+.visibility {
+    visibility: hidden;
+}
