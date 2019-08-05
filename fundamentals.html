@@ -2494,12 +2494,34 @@
                             for phones for example. It also allows the UI to change dynamically if you were to resize a browser window for instance to either decrease or increase the viewport.
                             You can supply many different media queries to be sure your application works for a variety of devices, or if you need to add specific styles for a particular size 
                             in order to fix the user experience. You can even load the style sheets based on these queries rather than placing all the different styles into a single CSS file.
-                            This way you load the correct styles from an organized file targetting the designated size and contraints.
+                            This way you load the correct styles from an organized file targeting the designated size and constraints. A style sheet will download regardless but only apply if the media
+                            query is true [2].
                         </p>
                         <p>
                             MDN explains that media queries are useful for conditionally applying styles with @media or @input rules, targeting media for the style, link, and source tag and other 
                             HTML elements with a media attribute, and for testing and monitoring media states using Window.matchMedia() and MediaQueryList.addListener() methods [2].
                         </p>
+                        <p>
+                            Media types include all, print (printers), screen, and speech (synthesizers). This value defaults to all. Print is intended for paged material. Media types describe the general category
+                            of a device [2].
+                        </p>
+                        <p>
+                            Media features include width, height, aspect-ratio, orientation, resolution, scan, grid, update, color, among many others. These help determine what device the user
+                            is viewing the media with. These are used within the query to target specific features and requirements. You can apply logical operators. These are and, not, only and 
+                            , (comma). And combines media features within a query and is also used to joining media features with media types. Not negates a media query. You must specify a media type
+                            when using not. Only applies the style when the entire media query matches the device and can be helpful "for preventing older browser from applying a style" [2]. When using only
+                            you must also supply a media type. The comma "combines multiple media queries into a single rule" so it behaves like an OR operator [2].
+                        </p>
+                        <p>
+                            In practice you'll create media queries based on various conditions which will make use of the logical operators. Furthermore you'll be able to group the queries
+                            with commas to create different situations where a particular style should be applied. Remember that not is applied last, to a specific media query (meaning it won't apply to 
+                            a comma separated list, only the query it is attached to) [2]. Media queries are also evolving and have had different iterations known as levels which improve upon the syntax
+                            and change features. For instance in level 4 you can use less than and greater then (or equal to) operators to specify ranges rather than check for a min- and max- value (i.e. 
+                            @media (5em <= width <= 10em) { ... }). Below is a simple example of a media query in action, adjust the browser size to watch the color change.
+                        </p>
+                        <div class="media-query-demo">
+                            This element changes based on media queries.
+                        </div>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
