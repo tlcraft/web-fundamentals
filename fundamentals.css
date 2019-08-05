@@ -755,3 +755,11 @@ svg.draw {
 .pseudo-class-demo:hover {
     color: red;
 }
+
+.pseudo-class-demo a:link {
+    color: green;
+}
+
+.pseudo-class-demo a:visited {
+    color: aqua;
+}
