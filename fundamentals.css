@@ -763,3 +763,13 @@ svg.draw {
 .pseudo-class-demo a:visited {
     color: aqua;
 }
+
+.important {
+    font-size: 15px !important;
+    color: darkblue !important;
+}
+
+.inheritance-example > p {
+    font-size: 20px;
+    color: lightcoral;
+}

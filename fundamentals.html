@@ -27,6 +27,7 @@
             <a href="#flexible-layout" title="Goes to the article on Flexible layouts.">- Flexible layout</a>
             <a href="#animated-adaptive-ui" title="Goes to the article on animated and adaptive UIs.">- Animated and Adaptive UI</a>
             <a href="#selectors" title="Goes to the article on CSS and jQuery selectors.">- CSS and jQuery Selectors</a>
+            <a href="#css-file-structure" title="Goes to the article on CSS file structure.">- CSS File Structure</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
         <section class="introduction">
@@ -147,11 +148,11 @@
                         <li><a href="#attribute-selectors" title="Goes to the article on element, style, and attribute selectors.">Define element, style, and attribute selectors</a></li>
                         <li><a href="#pseudo-elements" title="Goes to the article on pseudo-elements and classes.">Find elements with pseudo-elements and classes</a></li>
                     </ul>
-                    <li>CSS File Structure</li>
+                    <li><a href="#css-file-structure" title="Goes to the article on CSS file structure.">CSS File Structure</a></li>
                     <ul>
                         <li>CSS Selectors</li>
                         <li>Reference elements</li>
-                        <li>Implement inheritance</li>
+                        <li><a href="#implement-inheritance" title="Goes to the article on implementing CSS inheritance.">Implement inheritance</a></li>
                         <li>Override inheritance with !important</li>
                         <li>Style using pseudo-elements and classes</li>
                     </ul>
@@ -1771,9 +1772,9 @@
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
-                                <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" title="Goes to an MDN article discussing form data validation." rel="nofollow" target="_blank">MDN - Form data validation</a></li>
-                                <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="Goes to an MDN article over input types and attributes." rel="nofollow" target="_blank">MDN - The Input element</a></li>
-                                <li>[3] <a href="https://stackoverflow.com/a/1373724/8094831" title="Goes to a Stack Overflow post on Regex for email addresses." rel="nofollow" target="_blank">Stack Overflow - Email Regex example</a></li>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" title="Goes to an MDN article discussing form data validation." rel="nofollow" target="_blank">MDN - Form data validation</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input" title="Goes to an MDN article over input types and attributes." rel="nofollow" target="_blank">MDN - The Input element</a></li>
+                            <li>[3] <a href="https://stackoverflow.com/a/1373724/8094831" title="Goes to a Stack Overflow post on Regex for email addresses." rel="nofollow" target="_blank">Stack Overflow - Email Regex example</a></li>
                         </ul>
                     </div>
                 </article>
@@ -1787,7 +1788,10 @@
             <nav class="topics-nav">
                 <a href="#text-properties" title="Goes to the article on HTML Text Properties.">HTML Text Properties</a> |
                 <a href="#box-properties" title="Goes to the article on HTML Box Properties.">HTML Box Properties</a> |
-                <a href="#flexible-layout" title="Goes to the article on Flexible layouts.">Flexible layout</a>
+                <a href="#flexible-layout" title="Goes to the article on Flexible layouts.">Flexible layout</a> |
+                <a href="#animated-adaptive-ui" title="Goes to the article on animated and adaptive UIs.">Animated and Adaptive UI</a> |
+                <a href="#selectors" title="Goes to the article on CSS and jQuery selectors.">CSS and jQuery Selectors</a> |
+                <a href="#css-file-structure" title="Goes to the article on CSS file structure.">CSS File Structure</a>
             </nav>
             <section>                
                 <div class="title-bar">
@@ -2633,7 +2637,8 @@
                         <p>
                             Elements can be selected by creating a selector targeting a specific tag. For example you can apply a style to all divs by creating a CSS selector: div { styles here }. This applies to JavaScript
                             and jQuery as well given their APIs. All divs would be targeted. To be more specific you can add ids and classes to elements. These attributes are helpful for targeting 
-                            specific or related groups of elements. You can also target attributes given specific values or preferences.
+                            specific or related groups of elements. You can also target attributes given specific values or preferences. In order to find elements by their attributes you can use the querySelector and 
+                            querySelectorAll DOM API methods. jQuery also allows you to find elements by attributes with the following syntax: $("[attr=value]"). Quotes must surround the value if it has a space in it [3].
                         </p>
                         <p>
                             Attributes can be selected using the following patterns.
@@ -2661,7 +2666,8 @@
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="http://www.infocodify.com/css/selectors" title="Goes to the infocodify.com article on defining selectors." rel="nofollow" target="_blank">Infocodify.com - Defining element, style, and attribute selectors</a></li>
-                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" title="Goes to the MDN article on attribute selectors." rel="nofollow" target="_blank">MDN - Attribute seletors</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" title="Goes to the MDN article on attribute selectors." rel="nofollow" target="_blank">MDN - Attribute seletors</a></li>                            
+                            <li>[3] <a href="https://stackoverflow.com/a/2694668/8094831" title="Goes to a Stack Overflow answer regarding attribute selectors." rel="nofollow" target="_blank">Stack Overflow - Attribute Selectors</a></li>
                         </ul>
                     </div>
                 </article>
@@ -2676,7 +2682,8 @@
                             The list of pseudo-elements includes: ::after, ::first-line, ::selection, ::backdrop (experimental), ::grammar-error (experimental), ::slotted(), ::before, 
                             ::marker (experimental), ::spelling-error (experimental), ::cue, ::part (experimental), ::first-letter, and ::placeholder (experimental) [4]. Double colons :: are
                             used to distinguish pseudo-elements from pseudo-classes though most browsers support both single or double colons because this wasn't originally part of the 
-                            W3C specification [4].
+                            W3C specification [4]. Pseudo-elements and -classes are not selectable with an API because these are not part of the DOM. You can however find the styles applied to 
+                            an element with a pseudo-element or class [5].
                         </p>
                         <p class="pseudo-element-demo">
                             This paragraph's first line is styled. This is because I've targeted it with the pseudo-element ::first-line. The first letter has also been styled using a pseudo-element.
@@ -2700,6 +2707,87 @@
                             <li>[2] <a href="http://www.infocodify.com/css/pseudo_classes" title="Goes to the infocodify.com article on finding elements with pseudo-classes." rel="nofollow" target="_blank">Infocodify.com - Finding elements by using pseudo-classes</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" title="Goes to the MDN article on pseudo-classes." rel="nofollow" target="_blank">MDN - Pseudo-classes</a></li>
                             <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" title="Goes to the MDN article on pseudo-elements." rel="nofollow" target="_blank">MDN - Pseudo-elements</a></li>
+                            <li>[5] <a href="https://stackoverflow.com/questions/38872290/how-to-get-pseudo-element" title="Goes to a Stack Overflow answer regarding pseud-element selectors." rel="nofollow" target="_blank">Stack Overflow - Pseudo-element Selectors</a></li>     
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <section>                
+                <div class="title-bar">
+                    <h4><a id="css-file-structure">CSS File Structure</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            How you structure CSS files is important. Depending on how you've set up your files styles may be overridden by others defined earlier. In some cases you want that to happen,
+                            in others you don't. Styles inherited from earlier defined styles can be overridden if you need using the !important modifier.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#implement-inheritance" title="Goes to the article on implementing CSS inheritance.">Implement inheritance</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors" title="Goes to the MDN article covering an introduction to CSS selectors." rel="nofollow" target="_blank">MDN - CSS Selectors</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" title="Goes to the MDN CSS reference." rel="nofollow" target="_blank">MDN - CSS Reference</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="implement-inheritance">Implement inheritance</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            We've already discussed CSS selectors and pseudo-elements and -classes above. There are a number of ways to select elements. By class or id, by element tag,
+                            attributes, pseudo-elements and pseudo-classes, combinators, and you can even group multiple selectors together by separating them by a comma. Then you can define
+                            a style to apply to each selected element within the grouping. Styles can also be applied using inheritance.
+                        </p>
+                        <p>
+                            "Inheritance controls what happens when no value is specified for a property on an element" [4]. Some are inherited, like an em tag within a p tag. The color of the 
+                            text doesn't change inside the em compared to the rest of the paragraph. However some are not inherited. Like border, so applying a border to a paragraph won't also 
+                            effect an em tag inside of it (as MDN uses as an example) [4]. Also, some frameworks like Sass and less make the syntax even easier for you and compile their syntax 
+                            down to CSS for you.
+                        </p>
+                        <p>
+                            Specificity boils down to "how many elements could this match" [3]. MDN explains how you can score specificity using a numeric table of four columns (thousands, hundreds,
+                            tens, and ones). Inline styles on a page score 1000. ID selectors score 100 for each id selector contained in the overall selector. You score 1 in tens for each 
+                            class, attribute, or pseudo-class in the selector. Finally you score 1 in the ones column for each element and pseudo-element in the overall selector. The universal selector, 
+                            combinators, and the negation pseudo-class give no points [3].
+                        </p>
+                        <p>
+                            There are four universal property values for specifying inheritance. These are inherit, initial, unset, and revert. Inherit will set the property value to its parent's value.
+                            Initial will set the value to the browsers default stylesheet, otherwise it will default to inherit. Unset resets the property to its natural state of either inherit 
+                            or initial. Finally revert will set the value to the user's stylesheet. [3]
+                        </p>
+                        <p>
+                            There is an order of precedence when using selectors. Ids and classes have more specificity than elements alone for instance. Remember the styles defined last also have 
+                            precedence over styles declared earlier but that directly targeting an element using its id will always take precedence over other styles. The order is: elements and 
+                            pseudo-elements, classes, attributes, and pseudo-classes, and finally id selectors having the most specificity [5].
+                        </p>
+                        <div class="inheritance-example">
+                            <p>
+                                This paragraph is styled from inheritance. Each paragraph within this div will be styled similarly.
+                            </p>
+                            <p class="important">
+                                This paragraph has applied its own styles with the use of !important. This rule overrides any others and applies the specified style to the element. This is
+                                actually considered a bad practice. As MDN explains it can be difficult to debug issues. Rules with greater specificity win out if similar important rules are 
+                                applied to the same element [5]. It's best to be more specific than to use the important rule. Generally it's a good idea to only use important when overriding
+                                third-party CSS.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors" title="Goes to the MDN article covering an introduction to CSS selectors." rel="nofollow" target="_blank">MDN - CSS Selectors</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" title="Goes to the MDN CSS reference." rel="nofollow" target="_blank">MDN - CSS Reference</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance" title="Goes to the MDN article covering CSS cascading and inheritance" rel="nofollow" target="_blank">MDN - Cascade and inheritance</a></li>
+                            <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" title="Goes to the MDN article on CSS inheritance." rel="nofollow" target="_blank">MDN - CSS Inheritance</a></li>
+                            <li>[5] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" title="Goes to the MDN article on CSS specificity." rel="nofollow" target="_blank">MDN - CSS Specificity</a></li>
                         </ul>
                     </div>
                 </article>
