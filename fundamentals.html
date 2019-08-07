@@ -2746,6 +2746,26 @@
                             attributes, pseudo-elements and pseudo-classes, combinators, and you can even group multiple selectors together by separating them by a comma. Then you can define
                             a style to apply to each selected element within the grouping. Styles can also be applied using inheritance.
                         </p>
+                        <p>
+                            "Inheritance controls what happens when no value is specified for a property on an element" [4]. Some are inherited, like an em tag within a p tag. The color of the 
+                            text doesn't change inside the em compared to the rest of the paragraph. However some are not inherited. Like border, so applying a border to a paragraph won't also 
+                            effect an em tag inside of it (as MDN uses as an example) [4]. Also, some frameworks like Sass and less make the syntax even easier for you and compile their syntax 
+                            down to CSS for you.
+                        </p>
+                        <p>
+                            There is an order of precedence when using selectors. Ids and classes have more specificity than elements alone for instance. 
+                        </p>
+                        <div class="inheritance-example">
+                            <p>
+                                This paragraph is styled from inheritance. Each paragraph within this div will be styled similarly.
+                            </p>
+                            <p class="important">
+                                This paragraph has applied its own styles with the use of !important. This rule overrides any others and applies the specified style to the element. This is
+                                actually considered a bad practice. As MDN explains it can be difficult to debug issues. Rules with greater specificity win out if similar important rules are 
+                                applied to the same element [5]. It's best to be more specific than to use the important rule. Generally it's a good idea to only use important when overriding
+                                third-party CSS.
+                            </p>
+                        </div>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
