@@ -27,7 +27,7 @@
             <a href="#flexible-layout" title="Goes to the article on Flexible layouts.">- Flexible layout</a>
             <a href="#animated-adaptive-ui" title="Goes to the article on animated and adaptive UIs.">- Animated and Adaptive UI</a>
             <a href="#selectors" title="Goes to the article on CSS and jQuery selectors.">- CSS and jQuery Selectors</a>
-            <a href="#file-structure" title="Goes to the article on CSS file structure.">- CSS File Structure</a>
+            <a href="#css-file-structure" title="Goes to the article on CSS file structure.">- CSS File Structure</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
         </nav>
         <section class="introduction">
@@ -148,7 +148,7 @@
                         <li><a href="#attribute-selectors" title="Goes to the article on element, style, and attribute selectors.">Define element, style, and attribute selectors</a></li>
                         <li><a href="#pseudo-elements" title="Goes to the article on pseudo-elements and classes.">Find elements with pseudo-elements and classes</a></li>
                     </ul>
-                    <li><a href="#file-structure" title="Goes to the article on CSS file structure.">CSS File Structure</a></li>
+                    <li><a href="#css-file-structure" title="Goes to the article on CSS file structure.">CSS File Structure</a></li>
                     <ul>
                         <li>CSS Selectors</li>
                         <li>Reference elements</li>
@@ -1791,7 +1791,7 @@
                 <a href="#flexible-layout" title="Goes to the article on Flexible layouts.">Flexible layout</a> |
                 <a href="#animated-adaptive-ui" title="Goes to the article on animated and adaptive UIs.">Animated and Adaptive UI</a> |
                 <a href="#selectors" title="Goes to the article on CSS and jQuery selectors.">CSS and jQuery Selectors</a> |
-                <a href="#file-structure" title="Goes to the article on CSS file structure.">CSS File Structure</a>
+                <a href="#css-file-structure" title="Goes to the article on CSS file structure.">CSS File Structure</a>
             </nav>
             <section>                
                 <div class="title-bar">
@@ -2637,7 +2637,8 @@
                         <p>
                             Elements can be selected by creating a selector targeting a specific tag. For example you can apply a style to all divs by creating a CSS selector: div { styles here }. This applies to JavaScript
                             and jQuery as well given their APIs. All divs would be targeted. To be more specific you can add ids and classes to elements. These attributes are helpful for targeting 
-                            specific or related groups of elements. You can also target attributes given specific values or preferences.
+                            specific or related groups of elements. You can also target attributes given specific values or preferences. In order to find elements by their attributes you can use the querySelector and 
+                            querySelectorAll DOM API methods. jQuery also allows you to find elements by attributes with the following syntax: $("[attr=value]"). Quotes must surround the value if it has a space in it [3].
                         </p>
                         <p>
                             Attributes can be selected using the following patterns.
@@ -2665,7 +2666,8 @@
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="http://www.infocodify.com/css/selectors" title="Goes to the infocodify.com article on defining selectors." rel="nofollow" target="_blank">Infocodify.com - Defining element, style, and attribute selectors</a></li>
-                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" title="Goes to the MDN article on attribute selectors." rel="nofollow" target="_blank">MDN - Attribute seletors</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors" title="Goes to the MDN article on attribute selectors." rel="nofollow" target="_blank">MDN - Attribute seletors</a></li>                            
+                            <li>[3] <a href="https://stackoverflow.com/a/2694668/8094831" title="Goes to a Stack Overflow answer regarding attribute selectors." rel="nofollow" target="_blank">Stack Overflow - Attribute Selectors</a></li>
                         </ul>
                     </div>
                 </article>
@@ -2680,7 +2682,8 @@
                             The list of pseudo-elements includes: ::after, ::first-line, ::selection, ::backdrop (experimental), ::grammar-error (experimental), ::slotted(), ::before, 
                             ::marker (experimental), ::spelling-error (experimental), ::cue, ::part (experimental), ::first-letter, and ::placeholder (experimental) [4]. Double colons :: are
                             used to distinguish pseudo-elements from pseudo-classes though most browsers support both single or double colons because this wasn't originally part of the 
-                            W3C specification [4].
+                            W3C specification [4]. Pseudo-elements and -classes are not selectable with an API because these are not part of the DOM. You can however find the styles applied to 
+                            an element with a pseudo-element or class [5].
                         </p>
                         <p class="pseudo-element-demo">
                             This paragraph's first line is styled. This is because I've targeted it with the pseudo-element ::first-line. The first letter has also been styled using a pseudo-element.
@@ -2704,25 +2707,50 @@
                             <li>[2] <a href="http://www.infocodify.com/css/pseudo_classes" title="Goes to the infocodify.com article on finding elements with pseudo-classes." rel="nofollow" target="_blank">Infocodify.com - Finding elements by using pseudo-classes</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" title="Goes to the MDN article on pseudo-classes." rel="nofollow" target="_blank">MDN - Pseudo-classes</a></li>
                             <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" title="Goes to the MDN article on pseudo-elements." rel="nofollow" target="_blank">MDN - Pseudo-elements</a></li>
+                            <li>[5] <a href="https://stackoverflow.com/questions/38872290/how-to-get-pseudo-element" title="Goes to a Stack Overflow answer regarding pseud-element selectors." rel="nofollow" target="_blank">Stack Overflow - Pseudo-element Selectors</a></li>     
                         </ul>
                     </div>
                 </article>
             </section>
             <section>                
                 <div class="title-bar">
-                    <h4><a id="file-structure">CSS File Structure</a></h4>
+                    <h4><a id="css-file-structure">CSS File Structure</a></h4>
                     <span class="toggle">Show / Hide</span>              
                 </div> 
                 <article>
                     <div class="topic">
                         <p>
-
+                            How you structure CSS files is important. Depending on how you've set up your files styles may be overridden by others defined earlier. In some cases you want that to happen,
+                            in others you don't. Styles inherited from earlier defined styles can be overridden if you need using the !important modifier.
                         </p>
                         <nav class="topics-nav">
+                            <a href="#file-structure" title="Goes to the article on file structure.">File Structure</a>
                         </nav>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors" title="Goes to the MDN article covering an introduction to CSS selectors." rel="nofollow" target="_blank">MDN - CSS Selectors</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" title="Goes to the MDN CSS reference." rel="nofollow" target="_blank">MDN - CSS Reference</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="file-structure">File Structure</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            We've already discussed CSS selectors and pseudo-elements and -classes above.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Selectors" title="Goes to the MDN article covering an introduction to CSS selectors." rel="nofollow" target="_blank">MDN - CSS Selectors</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference" title="Goes to the MDN CSS reference." rel="nofollow" target="_blank">MDN - CSS Reference</a></li>
+                        </ul>
                     </div>
                 </article>
             </section>
