@@ -2753,9 +2753,20 @@
                             down to CSS for you.
                         </p>
                         <p>
-                            There is an order of precedence when using selectors. Ids and classes have more specificity than elements alone for instance. You can also use the inherit keyword 
-                            to explicitly specify inheritance when needed. Remember the styles defined last also have precedence over styles declared earlier but that directly targeting an 
-                            element using its id will always take precedence over other styles.
+                            Specificity boils down to "how many elements could this match" [3]. MDN explains how you can score specificity using a numeric table of four columns (thousands, hundreds,
+                            tens, and ones). Inline styles on a page score 1000. ID selectors score 100 for each id selector contained in the overall selector. You score 1 in tens for each 
+                            class, attribute, or pseudo-class in the selector. Finally you score 1 in the ones column for each element and pseudo-element in the overall selector. The universal selector, 
+                            combinators, and the negation pseudo-class give no points [3].
+                        </p>
+                        <p>
+                            There are four universal property values for specifying inheritance. These are inherit, initial, unset, and revert. Inherit will set the property value to its parent's value.
+                            Initial will set the value to the browsers default stylesheet, otherwise it will default to inherit. Unset resets the property to its natural state of either inherit 
+                            or initial. Finally revert will set the value to the user's stylesheet. [3]
+                        </p>
+                        <p>
+                            There is an order of precedence when using selectors. Ids and classes have more specificity than elements alone for instance. Remember the styles defined last also have 
+                            precedence over styles declared earlier but that directly targeting an element using its id will always take precedence over other styles. The order is: elements and 
+                            pseudo-elements, classes, attributes, and pseudo-classes, and finally id selectors having the most specificity [5].
                         </p>
                         <div class="inheritance-example">
                             <p>
