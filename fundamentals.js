@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     formValidation();
     setInterval(moveBanner, 600);
     setInterval(updateTransition, 5000);
-    var webWorker = new Worker("web-worker-demo.js");
+    startWebWorker();
 });
 
 function uiControlsExample() {
@@ -202,11 +202,26 @@ function updateTransition() {
     let box = document.querySelector('.transition-example div.box');
 
     if (box) {
-        box.className = "box-transition";
+        box.className = 'box-transition';
     } else {
         box = document.querySelector('.transition-example div.box-transition');
-        box.className = "box";
+        box.className = 'box';
     }
 
     return box;
+}
+
+
+function startWebWorker() {
+    if(window.Worker) {
+        var webWorker = new Worker('web-worker-demo.js');
+
+        webWorker.postMessage('Hello World!');
+
+        webWorker.onmessage = function(e) {
+            const response = e.data;
+            console.log(response);
+            webWorker.terminate();
+        }
+    }
 }

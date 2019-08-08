@@ -2839,7 +2839,10 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            MDN demonstrates a simple Web Worker example which multiplies two numbers together [1]. Following that example this page sends and receives a simple string message (view the console for output). 
+                            In order to start a web worker it's important to check that the Worker interface is available for use by wrapping your code in the follow if statement: if(window.Worker) [1].
+                            This helps with error handling and backwards compatibility. Next newing up a worker is simple: const webWorker = new Worker('script.js'); Workers communicate with the main thread
+                            using the postMessage and onmessage event handler. To stop a worker we simply need to terminate it: webWorker.terminate();
                         </p>
                     </div>
                     <div class="resources">
