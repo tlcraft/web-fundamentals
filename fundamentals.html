@@ -2810,10 +2810,10 @@
                     <div class="topic">
                         <p>
                             Web Workers are a way to create threads in the browser. As MDN explains these won't interfere with the UI and these can even perform input and output operations [1].
-                            Workers run code contained within a JS file in a new thread. These are run in a separate global context than the current window [1]. "Using the window shortcut to get
-                            the current global scope (instead of self) within a Worker will return an error" [1]. Some workers can be shared across multiple files whereas others are only
-                            accessible from the script which first ran it. These are known as Shared or Dedicated workers. These use the SharedWorkerGlobalScope and the DedicatedWorkerGlobalScope
-                            respectively.
+                            Workers run code contained within a JS file in a new thread. These are run in a separate global context than the current window so they can't affect the DOM [1]. 
+                            "Using the window shortcut to get the current global scope (instead of self) within a Worker will return an error" [1]. Some workers can be shared across multiple 
+                            files whereas others are only accessible from the script which first ran it. These are known as Shared or Dedicated workers. These use the SharedWorkerGlobalScope 
+                            and the DedicatedWorkerGlobalScope respectively.
                         </p>
                         <p>
                             Some of the restrictions of web workers include not being able to manipulate the DOM and you can't use some of the methods and properties on the window object. MDN notes 
@@ -2829,6 +2829,7 @@
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="Goes to the MDN article on using web workesr." rel="nofollow" target="_blank">MDN - Web Workers</a></li>
+                            <li>[2] <a href="http://www.infocodify.com/program_flow/web_worker" title="Goes to the infocodify.com article on web workesr." rel="nofollow" target="_blank">Infocodify.com - Web Workeres</a></li>
                         </ul>
                     </div>
                 </article>
@@ -2842,13 +2843,14 @@
                             MDN demonstrates a simple Web Worker example which multiplies two numbers together [1]. Following that example this page sends and receives a simple string message (view the console for output). 
                             In order to start a web worker it's important to check that the Worker interface is available for use by wrapping your code in the follow if statement: if(window.Worker) [1].
                             This helps with error handling and backwards compatibility. Next newing up a worker is simple: const webWorker = new Worker('script.js'); Workers communicate with the main thread
-                            using the postMessage and onmessage event handler. To stop a worker we simply need to terminate it: webWorker.terminate();
+                            using the postMessage and onmessage event handler. To stop a worker we simply need to terminate it: webWorker.terminate(); You can also have the worker stop itself by calling self.close(); [2]
                         </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="Goes to the MDN article on using web workesr." rel="nofollow" target="_blank">MDN - Web Workers</a></li>
+                            <li>[2] <a href="http://www.infocodify.com/program_flow/web_worker" title="Goes to the infocodify.com article on web workesr." rel="nofollow" target="_blank">Infocodify.com - Web Workeres</a></li>
                         </ul>
                     </div>
                 </article>

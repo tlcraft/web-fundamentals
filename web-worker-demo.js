@@ -4,4 +4,5 @@ onmessage = function(e) {
     const message = e.data;
     console.log(message);
     postMessage('Goodbye!');
+    self.close();
 }

@@ -221,7 +221,8 @@ function startWebWorker() {
         webWorker.onmessage = function(e) {
             const response = e.data;
             console.log(response);
-            webWorker.terminate();
+            //webWorker.terminate();
+            webWorker.postMessage('Hello World Two!');
         }
     }
 }
