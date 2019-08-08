@@ -1,0 +1,1 @@
+console.log("This comes from the web worker example!");

@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     formValidation();
     setInterval(moveBanner, 600);
     setInterval(updateTransition, 5000);
+    var webWorker = new Worker("web-worker-demo.js");
 });
 
 function uiControlsExample() {

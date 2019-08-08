@@ -196,7 +196,7 @@
                     </ul>
                     <li><a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a></li>
                     <ul>
-                        <li>Start and Stop a Web Worker</li>
+                        <li><a href="#start-web-workers" title="Goes to the article on starting and stopping a web worker.">Start and Stop a Web Worker</a></li>
                         <li>Pass data to a Web Worker</li>
                         <li>Timeouts and Intervals</li>
                         <li>Event Listeners</li>
@@ -2809,11 +2809,38 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            Web Workers are a way to create threads in the browser. As MDN explains these won't interfere with the UI and these can even perform input and output operations [1].
+                            Workers run code contained within a JS file in a new thread. These are run in a separate global context than the current window [1]. "Using the window shortcut to get
+                            the current global scope (instead of self) within a Worker will return an error" [1]. Some workers can be shared across multiple files whereas others are only
+                            accessible from the script which first ran it. These are known as Shared or Dedicated workers. These use the SharedWorkerGlobalScope and the DedicatedWorkerGlobalScope
+                            respectively.
+                        </p>
+                        <p>
+                            Some of the restrictions of web workers include not being able to manipulate the DOM and you can't use some of the methods and properties on the window object. MDN notes 
+                            some of the things that are accessible include WebSockets and data storage mechanisms like IndexedDB and the Data Store API [1]. In order to communicate between a Worker and 
+                            the main thread the postMessage method is used in either case. The onmessage event handler allows you to gather the Message object for use which contains the data being sent. [1]
+                            Finally workers can do network requests with XMLHttpRequest but as MDN notes again the responseXML and channel attributes will always be null. [1] 
                         </p>
                         <nav class="topics-nav">
-
+                            <a href="#start-web-workers" title="Goes to the article on starting and stopping a web worker.">Start and Stop a Web Worker</a>
                         </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="Goes to the MDN article on using web workesr." rel="nofollow" target="_blank">MDN - Web Workers</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="start-web-workers">Start and Stop a Web Worker</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
