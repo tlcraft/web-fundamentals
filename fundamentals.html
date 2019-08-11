@@ -2871,6 +2871,12 @@
                            when receiving a message or when an error has occurred. The onerror method implements the ErrorEvent interface and the handler has three key fields: message, filename, and lineno. These are the 
                            error message, the file in which the error occurred, and the line number where the error occurred. [1, 2]
                         </p>
+                        <p>
+                            When creating a Shared Worker (one which multiple files have access to) you communicate with it using a port number. This is done explicitly in the case of Shared Workers and implicitly in the case
+                            of Dedicated Workers. You can set up the port using the start method. If two-way communication is going to be required the worker and the main thread must call it. The onmessage method can also 
+                            be used to set up the port implicitly. In either case this must be done before communication can proceed. [1] For Shared Workers the onconnect handler is set up to fire when a connection is made.
+                            From there the port can be pull out of the event object and the onmessage handler can be set up on that port to listen for incoming messages. [1]
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
@@ -2908,7 +2914,8 @@
                     <div class="topic">
                         <p>
                            We saw the two Web Worker event listeners: onmessage and onerror. onmessage is called when a message is received from either the main thread to a Web Worker or vice versa. You can then act upon
-                           the message received. If an error occurs the onerror method will be called and errors can be logged and handled there.
+                           the message received. If an error occurs the onerror method will be called and errors can be logged and handled there. onconnect is used with Shared Workers in order to set up communication 
+                           between a Shared Worker and a file. Then the port (which is accessed through the event object) can be configured with the onmessage handler to listen for incoming messages. [1]
                         </p>
                     </div>
                     <div class="resources">
