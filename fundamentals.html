@@ -29,6 +29,7 @@
             <a href="#selectors" title="Goes to the article on CSS and jQuery selectors.">- CSS and jQuery Selectors</a>
             <a href="#css-file-structure" title="Goes to the article on CSS file structure.">- CSS File Structure</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
+            <a href="#web-workers" title="Goes to the article on web worker processes.">- Web Worker Processes</a>
         </nav>
         <section class="introduction">
             <h1>HTML, CSS, and JavaScript Review</h1>
@@ -154,7 +155,6 @@
                         <li>Reference elements</li>
                         <li><a href="#implement-inheritance" title="Goes to the article on implementing CSS inheritance.">Implement inheritance</a></li>
                         <li>Override inheritance with !important</li>
-                        <li>Style using pseudo-elements and classes</li>
                     </ul>
                 </ul>
             </article>
@@ -194,13 +194,13 @@
                         <li>anonymous callback functions</li>
                         <li>Handle the 'this' pointer</li>
                     </ul>
-                    <li>Web Worker Processes</li>
+                    <li><a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a></li>
                     <ul>
-                        <li>Start and Stop a Web Worker</li>
-                        <li>Pass data to a Web Worker</li>
-                        <li>Timeouts and Intervals</li>
-                        <li>Event Listeners</li>
-                        <li>Understand the limitations of Web Workers</li>
+                        <li><a href="#start-web-workers" title="Goes to the article on starting and stopping a web worker.">Start and Stop a Web Worker</a></li>
+                        <li><a href="#web-worker-data" title="Goes to the article on passing data to a web worker.">Pass data to a Web Worker</a></li>
+                        <li><a href="#web-worker-timeouts" title="Goes to the article on web worker timeouts and intervals.">Timeouts and Intervals</a></li>
+                        <li><a href="#web-worker-events" title="Goes to the article on web worker event listeners.">Event Listeners</a></li>
+                        <li><a href="#web-worker-limitations" title="Goes to the article on web worker limitations.">Understanding the limitations of Web Workers</a></li>  
                     </ul>
                     <li>Validate Input Programmatically</li>
                     <ul>
@@ -229,7 +229,7 @@
             </article>            
         </section>
         <section id="html-examples">
-            <div class="title-bar  main-section">
+            <div class="title-bar main-section">
                 <h2>HTML</h2>
                 <span class="toggleAll">Show / Hide All</span>              
             </div> 
@@ -2788,6 +2788,164 @@
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Cascade_and_inheritance" title="Goes to the MDN article covering CSS cascading and inheritance" rel="nofollow" target="_blank">MDN - Cascade and inheritance</a></li>
                             <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/inheritance" title="Goes to the MDN article on CSS inheritance." rel="nofollow" target="_blank">MDN - CSS Inheritance</a></li>
                             <li>[5] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity" title="Goes to the MDN article on CSS specificity." rel="nofollow" target="_blank">MDN - CSS Specificity</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <section id="js-examples">
+            <div class="title-bar main-section">
+                <h2>JS</h2>
+                <span class="toggleAll">Show / Hide All</span>              
+            </div> 
+            <nav class="topics-nav">
+                <a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a>              
+            </nav>
+            <section>                
+                <div class="title-bar">
+                    <h4><a id="web-workers">Web Worker Processes</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Web Workers are a way to create threads in the browser. As MDN explains these won't interfere with the UI and these can even perform input and output operations [1].
+                            Workers run code contained within a JS file in a new thread. These are run in a separate global context than the current window so they can't affect the DOM [1]. 
+                            "Using the window shortcut to get the current global scope (instead of self) within a Worker will return an error" [1]. Some workers can be shared across multiple 
+                            files whereas others are only accessible from the script which first ran it. These are known as Shared or Dedicated workers. These use the SharedWorkerGlobalScope 
+                            and the DedicatedWorkerGlobalScope respectively.
+                        </p>
+                        <p>
+                            Some of the restrictions of Web Workers include not being able to manipulate the DOM and you can't use some of the methods and properties on the window object. MDN notes 
+                            some of the things that are accessible include WebSockets and data storage mechanisms like IndexedDB and the Data Store API [1]. In order to communicate between a Worker and 
+                            the main thread the postMessage method is used in either case. The onmessage event handler allows you to gather the Message object for use which contains the data being sent. [1]
+                            Finally workers can do network requests with XMLHttpRequest but as MDN notes again the responseXML and channel attributes will always be null. [1] They also have access to 
+                            the navigator and location (read-only) objects as well as the application cache. [3]
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#start-web-workers" title="Goes to the article on starting and stopping a web worker.">Start and Stop a Web Worker</a> |
+                            <a href="#web-worker-data" title="Goes to the article on passing data to a web worker.">Pass data to a Web Worker</a> |
+                            <a href="#web-worker-timeouts" title="Goes to the article on web worker timeouts and intervals.">Timeouts and Intervals</a> |
+                            <a href="#web-worker-events" title="Goes to the article on web worker event listeners.">Event Listeners</a> |
+                            <a href="#web-worker-limitations" title="Goes to the article on web worker limitations.">Understanding the limitations of Web Workers</a>  
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="Goes to the MDN article on using web workers." rel="nofollow" target="_blank">MDN - Web Workers</a></li>
+                            <li>[2] <a href="http://www.infocodify.com/program_flow/web_worker" title="Goes to the infocodify.com article on web workers." rel="nofollow" target="_blank">Infocodify.com - Web Workeres</a></li>
+                            <li>[3] <a href="https://www.html5rocks.com/en/tutorials/workers/basics/" title="Goes to the HTML5Rocks.com article on the basics of web workers." rel="nofollow" target="_blank">HTML5Rocks.com - The Basics of Web Workeres</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="start-web-workers">Start and Stop a Web Worker</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            MDN demonstrates a simple Web Worker example which multiplies two numbers together [1]. Following that example this page sends and receives a simple string message (view the console for output). 
+                            In order to start a Web Worker it's important to check that the Worker interface is available for use by wrapping your code in the follow if statement: if(window.Worker) [1].
+                            This helps with error handling and backwards compatibility. Next newing up a worker is simple: const webWorker = new Worker('script.js'); Workers communicate with the main thread
+                            using the postMessage and onmessage event handler. To stop a worker we simply need to terminate it: webWorker.terminate(); You can also have the worker stop itself by calling self.close(); [2]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="Goes to the MDN article on using web workers." rel="nofollow" target="_blank">MDN - Web Workers</a></li>
+                            <li>[2] <a href="http://www.infocodify.com/program_flow/web_worker" title="Goes to the infocodify.com article on web workers." rel="nofollow" target="_blank">Infocodify.com - Web Workeres</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="web-worker-data">Pass data to a Web Worker</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                           Data can be passed back and forth from the main thread to Web Workers using the postMessage method as has already been discussed. The onmessage and onerror event handlers will trigger
+                           when receiving a message or when an error has occurred. The onerror method implements the ErrorEvent interface and the handler has three key fields: message, filename, and lineno. These are the 
+                           error message, the file in which the error occurred, and the line number where the error occurred. [1, 2]
+                        </p>
+                        <p>
+                            When creating a Shared Worker (one which multiple files have access to) you communicate with it using a port number. This is done explicitly in the case of Shared Workers and implicitly in the case
+                            of Dedicated Workers. You can set up the port using the start method. If two-way communication is going to be required the worker and the main thread must call it. The onmessage method can also 
+                            be used to set up the port implicitly. In either case this must be done before communication can proceed. [1] For Shared Workers the onconnect handler is set up to fire when a connection is made.
+                            From there the port can be pull out of the event object and the onmessage handler can be set up on that port to listen for incoming messages. [1]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="Goes to the MDN article on using web workers." rel="nofollow" target="_blank">MDN - Web Workers</a></li>
+                            <li>[2] <a href="http://www.infocodify.com/program_flow/web_worker" title="Goes to the infocodify.com article on web workers." rel="nofollow" target="_blank">Infocodify.com - Web Workeres</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="web-worker-timeouts">Timeouts and Intervals</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                           The setTimeout and setInterval methods can be used to run Web Workers. setTimeout runs once after a set amount of time. setInterval runs repeatedly given the set amount of time. This can 
+                           be useful to process some sort of queued user input for instance or running a spell checker. [2, 3]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="Goes to the MDN article on using web workers." rel="nofollow" target="_blank">MDN - Web Workers</a></li>
+                            <li>[2] <a href="http://www.infocodify.com/program_flow/web_worker" title="Goes to the infocodify.com article on web workers." rel="nofollow" target="_blank">Infocodify.com - Web Workeres</a></li>
+                            <li>[3] <a href="https://www.html5rocks.com/en/tutorials/workers/basics/" title="Goes to the HTML5Rocks.com article on the basics of web workers." rel="nofollow" target="_blank">HTML5Rocks.com - The Basics of Web Workeres</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="web-worker-events">Event Listeners</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                           We saw the two Web Worker event listeners: onmessage and onerror. onmessage is called when a message is received from either the main thread to a Web Worker or vice versa. You can then act upon
+                           the message received. If an error occurs the onerror method will be called and errors can be logged and handled there. onconnect is used with Shared Workers in order to set up communication 
+                           between a Shared Worker and a file. Then the port (which is accessed through the event object) can be configured with the onmessage handler to listen for incoming messages. [1]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="Goes to the MDN article on using web workers." rel="nofollow" target="_blank">MDN - Web Workers</a></li>
+                            <li>[2] <a href="http://www.infocodify.com/program_flow/web_worker" title="Goes to the infocodify.com article on web workers." rel="nofollow" target="_blank">Infocodify.com - Web Workeres</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="web-worker-limitations">Understanding the limitations of Web Workers</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                           The postMessage method only accepts a string value and it cannot be a function [2]. However this string value can of course be a serialized JSON object or XML which can contain
+                           lots of useful information. Web Workers don't have events for when they are started and stopped and you can only stop them with worker.terminate or self.stop. Finally workers are contained
+                           within their own global context and thus have no access to the DOM from the original page. [2] The messages passed from one thread to the other are copied and not the original reference
+                           from the thread. This can take a lot of time to copy if the payload is large. HTML5 Rocks mentions that you can use Tranferable Objects to quickly copy data from one context to another [3].
+                           Web Workers also don't have access to window, document, or parent [3].
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="Goes to the MDN article on using web workers." rel="nofollow" target="_blank">MDN - Web Workers</a></li>
+                            <li>[2] <a href="http://www.infocodify.com/program_flow/web_worker" title="Goes to the infocodify.com article on web workers." rel="nofollow" target="_blank">Infocodify.com - Web Workeres</a></li>
+                            <li>[3] <a href="https://www.html5rocks.com/en/tutorials/workers/basics/" title="Goes to the HTML5Rocks.com article on the basics of web workers." rel="nofollow" target="_blank">HTML5Rocks.com - The Basics of Web Workeres</a></li>
                         </ul>
                     </div>
                 </article>
