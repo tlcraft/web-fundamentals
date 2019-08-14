@@ -2839,7 +2839,7 @@
                         <p>
                             "The WebSocket API is an advanced technology that makes it possible to open a two-way interactive communication session between the user's browser and a server" [1]. The interfaces
                             include WebSocket, CloseEvent, and MessageEvent. The WebSocket is what is used to send and receive messages. The CloseEvent is sent when the WebSocket closes and the MessageEvent
-                            is sent by the WebSocket when a message is received. The CloseEvent is sent to the WebSocket's onclose attribute listener. It has three properties: code, reason, and wasClean. Code
+                            is sent by the WebSocket when a message is received. The CloseEvent is sent to the WebSocket's onclose attribute listener. It has three properties: code, reason, and wasClean. code
                             returns an unsigned short value indicating a specific code (such as 1000 for Normal Closure, 1011 for Internal Error, and 1013 for Try Again Later). There are many codes which are 
                             unassigned and are reserved for future use. reason returns a DOMString giving the reason the server closed based on the server and sub-protocol. wasClean determines if the connection
                             was closed cleanly or not. [5] MessageEvents are used for many things and in our case for WebSockets it's related to the onmessage property of the WebSocket interface. MessageEvents have
@@ -2871,7 +2871,8 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            The jQuery ajax method allows you to "perform an asynchronous HTTP (Ajax) request" [1]. Other methods in jQuery wrap this function (such as get and load) so you may not need to interact with it specifically. 
+                            In jQuery 1.5 ajax returns a jQuery XMLHttpRequest which extends the native XMLHttpRequest object. The ajax method takes a URL for submitting a request as well a list of settings. [1]
                         </p>
                     </div>
                     <div class="resources">
