@@ -2813,7 +2813,7 @@
                         <p>
                             Asynchronous programming is important when dealing with user interfaces. When someone selects to do something on the UI in some cases we need to make a call to the
                             server to request some information or do some processing. We can make asynchronous calls to the server and await its response. Libraries and frameworks like jQuery support 
-                            these types of interactions.
+                            these types of interactions. WebSockets are also a popular option.
                         </p>
                         <nav class="topics-nav">
                             <a href="#web-sockets" title="Goes to the article on HTML5 WebSockets API.">HTML5 WebSockets API</a> |
@@ -2837,7 +2837,19 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            "The WebSocket API is an advanced technology that makes it possible to open a two-way interactive communication session between the user's browser and a server" [1]. The interfaces
+                            include WebSocket, CloseEvent, and MessageEvent. The WebSocket is what is used to send and receive messages. The CloseEvent is sent when the WebSocket closes and the MessageEvent
+                            is sent by the WebSocket when a message is received. The CloseEvent is sent to the WebSocket's onclose attribute listener. It has three properties: code, reason, and wasClean. Code
+                            returns an unsigned short value indicating a specific code (such as 1000 for Normal Closure, 1011 for Internal Error, and 1013 for Try Again Later). There are many codes which are 
+                            unassigned and are reserved for future use. reason returns a DOMString giving the reason the server closed based on the server and sub-protocol. wasClean determines if the connection
+                            was closed cleanly or not. [5] MessageEvents are used for many things and in our case for WebSockets it's related to the onmessage property of the WebSocket interface. MessageEvents have
+                            data (what was sent), origin (USVString representing the origin), lastEventId, source (MessageEventSource - WindowProxy, MessagePort, ServiceWorker), and ports (which is an array 
+                            of ports associated with the channel the message is sent through) [6].
+                        </p>
+                        <p>
+                            WebSockets themselves have several properties including: binaryType, bufferedAmount, extensions, onclose, onerror, onmessage, onopen, protocol, readyStatus, and url. Its methods are only 
+                            close and send. Its events include: close, error, message, and open. These are available through the related properties as well. The constructor takes a url and any protocols. The url uses
+                            the scheme wss:// but in some cases you can use ws://. [1, 2]
                         </p>
                     </div>
                     <div class="resources">
@@ -2847,6 +2859,8 @@
                             <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications" title="Goes to the MDN article using the WebSocket API in client applications." rel="nofollow" target="_blank">MDN - WebSocket API Client Applications</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers" title="Goes to the MDN article using the WebSocket API in server applications." rel="nofollow" target="_blank">MDN - WebSocket API Server Applications</a></li>
                             <li>[4] <a href="http://www.infocodify.com/program_flow/websocket" title="Goes to the infocodify.com article on the WebSocket API." rel="nofollow" target="_blank">Infocodify.com - WebSocket API</a></li>
+                            <li>[5] <a href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent" title="Goes to the MDN article on the WebSocket CloseEvent." rel="nofollow" target="_blank">MDN - WebSocket CloseEvent</a></li>
+                            <li>[6] <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent" title="Goes to the MDN article on the WebSocket MessageEvent." rel="nofollow" target="_blank">MDN - WebSocket MessageEvent</a></li>
                         </ul>
                     </div>
                 </article>
