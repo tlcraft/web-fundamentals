@@ -2875,7 +2875,11 @@
                     <div class="topic">
                         <p>
                             The jQuery ajax method allows you to "perform an asynchronous HTTP (Ajax) request" [1]. Other methods in jQuery wrap this function (such as get and load) so you may not need to interact with it specifically. 
-                            In jQuery 1.5 ajax returns a jQuery XMLHttpRequest which extends the native XMLHttpRequest object. The ajax method takes a URL for submitting a request as well a list of settings. [1]
+                            In jQuery 1.5 ajax returns a jQuery XMLHttpRequest which extends the native XMLHttpRequest object. The ajax method takes a URL for submitting a request as well a list of settings. [1] These settings "are a set of key/value
+                            pairs that configure the Ajax request" [1]. You can also default these using ajaxSetup(). Some of the options include: accepts (the type of response it will accept), async (which 
+                            allows you to specify if the call needs to be synchronous), contentType (the type of data being sent to the server which defaults to application/x-www-form-urlencoded; charset=UTF-8), data (the data being sent to the server),
+                            dataType (the expect data type returned from the server), error (which specifies the function to call when an error occurs), and success (which specifies the function to call when the 
+                            request succeeds). [1]
                         </p>
                     </div>
                     <div class="resources">
