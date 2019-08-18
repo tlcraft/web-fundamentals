@@ -2881,6 +2881,18 @@
                 <article>
                     <div class="topic">
                         <p>
+                            From jQuery's Ajax introductory guide they explain that "traditionally webpages required reloading to update their content" [3]. Giving the example of web-based email this would mean
+                            that users would need to reload their email inbox to see if they received new mail. Making a webpage request all of its content over and over is very inefficient and making the user 
+                            reload a page over and over is not a great user experience. "By 2003, all the major browsers solved this issue by adopting the XMLHttpRequest (XHR) object, allowing browsers to 
+                            communicate with the server without requiring a page reload" [3]. Ajax allows us to query the server for additional information but not necessarily the entire webpage's data again--
+                            just a subset that we can append to the DOM for display for example. This reduces loading times in some cases and makes the user experience more dynamic and real-time. 
+                        </p>
+                        <p>
+                            Ajax stands for Asynchronous JavaScript and XML and the XMLHttpRequest object is part of that technology [3]. As the jQuery guide explains, this new technology allowed for services like   
+                            Google Maps to be built (so users could actively navigate the map and have it automatically update itself). jQuery's ajax methods abstract the work for you because different browsers
+                            implement the Ajax API differently. And while XML is in the name, generally JSON or plain HTML is sent to and from the server for processing. [3]
+                        </p>
+                        <p>
                             The jQuery ajax method allows you to "perform an asynchronous HTTP (Ajax) request" [1]. Other methods in jQuery wrap this function (such as get and load) so you may not need to interact with it specifically. 
                             In jQuery 1.5 ajax returns a jQuery XMLHttpRequest which extends the native XMLHttpRequest object. The ajax method takes a URL for submitting a request as well a list of settings. [1] These settings "are a set of key/value
                             pairs that configure the Ajax request" [1]. You can also default these using ajaxSetup(). Some of the options include: accepts (the type of response it will accept), async (which 
@@ -2894,6 +2906,7 @@
                         <ul>
                             <li>[1] <a href="https://api.jquery.com/jquery.ajax/" title="Goes to the jQuery documentation for ajax." rel="nofollow" target="_blank">jQuery - ajax</a></li>
                             <li>[2] <a href="https://api.jquery.com/category/ajax/" title="Goes to the jQuery documentation for ajax methods." rel="nofollow" target="_blank">jQuery - ajax methods</a></li>
+                            <li>[3] <a href="https://learn.jquery.com/ajax/" title="Goes to the jQuery guide for learning ajax." rel="nofollow" target="_blank">jQuery - Learn Ajax</a></li>
                         </ul>
                     </div>
                 </article>
