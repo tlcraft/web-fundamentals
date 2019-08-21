@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     setInterval(updateTransition, 5000);
     startWebWorker();
     webSocketExample();
+    eventHoverDemo();
 });
 
 function uiControlsExample() {
@@ -251,4 +252,15 @@ function webSocketExample() {
     socket.onerror = function(e) {
         console.log('WebSocket error.');
     }
+}
+
+function eventHoverDemo() {
+    $('#event-hover-demo').hover(
+        function(){
+            $(this).css('background-color', 'red');
+        }, 
+        function(){
+            $(this).css('background-color', 'yellow');
+        }
+    );
 }

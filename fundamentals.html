@@ -2918,13 +2918,22 @@
                 <article>
                     <div class="topic">
                         <p>
-                            jQuery has event methods that can register custom methods to execute as users interact with a web page.
+                            jQuery has event methods that can register custom methods to execute as users interact with a web page. Some of the native behaviors that jQuery wraps are .click(), .focus(), .blur(),
+                            and .change() [2]. These are shorthand for the .on method as the official guide points out. Events only get attached to elements that exist when the listener is established. Newly created
+                            elements appended to the DOM after the fact are not affected [2]. The on and off methods register and remove event handlers from elements. You can bind several events at the same time by 
+                            using on and spacing the event names out. You can set up events to act when a user hovers over an element (and other types of events). For example you could change the background color of an 
+                            element and then add a callback as a parameter to reset the background color when the user moves away from the element. You can see this in the example below.
                         </p>
+                        <div id="event-hover-demo">
+                            This element's background changes color on hover (mouseenter and mouseleave).
+                        </div>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://learn.jquery.com/events/" title="Goes to the jQuery documentation for events." rel="nofollow" target="_blank">jQuery - Events</a></li>
+                            <li>[2] <a href="https://learn.jquery.com/events/event-basics/" title="Goes to the jQuery documentation for event basics." rel="nofollow" target="_blank">jQuery - Event Basics</a></li>
+                            <li>[3] <a href="http://www.infocodify.com/program_flow/jQuery_events" title="Goes to the infocodify.com article on jQuery event handling." rel="nofollow" target="_blank">Infocodify.com - jQuery Event Handling</a></li>
                         </ul>
                     </div>
                 </article>
@@ -2935,7 +2944,9 @@
                 <article>
                     <div class="topic">
                         <p>
-                            jQuery allows you to typically add callbacks to methods once the first completes. 
+                            jQuery allows you to typically add callbacks to methods once the first method completes. Generally these will be anonymous functions. These are aptly named because they are not named functions. You can 
+                            add these in many places to achieve some sort of functionality or in event handling as in the example above. These can be passed in as parameters to other function as well. Pass the entire 
+                            anonymous function as a parameter and then inside the consuming method's body call the function by using the parameter name with parenthesis and semicolon and pass in any required parameters. 
                         </p>
                     </div>
                     <div class="resources">
@@ -2943,6 +2954,7 @@
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function" title="Goes to the MDN article on callback functions." rel="nofollow" target="_blank">MDN - Callback function</a></li>
                             <li>[2] <a href="https://learn.jquery.com/events/" title="Goes to the jQuery documentation for events." rel="nofollow" target="_blank">jQuery - Events</a></li>
+                            <li>[3] <a href="http://www.infocodify.com/program_flow/anonymous_function" title="Goes to the infocodify.com article on callbacks and anonymous functions." rel="nofollow" target="_blank">Infocodify.com - Callbacks and Anonymous Functions</a></li>
                         </ul>
                     </div>
                 </article>
@@ -2953,7 +2965,9 @@
                 <article>
                     <div class="topic">
                         <p>
-                            In jQuery event handlers 'this' refers to the DOM object that called the event [1].
+                            In jQuery event handlers 'this' refers to the DOM object that called the event [1]. For jQuery in general $(this) refers to the matched elements of a query. For example 
+                            you could select all the divs on a page with $('div') and then for each of them perform some operation. Within the each method you can use $(this) to refer to the specific
+                            div being acted upon in the loop.
                         </p>
                     </div>
                     <div class="resources">
@@ -2961,6 +2975,7 @@
                         <ul>
                             <li>[1] <a href="https://learn.jquery.com/events/" title="Goes to the jQuery documentation for events." rel="nofollow" target="_blank">jQuery - Events</a></li>
                             <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this" title="Goes to the MDN article for the this keyword." rel="nofollow" target="_blank">MDN - this</a></li>
+                            <li>[3] <a href="http://www.infocodify.com/program_flow/this_pointer" title="Goes to the infocodify.com article on the jQuery this pointer." rel="nofollow" target="_blank">Infocodify.com - jQuery this pointer</a></li>
                         </ul>
                     </div>
                 </article>
