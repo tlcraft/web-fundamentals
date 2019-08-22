@@ -29,6 +29,7 @@
             <a href="#selectors" title="Goes to the article on CSS and jQuery selectors.">- CSS and jQuery Selectors</a>
             <a href="#css-file-structure" title="Goes to the article on CSS file structure.">- CSS File Structure</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
+            <a href="#async-programming" title="Goes to the article on asynchronous programming.">- Asynchronous Programming</a>
             <a href="#web-workers" title="Goes to the article on web worker processes.">- Web Worker Processes</a>
         </nav>
         <section class="introduction">
@@ -186,13 +187,13 @@
                         <li>Null checks</li>
                         <li>try/catch/finally blocks</li>
                     </ul>
-                    <li>Asynchronous Programming</li>
+                    <li><a href="#async-programming" title="Goes to the article on asynchronous programming.">Asynchronous Programming</a></li>
                     <ul>
-                        <li>HTML5 WebSocket API</li>
-                        <li>jQuery AJAX</li>
-                        <li>Async Events</li>
-                        <li>anonymous callback functions</li>
-                        <li>Handle the 'this' pointer</li>
+                        <li><a href="#web-sockets" title="Goes to the article on HTML5 WebSockets API.">HTML5 WebSockets API</a></li>
+                        <li><a href="#jquery-ajax" title="Goes to the article on jQuery AJAX.">jQuery AJAX</a></li>
+                        <li><a href="#async-events" title="Goes to the article on Async Events.">Async Events</a></li>
+                        <li><a href="#callback-functions" title="Goes to the article on anonymous callback functions.">Anonymous Callback Functions</a></li>
+                        <li><a href="#this-pointer" title="Goes to the article on handling the this pointer.">Handling the 'this' pointer</a></li>
                     </ul>
                     <li><a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a></li>
                     <ul>
@@ -2411,6 +2412,9 @@
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://blog.prototypr.io/this-aint-disney-a-practical-guide-to-css-transitions-and-animations-a8b87e7c5531" title="Goes to the Prototypr.io guide to CSS transitions and animations." rel="nofollow" target="_blank">Prototypr.io - A practical guide to CSS transitions and animations</a></a></li>
+                        </ul>
                     </div>
                 </article>
                 <div class="title-bar">
@@ -2799,8 +2803,187 @@
                 <span class="toggleAll">Show / Hide All</span>              
             </div> 
             <nav class="topics-nav">
+                <a href="#async-programming" title="Goes to the article on asynchronous programming.">Asynchronous Programming</a> | 
                 <a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a>              
             </nav>
+            <section>                
+                <div class="title-bar">
+                    <h4><a id="async-programming">Asynchronous Programming</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Asynchronous programming is important when dealing with user interfaces. When someone selects to do something on the UI in some cases we need to make a call to the
+                            server to request some information or do some processing. We can make asynchronous calls to the server and await its response. Libraries and frameworks like jQuery support 
+                            these types of interactions. WebSockets are also a popular option.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#web-sockets" title="Goes to the article on HTML5 WebSockets API.">HTML5 WebSockets API</a> |
+                            <a href="#jquery-ajax" title="Goes to the article on jQuery AJAX.">jQuery AJAX</a> |
+                            <a href="#async-events" title="Goes to the article on Async Events.">Async Events</a> |
+                            <a href="#callback-functions" title="Goes to the article on anonymous callback functions.">Anonymous Callback Functions</a> |
+                            <a href="#this-pointer" title="Goes to the article on handling the this pointer.">Handling the 'this' pointer</a>  
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="web-sockets">HTML5 WebSockets API</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            "The WebSocket API is an advanced technology that makes it possible to open a two-way interactive communication session between the user's browser and a server" [1]. The interfaces
+                            include WebSocket, CloseEvent, and MessageEvent. The WebSocket is what is used to send and receive messages. The CloseEvent is sent when the WebSocket closes and the MessageEvent
+                            is sent by the WebSocket when a message is received. The CloseEvent is sent to the WebSocket's onclose attribute listener. It has three properties: code, reason, and wasClean. code
+                            returns an unsigned short value indicating a specific code (such as 1000 for Normal Closure, 1011 for Internal Error, and 1013 for Try Again Later). There are many codes which are 
+                            unassigned and are reserved for future use. reason returns a DOMString giving the reason the server closed based on the server and sub-protocol. wasClean determines if the connection
+                            was closed cleanly or not. [5] MessageEvents are used for many things and in our case for WebSockets it's related to the onmessage property of the WebSocket interface. MessageEvents have
+                            data (what was sent), origin (USVString representing the origin), lastEventId, source (MessageEventSource - WindowProxy, MessagePort, ServiceWorker), and ports (which is an array 
+                            of ports associated with the channel the message is sent through) [6].
+                        </p>
+                        <p>
+                            WebSockets themselves have several properties including: binaryType, bufferedAmount, extensions, onclose, onerror, onmessage, onopen, protocol, readyStatus, and url. Its methods are only 
+                            close and send. Its events include: close, error, message, and open. These are available through the related properties as well. The constructor takes a url and any protocols. The url uses
+                            the scheme wss:// but in some cases you can use ws://. [1, 2]
+                        </p>
+                        <p>
+                            WebSockets are great for real-time applications such as chat programs. Binary and textual data can be sent over the socket to the server. [4] WebSockets have several ready states including:
+                            CONNECTING - 0, OPEN - 1, CLOSING - 2, and CLOSED - 3. [4, 7] 
+                        </p>
+                        <div id="websocket-example"></div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Websockets_API" title="Goes to the MDN article on the WebSocket API." rel="nofollow" target="_blank">MDN - WebSocket API</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications" title="Goes to the MDN article using the WebSocket API in client applications." rel="nofollow" target="_blank">MDN - WebSocket API Client Applications</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API/Writing_WebSocket_servers" title="Goes to the MDN article using the WebSocket API in server applications." rel="nofollow" target="_blank">MDN - WebSocket API Server Applications</a></li>
+                            <li>[4] <a href="http://www.infocodify.com/program_flow/websocket" title="Goes to the infocodify.com article on the WebSocket API." rel="nofollow" target="_blank">Infocodify.com - WebSocket API</a></li>
+                            <li>[5] <a href="https://developer.mozilla.org/en-US/docs/Web/API/CloseEvent" title="Goes to the MDN article on the WebSocket CloseEvent." rel="nofollow" target="_blank">MDN - WebSocket CloseEvent</a></li>
+                            <li>[6] <a href="https://developer.mozilla.org/en-US/docs/Web/API/MessageEvent" title="Goes to the MDN article on the WebSocket MessageEvent." rel="nofollow" target="_blank">MDN - WebSocket MessageEvent</a></li>
+                            <li>[7] <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebSocket/readyState" title="Goes to the MDN article on the WebSocket readyState." rel="nofollow" target="_blank">MDN - WebSocket readyState</a></li>
+                            <li>[8] <a href="https://www.websocket.org/echo.html" title="Goes to the websocket.org echo test page." rel="nofollow" target="_blank">WebSocket.org - Echo Test</a></li>  
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="jquery-ajax">jQuery AJAX</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            From jQuery's Ajax introductory guide they explain that "traditionally webpages required reloading to update their content" [3]. Giving the example of web-based email this would mean
+                            that users would need to reload their email inbox to see if they received new mail. Making a web page request all of its content over and over is very inefficient and making the user 
+                            reload a page over and over is not a great user experience. "By 2003, all the major browsers solved this issue by adopting the XMLHttpRequest (XHR) object, allowing browsers to 
+                            communicate with the server without requiring a page reload" [3]. Ajax allows us to query the server for additional information but not necessarily the entire web page's data again--
+                            just a subset that we can append to the DOM for display for example. This reduces loading times in some cases and makes the user experience more dynamic and real-time. 
+                        </p>
+                        <p>
+                            Ajax stands for Asynchronous JavaScript and XML and the XMLHttpRequest object is part of that technology [3]. As the jQuery guide explains, this new technology allowed for services like   
+                            Google Maps to be built (so users could actively navigate the map and have it automatically update itself). jQuery's ajax methods abstract the work for you because different browsers
+                            implement the Ajax API differently. And while XML is in the name, generally JSON or plain HTML is sent to and from the server for processing. [3] Finally Ajax is not able to load data 
+                            from across domains but Cross-Origin Resource Sharing (CORS) has allowed Ajax requests to hit different domains. [3]
+                        </p>
+                        <p>
+                            The jQuery ajax method allows you to "perform an asynchronous HTTP (Ajax) request" [1]. Other methods in jQuery wrap this function (such as get and load) so you may not need to interact with it specifically. 
+                            In jQuery 1.5 ajax returns a jQuery XMLHttpRequest which extends the native XMLHttpRequest object. The ajax method takes a URL for submitting a request as well a list of settings. [1] These settings "are a set of key/value
+                            pairs that configure the Ajax request" [1]. You can also default these using ajaxSetup(). Some of the options include: accepts (the type of response it will accept), async (which 
+                            allows you to specify if the call needs to be synchronous), contentType (the type of data being sent to the server which defaults to application/x-www-form-urlencoded; charset=UTF-8), data (the data being sent to the server),
+                            dataType (the expect data type returned from the server), error (which specifies the function to call when an error occurs), and success (which specifies the function to call when the 
+                            request succeeds). [1]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://api.jquery.com/jquery.ajax/" title="Goes to the jQuery documentation for ajax." rel="nofollow" target="_blank">jQuery - ajax</a></li>
+                            <li>[2] <a href="https://api.jquery.com/category/ajax/" title="Goes to the jQuery documentation for ajax methods." rel="nofollow" target="_blank">jQuery - ajax methods</a></li>
+                            <li>[3] <a href="https://learn.jquery.com/ajax/" title="Goes to the jQuery guide for learning ajax." rel="nofollow" target="_blank">jQuery - Learn Ajax</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="async-events">Async Events</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            jQuery has event methods that can register custom methods to execute as users interact with a web page. Some of the native behaviors that jQuery wraps are .click(), .focus(), .blur(),
+                            and .change() [2]. These are shorthand for the .on method as the official guide points out. Events only get attached to elements that exist when the listener is established. Newly created
+                            elements appended to the DOM after the fact are not affected [2]. The on and off methods register and remove event handlers from elements. You can bind several events at the same time by 
+                            using on and spacing the event names out. You can set up events to act when a user hovers over an element (and other types of events). For example you could change the background color of an 
+                            element and then add a callback as a parameter to reset the background color when the user moves away from the element. You can see this in the example below.
+                        </p>
+                        <div id="event-hover-demo">
+                            This element's background changes color on hover (mouseenter and mouseleave).
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://learn.jquery.com/events/" title="Goes to the jQuery documentation for events." rel="nofollow" target="_blank">jQuery - Events</a></li>
+                            <li>[2] <a href="https://learn.jquery.com/events/event-basics/" title="Goes to the jQuery documentation for event basics." rel="nofollow" target="_blank">jQuery - Event Basics</a></li>
+                            <li>[3] <a href="http://www.infocodify.com/program_flow/jQuery_events" title="Goes to the infocodify.com article on jQuery event handling." rel="nofollow" target="_blank">Infocodify.com - jQuery Event Handling</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="callback-functions">Anonymous Callback Functions</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            jQuery allows you to typically add callbacks to methods once the first method completes. Generally these will be anonymous functions. These are aptly named because they are not named functions. You can 
+                            add these in many places to achieve some sort of functionality or in event handling as in the example above. These can be passed in as parameters to other function as well. Pass the entire 
+                            anonymous function as a parameter and then inside the consuming method's body call the function by using the parameter name with parenthesis and semicolon and pass in any required parameters. 
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Glossary/Callback_function" title="Goes to the MDN article on callback functions." rel="nofollow" target="_blank">MDN - Callback function</a></li>
+                            <li>[2] <a href="https://learn.jquery.com/events/" title="Goes to the jQuery documentation for events." rel="nofollow" target="_blank">jQuery - Events</a></li>
+                            <li>[3] <a href="http://www.infocodify.com/program_flow/anonymous_function" title="Goes to the infocodify.com article on callbacks and anonymous functions." rel="nofollow" target="_blank">Infocodify.com - Callbacks and Anonymous Functions</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="this-pointer">Handling the 'this' pointer</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            In jQuery event handlers 'this' refers to the DOM object that called the event [1]. For jQuery in general $(this) refers to the matched elements of a query. For example 
+                            you could select all the divs on a page with $('div') and then for each of them perform some operation. Within the each method you can use $(this) to refer to the specific
+                            div being acted upon in the loop.
+                        </p>
+                        <p>
+                            MDN also explains that in JavaScript this can refer to various things given the context that we're in. Different contexts include the global context, functions, the bind method,
+                            arrow functions, use within an object, use within a constructor, DOM events, and inline events. [2]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://learn.jquery.com/events/" title="Goes to the jQuery documentation for events." rel="nofollow" target="_blank">jQuery - Events</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this" title="Goes to the MDN article for the this keyword." rel="nofollow" target="_blank">MDN - this</a></li>
+                            <li>[3] <a href="http://www.infocodify.com/program_flow/this_pointer" title="Goes to the infocodify.com article on the jQuery this pointer." rel="nofollow" target="_blank">Infocodify.com - jQuery this pointer</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
             <section>                
                 <div class="title-bar">
                     <h4><a id="web-workers">Web Worker Processes</a></h4>

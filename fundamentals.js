@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     setInterval(moveBanner, 600);
     setInterval(updateTransition, 5000);
     startWebWorker();
+    webSocketExample();
+    eventHoverDemo();
 });
 
 function uiControlsExample() {
@@ -225,4 +227,40 @@ function startWebWorker() {
             webWorker.postMessage('Hello World Two!');
         }
     }
+}
+
+function webSocketExample() {
+    const wssUrl = 'wss://echo.websocket.org/';
+    const output = document.getElementById('websocket-example');
+    const socket = new WebSocket(wssUrl);
+
+    socket.onopen = function(e) {
+        socket.send('WebSockets rock!');
+    }
+
+    socket.onclose = function(e){
+        console.log('WebSocket closed.');
+    }
+
+    socket.onmessage = function(e) {
+        const p = document.createElement('p');
+        p.innerHTML = e.data;
+        output.append(p);
+        socket.close();
+    }
+
+    socket.onerror = function(e) {
+        console.log('WebSocket error.');
+    }
+}
+
+function eventHoverDemo() {
+    $('#event-hover-demo').hover(
+        function(){
+            $(this).css('background-color', 'red');
+        }, 
+        function(){
+            $(this).css('background-color', 'yellow');
+        }
+    );
 }
