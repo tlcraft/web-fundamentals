@@ -436,33 +436,35 @@
                     <div class="topic">
                         <p>
                             Using semantic HTML is very important when considering accessibility and screen readers. The browser and accessibility tools will key off of the semantic HTML to help someone 
-                            navigate your website. Using the wrong element to accomplish something, such as using a div element to create a button, can be confusing to people and other agents.
+                            navigate your website. Using the wrong element to accomplish something, such as using a div element to create a button, can be confusing to people and other agents (like screen
+                            readers or programs parsing a website).
                         </p>
                         <p>
                             Using the correct ARIA and semantic HTML is also helpful in navigating a page because users can quickly navigate between links, forms, headings, paragraphs, sections and other 
-                            elements. Along with that being descriptive within an opening sentence in a new paragraph for instance helps users skip content they aren't interested in much like someone would 
+                            elements. Along with that being descriptive within an opening sentence in a new paragraph for instance helps users skip content they aren't interested in much like someone could 
                             who can visually review the content.
                         </p>
                         <p>
                             Screen readers convert text to speech to help people navigate and understand a website. These users may have disabilities ranging from visual impairment to cognitive disabilities. 
                             Being sure to define the language the website is presented in is very important. This can be done within the html tag by defining a lang attribute. It's also possible to wrap smaller 
-                            sections of text in the span element and apply the lang attribute to the span (though lang can be applied to many other elements as well).
+                            sections of text in the span element and apply the lang attribute to the span (although lang can be applied to many other elements as well).
                         </p>
                         <p>
-                            The proper use of headings is helpful as well because search engines use these to index a web page's structure and content. People are drawn to the headlines which direct them to 
+                            The proper use of headings is helpful too because search engines use these to index a web page's structure and content. People are drawn to the headlines which direct them to 
                             different sections of relevant content.
                         </p>
                         <p>
-                            Alternative text is important to have on images. This helps give context to the page when a screen reader encounters an image. Screen readers will read the text in the alt attribute 
-                            for the user so be sure the text is descriptive. It's also useful to users when an image link is broken because the alt text will display for them.
+                            Alternative text is important to have on images. This helps give context to the image when a screen reader encounters one. Screen readers will read the text in the alt attribute 
+                            to the user so be sure the text is descriptive. It's also useful for users when an image link is broken because the alt text will display for them on the page. This provides some 
+                            context when the path to the image is broken.
                         </p>
                         <p>
-                            Finally it is important that links are spelled out and descriptive to the user. "Click here" means nothing but links such as "book airline tickets here" helps to put things into 
+                            Finally it is important that links are spelled out and descriptive to the user. "Click here" means nothing but links such as "book airline tickets here" help to put things into 
                             perspective. Remember we can add title attributes to elements such as the anchor tag. Doing so is helpful because the information can be displayed as a tooltip to the user when 
                             mousing over the link.
                         </p>
                         <p>
-                            It's important to remember that content described through a screen reader is much line an automated telephone directory. The content is "linearized" to the listener so, while some 
+                            It's important to remember that content described through a screen reader is much like an automated telephone directory. The content is "linearized" to the listener so, while some 
                             users can quickly navigate a web page visually, those users who utilize a screen reader must do so by listening to each option before understanding what actions are available. 
                             Consider this when designing your web pages.
                         </p>
