@@ -484,23 +484,24 @@
                 <article>
                     <div class="topic">                        
                         <p>
-                            Utilizing a layout for your website is important to help guide users to your content. Often content is displayed similarly to how magazines and newspapers layout their content. 
+                            Utilizing a layout for your website is important to help guide users around your site. Often content is displayed similarly to how magazines and newspapers layout their content. 
                             There are main headings and footers for consistency and navigation. Important information is placed between these sections in relevant ways. It's also important that navigation is 
                             easy between different sections of your website. Several new HTML5 elements help with creating layouts. These are: header, nav, section, article, aside, details, summary, and footer.
                         </p>
                         <p>
                             There are several different techniques for creating a layout. These range from basic tables, floats, a flexbox, modern frameworks, and grid views. Tables are generally not 
-                            recommended because they weren't even designed to be a layout tool [1]. Other options provide more modern and flexible alternatives which is important when considering mobile 
+                            recommended because they weren't even designed to be a layout tool [1]. Other options provide more modern and flexible alternatives, which are important when considering mobile 
                             devices and varying screen size and resolution.
                         </p>
                         <p>
                             This page itself uses several of the aforementioned elements including section, article, and nav. Each topic on this page is defined as an article. These are wrapped 
-                            in a section element. I'm also using a nav element for navigation to the right of the content in the scrolling sidebar among a few other locations.
+                            in a section element for a given area of focus (i.e. HTML, CSS or JS). I'm also using a nav element for navigation to the right of the content in the scrolling sidebar. 
+                            I'm also using a nav element for quick navigation to topics within a particular section in the content introductions.
                         </p>
                         <h5>Frameworks</h5>
                         <p>
                             There are several popular CSS frameworks such as Bootstrap and Foundation. These frameworks supply their own set of HTML and CSS element for you to use in consistent and reliable 
-                            ways. Both of the mentioned frameworks are modern and mobile friendly and take out a lot of the work in setting up device agnostic websites.
+                            ways. Both of the aforementioned frameworks are modern and mobile friendly and take out a lot of the work in setting up device agnostic websites.
                         </p>
                         <h5>Floats</h5>
                         <p>
@@ -510,7 +511,7 @@
                         <p>
                             The clear property specifies what elements can float beside the cleared element and on which side [2]. It has several properties: none, left, right, both, and inherit. You generally 
                             want to clear the same direction as the content is being floated. If you float content to the right, then you should clear the content to the right. This would mean that no floating 
-                            elements are allowed on the right side of the element [2]. Sometimes content is too large for an element so a clearfix must be applied. If there is overflow the containing element will 
+                            elements are allowed on the right side of the element [2]. Sometimes content is too large for an element so a clearfix must be applied. If there is any overflow the containing element will 
                             expand to enclose the large content. The code samples below are examples of two ways to create a clearfix as described by W3 Schools [2].
                         </p>
                         <pre>
