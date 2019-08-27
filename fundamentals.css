@@ -140,7 +140,7 @@ table th {
     flex-direction: row;
     justify-content: flex-end;
     min-height: var(--flex-container-height);
-    align-items: stretch;
+    align-items: flex-end;
     align-content: center;
 }
 
