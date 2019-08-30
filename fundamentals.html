@@ -872,7 +872,7 @@
                             <li>autoplay: a boolean determining if the content should play automatically or not</li>
                             <li>loop: a boolean for replaying the content automatically or not</li>
                             <li>controls: a boolean telling the browser to show media controls for the content</li>
-                            <li>preload: how much data should be preloaded before the content can begin (none, metadata only, or automatic amount determined by the browser)</li>
+                            <li>preload: how much data should be preloaded before the content can begin (none, metadata only, or an automatic amount determined by the browser)</li>
                             <li>muted: a boolean specifying if the content should be muted or not</li>
                             <li>type: a string indicating the MIME (multipurpose internet mail extension) type for the content</li>
                             <li>crossorigin: an attribute to determine if the Origin header should be sent along with the request to gather the content or not</li>
@@ -889,7 +889,7 @@
                         <p>
                             The video tag supports the above attributes as well as a poster attribute. This would be a URL to an image to display while the video loads [1]. Several other attributes include:
                             buffered for adding time ranges for the buffered media and playsinline for playing the media back within the element's playback area (though not including this doesn't mean the 
-                            content would default to fullscreen) [4]. Like the audio tag, the video tag also supports fallback content in the form of a paragraph. When providing fallback content you can 
+                            content would default to full screen) [4]. Like the audio tag, the video tag also supports fallback content in the form of a paragraph. When providing fallback content you can 
                             explain to the user that the tag is not supported by their browser. You could also link them to the content on another site or provide more description of the content.
                         </p>
                         <video controls="controls" src="https://d2v9y0dukr6mq2.cloudfront.net/video/preview/hawaii-beautiful-scenic-roadway-aerial_-yrjn2-s__PM.mp4" type="video/mp4" preload="auto">
@@ -904,8 +904,8 @@
                             There are a number of events that are related to media playback. These include [1][4]:
                         </p>
                         <ul>
-                            <li>canplay: The browser can play the media but possibly not through its entirety (canplaythrough estimates the browser won't have to buffer the media).</li>
-                            <li>playing: Playback is ready after being paused or stopped due to lack of data.</li>
+                            <li>canplay: The browser can play the media but possibly not through its entirety (canplaythrough estimates if the browser won't have to buffer the media).</li>
+                            <li>playing: Playback is ready after being paused or stopped due to a lack of data.</li>
                             <li>ended: Playback has stopped because the end of the media has been reached.</li>
                             <li>timeupdate: The currentTime attribute has been updated.</li>
                             <li>play: Playback has started.</li>
