@@ -1800,8 +1800,19 @@
                             page that you intend to be cached should include this attribute. You can however specify specific pages within the manifest file itself to cache them [1]. The browser 
                             automatically adds visited pages to the cache if the manifest attribute is set. MDN notes that some browsers notify the user and ask if they want to allow caching when the 
                             browser detects a site that uses the cache. In general the browser checks if the cache exists, loads cached files, then checks if the server has an updated manifest file and 
-                            downloads that and any new files listed.
+                            downloads that and any new files listed. In order to clear the cache manually you need to clear out browsing history for your particular internet browser.
                         </p>
+                        <h5>Manifest File</h5>
+                        <p>
+                            This file has a MIME type of text/cache-manifest. The files can have comments using the pound/hashtag symbol (#). The files must have three sections: CACHE, NETWORK, and FALLBACK.
+                            If a header is not specified it is defaulted to CACHE. The browser loads a new manifest if the file has changed (byte for byte) so including a version number in a comment can
+                            be helpful. Also MDN notes that you should never include the manifest file itself in the manifest for caching because then it is nearly impossible to update it. [1]
+                        </p>
+                        <ul>
+                            <li>CACHE: Files listed here are explicitly cached.</li>
+                            <li>NETWORK: These files require a connection to the server. Requests bypass the cache. The wildcard character * can be used once.</li>
+                            <li>FALLBACK: Specifies fallback pages the browser can use if a resource is not accessible.</li>
+                        </ul>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
