@@ -704,6 +704,22 @@ svg.draw {
     -webkit-transform: rotateX(-90deg) translateZ(50px);
 }
 
+@keyframes keyframeDemo {
+    0%, 100% {
+        font-size: 12px;
+        color: red;
+    }
+
+    50% {
+        font-size: 20px;
+        color: blue;
+    }
+}
+
+.keyframe-demo{
+    animation: keyframeDemo 3s infinite;
+}
+
 .media-query-demo {
     color: white;
 }

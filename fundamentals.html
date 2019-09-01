@@ -140,6 +140,7 @@
                     <ul>
                         <li><a href="#css-transitions" title="Goes to the article on CSS transitions.">CSS Transitions</a></li>
                         <li><a href="#css-transformations" title="Goes to the article on CSS transformations.">3D and 2D transformations</a></li>
+                        <li><a href="#at-rules" title="Goes to the article on CSS at-rules.">At-rules</a></li>
                         <li><a href="#media-queries" title="Goes to the article on media queries.">Media Queries</a></li>
                         <ul>
                             <li>device adaptations for output formats, displays, and representations</li>
@@ -2452,6 +2453,7 @@
                         <nav class="topics-nav">
                             <a href="#css-transitions" title="Goes to the article on CSS transitions.">CSS Transitions</a> |
                             <a href="#css-transformations" title="Goes to the article on CSS transformations.">3D and 2D transformations</a> |
+                            <a href="#at-rules" title="Goes to the article on CSS at-rules.">At-rules</a> |
                             <a href="#media-queries" title="Goes to the article on media queries.">Media Queries</a> |
                             <a href="#hide-show-logic" title="Goes to the article on hide and show logic.">Hide and Show logic</a>
                         </nav>
@@ -2535,6 +2537,35 @@
                         <ul>
                             <li>[1] <a href="http://www.infocodify.com/css/transformations" title="Goes to the infocodify.com article on applying 3-D and 2-D transformations." rel="nofollow" target="_blank">Infocodify.com - Applying 3-D and 2-D transformations</a></li>
                             <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Transforms/Using_CSS_transforms" title="Goes to the MDN article covering CSS transformations." rel="nofollow" target="_blank">MDN - Using CSS transformations</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="at-rules">At-rules</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Animation can also be achieved using CSS at-rules. One example is the @keyframes at-rule. This can be used to animate things using keyframes along a sequence [1].
+                            Different styles will be applied at different points in the animation sequence and thus animate the element.
+                        </p>
+                        <p>
+                            You define an @keyframes rule with the initial state and the ending state (from and to or percentages) and name the keyframe. In the animation CSS property you then specify the 
+                            @keyframe name along with other parameters such as the duration of the animation, the delay, and how many times to repeat the animation. You can also specify how 
+                            many steps the animation will take to complete a cycle using the steps() method. [2]
+                        </p>
+                        <div class="demo-area">
+                            <p class="keyframe-demo">
+                                This text is being animated using the @keyframes at-rule.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@keyframes" title="Goes to the MDN article covering CSS @keyframes at-rule." rel="nofollow" target="_blank">MDN - @keyframes at-rule</a></li>
+                            <li>[2] <a href="https://css-tricks.com/snippets/css/keyframe-animation-syntax/" title="Goes to the CSS-Tricks.com article covering keyframe animation." rel="nofollow" target="_blank">CSS-Tricks.com - Keyframe animation</a></li>
                         </ul>
                     </div>
                 </article>
