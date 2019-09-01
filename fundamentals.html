@@ -1797,7 +1797,7 @@
                         </p>
                         <p>
                             When using the app cache feature you must define and specify a manifest file. This file is then set within the HTML tag's attribute list using the manifest attribute. Each 
-                            page that you intend to be cached should include this attribute. You can however specify specific pages within the manifest file itself to cache them [1]. The browser 
+                            page that you intend to be cached should include this attribute. You can however specify specific pages within the manifest file itself to cache them (known as master entries) [1]. The browser 
                             automatically adds visited pages to the cache if the manifest attribute is set. MDN notes that some browsers notify the user and ask if they want to allow caching when the 
                             browser detects a site that uses the cache. In general the browser checks if the cache exists, loads cached files, then checks if the server has an updated manifest file and 
                             downloads that and any new files listed. In order to clear the cache manually you need to clear out browsing history for your particular internet browser.
@@ -1810,9 +1810,13 @@
                         </p>
                         <ul>
                             <li>CACHE: Files listed here are explicitly cached.</li>
-                            <li>NETWORK: These files require a connection to the server. Requests bypass the cache. The wildcard character * can be used once.</li>
-                            <li>FALLBACK: Specifies fallback pages the browser can use if a resource is not accessible.</li>
+                            <li>NETWORK: These files require a connection to the server. Requests bypass the cache. The wildcard character * can be used once. Useful for security reasons.</li>
+                            <li>FALLBACK: Specifies fallback pages the browser can use if a resource is not accessible. These include the initial resource to load and a fallback uri.</li>
                         </ul>
+                        <p>
+                            The app cache has a number of states including: UNCACHED (cache object is not fully initialized), IDLE (cache is not currently being updated), CHECKING (fetching and checking for updates), 
+                            DOWNLOADING (change in manifest has caused new files to be downloaded), UPDATEREADY (new version is available for download), and OBSOLETE (cache group is obsolete). [1]
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
