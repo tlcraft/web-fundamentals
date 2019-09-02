@@ -1039,14 +1039,14 @@
                         </p>
                         <p>
                             The relative position allows us to use the right/left/top/bottom/z-index properties to move the targeted element in the specified direction. Absolute position allows as to manipulate an element
-                            as if you could place it anywhere on the page. Fixed is very similar to absolute but isn't affected by scrolling where absolute is. Sticky is still experimental and acts much like relative position.
-                            However once the viewport reaches a set value the element will stay fixed in location. Inherit is used to force the position property to cascade down to the targeted children. The position property
-                            doesn't cascade by default. [4]
+                            as if you could place it anywhere on the page. Fixed is very similar to absolute but it isn't affected by scrolling where absolute is (so fixed elements are always visible depending on their position. 
+                            For example the side navigation of this page uses the fixed position). Sticky is still experimental and acts much like the relative position. However once the viewport reaches a set value the element 
+                            will stay fixed in location. Inherit is used to force the position property to cascade down to the targeted children. The position property doesn't cascade by default. [4]
                         </p>
                         <p>
-                            Using left, right, bottom, and the other related properties on a relative positioned element adjust the targeted element in those directions. If styling a child element they move in relation to their
+                            Using left, right, bottom, and the other related properties on a relative positioned element adjusts the targeted element in those directions. If styling a child element they move in relation to their
                             parent as long as both elements have a position set. Otherwise the child may move in relation to the document and not its parent element. The example below styles the overall parent div as relative.
-                            Then the inner div with duplicate child divs is positioned absolutely in relation to the parent container.
+                            Then the inner div with multiple child divs is positioned absolutely in relation to the parent container.
                         </p>
                         <div class="position-example">
                             <div class="position-box top-left">Top Left</div>
