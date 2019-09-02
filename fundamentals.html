@@ -1917,6 +1917,11 @@
                             (like spaces), anywhere breaks anywhere within a word and no hyphen is added, and break-word is just like anywhere but it does not consider soft-wrapping opportunities (like spaces that can also be broke). [4]
                         </p>
                         <p>
+                            word-break also affects text wrapping. MDN explains that it "sets whether line breaks appear wherever the text would otherwise overflow its content box" [5]. Its values include: normal (uses the 
+                            default line break), break-all (word breaks can be inserted between any two characters except for Chinese/Japanese/Korean text), keep-all (word breaks should not be used for Chinese/Japanese/Korean text, others default to normal), 
+                            and break-word (same effect as normal and overflow-wrap: anywhere regardless of the overflow-wrap property) [5].
+                        </p>
+                        <p>
                             MDN explains that there are four common properties that alter the weight and emphasis of text [1]. Those are font-style, font-weight, text-transform, and text-decoration. font-style is 
                             used to make the text italicized. There are three settings. Normal where the text is displayed in its default state, italic which will display the font's italic version, and oblique
                             which will slant the normal version of the font. If an italic version doesn't exist the font will be oblique by default. font-weight sets how bold the text is. This can take one of many 
@@ -1984,6 +1989,7 @@
                             <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/WOFF" title="Goes to the MDN article on the Web Open Font Format." rel="nofollow" target="_blank">MDN - The Web Open Font Format (WOFF)</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face" title="Goes to the MDN article on font face." rel="nofollow" target="_blank">MDN - @font-face</a></li>
                             <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap" title="Goes to the MDN article on overflow-wrap." rel="nofollow" target="_blank">MDN - overflow-wrap</a></li>
+                            <li>[5] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/word-break" title="Goes to the MDN article on word-break." rel="nofollow" target="_blank">MDN - word-break</a></li>  
                         </ul>
                     </div>
                 </article>
