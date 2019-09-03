@@ -1429,7 +1429,7 @@
                             Preventing default behavior is something that you will run across from time to time. One example that MDN describes is preventing a form from being 
                             submitted when a user clicks the submit button. You would want to prevent the user from submitting a bad form and to instead display validation information
                             before actually submitting the data to the server. Whenever you have custom logic you would like to apply and circumvent the default behavior use the event
-                            object's "preventDefault()" method to stop it from occurring. [2]
+                            object's "preventDefault()" method to stop it from occurring. [2] You can also set the event's return value by setting the event.ReturnValue property.
                         </p>
                         <p>
                             Bubbling and capturing are two more advanced event topics that are important to understand. If an element causes two events to fire and each affects one another 
@@ -1440,6 +1440,12 @@
                             phase the opposite occurs. It checks to see if the element that triggered the event has an event handler which should respond and moves up the hierarchy (all 
                             the way up to the html element). By default event handlers are registered during the bubbling phase [2]. To prevent issues like this the "stopPropagation()" 
                             method can be used. It will stop the bubbling up process so other handlers are not run. This can be invoked by calling the stopPropagation() method on the event object.
+                        </p>
+                        <p>
+                            The addEventListener method has another parameter which determines if the event should execute during the capturing phase or not. It is default to false and thus the bubbling phase
+                            is when the event will fire. MDN notes that if the event listener is "attached to the event target, the event is in the target phase, rather than the capturing and bubbling phases. Events
+                            in the target phase will trigger all listeners on an element in the order they were registered, regardless of the useCapture parameter" [4]. The addEventListener method allows you to 
+                            add multiple listeners to the same element rather than setting a specific property on an element, for example onload (which only allows you to set one method).
                         </p>
                         <p>
                             Event delegation is another related concept. Instead of registering handlers on child objects you can instead register an event on a parent element. For
@@ -1459,6 +1465,7 @@
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this" title="Goes to the MDN article for the this keyword." rel="nofollow" target="_blank">MDN - this</a></li>
                             <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" title="Goes to the MDN introduction for JS events." rel="nofollow" target="_blank">MDN - JS Events Introduction</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/Events" title="Goes to the MDN DOM event reference." rel="nofollow" target="_blank">MDN - DOM Event Reference</a></li>
+                            <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="Goes to the MDN article on the addEventListener method." rel="nofollow" target="_blank">MDN - addEventListener</a></li>
                         </ul>
                     </div>
                 </article>
@@ -2085,7 +2092,7 @@
                             <li>grayscale: converts an image to greyscale (amount number or percentage)</li>
                             <li>hue-rotate: adjusts the hue of an image (angle)</li>
                             <li>invert: inverts the colors of the image (amount number or percentage)</li>
-                            <li>opacity: adjusts the transparency of the image (amount number or percentage)</li>
+                            <li>opacity: adjusts the transparency of the image (amount number or percentage. 0 = transparent, 1 = opaque)</li>
                             <li>saturate: adjusts the saturation of the image (amount number or percentage)</li>
                             <li>sepia: converts the image to sepia (which is a reddish-brown color which can "warm" the image) (amount number or percentage)</li>
                         </ul>
