@@ -138,7 +138,7 @@ table th {
 .flex-container-row-align {
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     min-height: var(--flex-container-height);
     align-items: flex-end;
     align-content: center;
