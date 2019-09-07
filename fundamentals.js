@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     startWebWorker();
     webSocketExample();
     eventHoverDemo();
+    xmlHttpRequestDemo();
 });
 
 function uiControlsExample() {
@@ -263,4 +264,21 @@ function eventHoverDemo() {
             $(this).css('background-color', 'yellow');
         }
     );
+}
+
+function xmlHttpRequestDemo() {
+    const output = document.getElementById('xhr-demo');
+
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', 'ajax-demo.txt', true);
+
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState === 4 && xhr.status === 200) {
+            output.innerHTML = xhr.responseText;
+        } else {
+            output.innerHTML = "Error";
+        }
+    };
+
+    xhr.send();
 }
