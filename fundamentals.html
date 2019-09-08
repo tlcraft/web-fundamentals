@@ -3298,9 +3298,21 @@
                     <div class="topic">
                         <p>
                             The XMLHttpRequest is a fundamental way of sending and receiving data from web services. The flow is to create an XMLHttpRequest object, add listeners, open a connection, and to 
-                            send a request. The listeners will provide callback functions that will react to any data that comes back from the server.
+                            send a request. The listeners will provide callback functions that will react to any data that comes back from the server. The simple demo below loads data from a text file.
+                            We create the object, open an asynchronous GET connection to the file, setup the onreadystatechange method to display the file's responseText when successful and an error when
+                            something's gone wrong, and finally send the request.
                         </p>
-                        <div id="xhr-demo"></div>
+                        <p>
+                            There are several readyStates. These are [2]:
+                        </p>
+                        <ul>
+                            <li>0 - UNSENT: client has been created but open has not been called</li>
+                            <li>1 - OPENED: open has been called</li>
+                            <li>2 - HEADERS_RECEIVED: send has been called and the headers and status have been received</li>
+                            <li>3 - LOADING: currently downloading the data and responseText has partial data</li>
+                            <li>4 - DONE: the operation is complete</li>
+                        </ul>
+                        <p id="xhr-demo" class="xhr-demo"></p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>

@@ -276,7 +276,7 @@ function xmlHttpRequestDemo() {
         if(xhr.readyState === 4 && xhr.status === 200) {
             output.innerHTML = xhr.responseText;
         } else {
-            output.innerHTML = "Error";
+            output.innerHTML = "Error retrieving file.";
         }
     };
 
