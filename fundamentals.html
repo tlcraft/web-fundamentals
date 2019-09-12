@@ -1119,13 +1119,15 @@
                             Ultimately we want to change the display attribute of the element to none which will hide the element and its children. In my example on this page I'm using 
                             the jQuery .toggle method [1]. This method has many different parameters which can customize the show and hide logic, for example a duration parameter for the length
                             of time to show or hide the element. However it's easy enough to use to just toggle the display. This is good for information that you'd like to hide from the user
-                            and to let them decide to view it (and vice versa). This helps remove noise from the page and allows the user to focus on the content that they are interested in. I'm using 
-                            it on this page to collapse the content of each article to help reduce the length of the page.
+                            and to let them decide to view it (and vice versa) as a "show more" or less button for instance. This helps remove noise from the page and allows the user to focus 
+                            on the content that they are interested in. I'm using it on this page to collapse the content of each article to help reduce the overall length of the page. By doing that 
+                            it helps me navigate from section to section more quickly.
                         </p>
                         <p>
                             It's also possible to use the CSS property visibility to show and hide an element. This property can hide the element but doesn't actually remove the space it takes up
-                            from the document (as opposed to display: none). These properties can be accessed programmatically using the DOM API and jQuery as well. You can access these properties
-                            using the DOM API by accessing the .style of an element. jQuery has a hide() method which will hide the selected element. [3]
+                            from the document (as opposed to display: none which hides everything and removes the element's space on the page). These properties can be accessed programmatically using 
+                            the DOM API and jQuery as well. You can access these properties using the DOM API by accessing the .style of an element. jQuery has a hide() method which will hide the 
+                            selected element. [3]
                         </p>
                     </div>
                     <div class="resources">
