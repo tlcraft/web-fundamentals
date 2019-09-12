@@ -1078,18 +1078,20 @@
                 <article>
                     <div class="topic">
                         <p>
-                            One way to apply a transform to an element is to use CSS. CSS3 allows for lateral, rotation, scaling, and skewing transforms of elements. This can be done in both 2D and
+                            One way to apply a transform to an element is to use CSS. CSS3 allows for lateral, rotational, scaling, and skewing transforms to be applied to elements. This can be done in both 2D and
                             3D [1]. The transform property can apply several functions including: scale, skewX, shewY, translate, rotate, matrix, perspective [2]. Multiple transforms can be applied to an element. 
                             For example: transform: translate(-50px, -30px) skewY(10deg) rotateX(45deg); applies a translation, skewY and rotateX to the targeted element. A space-separated list of transform allows
-                            you to add multiple types. There is also an order to which they are applied [2].
+                            you to add multiple types as in the example. This is also the order in which they are applied [2].
                         </p>
                         <p>
-                            Scaling an element applies the scaling to font-size, padding, height, and width properties too [2]. Translate moves the element on the x and/or y axis. 
-                            Rotate unsurprisingly will rotate the element by a number of degrees (i.e. 10deg). Skewing the element can be done vertically or horizontally. There are x and y variants and a skew
-                            method which applies the skew in both directions given arguments for both x and y. Rotations can be applied on the x, y, or z axis. The matrix transform can be used to apply multiple
-                            transforms at once. There are tools which can help group your transforms into a single matrix. This can help reduce file size in some cases but is hard to read [2]. There are also 3D 
-                            variants for each of these properties which incorporate the z axis for manipulating elements in 3D space. This can be helpful in game development. The matrix transform is probably
-                            also heavily used for games and mathematically intense graphical programs.
+                            Scaling an element applies the scaling to font-size, padding, height, and width properties [2]. Translate moves the element on the x and/or y axis. 
+                            Rotate unsurprisingly will rotate the element by a number of degrees (i.e. 10deg). Rotations can be applied on the x, y, or z axis.  Skewing the element can be done 
+                            vertically or horizontally. There are x and y variants and a skew method which applies the skew in both directions given arguments for both x and y. 
+                        </p>
+                        <p> 
+                            The matrix transform can be used to apply multiple transforms at once. There are tools which can help group your transforms into a single matrix. This can help reduce file 
+                            size in some cases but is hard to read [2]. The matrix transform would mainly be used for games and mathematically intense graphical programs. There are also 3D variants 
+                            for each of these properties which incorporate the z axis for manipulating elements in 3D space. This can be helpful in game development. 
                         </p>
                         <div class="transform-example">
                             <div class="red-box transform-box">Red</div>
