@@ -1267,7 +1267,7 @@
                 <article>
                     <div class="topic">
                         <p>
-                            JavaScript behaves differently than many other programming languages you may be used to. Because it is loosely and dynamically typed
+                            JavaScript behaves differently than many other programming languages you may be use to. Because it is loosely and dynamically typed
                             variables can be assigned anything you wish and be reassigned to different types later on in your program. The scope at which your
                             variable is available is also important to keep in mind. The keywords var, let, and const operate differently when declaring a variable and 
                             open up your variables to different scopes. Along with that, the keyword this changes its value when the scope changes and so it can be
@@ -1301,8 +1301,8 @@
                         </p>
                         <p>
                             var hoisting ensures that all variables are processed before code execution. Because variables are able to be declared at any point in the code you
-                            can even declare them after their use and the program will still function. It's because of hoisting that this works. However it's recommended to always 
-                            declare your variables at the top of their scope. [1] It's as if the variable declarations are hoisted above the executing code. Functions are also
+                            can even declare them after their use and the program will still function. It's because of hoisting that this works. It's as if the variable declarations 
+                            are hoisted above the executing code. However it's recommended to always declare your variables at the top of their scope. [1] Functions are also
                             hoisted up so that they are available when called. However if they are defined as expressions (i.e. var f => function(){}) they are not hoisted and 
                             can cause undefined errors [4].
                         </p>
@@ -1315,10 +1315,10 @@
                             const is a keyword that functions very similarly to let. You must initialize the variable at the time of declaration because const represents
                             a variable that cannot be reassigned. It is read-only. However if you assign an object to a const variable the properties of that object can 
                             change values. "A constant cannot share its name with a function or a variable in the same scope" and it is affected by the temporal dead zone
-                            (as let is as well) [3]. 
+                            (as let is as well) [3]. const is useful in functional programming.
                         </p>
                         <p>
-                            The temporal dead zone refers the time between declaring a variable and initializing it (once the initialization is terminated). let variables 
+                            The temporal dead zone refers to the time between declaring a variable and initializing it (once the initialization is terminated). let variables 
                             are hoisted up like var variables however var variables are inherently initialized as undefined where let variables are not. So accessing them 
                             prior to initialization will throw a reference error. Using typoeof on a variable in the temporal dead zone will also throw a reference error. [2]
                         </p>
