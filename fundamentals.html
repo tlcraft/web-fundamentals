@@ -1340,26 +1340,27 @@
                 <article>
                     <div class="topic">
                         <p>
-                           If a variable is defined outside of a block (i.e. code encapsulated with curly braces {}) then that variable has a global scope (which is not true 
-                           when using var) [3]. This is actually only true for web browsers; it's different when using JavaScipt with Node.js for example [2]. It's not recommended
-                           to use the global scope. Naming collisions is one reason (if a variable name is used more than once in other parts of the code). 
+                           If a variable is defined outside of a block (i.e. code encapsulated with curly braces {}) then that variable has a global scope [3]. 
+                           This is actually only true for web browsers; it's different when using JavaScipt with Node.js for example [2]. It's not recommended
+                           to use the global scope. A naming collision is one reason (if a variable name is used more than once in several parts of the code) [3]. 
+                           Variables redeclared using var are at the same global scope as previous declarations so the variable will be assigned the new value 
+                           and overwrite the old value, so be careful here.
                         </p>
                         <p>
                             Local scope refers to variables defined within a particular block of code or function (i.e. within curly braces {}). For function scope, variables
-                            defined within the function are only accessible from within that function at the time it's called. Using const or let within a block (inside curly braces
-                            but not a function) causes these variables to be only accessible from within that block.
+                            defined within the function are only accessible from within that function at the time it's called. Using const or let within a block (inside curly 
+                            braces) causes these variables to be only accessible from within that block.
                         </p>
                         <p>
                             Functions don't have access to one another's variables even if one is calling another [3]. However, because of lexical scoping, when defining a 
-                            function within another one, the inner function can access the outer function's variables and up to the global scope. While the more global something is 
-                            the less it has access to inner variables and functions.
+                            function within another one, the inner function can access the outer function's variables and all the way up to the global scope. The more global something is 
+                            the less it has access to because it can't access inner variables and functions.
                         </p>
                         <p>
-                            Closures are a related topic. This is when a function returns another function. This can be helpful when you need access to a function at a later time in 
-                            your code and that function does asynchronous work for instance (and also that you might want to reuse this process over and over again) [3]. Closures
-                            can also be used to return private variables and these functions are known to be privileged functions [3]. CSS-Tricks.com's article linked below has
-                            a good example of closures and privileged functions. Closures retain the scope of the variables created within them which is how they are able to 
-                            function.
+                            Closures are a related topic. In short this is when a function returns another function. This can be helpful when you need to reuse a unit of work (or instance a function that does 
+                            asynchronous work to look up some data based on changing user input) [3]. Closures can also be used to return private variables and these functions are known to be privileged 
+                            functions [3]. CSS-Tricks.com's article linked below has a good example of closures and privileged functions. Closures retain the scope of the variables created within them 
+                            which is how they are able to function. CSS-Trick.com's explains that closures are generally used to do two things: to control side effects and to create private variables [3].
                         </p>
                     </div>
                     <div class="resources">
