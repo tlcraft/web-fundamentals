@@ -1380,35 +1380,35 @@
                     <div class="topic">
                         <h5>this</h5>
                         <p>
-                           this represents the JavaScript context object in which the current code is executing [1]. When outside of a function this refers to the global object whether
-                           in strict mode or not [1]. There are other differences between this in strict and non-strict mode. The value of this is determined by how a function is called.
-                           this can't be set during execution and may be different each time the function is called [1]. bind() has been introduced to set the value of this for a function
+                           'this' represents the JavaScript context object in which the current code is executing [1]. When outside of a function 'this' refers to the global object whether
+                           in strict mode or not [1]. There are other differences between 'this' in strict and non-strict mode. The value of 'this' is determined by how a function is called.
+                           'this' can't be set during execution and may be different each time the function is called [1]. bind() has been introduced to set the value of 'this' for a function
                            regardless of how it's called [1].
                         </p>
                         <p>
-                            When not in strict mode, and when a value of this isn't set by a function call, this will default to the global context [1]. When in strict mode this will 
-                            default to whatever it was set to right before the call [1]. The value of this can be passed from one context to another using the call() or apply() method [1].
-                            When the value passed as this to call or apply is not an object, internally a call to ToObject will convert the input (for example a primitive) to an object.
+                            When not in strict mode, and when a value of 'this' isn't set by a function call, 'this' will default to the global context [1]. When in strict mode 'this' will 
+                            default to whatever it was set to right before the call [1]. The value of 'this' can be passed from one context to another using the call() or apply() method [1].
+                            When the value passed as 'this' to call or apply is not an object, internally a call to ToObject will convert the input (for example a primitive) to an object.
                         </p>
                         <p>
-                            bind was introduced in ECMAScript 5. This binds the context of this to whatever argument was passed into bind. It is permanently bound regardless of how the 
+                            bind was introduced in ECMAScript 5. This binds the context of 'this' to whatever argument was passed into bind. It is permanently bound regardless of how the 
                             function is called later. For arrow functions "this will retain the value of the enclosing lexical context's this" [1]. If you use call, bind, or apply
-                            with arrow functions the this argument (the first argument) will be ignored. When using those methods with an arrow function null should be passed in
+                            with arrow functions the 'this' argument (the first argument) will be ignored. When using those methods with an arrow function null should be passed in
                             for the first argument [1].
                         </p>
                         <p>
-                            When a function is called as a method of an object, this refers to the calling object itself [1]. This is true whether the function was defined inline with the
+                            When a function is called as a method of an object 'this' refers to the calling object itself [1]. This is true whether the function was defined inline with the
                             object definition or assigned later separately [1]. This is also true for an object's prototype chain. Objects will inherit functions from their prototype 
-                            and this will refer to the concrete object [1]. This is also true when a function is invoked as a getter or a setter--this is bound to the object [1].
+                            and 'this' will refer to the concrete object [1]. The same can be said when a function is invoked as a getter or a setter--'this' is bound to the object [1].
                         </p>
                         <p>
-                            When this is used in a constructor it is bound to the new object being constructed. The variables assigned with the new statement will have the properties set
-                            on this during construction. If an object is returned from the constructor method then that object is bound to the variable assigned with the new statement.
-                            In that case any references to this in the constructor are essentially dead code as it has no affects [1].
+                            When 'this' is used in a constructor it is bound to the new object being constructed. The variables assigned with the new statement will have the properties set
+                            on 'this' during construction. If an object is returned from the constructor method then that object is bound to the variable assigned with the new statement.
+                            In that case any references to 'this' in the constructor are essentially dead code as it has no affects [1].
                         </p>
                         <p>
-                            For DOM events this is set to the element the event fired from, although some browsers don't follow that convention for listeners added with methods other than 
-                            addEventListener [1]. When inline event handlers are used this is set to the DOM element on which the listener is placed [1].
+                            For DOM events 'this' is set to the element that fired the event. Although some browsers don't follow that convention for listeners added with methods other than 
+                            addEventListener [1]. When inline event handlers are used 'this' is set to the DOM element on which the listener is placed [1].
                         </p>
                         <h5>Events</h5>
                         <p>
