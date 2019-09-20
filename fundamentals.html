@@ -1444,13 +1444,13 @@
                             from a method call).
                         </p>
                         <p>
-                            Bubbling and capturing are two more advanced event topics that are important to understand. If an element causes two events to fire and each affects one another 
+                            Bubbling and capturing are two advanced event topics that are important to understand. If an element causes two events to fire and each affects one another 
                             negatively this will need to be addresses in your code. For example, if an element should hide when an area of the screen is clicked but also play a video 
                             in response to a similar event that is also triggered at the same time (as MDN uses in their example [2]). When events are fired there are two phases.
-                            The capturing of the event phase which runs an event handler if one is registered in response. The capturing phase checks each ancestor of the element triggering
-                            the event and works its way from the outer most ancestor (the html element) down to the closest parent until it stops at the original element. In the bubbling 
+                            The "capturing" of the event phase which runs an event handler if one is registered in response. The capturing phase checks each ancestor of the element triggering
+                            the event and works its way from the outer most ancestor (the html element) down to the closest parent until it stops at the original element. In the "bubbling" 
                             phase the opposite occurs. It checks to see if the element that triggered the event has an event handler which should respond and moves up the hierarchy (all 
-                            the way up to the html element). By default event handlers are registered during the bubbling phase [2]. To prevent issues like this the "stopPropagation()" 
+                            the way up to the html element). By default event handlers are registered during the bubbling phase [2]. To prevent issues like this the stopPropagation()
                             method can be used. It will stop the bubbling up process so other handlers are not run. This can be invoked by calling the stopPropagation() method on the event object.
                         </p>
                         <p>
@@ -1466,7 +1466,7 @@
                             parent to handle the event and determine if a child is affected or not, then responds appropriately.
                         </p>
                         <p>
-                            Here's a historical note MDN points out "why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than 
+                            Here's a historical note MDN points out: "why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than 
                             they are now, Netscape only used event capturing, and Internet Explorer used only event bubbling. When the W3C decided to try to standardize the behavior and reach a 
                             consensus, they ended up with this system that included both, which is the one modern browsers implemented." [2]
                         </p>
