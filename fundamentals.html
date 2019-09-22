@@ -1548,10 +1548,10 @@
                         <p>
                             A JS object is a collection of properties and a property is an association between a key and a value [1]. These values can be primitives
                             or even whole functions. You can create a new object like so: var myObject = new Object(); and then you can assign properties and values to it
-                            using dot-notation. For example, myObject.name = "My new object"; If you declare a property with no value it will have the value of undefined. Most of the time
+                            using dot-notation. For example, myObject.name = "My new object"; If you declare a property with no value it will default to the value of undefined. Most of the time
                             properties will be accessed using dot-notation however you can also access and set them using bracket notation. For example myObject['name'] 
                             will return "My new object" which we defined earlier. Objects are sometimes called associative arrays [1]. You can even iterate over objects
-                            like an array to access the different property values (for example MDN uses a for...in loop to print out each property and its value) [1]. There 
+                            like an array to access the different property values (for example MDN uses a for...in loop to print out each property and its value in their example) [1]. There 
                             are actually three built-in ways in ECMAScript 5 to enumerate the properties of an object. The for...in loop (includes all enumerable prototype chain properties), the 
                             Object.keys(o) method (which does not include prototype properties), and the Object.getOwnPropertyNames(o) method which returns all property names on a given object
                             (enumerable or not) [1]. 
@@ -1560,22 +1560,22 @@
                             There are several ways to create new objects. You can use the object initializer or create a constructor method. It's easy to new up an object using the
                             initializer. Remember that objects are just collections of properties. You can define these by hand by declaring key and value pairs. For example: 
                             const myObject = { propertyOne: valueOne, propertyTwo: valueTwo }; The values can be any type (for example a number or a string value). These objects are of 
-                            type Object (as if a call to new Object() were made) [1]. Object initializers are expressions and each time it's called this results in a new object being created [1].
-                            These distinct objects won't compare to each other as being equal [1].
+                            type Object (as if a call to new Object() were made) [1]. Object initializers are expressions and each time it's called this results in a new object being created
+                            and these distinct objects won't compare to each other as being equal [1].
                         </p>
                         <p>
-                            You can also defined object types by defining constructor methods. By convention we capitalize constructor methods. We can then use the new keyword to create
+                            You can also define object types by defining constructor methods. By convention we capitalize constructor methods. We can then use the "new" keyword to create
                             a new instance of the object. To create a constructor simply define a function with a capitalized name which represent the object type. Within this method
                             you can assign properties to the new object and assign values to them either by taking in arguments and assigning them to the properties or by assigning them in a 
-                            different way (for example by hard coding initial values or by calling other methods which return a value). The keyword this is used to assign values to the 
-                            object's properties. For example, function Person(name) { this.name = name; }; This constructor creates a Person object and takes one argument which is assigned to the property name.
+                            different way (for example by hard coding initial values or by calling other methods which return a value). The keyword "this" is used to assign values to the 
+                            object's properties. For example, function Person(name) { this.name = name; }; This constructor creates a Person object and takes one argument which is assigned to the property "name".
                         </p>
                         <p>
                             Constructor methods can be called from the objects themselves because the constructor is a method attached to the object. So you are able to create a new Person object with the following 
-                            syntax: var anotherPerson = new personOne.constructor('New Name'); Just remember to use the new keyword and pass in required parameters. This can be useful if you don't have access to the original
+                            syntax: var anotherPerson = new personOne.constructor('New Name'); Just remember to use the "new" keyword and pass in required parameters. This can be useful if you don't have access to the original
                             constructor for whatever reason [2]. It can also be useful if you want to know the name of the original object that it is an instance of. You can find this using the name property, like 
                             anotherPerson.constructor.name. However this value can change for a variety of reasons (for example transpilers, binding, and inheritance) so using the instanceof operator 
-                            is better in some cases as explain by MDN [2].
+                            is better in some cases, as explained by MDN [2].
                         </p>
                         <p>
                             Remember that we can add properties to objects by simply using dot notation. For example person.age = 10; This would add the age property to the existing
@@ -1584,12 +1584,12 @@
                         </p>
                         <p>
                             Finally we can create objects using the Object.create method. "This method can be very useful, because it allows you to choose the prototype object for the object you want to create,
-                             without having to define a constructor function" [1]. Create makes a new object using the given object parameter as the prototype. So the new object's __proto__ property will
-                             refer to the passed in object and its available members [2].
+                            without having to define a constructor function" [1]. Create makes a new object using the given object parameter as the prototype. So the new object's __proto__ property will
+                            refer to the passed in object and its available members [2].
                         </p>
                         <p>
-                            As was described earlier object properties can be accessed by either dot notation or bracket notation. You are also able to index into object properties
-                            using bracket notation (for example myObject[2] = "Hello World!"). Once you define a property by either indexing or using a property name you can only access
+                            As was described earlier object properties can be accessed by either dot notation (myObject.name) or bracket notation (myObject['name']). You are also able to index into object properties
+                            using indexed bracket notation (for example myObject[2] = "Hello World!"). Once you define a property by either indexing or using a property name you can only access
                             it using the same technique (so you couldn't access the last property using dot notation as in myObject.2). The exception is array-like objects reflected from HTML [1].
                             "For example, if the second FORM tag in a document has a NAME attribute of "myForm", you can refer to the form as document.forms[1] or document.forms["myForm"] or document.forms.myForm" [1].
                         </p>
