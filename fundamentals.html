@@ -1618,9 +1618,9 @@
                         <p>
                             All objects inherit properties and methods from the Object prototype by default. So each object has members like watch and valueOf [1]. When a member that's inherited is called
                             the browser first checks to see if the current object has a matching member to call, otherwise it goes up the chain of prototypes until it finds a match [1]. These members (properties
-                            and methods) are not copied to the child objects, they are accessed by walking up the prototype chain [1]. The methods and properties that are inherited from the prototype object are 
-                            only the members on the prototype object, and not one defined directly on the parent object itself. So for example as MDN explains, Object.keys() and Object.is() are not available
-                            to the inheriting class because those are defined on the Object constructor itself. However members such as watch() and valueOf() are because these are defined on the prototype object.
+                            and methods) are not copied to the child objects--they are accessed by walking up the prototype chain [1]. The methods and properties that are inherited from the prototype object are 
+                            only the members on the prototype object, and not ones defined directly on the parent object itself. So for example as MDN explains, Object.keys() and Object.is() are not available
+                            to the inheriting class because those are defined on the Object constructor itself. However members such as watch() and valueOf() are available because these are defined on the prototype object.
                         </p>
                         <p>
                             To modify the prototype chain of an object simply access the prototype property and add a property or method using dot notation. For example: person.prototype.fullName = function() { 
