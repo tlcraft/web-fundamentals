@@ -1644,9 +1644,9 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Inheritance in JS is accomplished within constructor methods. We have to utilize the call() method with the constructor. The child object defines a constructor which 
-                            calls the parent object's call method. Call takes a parameter which specifies that value of 'this' when the function runs. The rest of the parameters are the 
-                            values the parent's constructor accepts as arguments.
+                            Inheritance in JavaScript is accomplished within constructor methods. We have to utilize the call() method within the constructor. The child object must define a constructor which 
+                            calls the parent object's call method. The call method takes a parameter which specifies that value of 'this' when the function runs. The rest of the parameters are the 
+                            parent's regular constructor arguments.
                         </p>
                         <p>
                             As MDN explains there is more to do to properly set up inheritance. We also need to set the child's prototype to be an object of the parent's type.
@@ -1654,12 +1654,12 @@
                             By doing this we'll ensure the child prototype has all the methods available from the parent object's prototype. The last thing we must do is make sure that the child constructor
                             returns an object of its type, and not its parent's type. We accomplish this by adding one more line of code: Object.defineProperty(Warrior.prototype, 'constructor', {
                             value: Warrior, enumerable: false, writable: true }); This will ensure we create an object of the desired type. Finally to define new functionality for an existing method 
-                            inherited from the parent object simply define the same method on the child's prototype. All of what has been discussed is just one way to implement inheritance. Frameworks
-                            and new features of ECMAScript allow for classes and other common constructs like extends. [1]
+                            inherited from the parent simply define the same method on the child's prototype. All of what has been discussed is just one way to implement inheritance. Frameworks
+                            and new features of ECMAScript allow for classes and other common constructs like the extends keyword. [1]
                         </p>
                         <p>
                             As MDN summarizes, there are three major groups of object members to remember. Ones defined inside of a constructor method that are given to object instances. Ones that
-                            are defined on the constructors themselves which are only available on the constructor. And finally ones that are on a constructor's prototype which are accessibly by
+                            are defined on the constructors themselves which are only available on the constructor. And finally ones that are on a constructor's prototype which are accessible from
                             instances and inheriting objects. [1]
                         </p>
                         <p>
