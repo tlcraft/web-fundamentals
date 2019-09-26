@@ -1667,9 +1667,9 @@
                             the class syntax in ECMAScript2015. Classes have a constructor method, class methods, and properties. MDN explains that underneath it all the class syntax is being converted to prototypical 
                             inheritance models (class syntax is just "syntactic sugar" to reduce code and feel more consistent with other languages many developers utilize) [1]. To inherit using this syntax we
                             use the extends keyword. For example: class Warrior extends Character { constructor() { super(); } } The call to super is important and must be done first. This way the parent
-                            class will be able to initialize 'this' and correctly set up our references [1]. Remember to pass along any required parameters to the parent's constructor by passing them 
+                            class will be able to initialize 'this' and correctly set up any references [1]. Remember to pass along any required parameters to the parent's constructor by passing them 
                             into the call to super(). Adding getters and setters is also common depending on the intended use of your object. These return and set values of instance fields and ECMAScript2015 has syntax 
-                            for creating them. To add a getter and setter to the Warrior class from above use the following syntax:
+                            for creating them. To add a getter and setter to the Warrior class from above use the following syntax (which also requires an _attackPower field on the class):
                         </p>
                         <pre>
                             get attackPower() { 
@@ -1686,7 +1686,7 @@
                         </p>
                         <p>
                             Inheritance is a powerful tool which allows for reuse. Functionality that we want to be reused among related but subtly different objects can be inherited from a base class and then
-                            extended for custom behavior. Too much inheritance can add unnecessary complexity to a project. Depending on your need composition may be a better choice as well. In the end inheritance 
+                            extended for custom behavior. Too much inheritance can add unnecessary complexity to a project. Depending on your need composition may be a better choice. In the end inheritance 
                             is just another tool in your toolbox and shouldn't be the hammer for all of your problems. There are a lot of benefits from using it but it has its place like any other tool. [1]
                         </p>
                     </div>
