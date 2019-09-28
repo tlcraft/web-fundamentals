@@ -1753,12 +1753,12 @@
                         <p>
                             There are different ways to validate form data. On the client-side we can use JavaScript and create custom validations. We are also able to use built-in form validation. While not as customizable
                             built-in form validation is more performant than custom JS validation. On the server-side we always want to validate incoming data before further processing or saving occurs.
-                            If the data isn't in the right format, or appears to be malicious we certainly don't want to save it. Be sure to always validate and sanitize your data. [1]
+                            If the data isn't in the right format, or appears to be malicious, we certainly don't want to save it. Be sure to always validate and sanitize your data. [1]
                         </p>
                         <p>
-                            To use HTML5's built-in validations we need to use different attributes to mark the forms. These allow us to specify if the input is requireD, has any limits, or is formatted correctly for example.
+                            To use HTML5's built-in validations we need to use different attributes to mark the forms. These allow us to specify if the input is required, has any limits, or is formatted correctly for example.
                             When an element is valid MDN explains that there are several things we can rely upon. First, the element will match the :valid CSS pseudo-class. Second, the browser will be able to submit the form (unless 
-                            custom JS for example is preventing it). When the element is invalid it will match the :invalid CSS pseudo-class and the browser will display an error if the user tries to submit the form.
+                            custom JS is preventing it). Third, when the element is invalid it will match the :invalid CSS pseudo-class and the browser will display an error if the user tries to submit the form.
                         </p>
                         <p>
                             Below is a simple form example using a text input box and a submit button. Using the same CSS that MDN uses in their input example the input's border is a red dashed line when the field is invalid.
@@ -1783,7 +1783,7 @@
                         <p>
                             Other examples of validation include restricting the minimum and maximum input length of input or textarea elements, adding similar min and max restrictions for number input types, or limiting date ranges 
                             on month input types. Along with all of this built-in validation we can create custom validation messages. There are two drawbacks according to MDN, one is that there is no standard way to style them using 
-                            CSS, and the other is that these depend on the browser locale so it's possible that the web page could be displayed in one language and the validation message be displayed in another [1]. In order to 
+                            CSS, and the other is that these depend on the browser locale so it's possible that the web page could be displayed in one language and the validation message could be displayed in another [1]. In order to 
                             add the validation we must use JavaScript using the constraint validation API [1]. The email example above uses this for custom messages. These are displayed when the input changes and then the button is clicked.
                         </p>
                         <p> 
@@ -1796,7 +1796,7 @@
                             Finally there are a number of different input types. These range from classic types like button, text, radio, and checkbox to types like color, email, search, date, and url. The full list can be 
                             found using the MDN link below [2]. Common attributes among all input types include autocomplete, autofocus, disabled, form, list, name, readonly, required, tabindex, type, and value. Each input type
                             has additional attributes specific for its own use. Using labels is highly recommended (this also helps with accessibility) and while placeholder text can be helpful be sure to use these for examples of valid input, 
-                            not as prompts for information (though many pages do this) [2].
+                            not as prompts for information (although many pages do this it shouldn't technically be used as a label) [2].
                         </p>
                     </div>
                     <div class="resources">
