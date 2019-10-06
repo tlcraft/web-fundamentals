@@ -37,7 +37,11 @@
         <section class="introduction">
             <h1>HTML, CSS, and JavaScript Review</h1>
             <p>In order to prepare for certifications and to review the various aspects of HTML, CSS, and JavaScript this page will be an overview of the fundamentals of each language.</p>
-            <p>I'll work through some of the content on the following tutorials and references and implement things myself to better practice, review, and learn:</p>
+            <p>
+                The focus will be on covering the topics outlined on the Microsoft HTML, CSS, and JS exam which you can review by following this link:  
+                <a href="https://www.microsoft.com/en-us/learning/exam-70-480.aspx" topic="Goes to the Microsoft HTML, CSS, and JS exam overview." rel="nofollow" target="_blank">Microsoft HTML, CSS, and JS exam</a>.
+            </p>            
+            <p>Directly below are a number of relevant resources. Each section below, which will cover the topics in the Microsoft exam, will also have links to the resources I used to gather my notes.</p>
             <ul>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML" title="Goes to the MDN article on HTML." rel="nofollow" target="_blank">MDN HTML</a></li>
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" title="Goes to the MDN article on CSS." rel="nofollow" target="_blank">MDN CSS</a></li>
@@ -47,11 +51,7 @@
                 <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" title="Goes to the MDN article on CSS3." rel="nofollow" target="_blank">CSS3</a></li>
                 <li><a href="https://www.ecma-international.org/publications/standards/Ecma-262.htm" title="Goes to the ECMA standards page for EMCA-262." rel="nofollow" target="_blank">ECMAScript 262</a></li>
                 <li><a href="https://css-tricks.com/" title="Goes to CSS-Tricks.com." rel="nofollow" target="_blank">CSS-Tricks</a></li>
-            </ul>
-            <p>
-                The focus will be on covering the topics outlined on the Microsoft HTML, CSS, and JS exam which you can review following this 
-                <a href="https://www.microsoft.com/en-us/learning/exam-70-480.aspx" topic="Goes to the Microsoft HTML, CSS, and JS exam overview." rel="nofollow" target="_blank">link</a>.
-            </p>
+            </ul>            
         </section>
         <section class="topics-nav">
             <article id="html-topics">
@@ -60,7 +60,7 @@
                     "HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content. Other technologies besides HTML are generally 
                     used to describe a web page's appearance/presentation (CSS) or functionality/behavior (JavaScript)." - MDN
                 </p>
-                <h2>Topics</h2>
+                <h3>Topics</h3>
                 <ul>
                     <li><a href="#semantics" title="Goes to the article on Semantic HTML.">Semantic Markup</a></li>
                     <ul>  
@@ -112,7 +112,7 @@
                     "Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). 
                     CSS describes how elements should be rendered on screen, on paper, in speech, or on other media." - MDN
                 </p>
-                <h2>Topics</h2>
+                <h3>Topics</h3>
                 <ul>
                     <li><a href="#text-properties" title="Goes to the article on HTML Text Properties.">HTML Text Properties</a></li>
                     <ul>                                
@@ -170,7 +170,7 @@
                     many non-browser environments also use it, such as Node.js, Apache CouchDB and Adobe Acrobat. JavaScript is a prototype-based, multi-paradigm, dynamic language, supporting 
                     object-oriented, imperative, and declarative (e.g. functional programming) styles." - MDN
                 </p>
-                <h2>Topics</h2>
+                <h3>Topics</h3>
                 <ul>
                     <li>Program Flow</li>
                     <ul>                                
@@ -257,14 +257,14 @@
                     <div class="topic">
                         <p>
                             Semantics refers to the meaning of something. When using HTML one should think about the information within the template and the organization of that information rather than 
-                            its appearance. Once the data is organized it can later be styled using CSS for presentation purposes. The semantics of a web page are important to programmatically traverse the 
-                            data. Web browsers use this data and so do other agents such as smart phones and other programs. HTML is the data structure for the web page which is separate from the graphical 
+                            its appearance. Once the data is organized it can later be styled using CSS for presentation purposes. The semantics of a web page are important to aid in programmatically traversing the 
+                            data. Web browsers use this data and so do other agents such as smart phones and web crawlers for instance. HTML is the data structure for the web page and is separate from the graphical 
                             aspects we interact with as users.
                         </p>
                         <p>
-                            Along with the idea of separation between data and presentation is that HTML elements need to be used to represent the data appropriately. This is to help ensure that web 
-                            browsers and other agents navigate and access the HTML correctly. For example if an agent wanted to display the title of the page it would look within the HEAD element for a 
-                            child TITLE tag. This consistence is something we need to be able to rely upon and is why it is also so important to remember.
+                            Along with the idea of the separation between data and presentation is that HTML elements also need to be used to represent the data appropriately. This is to help ensure that web 
+                            browsers and other agents (like screen readers) navigate and access the HTML correctly. For example if an agent wanted to display the title of the page it would look within the HEAD element for a 
+                            child TITLE tag. This consistency is something we need to be able to rely upon and is why it is also so important to remember.
                         </p>
                         <p>
                             The following sections describe how semantic HTML plays an important role in Search Engine Optimization, Screen Readers, and Layout Containers.
@@ -290,20 +290,20 @@
                     <div class="topic">                        
                         <p>
                             Optimizing a web page to increase its search index on search engines, such as Google and Bing, is important in grabbing a consumer's eye. Not often is it that someone reviews 
-                            several pages of search result to find what they're looking for. Algorithms are very good at locating what it is exactly that person is looking for and it usually appears toward 
+                            several pages of search result to find what they're looking for. Algorithms are very good at locating what it is exactly that that person is looking for and it usually appears toward 
                             the top of the results. Plus there are more widgets now which provide greater functionality to the user upfront (such as when searching for airline tickets for example) users 
                             don't have to look very far to find what they need.
                         </p>
                         <p>
                             In order to be relevant a web page must take into consideration "SEO" techniques to increase their chances of being ranked higher and found. This includes using the correct HTML 
-                            elements and attributes (such as title and alt), having relevant words and content, as well as how many other web pages link back to yours which is important as a search engine's 
+                            elements and attributes (such as title and alt), having relevant words and content, as well as how many other web pages link back to it which is important as a search engine's 
                             "crawler" investigates websites and links across the internet.
                         </p>
                         <p>
                             If a website has the same content in more than one location it will help to use the rel=canonical attribute so search engines can redirect users to the page you would rather them 
                             see. This helps search engines organize the ranks appropriately and increases the SEO. Another technique similar to this is a 301 redirect. 301 is the status code for content that 
                             has moved permanently to another URL. Other codes include 302 which is either for "moved" or "found" content. In HTTP version 1.0 it meant "moved temporarily" but in version 1.1 it's 
-                            been updated to mean "found". 307 became the replacement for "moved temporarily" in version 1.1. Meta Refresh is another redirect which is generally used with countdown times and 
+                            been updated to mean "found". 307 became the replacement for "moved temporarily" in version 1.1. Meta Refresh is another redirect which is generally used with countdown timers and 
                             "click here" links if the redirect doesn't occur. However it's not recommended for SEO and is slower.
                         </p>
                         <p>
@@ -401,7 +401,7 @@
                             <tr>
                                 <td>potentialAction</td>
                                 <td>Action</td>
-                                <td>An Action which can be performed on the thing.</td>
+                                <td>An Action which can be performed on the item.</td>
                             </tr>
                             <tr>
                                 <td>sameAs</td>
@@ -411,12 +411,12 @@
                             <tr>
                                 <td>subjectOf</td>
                                 <td>CreativeWork or Event</td>
-                                <td>A CreativeWork or Event about this thing.</td>
+                                <td>A CreativeWork or Event about this item.</td>
                             </tr>
                             <tr>
                                 <td>url</td>
                                 <td>URL</td>
-                                <td>The URL of the thing.</td>
+                                <td>The URL of the item.</td>
                             </tr>
                         </table>
                     </div>
@@ -441,33 +441,35 @@
                     <div class="topic">
                         <p>
                             Using semantic HTML is very important when considering accessibility and screen readers. The browser and accessibility tools will key off of the semantic HTML to help someone 
-                            navigate your website. Using the wrong element to accomplish something, such as using a div element to create a button, can be confusing to people and other agents.
+                            navigate your website. Using the wrong element to accomplish something, such as using a div element to create a button, can be confusing to people and other agents (like screen
+                            readers or programs parsing a website).
                         </p>
                         <p>
                             Using the correct ARIA and semantic HTML is also helpful in navigating a page because users can quickly navigate between links, forms, headings, paragraphs, sections and other 
-                            elements. Along with that being descriptive within an opening sentence in a new paragraph for instance helps users skip content they aren't interested in much like someone would 
+                            elements. Along with that being descriptive within an opening sentence in a new paragraph for instance helps users skip content they aren't interested in much like someone could 
                             who can visually review the content.
                         </p>
                         <p>
                             Screen readers convert text to speech to help people navigate and understand a website. These users may have disabilities ranging from visual impairment to cognitive disabilities. 
                             Being sure to define the language the website is presented in is very important. This can be done within the html tag by defining a lang attribute. It's also possible to wrap smaller 
-                            sections of text in the span element and apply the lang attribute to the span (though lang can be applied to many other elements as well).
+                            sections of text in the span element and apply the lang attribute to the span (although lang can be applied to many other elements as well).
                         </p>
                         <p>
-                            The proper use of headings is helpful as well because search engines use these to index a web page's structure and content. People are drawn to the headlines which direct them to 
+                            The proper use of headings is helpful too because search engines use these to index a web page's structure and content. People are drawn to the headlines which direct them to 
                             different sections of relevant content.
                         </p>
                         <p>
-                            Alternative text is important to have on images. This helps give context to the page when a screen reader encounters an image. Screen readers will read the text in the alt attribute 
-                            for the user so be sure the text is descriptive. It's also useful to users when an image link is broken because the alt text will display for them.
+                            Alternative text is important to have on images. This helps give context to the image when a screen reader encounters one. Screen readers will read the text in the alt attribute 
+                            to the user so be sure the text is descriptive. It's also useful for users when an image link is broken because the alt text will display for them on the page. This provides some 
+                            context when the path to the image is broken.
                         </p>
                         <p>
-                            Finally it is important that links are spelled out and descriptive to the user. "Click here" means nothing but links such as "book airline tickets here" helps to put things into 
+                            Finally it is important that links are spelled out and descriptive to the user. "Click here" means nothing but links such as "book airline tickets here" help to put things into 
                             perspective. Remember we can add title attributes to elements such as the anchor tag. Doing so is helpful because the information can be displayed as a tooltip to the user when 
                             mousing over the link.
                         </p>
                         <p>
-                            It's important to remember that content described through a screen reader is much line an automated telephone directory. The content is "linearized" to the listener so, while some 
+                            It's important to remember that content described through a screen reader is much like an automated telephone directory. The content is "linearized" to the listener so, while some 
                             users can quickly navigate a web page visually, those users who utilize a screen reader must do so by listening to each option before understanding what actions are available. 
                             Consider this when designing your web pages.
                         </p>
@@ -487,23 +489,24 @@
                 <article>
                     <div class="topic">                        
                         <p>
-                            Utilizing a layout for your website is important to help guide users to your content. Often content is displayed similarly to how magazines and newspapers layout their content. 
+                            Utilizing a layout for your website is important to help guide users around your site. Often content is displayed similarly to how magazines and newspapers layout their content. 
                             There are main headings and footers for consistency and navigation. Important information is placed between these sections in relevant ways. It's also important that navigation is 
                             easy between different sections of your website. Several new HTML5 elements help with creating layouts. These are: header, nav, section, article, aside, details, summary, and footer.
                         </p>
                         <p>
                             There are several different techniques for creating a layout. These range from basic tables, floats, a flexbox, modern frameworks, and grid views. Tables are generally not 
-                            recommended because they weren't even designed to be a layout tool [1]. Other options provide more modern and flexible alternatives which is important when considering mobile 
+                            recommended because they weren't even designed to be a layout tool [1]. Other options provide more modern and flexible alternatives, which are important when considering mobile 
                             devices and varying screen size and resolution.
                         </p>
                         <p>
                             This page itself uses several of the aforementioned elements including section, article, and nav. Each topic on this page is defined as an article. These are wrapped 
-                            in a section element. I'm also using a nav element for navigation to the right of the content in the scrolling sidebar among a few other locations.
+                            in a section element for a given area of focus (i.e. HTML, CSS or JS). I'm also using a nav element for navigation to the right of the content in the scrolling sidebar. 
+                            I'm also using a nav element for quick navigation to topics within a particular section in the content introductions.
                         </p>
                         <h5>Frameworks</h5>
                         <p>
                             There are several popular CSS frameworks such as Bootstrap and Foundation. These frameworks supply their own set of HTML and CSS element for you to use in consistent and reliable 
-                            ways. Both of the mentioned frameworks are modern and mobile friendly and take out a lot of the work in setting up device agnostic websites.
+                            ways. Both of the aforementioned frameworks are modern and mobile friendly and take out a lot of the work in setting up device agnostic websites.
                         </p>
                         <h5>Floats</h5>
                         <p>
@@ -513,7 +516,7 @@
                         <p>
                             The clear property specifies what elements can float beside the cleared element and on which side [2]. It has several properties: none, left, right, both, and inherit. You generally 
                             want to clear the same direction as the content is being floated. If you float content to the right, then you should clear the content to the right. This would mean that no floating 
-                            elements are allowed on the right side of the element [2]. Sometimes content is too large for an element so a clearfix must be applied. If there is overflow the containing element will 
+                            elements are allowed on the right side of the element [2]. Sometimes content is too large for an element so a clearfix must be applied. If there is any overflow the containing element will 
                             expand to enclose the large content. The code samples below are examples of two ways to create a clearfix as described by W3 Schools [2].
                         </p>
                         <pre>
@@ -551,7 +554,7 @@
                                 Flex Item Three
                             </div>
                         </div>
-                        <h5>Flex Container Row with an alignment. The items are stretched and centered.</h5>
+                        <h5>Flex Container Row with an alignment. The items are centered and flexed to the end.</h5>
                         <div class="flex-container-row-align flex-container">
                             <div class="flex-item-row-align flex-item">
                                 Flex Item One
@@ -572,7 +575,7 @@
                                 Flex Item Six
                             </div>
                         </div>
-                        <h5>Flex Container Column. This wraps and the direction is reversed.</h5>
+                        <h5>Flex Container Column. This wraps items and the direction is reversed.</h5>
                         <div class="flex-container-column flex-container">
                             <div class="flex-item">
                                 Flex Item One. Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet.
@@ -584,7 +587,7 @@
                                 Flex Item Three
                             </div>
                         </div>
-                        <h5>Flex Container Flow. This is a revered row has a reverse wrap.</h5>
+                        <h5>Flex Container Flow. This is a revered row which also has a reverse wrap.</h5>
                         <div class="flex-container-flow flex-container">
                             <div class="flex-item">
                                 Flex Item One
@@ -674,7 +677,7 @@
                             The CSS Grid allows a designer to organize content is a grid-based layout using rows and columns. Frameworks such as Bootstrap and Foundation have their own implementations which 
                             help make modern web pages responsive. Generally a grid is broken into twelve columns and CSS styles are generated to size content based on those columns. For example one could define 
                             CSS classes for content which may span between one and all twelve columns. Each of these would be given a width proportionate to its size. This can be taken further to add style based 
-                            on small, medium, and large screen sizes (which you will find the frameworks support).
+                            on small, medium, and large screen sizes (which you will find the mentioned frameworks support).
                         </p>
                     </div>           
                     <div class="resources">
@@ -697,11 +700,11 @@
                     <div class="topic">
                         <p>
                             Understanding the Document Object Model is important when building a website. Modern frameworks like Angular and React manipulate the DOM for you to make creating user interfaces easier. 
-                            The DOM (as it's known) is what connects web pages to scripts and programming languages [1]. "The DOM represents a document with a logical tree" [1]. This tree can be traversed 
-                            and updated using JavaScript and libraries such as jQuery as well as with the DOM interface.
+                            These frameworks at least abstract away the lower level details for you. The DOM (as it's known) is what connects web pages to scripts and programming languages [1]. "The DOM represents 
+                            a document with a logical tree" [1]. This tree can be traversed and updated using JavaScript and libraries such as jQuery as well as with the DOM interface.
                         </p>
                         <p>
-                            In the following sections we'll explore manipulating the DOM and adding or modifying HTML. We'll also see use of different media controls and learn more about the HTML5 Canvas and Scaled Vector Graphics (SVGs).
+                            In the following sections we'll explore manipulating the DOM and adding or modifying HTML. We'll also see use of different media controls and learn more about the HTML5 Canvas as well as Scaled Vector Graphics (SVGs).
                         </p>
                         <nav class="topics-nav">
                             <a href="#modify-html" title="Goes to the article on adding and modifying HTML programmatically.">Programmatically modify HTML</a> |
@@ -724,8 +727,8 @@
                     <div class="topic">               
                         <p>
                             Understanding the fundamentals of manipulating the DOM is important. It's what modern frameworks and libraries are built upon. Aidan Ryan has a good overview of this particular section of the exam on his blog. 
-                            To quote him, "The document object is a node that represents the entire HTML document (including the head). Everything in the DOM is a node. It's important to differentiate between nodes and elements: all 
-                            elements are nodes, but not all nodes are elements. For example, a div element may have an id attribute - the attribute is a node, but not an element [2]."
+                            To quote him, "the document object is a node that represents the entire HTML document (including the head). Everything in the DOM is a node. It's important to differentiate between nodes and elements: all 
+                            elements are nodes, but not all nodes are elements. For example, a div element may have an id attribute - the attribute is a node, but not an element" [2].
                         </p>
                         <div class="modify-dom-examples">
                             <div>
@@ -749,7 +752,7 @@
                         </div>
                         <div id="ui-controls-practice" class="ui-controls-practice">
                             <p>
-                                This paragraph is contained within a div. Below demonstrates the use of the above methods on this particular div and its containing children.
+                                This paragraph is contained within a div. This area demonstrates the use of the above methods on this particular div and its containing children.
                             </p>
                             <p>
                                 This paragraph will also be targeted using the DOM API. Check the list of P tags below.
@@ -790,10 +793,10 @@
                         <p>
                             Elements can have attributes which provide additional information about them. They are set like name="value" pairs within the starting tag. Some examples of attributes 
                             include: src, alt, title, rel, width, height, style, lang, id, class, for, name, onresize. There are many more and you can view a list on the W3 School.com website following 
-                            this <a href="https://www.w3schools.com/tags/ref_attributes.asp" rel="nofollow" target="_blank" title="Goes to the attribute list on W3Schools.com">link</a> [4].
+                            this link: <a href="https://www.w3schools.com/tags/ref_attributes.asp" rel="nofollow" target="_blank" title="Goes to the attribute list on W3Schools.com">W3 School.com attribute list</a> [4].
                         </p>
                         <p>
-                            Attributes are not considered children of a node [2]. We can access them using the DOM API like so (there is no jQuery equivalent but you can build your own):
+                            Attributes are not considered children of a node [2]. We can access them using the DOM API like so (there is no jQuery equivalent but you can build your own [5]):
                         </p>
     <pre>
         var div = document.getElementById('divId');
@@ -822,7 +825,7 @@
         jqElement.removeAttr('id');
     </pre>
                         <p>
-                            The next step after being able to access a DOM node it be make changes to it or the overall structure of the page itself. 
+                            The next step after accessing a DOM node is to manipulate it or the overall structure of the page itself. 
                         </p>
                         <div id="ui-controls-mod-practice" class="ui-controls-practice">
                             <div class="controls">
@@ -849,6 +852,7 @@
                             <li>[2] <a href="http://www.aidanjryan.com/blog/2013/01/22/microsoft-exam-70-480-study-guide-continued/" title="Goes to Aidan Ryan's blog post discussing the UI Controls portion of the Microsoft exam." rel="nofollow" target="_blank">UI Controls Study Guide by Aidan Ryan</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node" title="Goes to the MDN article on DOM Nodes" rel="nofollow" target="_blank">DOM Node Properties</a></li>
                             <li>[4] <a href="https://www.w3schools.com/tags/ref_attributes.asp" rel="nofollow" target="_blank" title="Goes to the attribute list on W3Schools.com">HTML Attributes</a></li>
+                            <li>[5] <a href="https://stackoverflow.com/questions/14645806/get-all-attributes-of-an-element-using-jquery" rel="nofollow" target="_blank" title="Goes to a Stack Overflow question about accessing a list of attributes using jQuery">Stack Overflow - Attributes List using jQuery</a></li>
                         </ul>
                     </div>
                 </article>
@@ -861,8 +865,8 @@
                         <p>
                             People consume a lot of media from the web and over the years there have been different advances allowing people to do just that. As MDN explains, in the early days of
                             the web video files were too large to be consumed given bandwidth and other technological limitations [3]. As the web grew extensions like Flash provided a way to consume
-                            media and quickly became popular. These extensions have issues with security among other things but now with HTML5 and current browsers we can utilize the video and audio 
-                            tags to provide media playback natively within the browser. We can also utilize services like YouTube for the hosting and streaming of content.
+                            media and Flash quickly became popular. These extensions have had issues with security vulnerabilities among other things. Now with HTML5 and modern browsers we can utilize 
+                            the video and audio tags to provide media playback natively within the browser. We can also utilize services like YouTube for the hosting and streaming of content.
                         </p>
                         <h5>Audio</h5>
                         <p>
@@ -873,7 +877,7 @@
                             <li>autoplay: a boolean determining if the content should play automatically or not</li>
                             <li>loop: a boolean for replaying the content automatically or not</li>
                             <li>controls: a boolean telling the browser to show media controls for the content</li>
-                            <li>preload: how much data should be preloaded before the content can begin (none, metadata only, or automatic amount determined by the browser)</li>
+                            <li>preload: how much data should be preloaded before the content can begin (none, metadata only, or an automatic amount determined by the browser)</li>
                             <li>muted: a boolean specifying if the content should be muted or not</li>
                             <li>type: a string indicating the MIME (multipurpose internet mail extension) type for the content</li>
                             <li>crossorigin: an attribute to determine if the Origin header should be sent along with the request to gather the content or not</li>
@@ -890,7 +894,7 @@
                         <p>
                             The video tag supports the above attributes as well as a poster attribute. This would be a URL to an image to display while the video loads [1]. Several other attributes include:
                             buffered for adding time ranges for the buffered media and playsinline for playing the media back within the element's playback area (though not including this doesn't mean the 
-                            content would default to fullscreen) [4]. Like the audio tag, the video tag also supports fallback content in the form of a paragraph. When providing fallback content you can 
+                            content would default to full screen) [4]. Like the audio tag, the video tag also supports fallback content in the form of a paragraph. When providing fallback content you can 
                             explain to the user that the tag is not supported by their browser. You could also link them to the content on another site or provide more description of the content.
                         </p>
                         <video controls="controls" src="https://d2v9y0dukr6mq2.cloudfront.net/video/preview/hawaii-beautiful-scenic-roadway-aerial_-yrjn2-s__PM.mp4" type="video/mp4" preload="auto">
@@ -905,8 +909,8 @@
                             There are a number of events that are related to media playback. These include [1][4]:
                         </p>
                         <ul>
-                            <li>canplay: The browser can play the media but possibly not through its entirety (canplaythrough estimates the browser won't have to buffer the media).</li>
-                            <li>playing: Playback is ready after being paused or stopped due to lack of data.</li>
+                            <li>canplay: The browser can play the media but possibly not through its entirety (canplaythrough estimates if the browser won't have to buffer the media).</li>
+                            <li>playing: Playback is ready after being paused or stopped due to a lack of data.</li>
                             <li>ended: Playback has stopped because the end of the media has been reached.</li>
                             <li>timeupdate: The currentTime attribute has been updated.</li>
                             <li>play: Playback has started.</li>
@@ -932,22 +936,22 @@
                     <div class="topic">                        
                         <h5>Graphics</h5>
                         <p>
-                            Scalable Vector Graphics and the Canvas element are two different ways to add graphics and animation to a website. SVGs are scalable so the resolution doesn't degrade as an image scales. 
-                            SVGs are great for icons that need to scale based on device size and screen resolution. The canvas is strictly programmable using JavaScript and is great for things like games 
-                            and animations. Using the canvas you can draw shapes and animate them. You also have access to WebGL which is a powerful tool for creating 3D and 2D objects.
+                            Scalable Vector Graphics and the Canvas element are two different ways to add graphics and animation to a website. SVGs are scalable so the resolution doesn't degrade as an image 
+                            changes its size. SVGs are great for icons that need to scale based on device size and screen resolution. The canvas is strictly programmable using JavaScript and is great for things 
+                            like games and animations. Using the canvas you can draw shapes and animate them. You also have access to WebGL which is a powerful tool for creating 3D and 2D objects.
                         </p>
                         <p>
-                            Each of these tools has pros and cans so use each depending on your need. Ben Sinca lists several key differences between the two. Canvas is resolution dependent, 
+                            Each of these tools has pros and cons so use each depending on your need. Ben Sinca lists several key differences between the two. Canvas is resolution dependent, 
                             has no support for event handlers, has poor text rendering capabilities, can be saved as an image (png or jpg), and is well suited for graphical  games [3]. He writes that
                             SVGs are resolution independent, support event handlers, are best suited for apps with large rendering areas, slow rendering can be complex, and that they are not 
-                            suited for games [3]. As Aidan Ryan describes it in his blog post, canvas is more of a "fire and forget" or "immediate" model of rendering whereas SVGs have a 
+                            suited for games [3]. As Aidan Ryan describes in his blog post, canvas is more of a "fire and forget" or "immediate" model of rendering whereas SVGs have a 
                             "retained mode" which allows us to change and re-render the graphics [1].
                         </p>
                         <h5>Canvas</h5>
                         <p>
-                            Canvas allows us to draw lines, rectangles, curves and other elements. The origin is in the upper left with the x axis along the top and the y axis
-                            being vertical. Positive values along the x axis move to the right, and for the y axis move down the screen. In order to interact with the canvas you must
-                            get the context in which you intend to draw with, for example 3D or 2D. This context is what you interact with and call methods on in order to draw. 
+                            Canvas allows us to draw lines, rectangles, curves and other shapes. The origin is in the upper left with the x axis along the top and the y axis
+                            being vertical. Positive values along the x axis move to the right, and for the y axis these move down the screen. In order to interact with the canvas you must
+                            get the context in which you intend to draw with, for example 3D or 2D. This context is what you interact with and call methods on in order to draw and manipulate the canvas. 
                             The context has style attributes which can be set to change colors and gradients and methods for drawing lines and shapes like boxes and curves. 
                             Below is an example of a canvas with multiple different examples from text to shapes and lines.
                         </p>
@@ -1005,14 +1009,15 @@
                 <article>                    
                     <div class="topic">
                         <p>
-                            Updating your website user interface programmatically as a user interacts with it is an important part of creating an engaging experience. Dynamic websites
+                            Updating your website's user interface programmatically as a user interacts with it is an important part of creating an engaging experience. Dynamic websites
                             can provide a much more rich experience for the user. It may be the difference in attracting and keeping people on your site for longer periods of time.
                             That can be important if you are building a website which intends to captivate an audience and engage them long-term. Updating the UI based on user selections,
-                            or from reacting to different events, is certainly a nice touch but in the current age of media is more or less expected. 
+                            or from reacting to different events, is certainly a nice touch but in the current day and age it is more or less expected. 
                         </p>
                         <p>
-                            The styling we'll focus on in this section will be to change the location of an element, applying transforms, and showing and hiding elements. We can apply
-                            these techniques to this page and help clean up the user experience and interface to make the page more accessible and easier to navigate.
+                            The styling we'll focus on in this section will be on changing the location of an element, applying transforms, and showing and hiding elements. We can apply
+                            these techniques to this page and help clean up the user experience and interface to make the page more accessible and easier to navigate. I did this 
+                            by show and hiding each of the topics to reduce the initial amount of vertical scrolling.
                         </p>
                         <nav class="topics-nav">
                             <a href="#change-element-location" title="Goes to the article on changing an element's location.">Change location of an Element</a> |
@@ -1035,14 +1040,14 @@
                         </p>
                         <p>
                             The relative position allows us to use the right/left/top/bottom/z-index properties to move the targeted element in the specified direction. Absolute position allows as to manipulate an element
-                            as if you could place it anywhere on the page. Fixed is very similar to absolute but isn't affected by scrolling where absolute is. Sticky is still experimental and acts much like relative position.
-                            However once the viewport reaches a set value the element will stay fixed in location. Inherit is used to force the position property to cascade down to the targeted children. The position property
-                            doesn't cascade by default. [4]
+                            as if you could place it anywhere on the page. Fixed is very similar to absolute but it isn't affected by scrolling where absolute is (so fixed elements are always visible depending on their position. 
+                            For example the side navigation of this page uses the fixed position). Sticky is still experimental and acts much like the relative position. However once the viewport reaches a set value the element 
+                            will stay fixed in location. Inherit is used to force the position property to cascade down to the targeted children. The position property doesn't cascade by default. [4]
                         </p>
                         <p>
-                            Using left, right, bottom, and the other related properties on a relative positioned element adjust the targeted element in those directions. If styling a child element they move in relation to their
+                            Using left, right, bottom, and the other related properties on a relative positioned element adjusts the targeted element in those directions. If styling a child element they move in relation to their
                             parent as long as both elements have a position set. Otherwise the child may move in relation to the document and not its parent element. The example below styles the overall parent div as relative.
-                            Then the inner div with duplicate child divs is positioned absolutely in relation to the parent container.
+                            Then the inner div with multiple child divs is positioned absolutely in relation to the parent container.
                         </p>
                         <div class="position-example">
                             <div class="position-box top-left">Top Left</div>
@@ -1074,18 +1079,20 @@
                 <article>
                     <div class="topic">
                         <p>
-                            One way to apply a transform to an element is to use CSS. CSS3 allows for lateral, rotation, scaling, and skewing transforms of elements. This can be done in both 2D and
+                            One way to apply a transform to an element is to use CSS. CSS3 allows for lateral, rotational, scaling, and skewing transforms to be applied to elements. This can be done in both 2D and
                             3D [1]. The transform property can apply several functions including: scale, skewX, shewY, translate, rotate, matrix, perspective [2]. Multiple transforms can be applied to an element. 
                             For example: transform: translate(-50px, -30px) skewY(10deg) rotateX(45deg); applies a translation, skewY and rotateX to the targeted element. A space-separated list of transform allows
-                            you to add multiple types. There is also an order to which they are applied [2].
+                            you to add multiple types as in the example. This is also the order in which they are applied [2].
                         </p>
                         <p>
-                            Scaling an element applies the scaling to font-size, padding, height, and width properties too [2]. Translate moves the element on the x and/or y axis. 
-                            Rotate unsurprisingly will rotate the element by a number of degrees (i.e. 10deg). Skewing the element can be done vertically or horizontally. There are x and y variants and a skew
-                            method which applies the skew in both directions given arguments for both x and y. Rotations can be applied on the x, y, or z axis. The matrix transform can be used to apply multiple
-                            transforms at once. There are tools which can help group your transforms into a single matrix. This can help reduce file size in some cases but is hard to read [2]. There are also 3D 
-                            variants for each of these properties which incorporate the z axis for manipulating elements in 3D space. This can be helpful in game development. The matrix transform is probably
-                            also heavily used for games and mathematically intense graphical programs.
+                            Scaling an element applies the scaling to font-size, padding, height, and width properties [2]. Translate moves the element on the x and/or y axis. 
+                            Rotate unsurprisingly will rotate the element by a number of degrees (i.e. 10deg). Rotations can be applied on the x, y, or z axis.  Skewing the element can be done 
+                            vertically or horizontally. There are x and y variants and a skew method which applies the skew in both directions given arguments for both x and y. 
+                        </p>
+                        <p> 
+                            The matrix transform can be used to apply multiple transforms at once. There are tools which can help group your transforms into a single matrix. This can help reduce file 
+                            size in some cases but is hard to read [2]. The matrix transform would mainly be used for games and mathematically intense graphical programs. There are also 3D variants 
+                            for each of these properties which incorporate the z axis for manipulating elements in 3D space. This can be helpful in game development. 
                         </p>
                         <div class="transform-example">
                             <div class="red-box transform-box">Red</div>
@@ -1113,13 +1120,15 @@
                             Ultimately we want to change the display attribute of the element to none which will hide the element and its children. In my example on this page I'm using 
                             the jQuery .toggle method [1]. This method has many different parameters which can customize the show and hide logic, for example a duration parameter for the length
                             of time to show or hide the element. However it's easy enough to use to just toggle the display. This is good for information that you'd like to hide from the user
-                            and to let them decide to view it (and vice versa). This helps remove noise from the page and allows the user to focus on the content that they are interested in. I'm using 
-                            it on this page to collapse the content of each article to help reduce the length of the page.
+                            and to let them decide to view it (and vice versa) as a "show more" or less button for instance. This helps remove noise from the page and allows the user to focus 
+                            on the content that they are interested in. I'm using it on this page to collapse the content of each article to help reduce the overall length of the page. By doing that 
+                            it helps me navigate from section to section more quickly.
                         </p>
                         <p>
                             It's also possible to use the CSS property visibility to show and hide an element. This property can hide the element but doesn't actually remove the space it takes up
-                            from the document (as opposed to display: none). These properties can be accessed programmatically using the DOM API and jQuery as well. You can access these properties
-                            using the DOM API by accessing the .style of an element. jQuery has a hide() method which will hide the selected element. [3]
+                            from the document (as opposed to display: none which hides everything and removes the element's space on the page). These properties can be accessed programmatically using 
+                            the DOM API and jQuery as well. You can access these properties using the DOM API by accessing the .style of an element. jQuery has a hide() method which will hide the 
+                            selected element. [3]
                         </p>
                     </div>
                     <div class="resources">
@@ -1152,7 +1161,7 @@
                         <p>
                             The geolocation API is popular because many applications react to a user's known location. Apps use location to display things on the screen, or alert users of
                             information. Consider an app like Google Maps for instance which can help you navigate from your current location to anywhere else in the world. Privacy is always
-                            a concern so the user is asked for permission before the data can be gathered and used.
+                            a concern so the user is asked for permission by the browser before the data can be gathered and used.
                         </p>
                         <nav class="topics-nav">
                             <a href="#storage" title="Goes to the article on the Web Storage API.">Web Storage API</a> |
@@ -1188,6 +1197,11 @@
                             of this and how different vendors operate when implementing storage features is important to keep in mind. [1]
                         </p>
                         <p>
+                            sessionStorage allows you to save up to 5MB which is more than a cookie and the data is never transferred to the sever. localStorage is similar to
+                            sessionStorage but is not cleared when the browser closes (only with JS or when the history is cleared). The localStorage storage limit is the largest
+                            among cookies, sessionStorage, and localStorage. [1]
+                        </p>
+                        <p>
                             Web Storage Example:
                         </p>
                         <div class="storage-example">
@@ -1220,18 +1234,18 @@
                 <article>
                     <div class="topic">
                         <p>
-                            The Geolocation interface represents an object able to programmatically obtain the position of the device [1]. This is important if an app can 
-                            utilize a user's location for interactions or display (such as with a Map application). The Navigator object implements the geolocation interface
-                            and this data can be obtained from the navigator.geolocation property [1].
+                            The Geolocation interface represents an object that is able to obtain the position of a user's device [1]. This is important in applications 
+                            that utilize a user's location for interactions or display (such as with a map application). The Navigator object implements the geolocation interface
+                            and the location data can be obtained from the navigator.geolocation property [1].
                         </p>
                         <p>
                             There are three methods to be aware of. Those are getCurrentPosition(), watchPosition(), and clearWatch(). The getCurrentPosition() method returns
                             the device's location by returning a Position object. Position objects have a coords and timestamp property of type Coordinates and DOMTimeStamp 
-                            respectively. The Coordinate object has several properties including latitude, longitude, altitude, accuracy, heading, and speed [2].
+                            respectively. The Coordinates object has several properties including latitude, longitude, altitude, accuracy, heading, and speed [2].
                         </p>
                         <p>
-                            The watchPosition() method returns a long value which represents a newly established callback function to be invoked whenever the device location
-                            changes [1]. This method takes two callback function as arguments. One for success and one for failure. The third argument is an optional 
+                            The watchPosition() method returns a long id value which represents the callback functions to be invoked whenever the device location
+                            changes [1]. This method takes two callback functions as arguments. One for success and one for failure. The third argument is an optional 
                             PositionOptions object for configuring the location watch. The clearWatch() method removes the callback handler that was set with the 
                             watchPosition() method [1]. clearWatch() accepts an id argument.
                         </p>
@@ -1254,7 +1268,7 @@
                 <article>
                     <div class="topic">
                         <p>
-                            JavaScript behaves differently than many other programming languages you may be used to. Because it is loosely and dynamically typed
+                            JavaScript behaves differently than many other programming languages you may be use to. Because it is loosely and dynamically typed
                             variables can be assigned anything you wish and be reassigned to different types later on in your program. The scope at which your
                             variable is available is also important to keep in mind. The keywords var, let, and const operate differently when declaring a variable and 
                             open up your variables to different scopes. Along with that, the keyword this changes its value when the scope changes and so it can be
@@ -1288,8 +1302,8 @@
                         </p>
                         <p>
                             var hoisting ensures that all variables are processed before code execution. Because variables are able to be declared at any point in the code you
-                            can even declare them after their use and the program will still function. It's because of hoisting that this works. However it's recommended to always 
-                            declare your variables at the top of their scope. [1] It's as if the variable declarations are hoisted above the executing code. Functions are also
+                            can even declare them after their use and the program will still function. It's because of hoisting that this works. It's as if the variable declarations 
+                            are hoisted above the executing code. However it's recommended to always declare your variables at the top of their scope. [1] Functions are also
                             hoisted up so that they are available when called. However if they are defined as expressions (i.e. var f => function(){}) they are not hoisted and 
                             can cause undefined errors [4].
                         </p>
@@ -1302,10 +1316,10 @@
                             const is a keyword that functions very similarly to let. You must initialize the variable at the time of declaration because const represents
                             a variable that cannot be reassigned. It is read-only. However if you assign an object to a const variable the properties of that object can 
                             change values. "A constant cannot share its name with a function or a variable in the same scope" and it is affected by the temporal dead zone
-                            (as let is as well) [3]. 
+                            (as let is as well) [3]. const is useful in functional programming.
                         </p>
                         <p>
-                            The temporal dead zone refers the time between declaring a variable and initializing it (once the initialization is terminated). let variables 
+                            The temporal dead zone refers to the time between declaring a variable and initializing it (once the initialization is terminated). let variables 
                             are hoisted up like var variables however var variables are inherently initialized as undefined where let variables are not. So accessing them 
                             prior to initialization will throw a reference error. Using typoeof on a variable in the temporal dead zone will also throw a reference error. [2]
                         </p>
@@ -1327,26 +1341,27 @@
                 <article>
                     <div class="topic">
                         <p>
-                           If a variable is defined outside of a block (i.e. code encapsulated with curly braces {}) then that variable has a global scope (which is not true 
-                           when using var) [3]. This is actually only true for web browsers; it's different when using JavaScipt with Node.js for example [2]. It's not recommended
-                           to use the global scope. Naming collisions is one reason (if a variable name is used more than once in other parts of the code). 
+                           If a variable is defined outside of a block (i.e. code encapsulated with curly braces {}) then that variable has a global scope [3]. 
+                           This is actually only true for web browsers; it's different when using JavaScipt with Node.js for example [2]. It's not recommended
+                           to use the global scope. A naming collision is one reason (if a variable name is used more than once in several parts of the code) [3]. 
+                           Variables redeclared using var are at the same global scope as previous declarations so the variable will be assigned the new value 
+                           and overwrite the old value, so be careful here.
                         </p>
                         <p>
                             Local scope refers to variables defined within a particular block of code or function (i.e. within curly braces {}). For function scope, variables
-                            defined within the function are only accessible from within that function at the time it's called. Using const or let within a block (inside curly braces
-                            but not a function) causes these variables to be only accessible from within that block.
+                            defined within the function are only accessible from within that function at the time it's called. Using const or let within a block (inside curly 
+                            braces) causes these variables to be only accessible from within that block.
                         </p>
                         <p>
                             Functions don't have access to one another's variables even if one is calling another [3]. However, because of lexical scoping, when defining a 
-                            function within another one, the inner function can access the outer function's variables and up to the global scope. While the more global something is 
-                            the less it has access to inner variables and functions.
+                            function within another one, the inner function can access the outer function's variables and all the way up to the global scope. The more global something is 
+                            the less it has access to because it can't access inner variables and functions.
                         </p>
                         <p>
-                            Closures are a related topic. This is when a function returns another function. This can be helpful when you need access to a function at a later time in 
-                            your code and that function does asynchronous work for instance (and also that you might want to reuse this process over and over again) [3]. Closures
-                            can also be used to return private variables and these functions are known to be privileged functions [3]. CSS-Tricks.com's article linked below has
-                            a good example of closures and privileged functions. Closures retain the scope of the variables created within them which is how they are able to 
-                            function.
+                            Closures are a related topic. In short this is when a function returns another function. This can be helpful when you need to reuse a unit of work (or instance a function that does 
+                            asynchronous work to look up some data based on changing user input) [3]. Closures can also be used to return private variables and these functions are known to be privileged 
+                            functions [3]. CSS-Tricks.com's article linked below has a good example of closures and privileged functions. Closures retain the scope of the variables created within them 
+                            which is how they are able to function. CSS-Trick.com's explains that closures are generally used to do two things: to control side effects and to create private variables [3].
                         </p>
                     </div>
                     <div class="resources">
@@ -1366,75 +1381,77 @@
                     <div class="topic">
                         <h5>this</h5>
                         <p>
-                           this represents the JavaScript context object in which the current code is executing [1]. When outside of a function this refers to the global object whether
-                           in strict mode or not [1]. There are other differences between this in strict and non-strict mode. The value of this is determined by how a function is called.
-                           this can't be set during execution and may be different each time the function is called [1]. bind() has been introduced to set the value of this for a function
+                           'this' represents the JavaScript context object in which the current code is executing [1]. When outside of a function 'this' refers to the global object whether
+                           in strict mode or not [1]. There are other differences between 'this' in strict and non-strict mode. The value of 'this' is determined by how a function is called.
+                           'this' can't be set during execution and may be different each time the function is called [1]. bind() has been introduced to set the value of 'this' for a function
                            regardless of how it's called [1].
                         </p>
                         <p>
-                            When not in strict mode, and when a value of this isn't set by a function call, this will default to the global context [1]. When in strict mode this will 
-                            default to whatever it was set to right before the call [1]. The value of this can be passed from one context to another using the call() or apply() method [1].
-                            When the value passed as this to call or apply is not an object, internally a call to ToObject will convert the input (for example a primitive) to an object.
+                            When not in strict mode, and when a value of 'this' isn't set by a function call, 'this' will default to the global context [1]. When in strict mode 'this' will 
+                            default to whatever it was set to right before the call [1]. The value of 'this' can be passed from one context to another using the call() or apply() method [1].
+                            When the value passed as 'this' to call or apply is not an object, internally a call to ToObject will convert the input (for example a primitive) to an object.
                         </p>
                         <p>
-                            bind was introduced in ECMAScript 5. This binds the context of this to whatever argument was passed into bind. It is permanently bound regardless of how the 
+                            bind was introduced in ECMAScript 5. This binds the context of 'this' to whatever argument was passed into bind. It is permanently bound regardless of how the 
                             function is called later. For arrow functions "this will retain the value of the enclosing lexical context's this" [1]. If you use call, bind, or apply
-                            with arrow functions the this argument (the first argument) will be ignored. When using those methods with an arrow function null should be passed in
+                            with arrow functions the 'this' argument (the first argument) will be ignored. When using those methods with an arrow function null should be passed in
                             for the first argument [1].
                         </p>
                         <p>
-                            When a function is called as a method of an object, this refers to the calling object itself [1]. This is true whether the function was defined inline with the
+                            When a function is called as a method of an object 'this' refers to the calling object itself [1]. This is true whether the function was defined inline with the
                             object definition or assigned later separately [1]. This is also true for an object's prototype chain. Objects will inherit functions from their prototype 
-                            and this will refer to the concrete object [1]. This is also true when a function is invoked as a getter or a setter--this is bound to the object [1].
+                            and 'this' will refer to the concrete object [1]. The same can be said when a function is invoked as a getter or a setter--'this' is bound to the object [1].
                         </p>
                         <p>
-                            When this is used in a constructor it is bound to the new object being constructed. The variables assigned with the new statement will have the properties set
-                            on this during construction. If an object is returned from the constructor method then that object is bound to the variable assigned with the new statement.
-                            In that case any references to this in the constructor are essentially dead code as it has no affects [1].
+                            When 'this' is used in a constructor it is bound to the new object being constructed. The variables assigned with the new statement will have the properties set
+                            on 'this' during construction. If an object is returned from the constructor method then that object is bound to the variable assigned with the new statement.
+                            In that case any references to 'this' in the constructor are essentially dead code as it has no affects [1].
                         </p>
                         <p>
-                            For DOM events this is set to the element the event fired from, although some browsers don't follow that convention for listeners added with methods other than 
-                            addEventListener [1]. When inline event handlers are used this is set to the DOM element on which the listener is placed [1].
+                            For DOM events 'this' is set to the element that fired the event. Although some browsers don't follow that convention for listeners added with methods other than 
+                            addEventListener [1]. When inline event handlers are used 'this' is set to the DOM element on which the listener is placed [1].
                         </p>
                         <h5>Events</h5>
                         <p>
-                            Events are fired in response to action taken by the user or program. As users interact with a web page for example it can be useful to know that they clicked
+                            Events are fired in response to actions taken by the user or program. As users interact with a web page for example it can be useful to know that they clicked
                             a button. In response to clicking that button a user may be logged in or a modal might display with relevant information. There are many different types of events.
-                            For instance keyboard keys being pressed, clicking, on form submission, on load of a page, or when errors occur. Programming around events is important in 
-                            any program with user interaction and is not limited to the web. The MDN - DOM Event Reference below lists all of the different events that can occur in the browswer [3].
+                            For instance keyboard keys being pressed, clicking, form submission, the loading of a page, or when errors occur. Programming around events is important in 
+                            any program with user interaction and is not limited to the web. The MDN - DOM Event Reference below lists all of the different events that can occur in the browser [3].
                         </p>
                         <p>
                             Each event has an "event handler" which is "registered" when a block of code is defined to be run in response to an event [2]. Listeners wait for an event to occur
-                            and the handler runs specific code in response. "It's important to note that web events are not part of the core JavaScript language. They are defined as part of the
-                            JavaScript APIs built into browser" [2].
+                            and the handler runs the specific code in response. "It's important to note that web events are not part of the core JavaScript language. They are defined as part of the
+                            JavaScript APIs built into the browser" [2].
                         </p>
                         <p>
-                            Event handlers can be registered to elements using JavaScript. First one needs a reference to the element and from there we can assign
+                            Event handlers can be registered to elements using JavaScript. First one needs a reference to the element and from there one can assign
                             functions to the various event handler properties (i.e. onblur, onkeypress, onmouseover). We are also able to assign event handlers inline
                             within the HTML code (as event handler HTML attributes), however that's not recommended [2]. This is because it can quickly become unmanageable 
-                            and inefficient [2]. The current mechanism is to use the addEventListener() and removeEventListener() functions to add and remove event handlers.
+                            and inefficient [2]. The current recommended mechanism is to use the addEventListener() and removeEventListener() functions to add and remove event handlers.
                             This lets us easily add and remove different event handlers for different purposes. These methods also allow us to apply multiple event handlers
                             to the same event handler property. Trying to assign two different functions to the same property normally overwrites the first because the 
-                            event property is assigned a new value. Using addEventListener we can get around this limitation.
+                            event property is assigned a new value. When using addEventListener we can get around this limitation.
                         </p>
                         <p>
                             Event handlers often pass in the event object to the handler method. This is generally seen in the parameter list named as "e". This event object has a 
-                            reference to the element that the event just occurred upon. You can access this object through the event object's "target" property. [2]
+                            reference to the element that just fired the event. You can access this object through the event object's "target" property. [2]
                         </p>
                         <p>
                             Preventing default behavior is something that you will run across from time to time. One example that MDN describes is preventing a form from being 
-                            submitted when a user clicks the submit button. You would want to prevent the user from submitting a bad form and to instead display validation information
+                            submitted when a user clicks the submit button. You would want to prevent the user from submitting a bad form and instead display validation information
                             before actually submitting the data to the server. Whenever you have custom logic you would like to apply and circumvent the default behavior use the event
                             object's "preventDefault()" method to stop it from occurring. [2] You can also set the event's return value by setting the event.ReturnValue property.
+                            Finally returning false for a given event will prevent the form from being submitted (i.e. onsubmit="return false" where false would be the returned value
+                            from a method call).
                         </p>
                         <p>
-                            Bubbling and capturing are two more advanced event topics that are important to understand. If an element causes two events to fire and each affects one another 
+                            Bubbling and capturing are two advanced event topics that are important to understand. If an element causes two events to fire and each affects one another 
                             negatively this will need to be addresses in your code. For example, if an element should hide when an area of the screen is clicked but also play a video 
                             in response to a similar event that is also triggered at the same time (as MDN uses in their example [2]). When events are fired there are two phases.
-                            The capturing of the event phase which runs an event handler if one is registered in response. The capturing phase checks each ancestor of the element triggering
-                            the event and works its way from the outer most ancestor (the html element) down to the closest parent until it stops at the original element. In the bubbling 
+                            The "capturing" of the event phase which runs an event handler if one is registered in response. The capturing phase checks each ancestor of the element triggering
+                            the event and works its way from the outer most ancestor (the html element) down to the closest parent until it stops at the original element. In the "bubbling" 
                             phase the opposite occurs. It checks to see if the element that triggered the event has an event handler which should respond and moves up the hierarchy (all 
-                            the way up to the html element). By default event handlers are registered during the bubbling phase [2]. To prevent issues like this the "stopPropagation()" 
+                            the way up to the html element). By default event handlers are registered during the bubbling phase [2]. To prevent issues like this the stopPropagation()
                             method can be used. It will stop the bubbling up process so other handlers are not run. This can be invoked by calling the stopPropagation() method on the event object.
                         </p>
                         <p>
@@ -1450,7 +1467,7 @@
                             parent to handle the event and determine if a child is affected or not, then responds appropriately.
                         </p>
                         <p>
-                            Here's a historical note MDN points out "why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than 
+                            Here's a historical note MDN points out: "why bother with both capturing and bubbling? Well, in the bad old days when browsers were much less cross-compatible than 
                             they are now, Netscape only used event capturing, and Internet Explorer used only event bubbling. When the W3C decided to try to standardize the behavior and reach a 
                             consensus, they ended up with this system that included both, which is the one modern browsers implemented." [2]
                         </p>
@@ -1474,11 +1491,11 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Objects are an important building block in programming. Knowing what objects exist in a language is important because often times
-                            they are there for a reason. They encapsulate actions and processes that many programmers utilize frequently. Being able to extend 
+                            Objects are an important building block in programming. Knowing what objects exist in a language natively is important because often times
+                            they are there for a reason. Often they encapsulate actions and processes that many programmers utilize frequently. Being able to extend 
                             the default functionality with your own custom functions is an important technique as well. JavaScript has its own way of doing such 
-                            things in its use of prototypes. However there are certain things considered to be bad practice and should be avoided depending on your
-                            situation.
+                            things in its use of prototypes. However in some cases adding behavior to native objects is considered to be a bad practice and should be 
+                            avoided depending on your situation.
                         </p>
                         <nav class="topics-nav">
                             <a href="#built-in-js" title="Goes to the article on Native JS Objectss.">Native Objects</a> |
@@ -1506,13 +1523,14 @@
                 <article>
                     <div class="topic">
                         <p>
-                            There are many global objects in JavaScript. These objects are in the global scope [1]. The resource link below goes to MDN's listing of
+                            There are many globally scoped objects in JavaScript [1]. The resource link below goes to MDN's listing of
                             all the global objects in various categories. To name a few there are values such as Infinity, NaN, undefined, null, and globalThis. There
-                            are funcation such as eval(), isFinite(), isNaN(), parseFloat(), decodeURI(), escape(), and unescape(). There are fundamental objects like
+                            are functions such as eval(), isFinite(), isNaN(), parseFloat(), decodeURI(), escape(), and unescape(). There are fundamental objects like
                             Object, Function, Boolean, Error, and ReferenceError. Other types include Number, BigInt, Math, Date, String, RegExp, Array, Map, Set, 
                             WeakMap, and WeakSet. There are control abstractions like Promise, Generator, GeneratorFunction, and AsyncFunction. There is Reflect and Proxy
                             for reflection. There are internationalization objects like Intl and Intl.DateTimeFormat. And finally WebAssembly objects like WebAssembly, 
-                            WebAssembly.Module, and WebAssembly.Instance.
+                            WebAssembly.Module, and WebAssembly.Instance. Knowing what's available for use is half the battle so taking time to review the native objects
+                            is important. Next, spend some time practicing using them.
                         </p>
                     </div>
                     <div class="resources">
@@ -1531,10 +1549,10 @@
                         <p>
                             A JS object is a collection of properties and a property is an association between a key and a value [1]. These values can be primitives
                             or even whole functions. You can create a new object like so: var myObject = new Object(); and then you can assign properties and values to it
-                            using dot-notation. For example, myObject.name = "My new object"; If you declare a property with no value it will have the value of undefined. Most of the time
+                            using dot-notation. For example, myObject.name = "My new object"; If you declare a property with no value it will default to the value of undefined. Most of the time
                             properties will be accessed using dot-notation however you can also access and set them using bracket notation. For example myObject['name'] 
                             will return "My new object" which we defined earlier. Objects are sometimes called associative arrays [1]. You can even iterate over objects
-                            like an array to access the different property values (for example MDN uses a for...in loop to print out each property and its value) [1]. There 
+                            like an array to access the different property values (for example MDN uses a for...in loop to print out each property and its value in their example) [1]. There 
                             are actually three built-in ways in ECMAScript 5 to enumerate the properties of an object. The for...in loop (includes all enumerable prototype chain properties), the 
                             Object.keys(o) method (which does not include prototype properties), and the Object.getOwnPropertyNames(o) method which returns all property names on a given object
                             (enumerable or not) [1]. 
@@ -1543,22 +1561,22 @@
                             There are several ways to create new objects. You can use the object initializer or create a constructor method. It's easy to new up an object using the
                             initializer. Remember that objects are just collections of properties. You can define these by hand by declaring key and value pairs. For example: 
                             const myObject = { propertyOne: valueOne, propertyTwo: valueTwo }; The values can be any type (for example a number or a string value). These objects are of 
-                            type Object (as if a call to new Object() were made) [1]. Object initializers are expressions and each time it's called this results in a new object being created [1].
-                            These distinct objects won't compare to each other as being equal [1].
+                            type Object (as if a call to new Object() were made) [1]. Object initializers are expressions and each time it's called this results in a new object being created
+                            and these distinct objects won't compare to each other as being equal [1].
                         </p>
                         <p>
-                            You can also defined object types by defining constructor methods. By convention we capitalize constructor methods. We can then use the new keyword to create
+                            You can also define object types by defining constructor methods. By convention we capitalize constructor methods. We can then use the "new" keyword to create
                             a new instance of the object. To create a constructor simply define a function with a capitalized name which represent the object type. Within this method
                             you can assign properties to the new object and assign values to them either by taking in arguments and assigning them to the properties or by assigning them in a 
-                            different way (for example by hard coding initial values or by calling other methods which return a value). The keyword this is used to assign values to the 
-                            object's properties. For example, function Person(name) { this.name = name; }; This constructor creates a Person object and takes one argument which is assigned to the property name.
+                            different way (for example by hard coding initial values or by calling other methods which return a value). The keyword "this" is used to assign values to the 
+                            object's properties. For example, function Person(name) { this.name = name; }; This constructor creates a Person object and takes one argument which is assigned to the property "name".
                         </p>
                         <p>
                             Constructor methods can be called from the objects themselves because the constructor is a method attached to the object. So you are able to create a new Person object with the following 
-                            syntax: var anotherPerson = new personOne.constructor('New Name'); Just remember to use the new keyword and pass in required parameters. This can be useful if you don't have access to the original
+                            syntax: var anotherPerson = new personOne.constructor('New Name'); Just remember to use the "new" keyword and pass in required parameters. This can be useful if you don't have access to the original
                             constructor for whatever reason [2]. It can also be useful if you want to know the name of the original object that it is an instance of. You can find this using the name property, like 
                             anotherPerson.constructor.name. However this value can change for a variety of reasons (for example transpilers, binding, and inheritance) so using the instanceof operator 
-                            is better in some cases as explain by MDN [2].
+                            is better in some cases, as explained by MDN [2].
                         </p>
                         <p>
                             Remember that we can add properties to objects by simply using dot notation. For example person.age = 10; This would add the age property to the existing
@@ -1567,12 +1585,12 @@
                         </p>
                         <p>
                             Finally we can create objects using the Object.create method. "This method can be very useful, because it allows you to choose the prototype object for the object you want to create,
-                             without having to define a constructor function" [1]. Create makes a new object using the given object parameter as the prototype. So the new object's __proto__ property will
-                             refer to the passed in object and its available members [2].
+                            without having to define a constructor function" [1]. Create makes a new object using the given object parameter as the prototype. So the new object's __proto__ property will
+                            refer to the passed in object and its available members [2].
                         </p>
                         <p>
-                            As was described earlier object properties can be accessed by either dot notation or bracket notation. You are also able to index into object properties
-                            using bracket notation (for example myObject[2] = "Hello World!"). Once you define a property by either indexing or using a property name you can only access
+                            As was described earlier object properties can be accessed by either dot notation (myObject.name) or bracket notation (myObject['name']). You are also able to index into object properties
+                            using indexed bracket notation (for example myObject[2] = "Hello World!"). Once you define a property by either indexing or using a property name you can only access
                             it using the same technique (so you couldn't access the last property using dot notation as in myObject.2). The exception is array-like objects reflected from HTML [1].
                             "For example, if the second FORM tag in a document has a NAME attribute of "myForm", you can refer to the form as document.forms[1] or document.forms["myForm"] or document.forms.myForm" [1].
                         </p>
@@ -1601,9 +1619,9 @@
                         <p>
                             All objects inherit properties and methods from the Object prototype by default. So each object has members like watch and valueOf [1]. When a member that's inherited is called
                             the browser first checks to see if the current object has a matching member to call, otherwise it goes up the chain of prototypes until it finds a match [1]. These members (properties
-                            and methods) are not copied to the child objects, they are accessed by walking up the prototype chain [1]. The methods and properties that are inherited from the prototype object are 
-                            only the members on the prototype object, and not one defined directly on the parent object itself. So for example as MDN explains, Object.keys() and Object.is() are not available
-                            to the inheriting class because those are defined on the Object constructor itself. However members such as watch() and valueOf() are because these are defined on the prototype object.
+                            and methods) are not copied to the child objects--they are accessed by walking up the prototype chain [1]. The methods and properties that are inherited from the prototype object are 
+                            only the members on the prototype object, and not ones defined directly on the parent object itself. So for example as MDN explains, Object.keys() and Object.is() are not available
+                            to the inheriting class because those are defined on the Object constructor itself. However members such as watch() and valueOf() are available because these are defined on the prototype object.
                         </p>
                         <p>
                             To modify the prototype chain of an object simply access the prototype property and add a property or method using dot notation. For example: person.prototype.fullName = function() { 
@@ -1627,9 +1645,9 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Inheritance in JS is accomplished within constructor methods. We have to utilize the call() method with the constructor. The child object defines a constructor which 
-                            calls the parent object's call method. Call takes a parameter which specifies that value of 'this' when the function runs. The rest of the parameters are the 
-                            values the parent's constructor accepts as arguments.
+                            Inheritance in JavaScript is accomplished within constructor methods. We have to utilize the call() method within the constructor. The child object must define a constructor which 
+                            calls the parent object's call method. The call method takes a parameter which specifies that value of 'this' when the function runs. The rest of the parameters are the 
+                            parent's regular constructor arguments.
                         </p>
                         <p>
                             As MDN explains there is more to do to properly set up inheritance. We also need to set the child's prototype to be an object of the parent's type.
@@ -1637,12 +1655,12 @@
                             By doing this we'll ensure the child prototype has all the methods available from the parent object's prototype. The last thing we must do is make sure that the child constructor
                             returns an object of its type, and not its parent's type. We accomplish this by adding one more line of code: Object.defineProperty(Warrior.prototype, 'constructor', {
                             value: Warrior, enumerable: false, writable: true }); This will ensure we create an object of the desired type. Finally to define new functionality for an existing method 
-                            inherited from the parent object simply define the same method on the child's prototype. All of what has been discussed is just one way to implement inheritance. Frameworks
-                            and new features of ECMAScript allow for classes and other common constructs like extends. [1]
+                            inherited from the parent simply define the same method on the child's prototype. All of what has been discussed is just one way to implement inheritance. Frameworks
+                            and new features of ECMAScript allow for classes and other common constructs like the extends keyword. [1]
                         </p>
                         <p>
                             As MDN summarizes, there are three major groups of object members to remember. Ones defined inside of a constructor method that are given to object instances. Ones that
-                            are defined on the constructors themselves which are only available on the constructor. And finally ones that are on a constructor's prototype which are accessibly by
+                            are defined on the constructors themselves which are only available on the constructor. And finally ones that are on a constructor's prototype which are accessible from
                             instances and inheriting objects. [1]
                         </p>
                         <p>
@@ -1650,9 +1668,9 @@
                             the class syntax in ECMAScript2015. Classes have a constructor method, class methods, and properties. MDN explains that underneath it all the class syntax is being converted to prototypical 
                             inheritance models (class syntax is just "syntactic sugar" to reduce code and feel more consistent with other languages many developers utilize) [1]. To inherit using this syntax we
                             use the extends keyword. For example: class Warrior extends Character { constructor() { super(); } } The call to super is important and must be done first. This way the parent
-                            class will be able to initialize 'this' and correctly set up our references [1]. Remember to pass along any required parameters to the parent's constructor by passing them 
+                            class will be able to initialize 'this' and correctly set up any references [1]. Remember to pass along any required parameters to the parent's constructor by passing them 
                             into the call to super(). Adding getters and setters is also common depending on the intended use of your object. These return and set values of instance fields and ECMAScript2015 has syntax 
-                            for creating them. To add a getter and setter to the Warrior class from above use the following syntax:
+                            for creating them. To add a getter and setter to the Warrior class from above use the following syntax (which also requires an _attackPower field on the class):
                         </p>
                         <pre>
                             get attackPower() { 
@@ -1669,7 +1687,7 @@
                         </p>
                         <p>
                             Inheritance is a powerful tool which allows for reuse. Functionality that we want to be reused among related but subtly different objects can be inherited from a base class and then
-                            extended for custom behavior. Too much inheritance can add unnecessary complexity to a project. Depending on your need composition may be a better choice as well. In the end inheritance 
+                            extended for custom behavior. Too much inheritance can add unnecessary complexity to a project. Depending on your need composition may be a better choice. In the end inheritance 
                             is just another tool in your toolbox and shouldn't be the hammer for all of your problems. There are a lot of benefits from using it but it has its place like any other tool. [1]
                         </p>
                     </div>
@@ -1687,10 +1705,10 @@
                 <article>
                     <div class="topic">
                         To extend native object behavior it's as simple as modifying the native object's prototype chain. There can be downsides to doing this though. By extending native
-                        objects you are changing or adding behavior to something many people understand as working one way. When new contributors work with your code you will need to teach them
+                        objects you are changing or adding behavior to something many people understand as behaving one way. When new contributors work with your code you will need to teach them
                         of these changes. The other downside is that as time goes on the native objects may grow to include the same functionality that you've added yourself. So you might run into collisions
-                        to native functionality as the language evolves. When adding properties one good thing to keep in mind is to use non-enumerable properties. This way your additional 
-                        functionality will be hidden from the regular means to view all of an object's properties (for example a for loop or Object.keys()). To do so use the Object.defineProperty method
+                        with native functionality as the language evolves. When adding properties one good thing to keep in mind is to use non-enumerable properties. This way your additional 
+                        functionality will be hidden from the normal ways of viewing all of an object's properties (for example a for loop or Object.keys()). To do so use the Object.defineProperty method
                         and set the property to enumerable: false. This prevents things like JSON.stringify(object) from seeing your new properties. [1][2]
                     </div>
                     <div class="resources">
@@ -1710,7 +1728,7 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Validating user input is a critical part of software development. With security becoming an even more important part of the development process making sure to validate and clean
+                            Validating user input is a critical part of software development. With security becoming an even more important part of the development process making sure to validate and sanitize
                             user input is an important step in that process. Apart from wanting to make sure the user enters in meaningful data we must also be concerned with malicious attacks. SQL or JavaScript
                             injection can cause havoc to a software system if input is not sanitized before saving. In this section we'll explore HTML5's input types and attributes which can be used to validate
                             form data.
@@ -1736,12 +1754,12 @@
                         <p>
                             There are different ways to validate form data. On the client-side we can use JavaScript and create custom validations. We are also able to use built-in form validation. While not as customizable
                             built-in form validation is more performant than custom JS validation. On the server-side we always want to validate incoming data before further processing or saving occurs.
-                            If the data isn't in the right format, or appears to be malicious we certainly don't want to save it. Be sure to always validate and sanitize your data. [1]
+                            If the data isn't in the right format, or appears to be malicious, we certainly don't want to save it. Be sure to always validate and sanitize your data. [1]
                         </p>
                         <p>
-                            To use HTML5's built-in validations we need to use different attributes to mark the forms. These allow us to specify if the input is requireD, has any limits, or is formatted correctly for example.
+                            To use HTML5's built-in validations we need to use different attributes to mark the forms. These allow us to specify if the input is required, has any limits, or is formatted correctly for example.
                             When an element is valid MDN explains that there are several things we can rely upon. First, the element will match the :valid CSS pseudo-class. Second, the browser will be able to submit the form (unless 
-                            custom JS for example is preventing it). When the element is invalid it will match the :invalid CSS pseudo-class and the browser will display an error if the user tries to submit the form.
+                            custom JS is preventing it). Third, when the element is invalid it will match the :invalid CSS pseudo-class and the browser will display an error if the user tries to submit the form.
                         </p>
                         <p>
                             Below is a simple form example using a text input box and a submit button. Using the same CSS that MDN uses in their input example the input's border is a red dashed line when the field is invalid.
@@ -1766,7 +1784,7 @@
                         <p>
                             Other examples of validation include restricting the minimum and maximum input length of input or textarea elements, adding similar min and max restrictions for number input types, or limiting date ranges 
                             on month input types. Along with all of this built-in validation we can create custom validation messages. There are two drawbacks according to MDN, one is that there is no standard way to style them using 
-                            CSS, and the other is that these depend on the browser locale so it's possible that the web page could be displayed in one language and the validation message be displayed in another [1]. In order to 
+                            CSS, and the other is that these depend on the browser locale so it's possible that the web page could be displayed in one language and the validation message could be displayed in another [1]. In order to 
                             add the validation we must use JavaScript using the constraint validation API [1]. The email example above uses this for custom messages. These are displayed when the input changes and then the button is clicked.
                         </p>
                         <p> 
@@ -1779,7 +1797,7 @@
                             Finally there are a number of different input types. These range from classic types like button, text, radio, and checkbox to types like color, email, search, date, and url. The full list can be 
                             found using the MDN link below [2]. Common attributes among all input types include autocomplete, autofocus, disabled, form, list, name, readonly, required, tabindex, type, and value. Each input type
                             has additional attributes specific for its own use. Using labels is highly recommended (this also helps with accessibility) and while placeholder text can be helpful be sure to use these for examples of valid input, 
-                            not as prompts for information (though many pages do this) [2].
+                            not as prompts for information (although many pages do this it shouldn't technically be used as a label) [2].
                         </p>
                     </div>
                     <div class="resources">
@@ -1801,26 +1819,26 @@
                     <div class="topic">
                         <p>
                             The application cache can be used to store files offline and reduce server load [1]. However MDN does not recommend using this feature as the application cache is being 
-                            removed from the web standard and should no longer be supported. Service Workers are encouraged instead. That said here is a bit of information on the topic in case you run
+                            removed from the web standard and should no longer be supported. Service workers are encouraged instead. That said here is a bit of information on the topic in case you run
                             into them in legacy applications.
                         </p>
                         <p>
                             When using the app cache feature you must define and specify a manifest file. This file is then set within the HTML tag's attribute list using the manifest attribute. Each 
-                            page that you intend to be cached should include this attribute. You can however specify specific pages within the manifest file itself to cache them (known as master entries) [1]. The browser 
+                            page that you intend to cache should include this attribute. You can however specify specific pages within the manifest file itself to cache them (known as master entries) [1]. The browser 
                             automatically adds visited pages to the cache if the manifest attribute is set. MDN notes that some browsers notify the user and ask if they want to allow caching when the 
                             browser detects a site that uses the cache. In general the browser checks if the cache exists, loads cached files, then checks if the server has an updated manifest file and 
-                            downloads that and any new files listed. In order to clear the cache manually you need to clear out browsing history for your particular internet browser.
+                            downloads that and any new files listed. In order to clear the cache manually you need to clear out the browsing history for your particular internet browser.
                         </p>
                         <h5>Manifest File</h5>
                         <p>
-                            This file has a MIME type of text/cache-manifest. The files can have comments using the pound/hashtag symbol (#). The files must have three sections: CACHE, NETWORK, and FALLBACK.
+                            This file has a MIME type of text/cache-manifest. The files can have comments using the pound/hashtag symbol (#) at the beginning of the comment. The files must have three sections: CACHE, NETWORK, and FALLBACK.
                             If a header is not specified it is defaulted to CACHE. The browser loads a new manifest if the file has changed (byte for byte) so including a version number in a comment can
-                            be helpful. Also MDN notes that you should never include the manifest file itself in the manifest for caching because then it is nearly impossible to update it. [1]
+                            be helpful so it can detect a change. Also MDN notes that you should never include the manifest file itself in the manifest for caching because then it is nearly impossible to update it. [1]
                         </p>
                         <ul>
                             <li>CACHE: Files listed here are explicitly cached.</li>
                             <li>NETWORK: These files require a connection to the server. Requests bypass the cache. The wildcard character * can be used once. Useful for security reasons.</li>
-                            <li>FALLBACK: Specifies fallback pages the browser can use if a resource is not accessible. These include the initial resource to load and a fallback uri.</li>
+                            <li>FALLBACK: Specifies fallback pages the browser can use if a resource is not accessible. These include the initial resource to attempt to load and a fallback uri.</li>
                         </ul>
                         <p>
                             The app cache has a number of states including: UNCACHED (cache object is not fully initialized), IDLE (cache is not currently being updated), CHECKING (fetching and checking for updates), 
@@ -1886,22 +1904,22 @@
                         <p>
                             As MDN explains styling text with CSS generally falls into one of two categories. Font styles which affect the font size, thickness, and color and text layout styles which
                             affect the spacing of the letters, the space between lines, and alignment. Text within an element is all styled together (unless you wrap specific text in another element and target
-                            it specifically--like wrapping it in a span element for example). [1] As stated it's possible to color text using the color CSS property. This can be a word like 'red' or an RBG or 
-                            Hexadecimal value for instance (among others). Font families allow you to change the font of text. You can supply fallback fonts in case the user doesn't have a specific font installed on their computer.
+                            it specifically--like wrapping it in a span element for example). [1] It's possible to color text using the color CSS property. This can be a word like 'red' or an RBG or 
+                            Hexadecimal value for instance (among others). Font families allow you to change the font of text. You can also supply fallback fonts in case the user doesn't have a specific font installed on their computer.
                             Some fonts are "web safe" meaning that these are supported across all systems and are great default fonts to choose from. These include Arial, Georgia, and Times New Roman. [1]
                         </p>
                         <p>
                             Font size takes a value in various units and scales the text appropriately. Examples of acceptable units include percentages, pixels (px), ems, rems, and even named values (like xx-small, large, and relative 
                             size like smaller and larger). Font size can also take several global values such as inherit, initial, and unset. Commonly used units include px, ems, and rems. Pixels specify
-                            how high you want the text to be. It's an absolute unit in most situations. ems are "equal to the font size set on the parent element of the current element (more specifically, the width
+                            how tall you want the text to be. It's an absolute unit in most situations. ems are "equal to the font size set on the parent element of the current element (more specifically, the width
                             of a capital letter M contained inside the parent element) [1]. It's possible to scale other things using ems. Finally rems are like ems "except that 1rem is equal to the font size set on the
                             root element of the document (i.e. html), not the parent element" [1]. By default font-size is inherited and is defaulted to 16px as a standard [1]. 1em is 16px by default but these scale to 
                             whatever the font-size is set to which make them powerful in CSS. MDN notes that it can be helpful to work off of rems and to default the font-size to 10px so that the math is easier to work with
                             when styling other sections of the page [1].
                         </p>
                         <p class="text-styles">
-                            Here's an example of styling text. <span class="red-georgia">This text is colored and has a Georgia font family. If your browser doesn't support Georgia it will fallback to Times New Roman, then to Times, and 
-                            finally to a serif font.</span><span class="small-text">These fallbacks are also known as a font stack.</span>
+                            Here's an example of styling text. <span class="red-georgia">This text is colored and has a Georgia font family. If your browser doesn't support Georgia it will fall back to Times New Roman, then to Times, and 
+                            finally to a serif font. </span><span class="small-text">These fallbacks are also known as a font stack.</span>
                         </p>
                         <p>
                             Below is another example of styling text which changes the font-size, font-family, and color of the text. It also includes an example of hyphenation and drop shadow around text. Hyphens can be
@@ -1910,24 +1928,24 @@
                         </p>
                         <div class="card">
                             <div class="title">
-                                <p class="stage">Basic Pokemon</p>
+                                <p class="stage">Basic Pokémon</p>
                                 <p class="name">Pikachu</p>
                                 <p class="hitPoints">40 HP</p>
                             </div>
                             <p class="attack">Gnaw - 10</p>                            
                             <p class="attack">Thunder Jolt - 30</p>
                             <p class="attack-description">Flip a coin. If tails, Pikachu do&shy;es 10 damage to itself.</p>
-                            <p class="dex">When several of these Pokemon gather, their electricity can cause lightning storms.</p>
+                            <p class="dex">When several of these Pokémon gather, their electricity can cause lightning storms.</p>
                         </div>
                         <p>
                             There are a couple other important word-wrapping CSS properties. These are word-wrap and word-break. Word-wrap was a nonstandard Microsoft property but it is now officially overflow-wrap. This 
                             can have one of three values: normal, anywhere, and break-word. This controls if the browser should insert line breaks into text to stop text from overflowing. Normal breaks on normal word breaks
-                            (like spaces), anywhere breaks anywhere within a word and no hyphen is added, and break-word is just like anywhere but it does not consider soft-wrapping opportunities (like spaces that can also be broke). [4]
+                            (like spaces), anywhere breaks anywhere within a word and no hyphen is added, and break-word is just like anywhere but it does not consider soft-wrapping opportunities (like spaces that can also be broke on). [4]
                         </p>
                         <p>
-                            word-break also affects text wrapping. MDN explains that it "sets whether line breaks appear wherever the text would otherwise overflow its content box" [5]. Its values include: normal (uses the 
+                            Word-break also affects text wrapping. MDN explains that it "sets whether line breaks appear wherever the text would otherwise overflow its content box" [5]. Its values include: normal (uses the 
                             default line break), break-all (word breaks can be inserted between any two characters except for Chinese/Japanese/Korean text), keep-all (word breaks should not be used for Chinese/Japanese/Korean text, others default to normal), 
-                            and break-word (same effect as normal and overflow-wrap: anywhere regardless of the overflow-wrap property) [5].
+                            and break-word (same effect as "normal" and "overflow-wrap: anywhere" regardless of the overflow-wrap property) [5].
                         </p>
                         <p>
                             MDN explains that there are four common properties that alter the weight and emphasis of text [1]. Those are font-style, font-weight, text-transform, and text-decoration. font-style is 
@@ -1935,7 +1953,7 @@
                             which will slant the normal version of the font. If an italic version doesn't exist the font will be oblique by default. font-weight sets how bold the text is. This can take one of many 
                             different values such as normal or bold, or even lighter or bolder (which set the font one step more or less bold compared to the parent's value). Finally it can take a numeric value from 
                             100 to 900. text-transform allows you to transform the font by uppercasing it, lowercasing it, capitalizing it, or applying a full-width style. text-decoration allows you to add lines around
-                            or through the text (such as underneath, over or through). Multiple text decorations can be applied at once. I've added examples of these above in the Pokemon example.
+                            or through the text (such as underneath, over or through). Multiple text decorations can be applied at once. I've added examples of these above in the Pokémon card example.
                         </p>
                         <p>
                             It's also possible to align text using the text-align property. This property has several values including left, right, center, and justify. These align text like a word processor. Text is either
@@ -1948,7 +1966,7 @@
                         </p>
                         <p class="justify">
                             This text has been justified to fill the element. Notice the gaps in between the letters so that all of the lines of text have the same width. <span class="spacing">This can look bad depending on the styles of the 
-                            other elements around it.</span> Ultimately consider user readability and experience when styling anything.
+                            other elements around it.</span> Ultimately consider user readability and user experience when styling anything.
                         </p>
                         <p>
                             MDN lists a number of additional properties that you can use to style your text including font-variant, font-kerning, font-stretch, text-indent, text-overflow, white-space, and text-align-last just to 
@@ -1983,7 +2001,7 @@
                             or from a URL which will download the font for the user [3]. It's a good idea to provide several options in case the user doesn't have a font installed or for when a font just isn't available. 
                             @font-face can use the following file types: woff, woff2, truetype, opentype, embedded-opentype, and svg [3]. woff refers to the Web Open Font Format developed by Mozilla together with Type Supply, LettError,
                             and other organizations [2]. This format is similar to others and uses the same sfnt structure that is used by TrueType, OpenType, and Open Font Format but includes additional metadata and
-                            private-use data structures [2]. Some of the benefits include compressed data for using less bandwidth and that generally vendors like the format and are willing to support it (where they 
+                            private-use data structures [2]. Some of the benefits include compressed data for using less bandwidth and that, generally, vendors like the format and are willing to support it (where they 
                             might not license their TrueType or OpenType format fonts). There are two WOFF formats. WOFF and WOFF2 differ mainly in the algorithms used for compression according to MDN [2].
                         </p>
                         <p class="font-face">
@@ -2038,7 +2056,7 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Each element has a size, border, padding and margins that can be sized and styled. The size of an element can be adjusted using the width and height properties. There 
+                            Each element has a size, border, padding and margins that can be styled. The size of an element can be adjusted using the width and height properties. There 
                             are also min and max properties for the width and height. Padding is used to separate content within an element from the sides of the border. Likewise, margin is used to
                             separate other elements from the outside of an element's border. You can style the top, right, bottom, and left values separately. There is also shorthand for doing parallel 
                             sides or all at once. The border can be styled to have rounded corners (by giving the border a radius) and the style can be adjusted (to display a solid line or a dashed
@@ -2050,7 +2068,7 @@
                         </p>
                         <p>
                             Margin collapsing is something that occurs between sibling elements (those on the same level in the DOM). If the top and bottom margins are set between two elements these
-                            are merged into one single margin. The value will be whichever margin is the largest of the two. Margins of floating and absolutely positioned elements never collapse [2]. Margins 
+                            are merged into one single margin. The value will be whichever margin is the larger of the two. Margins of floating and absolutely positioned elements never collapse [2]. Margins 
                             will be collapsed when there is no border, padding, inline content, height, min-height, block formatting context or clearance (see clear) set for an element in general. Ultimately
                             if there is no reason for the space to exist (for example an empty block) it will be collapsed.
                         </p>
@@ -2076,21 +2094,21 @@
                     <div class="topic">
                         <h5>Graphical Effects</h5>
                         <p>
-                            The filter-function can be used to change the appearance of an input image and is used in the filter and background-filter properties [5]. This function "applies
+                            The filter-function can be used to change the appearance of an image and is used in the filter and background-filter properties [5]. This function "applies
                             graphical effects like blur and color shift to an element." [6] These can be used to adjust images, backgrounds, and borders as MDN explains [6]. The full list of filter 
                             functions includes [5]:
                         </p>
                         <ul>
-                            <li>blur: blurs an image (radius length)</li>
-                            <li>brightness: can make the image brighter or darker (amount number or percentage)</li>
-                            <li>contrast: changes the contrast of the image (amount number or percentage)</li>
+                            <li>blur: blurs an image (radius - length)</li>
+                            <li>brightness: can make the image brighter or darker (amount - number or percentage)</li>
+                            <li>contrast: changes the contrast of the image (amount - number or percentage)</li>
                             <li>drop-shadow: adds a shadow to the image (length offset x and y, blur radius length, spread-radius length, and a color)</li>
-                            <li>grayscale: converts an image to greyscale (amount number or percentage)</li>
+                            <li>grayscale: converts an image to greyscale (amount - number or percentage)</li>
                             <li>hue-rotate: adjusts the hue of an image (angle)</li>
-                            <li>invert: inverts the colors of the image (amount number or percentage)</li>
-                            <li>opacity: adjusts the transparency of the image (amount number or percentage. 0 = transparent, 1 = opaque)</li>
-                            <li>saturate: adjusts the saturation of the image (amount number or percentage)</li>
-                            <li>sepia: converts the image to sepia (which is a reddish-brown color which can "warm" the image) (amount number or percentage)</li>
+                            <li>invert: inverts the colors of the image (amount - number or percentage)</li>
+                            <li>opacity: adjusts the transparency of the image (amount - number or percentage. 0 = transparent, 1 = opaque)</li>
+                            <li>saturate: adjusts the saturation of the image (amount - number or percentage)</li>
+                            <li>sepia: converts the image to sepia (which is a reddish-brown color which can "warm" the image) (amount - number or percentage)</li>
                         </ul>
                         <p>
                             Below are examples of some of these functions.
@@ -2100,9 +2118,9 @@
                         <img class="filter-example-3" src="rock.jpg" alt="An inverted, sepia image of a rock wall." />
                         <img class="filter-example-4" src="rock.jpg" alt="A saturated image of a rock wall." />
                         <p>
-                            Other effects include adding transparency to an element, adding background images, gradients, shadows, and clipping. According to MDN by default the background-color and image properteis extend
+                            Other effects include adding transparency to an element, adding background images, gradients, shadows, and clipping. According to MDN by default the background-color and image properties extend
                             to the edge of the border of an element [1]. This can be adjusted using the background-clip property. The background color also defaults to transparent, meaning that other background elements will
-                            show through. You can also set this specifically if an element already has a color defined for instance.
+                            show through. You can also set this specifically and could be helpful if an element already has a color defined for instance.
                         </p>
                         <div class="background">
                             <p class="background-info">This element has a background image and I have adjusted its opactiy.</p>
@@ -2126,7 +2144,7 @@
                             Linear gradients use the background-image property but can also be declared using the shorthand background property [3]. The gradient defaults to top-to-bottom but can 
                             be set to left-to-right or any angle you'd like [3]. The angle can be specified using a degree value (i.e. 45deg) or by using keywords like "to top right" which would start
                             the gradient in the bottom left. You are also able to specify multiple colors and can even add "color stops" for hard edges rather than the fading effect. [3]
-                            Gradients produce special image objects of the same name (i.e. the Gradient data type) so these can be used where images can be used [4].
+                            Gradients produce special image objects of the same name (i.e. the Gradient data type) so these can be used anywhere images can be used [4].
                         </p>
                         <p class="shadow-gradient">
                             This element has a box-shadow and a gradient applied to it!
@@ -2178,7 +2196,7 @@
                     <div class="topic">
                         <p>
                             As we have seen earlier (in the "Change location of an element" section) elements can be positioned with the position property. Other properties (like left and right) allow you to adjust the element's position
-                            even further. As the official guide to the exam explains, remember that each element has its own coordinate system. Elements within parent elements are positioned within the parent, and not 
+                            even further. As the official guide to the Microsoft exam explains, remember that each element has its own coordinate system. Elements within parent elements are positioned within the parent, and not 
                             within the page itself. So each element has its own origin rather than starting at the x and y coordinate of the entire web page (in the top left corner of the browser) [2].
                         </p>
                         <div class="banner"> 
