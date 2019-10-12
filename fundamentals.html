@@ -2443,18 +2443,18 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Infocodify.com explains that regions are "a new CSS3 construct that allows you to have content flow through various regions in a webpage" [1]. In order to use regions the layout must implement two things, those being a content source 
-                            and regions which will display the content. This content can come from another web page with the use of an iframe or from another element on the page and Infocodify's article explains that at the time it didn't work in all browsers [1].
-                            Ultimately this allows content to fill in these defined regions similarly to how a magazine or newspaper is laid out, where content is laid out in grids and columns and the articles flow from page to page in some cases. Using regions
-                            allows you to add other elements in-between them and to pull your content from one source but have it placed on the page across the defined regions. The regions which the content flows over are called a 
+                            Infocodify.com explains that regions are "a new CSS3 construct that allows you to have content flow through various regions in a webpage" [1]. In order to use regions the layout must implement two things. Those are a content source 
+                            and regions which will display that content. This content can come from another web page with the use of an iframe or from another element on the page. Infocodify's article explains that at the time of their article this didn't work in all browsers [1].
+                            Ultimately these mechanisms allow for content to fill in the defined regions similarly to how a magazine or newspaper is laid out where content is placed in grids and columns and the articles flow from page to page and around other things like advertisements. Using regions
+                            allows you to add other elements in-between them and to pull your content from one source but have it placed on the page across all of the defined regions. The regions which the content flows over are called a 
                             region chain.
                         </p>
                         <p>
-                            You are also able to control where content breaks and moves to a new region with the break-before, break-after, and break-inside properties. You can use these to be sure
-                            a heading isn't the last line of a region and instead gets displayed in a new region with the beginning of its content. For instance this could be achieved by setting the 
+                            You are also able to control where content breaks and moves to a new region with the break-before, break-after, and break-inside properties. So you could use these to be sure
+                            a heading of an article isn't the last line of a region and instead gets displayed in a new region with the beginning of its content. For instance this could be achieved by setting the 
                             break-after and break-inside properties for heading tags to 'avoid', as WebPlatform describes, to be sure the headings are placed within a single region and don't end up alone [4].
                             The region-fragment property determines how the last region behaves. If the content were to break in the last region the overflow will not be rendered because there are no other regions for the 
-                            content to flow to, but it would act as though it was flowing into the next region and a break would occur.
+                            content to flow to but it would act as though it was flowing into the next region and a break would occur.
                         </p>
                         <h5>Nesting and Grouping</h5>
                         <p>
