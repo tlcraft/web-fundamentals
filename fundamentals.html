@@ -2512,13 +2512,13 @@
                     <div class="topic">
                         <p>
                             CSS transitions change the style of an element over a period of time. This can be helpful to illustrate to users that their actions have taken affect and the application
-                            is processing in some way as one example. We have control over how the style changes and how long the transition takes to complete. You can chain together multiple styles
-                            with time intervals in a list. These are controlled by the following properties: transition-property, transition-duration, and transition-delay. There is 
+                            is processing. We have control over how the style changes and how long the transition takes to complete. You can chain together multiple styles
+                            with time intervals by defining a list of transitions. Transitions are controlled by the following properties: transition-property, transition-duration, and transition-delay. There is 
                             also a transition-timing-function for determining "how intermediate values for properties are computed" [2]. The effects can be triggered from events such as hovering over an
                             element or by using JavaScript.
                         </p>
                         <p>
-                            The transition-property lists the CSS properties which will change and only those listed will be affected. The transition-duration specifies how long the transition takes to complete.
+                            The transition-property lists the CSS properties which will change and only those listed will be affected (i.e. background-color). The transition-duration specifies how long the transition takes to complete.
                             The transition-delay specifies how long to wait before applying the transition once the trigger occurs. Finally the transition-timing-function has several possible values 
                             including: ease, ease-in, ease-out, linear, step-start, step-end, steps (which specifies how many steps to take during the transition). It's also important to consider accessibility 
                             and to allow users to turn off the animations if they so choose.
