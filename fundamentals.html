@@ -2663,19 +2663,19 @@
                     <div class="topic">
                         <p>
                             You can show and hide elements using one of several different CSS properties. These include display, visibility, and disabled. The display and visibility
-                            properties allow you to hide an element. These work similarly however when using the visibility property to hide an element (hidden) the document will still behave
-                            as though the element is within the DOM structure. So the space it is taking up is not removed. If you want to also remove the space the element takes up
-                            set the display property to none which will completely hide the element. If you would rather disable the element and leave it visible on the screen the disabled
-                            attribute will allow you to disable actions from being performed (such as for input). Elements become greyed out but still react to mouse events. It also
-                            cannot be focused and the command event will not fire [4]. It's only allowed for form controls.
+                            properties allow you to hide an element. These work similarly however when using the visibility property to hide an element (with a value of "hidden") the document will still behave
+                            as though the element is within the DOM structure. So the space it is taking up on the page is not removed. If you want to instead remove the space the element takes up
+                            set the display property to "none" which will completely hide the element. If you would rather just disable the element and leave it visible on the screen the disabled
+                            attribute will allow you to do that. Elements become greyed out and inaccessible but still react to mouse events. A disabled element also can't be focused on and the command event will not fire [4]. 
+                            Disabled is only allowed for form controls and has no effect on other elements [4].
                         </p>
                         <p>
-                            Display has many possible values including: block, inline, run-in, flow, flex, grid, etc. As MDN explains display sets the inner and outer display types of an element [2].
+                            Display has many possible values including block, inline, run-in, flow, flex, and grid among others. As MDN explains display sets the inner and outer display types of an element [2].
                             "The outer type sets an element's participation in flow layout; the inner type sets the layout of children" [2].
                         </p>
                         <p>
                             Visibility has several values including: visible (the element is displayed), hidden (the element is not drawn but affects the layout), and collapse. Collapse is
-                            useful for tables to quickly hide a column or row but to not affect spacing. If applied to flex items the item and space are removed. For other elements it is as if 
+                            useful for tables to quickly hide a column or row but won't affect spacing. If applied to flex items the item and space are removed. For other elements it is as if 
                             the element was hidden. [3]
                         </p>
                         <div class="disply-none">This is not visible.</div>
