@@ -2230,7 +2230,7 @@
                     <div class="topic">
                         <p>
                             As we've discussed earlier having a flexible layout is important because in this day and age people use all sorts of devices when connecting to the web. From smartphones, 
-                            to televisions, to desktop computers. Each of these have very different screen sizes so having a flexible design in your layout lends itself toward the user experience. 
+                            to televisions, to desktop computers people use a variety of devices to connect to the web. Each of these have very different screen sizes so having a flexible design in your layout lends itself toward the user experience. 
                             In this section we'll revisit some of the earlier topics and add additional details about layouts.
                         </p>
                         <nav class="topics-nav">
@@ -2265,13 +2265,13 @@
                         </p>
                         <ul>
                             <li>main size: the width or height of a flex container or flex item, whichever is in the main dimension.</li>
-                            <li>cross size: this functions the same as the main size but for the cross axis.</li>
+                            <li>cross size: this functions the same as the main size but for the cross (perpendicular) axis.</li>
                             <li>main axis: the primary axis which flex items are laid out on, this extends from the main-start to the main-end.</li>
                             <li>cross axis: the axis which is perpendicular to the main axis. This extends from the cross-start to the cross-end.</li>
                             <li>main/cross-start and end: flex items are placed into the container beginning from the main-start and cross-start sides and extending toward the main-end and cross-end sides.</li>
                         </ul>
                         <p>
-                            There are two flex display properties. flex which generates a flex container that is block-level and inline-flex that generates a flex container that is inline-level [1]. While the flex
+                            There are two flex display properties. "flex" which generates a flex container that is block-level and "inline-flex" that generates a flex container that is inline-level [1]. While the flex
                             property behaves similarly to a block display there are differences. For instance the float and clear properties have no effect. Likewise for vertical-align. This is also true for the pseudo-elements
                             ::first-line and ::first-letter.
                         </p>
@@ -2290,12 +2290,12 @@
                             flex items do not collapse. Items that are collapsed (visibility: collapse) leave the cross width intact so that the UI is consistent. [1]
                         </p>
                         <p>
-                            A note on the order property and accessibility from the documentation points out that the order property only affects the visual display and does not affect non-visual media (such as speech) [1]. 
+                            A note on the order property and accessibility from the W3C documentation points out that the order property only affects the visual display and does not affect non-visual media (such as speech) [1]. 
                             It also doesn't affect the default traversal order of sequential navigation modes. [1] 
                         </p>
                         <p>
-                            Flex lines are used to layout the flex items. These can be single or multiple lines. This depends on if you allow the items to wrap around or not. [1] Much more details on the flex box model
-                            can be found within the documentation linked below.
+                            Flex lines are used to layout the flex items. These can be single or multiple lines. This depends on if you allow the items to wrap around or not. [1] Much more detail on the flex box model
+                            can be found within the W3C documentation linked below.
                         </p>
                     </div>
                     <div class="resources">
@@ -2312,20 +2312,20 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Multi-column layouts can be helpful for users to consume content by displaying the content similarly to how newspapers do in columns. This way people don't have to 
-                            read long lines of text which sometimes causes readers to lose track of their place. Multi-column layouts shorten the text and make it easier to keep track of. [1] 
+                            Multi-column layouts can help users consume content by displaying the content similarly to how newspapers and magazines do by using columns. This way people don't have to 
+                            read long lines of text which sometimes cause readers to lose track of their place. Multi-column layouts shorten the text per line and make it easier to keep track of. [1] 
                         </p>
                         <p class="multi-column">
                             The two CSS properties to be aware of are column-count and column-width. These adjust the number of columns of text within an element and the line length (the width)
-                            for each column [1]. This paragraph has four columns with a width set to 200 pixels. Whichever property ends up restricting the content the most will be displayed. 
-                            You can also use the single property column to specify one or both of these values. The height of each column is balanced so you won't have to set this value manually.
+                            for each column [1]. This paragraph has four columns with a width set to 200 pixels. Whichever property ends up restricting the content the most will be used. 
+                            You can also use the single property "column" to specify one or both of these values. The height of each column is balanced so you won't have to set this value manually.
                             That's actually specified in the CCS3 Column specification [1]. However as MDN explains you can actually specify a maximum height to determine when the text 
                             will overflow into another column. You can use the height or max-height properties to set this. Finally the column-gap property can be used to adjust the gap between
                             each column (this has a default value of 1em) [1]. 
                         </p>
                         <p>
-                            A few other properties to be aware of are: column-rule which behaves like the border property. column-fill and column-span which determines if the content will be 
-                            balanced between the columns or not, and for span, how far a particular element will span across the columns (like a header).
+                            A few other properties to be aware of are column-rule, column-fill, and column-span. column-rule behaves like the border property. column-fill determines if the content will be 
+                            balanced between the columns or not and column-span determines how far a particular element will span across the columns (like a header).
                         </p>
                     </div>
                     <div class="resources">
@@ -2342,7 +2342,7 @@
                 <article>
                     <div class="topic">
                         <p>
-                            We know that floating items allows content to flow around them to the left or right. As infocodidy.com explains exclusions "provide a way to overcome this limitation with float" [1]. You apply exclusions
+                            We know that floating items allows content to flow around them to the left or right. But that is limited to floated items. As infocodidy.com explains exclusions "provide a way to overcome this limitation with float" [1]. You apply exclusions
                             by setting the wrap-flow CSS property. The possible options include:
                         </p>
                         <ul>
@@ -2371,6 +2371,8 @@
                         <ul>
                             <li>[1] <a href="http://www.infocodify.com/css/position_floating_exclusions" title="Goes to the infocodify.com article covering position, floating, and exclusions." rel="nofollow" target="_blank">Infocodify.com - Using position, floating, and exclusions in overall layout</a></li>
                             <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-ms-wrap-flow" title="Goes to the MDN article covering the -ms-wrap-flow property." rel="nofollow" target="_blank">MDN - -ms-wrap-flow</a></li>
+                            <li>[3] <a href="https://css-tricks.com/exclusions-will-hopefully-be-like-more-powerful-grid-friendly-floats/" title="Goes to the CSS-Tricks.com article covering the -ms-wrap-flow property and exclusions." rel="nofollow" target="_blank">CSS-Tricks.com - Exclusions will hopefully be like more powerful grid-friendly floats</a></li>
+                            <li>[4] <a href="https://www.w3.org/TR/css3-exclusions/" title="Goes to the W3C documentation covering exclusions." rel="nofollow" target="_blank">W3C.org - CSS Exclusions Module Level 1</a></li>
                         </ul>
                     </div>
                 </article>
@@ -2381,13 +2383,13 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Again we discussed this topic within the Layout Container section above. Here are some more details.
+                            We discussed this topic within the Layout Container section above but here are some more details.
                         </p>
                         <p>
                             In the past using HTML tables for layout was common. It provided a way to organize content but it is not very flexible and is cumbersome. Now we have ways to 
                             achieve similar results but in a much more modern way which is responsive to a user's screen size. We can use CSS to define that we will use 
-                            a grid layout and then we can define the number of columns and rows to use within the grid. This is now fully baked into native CSS. At one point Microsoft 
-                            had specific extensions of their own use within IE and Edge (i.e. -ms-grid).
+                            a grid layout and then we can define the number of columns and rows to use within that grid. This is now fully baked into native CSS. At one point Microsoft 
+                            had specific extensions of their own for use within IE and Edge (i.e. -ms-grid).
                         </p>
                         <p>
                             A grid can either be block-level or inline (which is set using grid or inline-grid for the display property). Grid items are not affected by some properties like 
@@ -2398,8 +2400,8 @@
                         <p>
                             The grid-area property specifies a name for an item and the grid-template-areas property can reference these grid-area names to define a template and
                             determine if elements span multiple spaces (which is set by repeating the name of an area multiple times in a row) [3]. grid-areas can also define a particular
-                            area within the grid which uses four values (grid-row-start, grid-column-start, grid-row-end, grid-column-end). When defining grid-template-areas you must be
-                            sure that the template lists the same number of cells in each declaration. Empty cells can be specified with a period.
+                            area within the grid which uses four values (grid-row-start, grid-column-start, grid-row-end, and grid-column-end). When defining grid-template-areas you must be
+                            sure that the template lists the same number of cells in each declaration. Empty cells can be specified with a period character (i.e. ".").
                         </p>
                         <p>
                             grid-templates are shorthand for grid-template-rows, grid-template-columns, and grid-template-areas. You can specify the rows and columns and default the areas to none, 
@@ -2412,12 +2414,12 @@
                             The entire contents of the grid can also be justified or aligned using the justify-content and align-content properties.
                         </p>
                         <p>
-                            The grid-auto-flow properties tell the grid to either fill in more rows, columns, or empty space automatically (row, column, or dense values). The grid property is shorthand for
+                            The grid-auto-flow properties tell the grid to either fill in more rows, columns, or empty space automatically (using the row, column, or dense values). The grid property is shorthand for
                             several properties including grid-template-rows, grid-template-columns, grid-template-areas, grid-auto-rows, grid-auto-columns, and grid-auto-flow.
                         </p>
                         <p>
                             Grid items have a number of properties that allow you to set where they each begin and end (for example grid-column-start, grid-column-end and equivalent row properties) [3]. 
-                            These also have properties to justify and align their content.
+                            These also have properties to justify and align their content. Below is a simple example of the grid layout.
                         </p>
                         <div class="grid-container">
                             <div class="header grid-item">Header Area</div>
@@ -2441,18 +2443,18 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Infocodify.com explains that regions are "a new CSS3 construct that allows you to have content flow through various regions in a webpage" [1]. In order to use regions the layout must implement two things, those being a content source 
-                            and regions which will display the content. This content can come from another web page with the use of an iframe or from another element on the page and Infocodify's article explains that at the time it didn't work in all browsers [1].
-                            Ultimately this allows content to fill in these defined regions similarly to how a magazine or newspaper is laid out, where content is laid out in grids and columns and the articles flow from page to page in some cases. Using regions
-                            allows you to add other elements in-between them and to pull your content from one source but have it placed on the page across the defined regions. The regions which the content flows over are called a 
+                            Infocodify.com explains that regions are "a new CSS3 construct that allows you to have content flow through various regions in a webpage" [1]. In order to use regions the layout must implement two things. Those are a content source 
+                            and regions which will display that content. This content can come from another web page with the use of an iframe or from another element on the page. Infocodify's article explains that at the time of their article this didn't work in all browsers [1].
+                            Ultimately these mechanisms allow for content to fill in the defined regions similarly to how a magazine or newspaper is laid out where content is placed in grids and columns and the articles flow from page to page and around other things like advertisements. Using regions
+                            allows you to add other elements in-between them and to pull your content from one source but have it placed on the page across all of the defined regions. The regions which the content flows over are called a 
                             region chain.
                         </p>
                         <p>
-                            You are also able to control where content breaks and moves to a new region with the break-before, break-after, and break-inside properties. You can use these to be sure
-                            a heading isn't the last line of a region and instead gets displayed in a new region with the beginning of its content. For instance this could be achieved by setting the 
+                            You are also able to control where content breaks and moves to a new region with the break-before, break-after, and break-inside properties. So you could use these to be sure
+                            a heading of an article isn't the last line of a region and instead gets displayed in a new region with the beginning of its content. For instance this could be achieved by setting the 
                             break-after and break-inside properties for heading tags to 'avoid', as WebPlatform describes, to be sure the headings are placed within a single region and don't end up alone [4].
                             The region-fragment property determines how the last region behaves. If the content were to break in the last region the overflow will not be rendered because there are no other regions for the 
-                            content to flow to, but it would act as though it was flowing into the next region and a break would occur.
+                            content to flow to but it would act as though it was flowing into the next region and a break would occur.
                         </p>
                         <h5>Nesting and Grouping</h5>
                         <p>
@@ -2510,13 +2512,13 @@
                     <div class="topic">
                         <p>
                             CSS transitions change the style of an element over a period of time. This can be helpful to illustrate to users that their actions have taken affect and the application
-                            is processing in some way as one example. We have control over how the style changes and how long the transition takes to complete. You can chain together multiple styles
-                            with time intervals in a list. These are controlled by the following properties: transition-property, transition-duration, and transition-delay. There is 
+                            is processing. We have control over how the style changes and how long the transition takes to complete. You can chain together multiple styles
+                            with time intervals by defining a list of transitions. Transitions are controlled by the following properties: transition-property, transition-duration, and transition-delay. There is 
                             also a transition-timing-function for determining "how intermediate values for properties are computed" [2]. The effects can be triggered from events such as hovering over an
                             element or by using JavaScript.
                         </p>
                         <p>
-                            The transition-property lists the CSS properties which will change and only those listed will be affected. The transition-duration specifies how long the transition takes to complete.
+                            The transition-property lists the CSS properties which will change and only those listed will be affected (i.e. background-color). The transition-duration specifies how long the transition takes to complete.
                             The transition-delay specifies how long to wait before applying the transition once the trigger occurs. Finally the transition-timing-function has several possible values 
                             including: ease, ease-in, ease-out, linear, step-start, step-end, steps (which specifies how many steps to take during the transition). It's also important to consider accessibility 
                             and to allow users to turn off the animations if they so choose.
@@ -2545,10 +2547,9 @@
                 <article>
                     <div class="topic">
                         <p>
-                            CSS Transformations can change the shape and position of an element. Again this is something that can enhance the user experience at times, though accessibility is also a concern to plan for.
+                            CSS Transformations can change the shape and position of an element. Again, this is something that can enhance the user experience at times although accessibility concerns are also something to consider.
                             Some of the transformations include skewing, scaling, and rotating an element. This includes both 2D and 3D transformations. We actually looked at these earlier within the
-                            Media Controls section. MDN points out that only elements positioned by the box model can be transformed and that a good rule of thumb to determine this is if the element has 
-                            a display: block [2].
+                            Media Controls section. MDN points out that only elements positioned by the box model can be transformed and that a good rule of thumb is to check to see if the element has display set to block [2].
                         </p>
                         <p>
                             We saw the use of the transform property earlier. There is also a transform-origin property which specifies the position of the origin [2]. By default this is at the center of the element but you can 
@@ -2588,7 +2589,7 @@
                             Different styles will be applied at different points in the animation sequence and thus animate the element.
                         </p>
                         <p>
-                            You define an @keyframes rule with the initial state and the ending state (from and to or percentages) and name the keyframe. In the animation CSS property you then specify the 
+                            You define an @keyframes rule with the initial state and the ending state (using "from" and "to" or percentages) and name the keyframe. In the animation CSS property you then specify the 
                             @keyframe name along with other parameters such as the duration of the animation, the delay, and how many times to repeat the animation. You can also specify how 
                             many steps the animation will take to complete a cycle using the steps() method. [2]
                         </p>
@@ -2615,9 +2616,9 @@
                         <p>
                             Media queries are used to alter which CSS styles are applied based on screen size and device constraints. So your web page can be styled one way for desktops but differently
                             for phones for example. It also allows the UI to change dynamically if you were to resize a browser window for instance to either decrease or increase the viewport.
-                            You can supply many different media queries to be sure your application works for a variety of devices, or if you need to add specific styles for a particular size 
+                            You can supply many different media queries to be sure your application works for a variety of devices. These can also be useful for adding specific styles for a particular screen size 
                             in order to fix the user experience. You can even load the style sheets based on these queries rather than placing all the different styles into a single CSS file.
-                            This way you load the correct styles from an organized file targeting the designated size and constraints. A style sheet will download regardless but only apply if the media
+                            This way you will load the correct styles from an organized file targeting a designated size with specific constraints. A style sheet will download regardless but will only apply if the media
                             query is true [2].
                         </p>
                         <p>
@@ -2630,17 +2631,17 @@
                         </p>
                         <p>
                             Media features include width, height, aspect-ratio, orientation, resolution, scan, grid, update, color, among many others. These help determine what device the user
-                            is viewing the media with. These are used within the query to target specific features and requirements. You can apply logical operators. These are and, not, only and 
-                            , (comma). And combines media features within a query and is also used to joining media features with media types. Not negates a media query. You must specify a media type
-                            when using not. Only applies the style when the entire media query matches the device and can be helpful "for preventing older browser from applying a style" [2]. When using only
+                            is viewing the media with. These are used within the query to target specific features and requirements. You can also apply logical operators. These are "and", "not", "only" and 
+                            "," (comma). "And" combines media features within a query and is also used to join media features with media types. "Not" negates a media query. You must specify a media type
+                            when using "not". "Only" applies the style when the entire media query matches the device and can be helpful "for preventing older browser from applying a style" [2]. When using "only"
                             you must also supply a media type. The comma "combines multiple media queries into a single rule" so it behaves like an OR operator [2].
                         </p>
                         <p>
                             In practice you'll create media queries based on various conditions which will make use of the logical operators. Furthermore you'll be able to group the queries
-                            with commas to create different situations where a particular style should be applied. Remember that not is applied last, to a specific media query (meaning it won't apply to 
-                            a comma separated list, only the query it is attached to) [2]. Media queries are also evolving and have had different iterations known as levels which improve upon the syntax
-                            and change features. For instance in level 4 you can use less than and greater then (or equal to) operators to specify ranges rather than check for a min- and max- value (i.e. 
-                            @media (5em <= width <= 10em) { ... }). Below is a simple example of a media query in action, adjust the browser size to watch the color change.
+                            with commas to create different situations where a particular style should be applied. Remember that "not" is applied last to a specific media query (meaning it won't apply to 
+                            a comma separated list--only to the query it is attached to) [2]. Media queries are also evolving and have had different iterations known as levels which improve upon the syntax
+                            and change features. For instance in level 4 you can use less-than and greater-than (or equal to) operators to specify ranges rather than check for a min- and max- value (i.e. 
+                            @media (5em <= width <= 10em) { ... }). Below is a simple example of a media query in action. Adjust the browser size to watch the color change.
                         </p>
                         <div class="media-query-demo">
                             This element changes based on media queries.
@@ -2662,19 +2663,19 @@
                     <div class="topic">
                         <p>
                             You can show and hide elements using one of several different CSS properties. These include display, visibility, and disabled. The display and visibility
-                            properties allow you to hide an element. These work similarly however when using the visibility property to hide an element (hidden) the document will still behave
-                            as though the element is within the DOM structure. So the space it is taking up is not removed. If you want to also remove the space the element takes up
-                            set the display property to none which will completely hide the element. If you would rather disable the element and leave it visible on the screen the disabled
-                            attribute will allow you to disable actions from being performed (such as for input). Elements become greyed out but still react to mouse events. It also
-                            cannot be focused and the command event will not fire [4]. It's only allowed for form controls.
+                            properties allow you to hide an element. These work similarly however when using the visibility property to hide an element (with a value of "hidden") the document will still behave
+                            as though the element is within the DOM structure. So the space it is taking up on the page is not removed. If you want to instead remove the space the element takes up
+                            set the display property to "none" which will completely hide the element. If you would rather just disable the element and leave it visible on the screen the disabled
+                            attribute will allow you to do that. Elements become greyed out and inaccessible but still react to mouse events. A disabled element also can't be focused on and the command event will not fire [4]. 
+                            Disabled is only allowed for form controls and has no effect on other elements [4].
                         </p>
                         <p>
-                            Display has many possible values including: block, inline, run-in, flow, flex, grid, etc. As MDN explains display sets the inner and outer display types of an element [2].
+                            Display has many possible values including block, inline, run-in, flow, flex, and grid among others. As MDN explains display sets the inner and outer display types of an element [2].
                             "The outer type sets an element's participation in flow layout; the inner type sets the layout of children" [2].
                         </p>
                         <p>
                             Visibility has several values including: visible (the element is displayed), hidden (the element is not drawn but affects the layout), and collapse. Collapse is
-                            useful for tables to quickly hide a column or row but to not affect spacing. If applied to flex items the item and space are removed. For other elements it is as if 
+                            useful for tables to quickly hide a column or row but won't affect spacing. If applied to flex items the item and space are removed. For other elements it is as if 
                             the element was hidden. [3]
                         </p>
                         <div class="disply-none">This is not visible.</div>
@@ -2700,8 +2701,8 @@
                 <article>
                     <div class="topic">
                         <p>
-                            In order to apply logic or styles we need to be able to locate elements on the page. We can do this in several ways and frameworks like jQuery can make the syntax easier to use and read.
-                            This is true for CSS as well which can target elements for instance by class or id. We can also create pseudo-classes to represent different things.
+                            In order to apply logic or styles we need to be able to locate elements within the DOM. We can do this in several ways and frameworks and libraries like jQuery can make the syntax easier to use and read.
+                            This is true for CSS as well which can target elements by class or id for instance. We can also create pseudo-classes to represent different things and target and style based on those.
                         </p>
                         <nav class="topics-nav">
                             <a href="#selector-types" title="Goes to the article on selector types.">Different types of selectors</a> |
@@ -2720,8 +2721,8 @@
                 <article>
                     <div class="topic">
                         <p>
-                            There are various types of selectors. It's possible to select elements given their tag, or elements by id or class attributes (#id and .class). There are also
-                            ways to select elements given their attributes. JavaScript and jQuery provide APIs for selecting based on these same properties as we've seen throughout these notes 
+                            There are various types of selectors. It's possible to select elements given their tag, their id or their class (i.e. #id and .class). There are also
+                            ways to select elements given their other attributes. JavaScript and jQuery provide APIs for selecting based on these same properties as we've seen throughout these notes 
                             in the Programmatically modify HTML section. You can also select all elements with the wildcard *.
                         </p>
                         <p>
@@ -2735,7 +2736,7 @@
                             <li>A || B : column - elements must be within the scope of a column - this is experimental</li>
                         </ul>
                         <p>
-                            Of course there are also pseudo-elements and -classes which we'll see below.
+                            Of course there are also pseudo-elements and pseudo-classes which we'll see below.
                         </p>
                     </div>
                     <div class="resources">
@@ -2753,10 +2754,10 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Elements can be selected by creating a selector targeting a specific tag. For example you can apply a style to all divs by creating a CSS selector: div { styles here }. This applies to JavaScript
-                            and jQuery as well given their APIs. All divs would be targeted. To be more specific you can add ids and classes to elements. These attributes are helpful for targeting 
+                            Elements can be targeted using a selector for a specific tag. For example you can apply a style to all divs by creating a CSS selector: div { styles here }. This applies to JavaScript
+                            and jQuery as well given their APIs. To be more specific you can add ids and classes to elements. These attributes are helpful for targeting 
                             specific or related groups of elements. You can also target attributes given specific values or preferences. In order to find elements by their attributes you can use the querySelector and 
-                            querySelectorAll DOM API methods. jQuery also allows you to find elements by attributes with the following syntax: $("[attr=value]"). Quotes must surround the value if it has a space in it [3].
+                            querySelectorAll DOM API methods. jQuery also allows you to find elements by attributes with the following syntax: $("[attr=value]"). Remember that quotes must surround the value if it has a space within it [3].
                         </p>
                         <p>
                             Attributes can be selected using the following patterns.
@@ -2766,7 +2767,7 @@
                             <li>[attr=value] - a specific attribute set with a specific value</li>
                             <li>[attr~=value] - a specific attribute with a list of words where one is the defined value</li>
                             <li>[attr|=value] - an attribute with the defined value or that value after a hyphen (this is often used to match language subcodes [2])</li>
-                            <li>[attr=^=value] - an attribute whose value begins with the defined value</li>
+                            <li>[attr^=value] - an attribute whose value begins with the defined value</li>
                             <li>[attr$=value] - an attribute whose value ends with the defined value</li>
                             <li>[attr*=value] - an attribute whose value contains the value specified</li>
                             <li>[attr operator value i] - the i or I causes the value to be case-insensitive</li>
@@ -2799,17 +2800,17 @@
                             Pseudo-elements let you style specific parts of the selected element. These are keywords that target things like the first line of an element (::first-line).
                             The list of pseudo-elements includes: ::after, ::first-line, ::selection, ::backdrop (experimental), ::grammar-error (experimental), ::slotted(), ::before, 
                             ::marker (experimental), ::spelling-error (experimental), ::cue, ::part (experimental), ::first-letter, and ::placeholder (experimental) [4]. Double colons :: are
-                            used to distinguish pseudo-elements from pseudo-classes though most browsers support both single or double colons because this wasn't originally part of the 
-                            W3C specification [4]. Pseudo-elements and -classes are not selectable with an API because these are not part of the DOM. You can however find the styles applied to 
-                            an element with a pseudo-element or class [5].
+                            used to distinguish pseudo-elements from pseudo-classes although most browsers support both single or double colons because this wasn't originally part of the 
+                            W3C specification [4]. Pseudo-elements and pseudo-classes are not selectable with an API because these are not part of the DOM. You can however find the styles applied to 
+                            an element with a pseudo-element or pseudo-class [5].
                         </p>
                         <p class="pseudo-element-demo">
                             This paragraph's first line is styled. This is because I've targeted it with the pseudo-element ::first-line. The first letter has also been styled using a pseudo-element.
-                            With enough text to fill a line the part of the sentence that wraps to the following line(s) ends up with no styling and is colored black. The first line is orange and the first 
-                            letter is styled black specifically. Try highlighting the text as well. This turns cyan from the pseudo-element ::selection.
+                            Any text that overflows onto the next line will not be styled. In this example the first line is orange and the first letter is styled red specifically. Try highlighting the 
+                            text within this paragraph. This turns cyan from the pseudo-element ::selection.
                         </p>
                         <p>
-                            Pseudo-classes work similarly to pseudo-elements. These allow you to style an element given contextual information, like if a link has been visited, if an element is disabled,
+                            Pseudo-classes work similarly to pseudo-elements. These allow you to style an element given contextual information like if a link has been visited, if an element is disabled,
                             if a box if checked, or if the mouse is hovering over an element. Some of the pseudo-classes include: :active, :nth-last-of-type(), :host, :only-child, :hover, :default, :out-of-range,
                             :disabled, :read-only, :empty, :last-child, :first-child, :valid, and :visited. For the full list see the MDN link below.
                         </p>
@@ -2838,8 +2839,9 @@
                 <article>
                     <div class="topic">
                         <p>
-                            How you structure CSS files is important. Depending on how you've set up your files styles may be overridden by others defined earlier. In some cases you want that to happen,
-                            in others you don't. Styles inherited from earlier defined styles can be overridden if you need using the !important modifier.
+                            How you structure CSS files is important. Depending on how you've set up your files some styles may be overridden by others defined above them in the style sheet. In some cases you want that to happen,
+                            in others you don't. Styles that are inherited can actually be overridden if you need using the !important modifier. However it would be best not to rely on that property and instead target the elements
+                            differently.
                         </p>
                         <nav class="topics-nav">
                             <a href="#implement-inheritance" title="Goes to the article on implementing CSS inheritance.">Implement inheritance</a>
@@ -2860,31 +2862,31 @@
                 <article>
                     <div class="topic">
                         <p>
-                            We've already discussed CSS selectors and pseudo-elements and -classes above. There are a number of ways to select elements. By class or id, by element tag,
+                            We've already discussed CSS selectors and pseudo-elements and pseudo-classes above. There are a number of ways to select elements. By class or id, by element tag,
                             attributes, pseudo-elements and pseudo-classes, combinators, and you can even group multiple selectors together by separating them by a comma. Then you can define
                             a style to apply to each selected element within the grouping. Styles can also be applied using inheritance.
                         </p>
                         <p>
                             "Inheritance controls what happens when no value is specified for a property on an element" [4]. Some are inherited, like an em tag within a p tag. The color of the 
                             text doesn't change inside the em compared to the rest of the paragraph. However some are not inherited. Like border, so applying a border to a paragraph won't also 
-                            effect an em tag inside of it (as MDN uses as an example) [4]. Also, some frameworks like Sass and less make the syntax even easier for you and compile their syntax 
+                            affect an em tag inside of it (as MDN uses as an example) [4]. Also, some frameworks like Sass and less make the syntax even easier for you and compile their syntax 
                             down to CSS for you.
                         </p>
                         <p>
-                            Specificity boils down to "how many elements could this match" [3]. MDN explains how you can score specificity using a numeric table of four columns (thousands, hundreds,
+                            A selector's specificity boils down to "how many elements could this match" [3]. MDN explains how you can score specificity using a numeric table of four columns (thousands, hundreds,
                             tens, and ones). Inline styles on a page score 1000. ID selectors score 100 for each id selector contained in the overall selector. You score 1 in tens for each 
-                            class, attribute, or pseudo-class in the selector. Finally you score 1 in the ones column for each element and pseudo-element in the overall selector. The universal selector, 
+                            class, attribute, or pseudo-class in the selector. Finally you score 1 in the one's column for each element and pseudo-element in the overall selector. The universal selector, 
                             combinators, and the negation pseudo-class give no points [3].
                         </p>
                         <p>
                             There are four universal property values for specifying inheritance. These are inherit, initial, unset, and revert. Inherit will set the property value to its parent's value.
-                            Initial will set the value to the browsers default stylesheet, otherwise it will default to inherit. Unset resets the property to its natural state of either inherit 
+                            Initial will set the value to the browser's default stylesheet, otherwise it will default to inherit. Unset resets the property to its natural state of either inherit 
                             or initial. Finally revert will set the value to the user's stylesheet. [3]
                         </p>
                         <p>
                             There is an order of precedence when using selectors. Ids and classes have more specificity than elements alone for instance. Remember the styles defined last also have 
-                            precedence over styles declared earlier but that directly targeting an element using its id will always take precedence over other styles. The order is: elements and 
-                            pseudo-elements, classes, attributes, and pseudo-classes, and finally id selectors having the most specificity [5].
+                            precedence over styles declared earlier but that directly targeting an element using its id will always take precedence over other styles. The order goes elements and 
+                            pseudo-elements, classes, attributes, and pseudo-classes, and finally id selectors which have the most specificity [5].
                         </p>
                         <div class="inheritance-example">
                             <p>
@@ -2895,6 +2897,9 @@
                                 actually considered a bad practice. As MDN explains it can be difficult to debug issues. Rules with greater specificity win out if similar important rules are 
                                 applied to the same element [5]. It's best to be more specific than to use the important rule. Generally it's a good idea to only use important when overriding
                                 third-party CSS.
+                            </p>
+                            <p>
+                                This paragraph is also styled from inheritance!
                             </p>
                         </div>
                     </div>
