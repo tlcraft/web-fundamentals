@@ -2839,8 +2839,9 @@
                 <article>
                     <div class="topic">
                         <p>
-                            How you structure CSS files is important. Depending on how you've set up your files styles may be overridden by others defined earlier. In some cases you want that to happen,
-                            in others you don't. Styles inherited from earlier defined styles can be overridden if you need using the !important modifier.
+                            How you structure CSS files is important. Depending on how you've set up your files some styles may be overridden by others defined above them in the style sheet. In some cases you want that to happen,
+                            in others you don't. Styles that are inherited can actually be overridden if you need using the !important modifier. However it would be best not to rely on that property and instead target the elements
+                            differently.
                         </p>
                         <nav class="topics-nav">
                             <a href="#implement-inheritance" title="Goes to the article on implementing CSS inheritance.">Implement inheritance</a>
@@ -2861,31 +2862,31 @@
                 <article>
                     <div class="topic">
                         <p>
-                            We've already discussed CSS selectors and pseudo-elements and -classes above. There are a number of ways to select elements. By class or id, by element tag,
+                            We've already discussed CSS selectors and pseudo-elements and pseudo-classes above. There are a number of ways to select elements. By class or id, by element tag,
                             attributes, pseudo-elements and pseudo-classes, combinators, and you can even group multiple selectors together by separating them by a comma. Then you can define
                             a style to apply to each selected element within the grouping. Styles can also be applied using inheritance.
                         </p>
                         <p>
                             "Inheritance controls what happens when no value is specified for a property on an element" [4]. Some are inherited, like an em tag within a p tag. The color of the 
                             text doesn't change inside the em compared to the rest of the paragraph. However some are not inherited. Like border, so applying a border to a paragraph won't also 
-                            effect an em tag inside of it (as MDN uses as an example) [4]. Also, some frameworks like Sass and less make the syntax even easier for you and compile their syntax 
+                            affect an em tag inside of it (as MDN uses as an example) [4]. Also, some frameworks like Sass and less make the syntax even easier for you and compile their syntax 
                             down to CSS for you.
                         </p>
                         <p>
-                            Specificity boils down to "how many elements could this match" [3]. MDN explains how you can score specificity using a numeric table of four columns (thousands, hundreds,
+                            A selector's specificity boils down to "how many elements could this match" [3]. MDN explains how you can score specificity using a numeric table of four columns (thousands, hundreds,
                             tens, and ones). Inline styles on a page score 1000. ID selectors score 100 for each id selector contained in the overall selector. You score 1 in tens for each 
-                            class, attribute, or pseudo-class in the selector. Finally you score 1 in the ones column for each element and pseudo-element in the overall selector. The universal selector, 
+                            class, attribute, or pseudo-class in the selector. Finally you score 1 in the one's column for each element and pseudo-element in the overall selector. The universal selector, 
                             combinators, and the negation pseudo-class give no points [3].
                         </p>
                         <p>
                             There are four universal property values for specifying inheritance. These are inherit, initial, unset, and revert. Inherit will set the property value to its parent's value.
-                            Initial will set the value to the browsers default stylesheet, otherwise it will default to inherit. Unset resets the property to its natural state of either inherit 
+                            Initial will set the value to the browser's default stylesheet, otherwise it will default to inherit. Unset resets the property to its natural state of either inherit 
                             or initial. Finally revert will set the value to the user's stylesheet. [3]
                         </p>
                         <p>
                             There is an order of precedence when using selectors. Ids and classes have more specificity than elements alone for instance. Remember the styles defined last also have 
-                            precedence over styles declared earlier but that directly targeting an element using its id will always take precedence over other styles. The order is: elements and 
-                            pseudo-elements, classes, attributes, and pseudo-classes, and finally id selectors having the most specificity [5].
+                            precedence over styles declared earlier but that directly targeting an element using its id will always take precedence over other styles. The order goes elements and 
+                            pseudo-elements, classes, attributes, and pseudo-classes, and finally id selectors which have the most specificity [5].
                         </p>
                         <div class="inheritance-example">
                             <p>
@@ -2896,6 +2897,9 @@
                                 actually considered a bad practice. As MDN explains it can be difficult to debug issues. Rules with greater specificity win out if similar important rules are 
                                 applied to the same element [5]. It's best to be more specific than to use the important rule. Generally it's a good idea to only use important when overriding
                                 third-party CSS.
+                            </p>
+                            <p>
+                                This paragraph is also styled from inheritance!
                             </p>
                         </div>
                     </div>
