@@ -823,7 +823,7 @@ svg.draw {
 }
 
 .pseudo-element-demo::first-letter {
-    color: black;
+    color: red;
 }
 
 .pseudo-element-demo::selection {
