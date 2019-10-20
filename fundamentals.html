@@ -2800,17 +2800,17 @@
                             Pseudo-elements let you style specific parts of the selected element. These are keywords that target things like the first line of an element (::first-line).
                             The list of pseudo-elements includes: ::after, ::first-line, ::selection, ::backdrop (experimental), ::grammar-error (experimental), ::slotted(), ::before, 
                             ::marker (experimental), ::spelling-error (experimental), ::cue, ::part (experimental), ::first-letter, and ::placeholder (experimental) [4]. Double colons :: are
-                            used to distinguish pseudo-elements from pseudo-classes though most browsers support both single or double colons because this wasn't originally part of the 
-                            W3C specification [4]. Pseudo-elements and -classes are not selectable with an API because these are not part of the DOM. You can however find the styles applied to 
-                            an element with a pseudo-element or class [5].
+                            used to distinguish pseudo-elements from pseudo-classes although most browsers support both single or double colons because this wasn't originally part of the 
+                            W3C specification [4]. Pseudo-elements and pseudo-classes are not selectable with an API because these are not part of the DOM. You can however find the styles applied to 
+                            an element with a pseudo-element or pseudo-class [5].
                         </p>
                         <p class="pseudo-element-demo">
                             This paragraph's first line is styled. This is because I've targeted it with the pseudo-element ::first-line. The first letter has also been styled using a pseudo-element.
-                            With enough text to fill a line the part of the sentence that wraps to the following line(s) ends up with no styling and is colored black. The first line is orange and the first 
-                            letter is styled black specifically. Try highlighting the text as well. This turns cyan from the pseudo-element ::selection.
+                            Any text that overflows onto the next line will not be styled. In this example the first line is orange and the first letter is styled red specifically. Try highlighting the 
+                            text within this paragraph. This turns cyan from the pseudo-element ::selection.
                         </p>
                         <p>
-                            Pseudo-classes work similarly to pseudo-elements. These allow you to style an element given contextual information, like if a link has been visited, if an element is disabled,
+                            Pseudo-classes work similarly to pseudo-elements. These allow you to style an element given contextual information like if a link has been visited, if an element is disabled,
                             if a box if checked, or if the mouse is hovering over an element. Some of the pseudo-classes include: :active, :nth-last-of-type(), :host, :only-child, :hover, :default, :out-of-range,
                             :disabled, :read-only, :empty, :last-child, :first-child, :valid, and :visited. For the full list see the MDN link below.
                         </p>
