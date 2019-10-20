@@ -2754,10 +2754,10 @@
                 <article>
                     <div class="topic">
                         <p>
-                            Elements can be selected by creating a selector targeting a specific tag. For example you can apply a style to all divs by creating a CSS selector: div { styles here }. This applies to JavaScript
-                            and jQuery as well given their APIs. All divs would be targeted. To be more specific you can add ids and classes to elements. These attributes are helpful for targeting 
+                            Elements can be targeted using a selector for a specific tag. For example you can apply a style to all divs by creating a CSS selector: div { styles here }. This applies to JavaScript
+                            and jQuery as well given their APIs. To be more specific you can add ids and classes to elements. These attributes are helpful for targeting 
                             specific or related groups of elements. You can also target attributes given specific values or preferences. In order to find elements by their attributes you can use the querySelector and 
-                            querySelectorAll DOM API methods. jQuery also allows you to find elements by attributes with the following syntax: $("[attr=value]"). Quotes must surround the value if it has a space in it [3].
+                            querySelectorAll DOM API methods. jQuery also allows you to find elements by attributes with the following syntax: $("[attr=value]"). Remember that quotes must surround the value if it has a space within it [3].
                         </p>
                         <p>
                             Attributes can be selected using the following patterns.
@@ -2767,7 +2767,7 @@
                             <li>[attr=value] - a specific attribute set with a specific value</li>
                             <li>[attr~=value] - a specific attribute with a list of words where one is the defined value</li>
                             <li>[attr|=value] - an attribute with the defined value or that value after a hyphen (this is often used to match language subcodes [2])</li>
-                            <li>[attr=^=value] - an attribute whose value begins with the defined value</li>
+                            <li>[attr^=value] - an attribute whose value begins with the defined value</li>
                             <li>[attr$=value] - an attribute whose value ends with the defined value</li>
                             <li>[attr*=value] - an attribute whose value contains the value specified</li>
                             <li>[attr operator value i] - the i or I causes the value to be case-insensitive</li>
