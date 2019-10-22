@@ -3290,7 +3290,12 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            Regular expressions are useful for pattern matching. These can also get out of hand easily so having good tests and comments describing what they represent can be helpful. Regular expressions (or regex as it's known) is 
+                            found in many programming languages and can even be applied to input HTML elements. You could use regex to validate email addresses for example. We did this already above in the "HTML5 Input Types and Attributes" section.
+                        </p>
+                        <p>
+                            MDN's article below describes Regex in JavaScript. They explain that you can construct a regex object in one of two ways. First is by using forward slashes to enclose the pattern (i.e. /ab+c/). The other is by using the 
+                            RegExp constructor method and passing the pattern as a string value (i.e. new RegExp('ab+c')). [1] The forward slash constructor represents a regex literal and is good to use when the regex is a constant value [1].
                         </p>
                     </div>
                     <div class="resources">
