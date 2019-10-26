@@ -3328,8 +3328,32 @@
                 <article>
                     <div class="topic">
                         <p>
-                            We've already explored input validation within the HTML5 Input Types and Attributes section above however there are some other details to consider. Including the use of the typeof operator
+                            We've already explored input validation within the HTML5 Input Types and Attributes section above however there are some other details to consider. This includes the use of the typeof operator
                             for determining the type of a variable.
+                        </p>
+                        <p>
+                            The input type has various ways to filter input to a specific type and range. For example you can set minimum and maximum values and include a "step" attribute so that the input is limited to specific 
+                            numbers. Check out the example below to see how this is done. Input can be validated using things like regex as we've seen previously. This is all very important for two reasons. One
+                            is so that your program functions correctly and is given data in the correct format. The second is for security reasons. We don't want users maliciously entering data that could affect the
+                            application or other users' information.
+                        </p>
+                        <label for="input-step-example">
+                            Input step example:
+                        </label>
+                        <input id="input-step-example" type="number" min="0" max="100" step="5"/>
+                        <p>
+                            Input has many types available including color, date, week, url, password and more. These each alter the input element and allow for different types of data to be entered. Using these specific types along with 
+                            validation helps to ensure users enter meaningful data in the correct format and helps reduce validation code in some cases (because you can rely on the input being of a certain format and type). Some 
+                            of the different input types already have some basic validation in place such as the email and url types.
+                        </p>
+                        <p>
+                            The typeof operation can also be used to help verify input if needed. For example you can use it to be sure a particular variable is of the number type. This wouldn't be used alone and isn't necessarily 
+                            going to be that useful in terms of validation but it seemed relevant to the topic of "data type checking". Ultimately it allows you to check the type of a variable at runtime which can be useful 
+                            in some cases. For more information check out the resources below.
+                        </p>
+                        <p>
+                            Other relevant HTML attributes include spellchecker (which helps point out misspelled words), pattern (used for regex), placeholder (to help demonstrate acceptable values), required (to indicate that a 
+                            field must be filled in) and readonly (to prevent users from modifying a form value). All of these things can work together to help to ensure users are entering valid data and filling in your page forms correctly.
                         </p>
                     </div>
                     <div class="resources">
