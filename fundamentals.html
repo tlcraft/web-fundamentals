@@ -3355,6 +3355,11 @@
                             Other relevant HTML attributes include spellchecker (which helps point out misspelled words), pattern (used for regex), placeholder (to help demonstrate acceptable values), required (to indicate that a 
                             field must be filled in) and readonly (to prevent users from modifying a form value). All of these things can work together to help to ensure users are entering valid data and filling in your page forms correctly.
                         </p>
+                        <p>
+                            Finally built-in functions like isNaN, isFinite and eval can be useful for validating input as well. isNaN can be used to determine if a value is a number or not so you can react to that and provide a validation error for instance
+                            (if your input was supposed to be a number). isFinite will return true if a value is a finite number and false otherwise. Finally eval is actually a dangerous method to use because it runs a given string input as a function. So 
+                            be sure NOT to run unsanitized user input with this method because malicious users can easily inject bad code if you do.
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
