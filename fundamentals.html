@@ -32,6 +32,7 @@
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
             <a href="#async-programming" title="Goes to the article on asynchronous programming.">- Asynchronous Programming</a>
             <a href="#web-workers" title="Goes to the article on web worker processes.">- Web Worker Processes</a>
+            <a href="#validate-input" title="Goes to the article on validating input.">- Validate Input Programmatically</a>
         </nav>
         <section class="introduction">
             <h1>HTML, CSS, and JavaScript Review</h1>
@@ -206,11 +207,11 @@
                         <li><a href="#web-worker-events" title="Goes to the article on web worker event listeners.">Event Listeners</a></li>
                         <li><a href="#web-worker-limitations" title="Goes to the article on web worker limitations.">Understanding the limitations of Web Workers</a></li>  
                     </ul>
-                    <li>Validate Input Programmatically</li>
+                    <li><a href="#validate-input" title="Goes to the article on validating input.">Validate Input Programmatically</a></li>
                     <ul>
-                        <li>Regular Expressions</li>
-                        <li>Data Type checking</li>
-                        <li>Security</li>
+                        <li><a href="#regex" title="Goes to the article on regular expressions.">Regular Expressions</a></li>
+                        <li><a href="#type-checking" title="Goes to the article on data type checking.">Data Type Checking</a></li>
+                        <li><a href="#security" title="Goes to the article on security.">Security</a></li>
                         <ul>
                             <li>Prevent Script Injection</li>
                             <li>Input Sanitization - URI/form encoding</li>
@@ -2923,7 +2924,8 @@
             </div> 
             <nav class="topics-nav">
                 <a href="#async-programming" title="Goes to the article on asynchronous programming.">Asynchronous Programming</a> | 
-                <a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a>              
+                <a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a> | 
+                <a href="#validate-input" title="Goes to the article on validating input.">Validate Input Programmatically</a>          
             </nav>
             <section>                
                 <div class="title-bar">
@@ -3248,6 +3250,182 @@
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" title="Goes to the MDN article on using web workers." rel="nofollow" target="_blank">MDN - Web Workers</a></li>
                             <li>[2] <a href="http://www.infocodify.com/program_flow/web_worker" title="Goes to the infocodify.com article on web workers." rel="nofollow" target="_blank">Infocodify.com - Web Workeres</a></li>
                             <li>[3] <a href="https://www.html5rocks.com/en/tutorials/workers/basics/" title="Goes to the HTML5Rocks.com article on the basics of web workers." rel="nofollow" target="_blank">HTML5Rocks.com - The Basics of Web Workeres</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <section>                
+                <div class="title-bar">
+                    <h4><a id="validate-input">Validate Input Programmatically</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Validating user input is an important thing to remember to do. Otherwise malicious users can inject scripts into your site that affect it and your other users. This can potentially
+                            lead to putting everyone at risk of losing account information or opening people up to other attacks. Locking down input to specific values rather than allowing freeform text is one
+                            way to help prevent issues. Past this being sure to escape freeform text and other fields is important so that user input will be interpreted as a string and won't be able to 
+                            execute as code. These are just some of the things to consider.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#regex" title="Goes to the article on regular expressions.">Regular Expressions</a> |
+                            <a href="#type-checking" title="Goes to the article on data type checking.">Data Type Checking</a> |
+                            <a href="#security" title="Goes to the article on security.">Security</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" title="Goes to the MDN article on regular expressions." rel="nofollow" target="_blank">MDN - Regular Expressions</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI" title="Goes to the MDN article on encodeURI." rel="nofollow" target="_blank">MDN - encodeURI</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof" title="Goes to the MDN article on the typeof operator." rel="nofollow" target="_blank">MDN - typeof operator</a></li>
+                            <li>[4] <a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)" title="Goes to the OWASP page on cross-site scripting." rel="nofollow" target="_blank">OWASP - Cross-site Scripting</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="regex">Regular Expressions</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Regular expressions are useful for pattern matching. These can also get out of hand easily so having good tests and comments describing what they represent can be helpful. Regular expressions (or regex as it's known) is 
+                            found in many programming languages and can even be applied to input HTML elements. You could use regex to validate email addresses for example. We did this already above in the "HTML5 Input Types and Attributes" section.
+                        </p>
+                        <p>
+                            MDN's article below describes Regex in JavaScript. They explain that you can construct a regex object in one of two ways. First is by using forward slashes to enclose the pattern (i.e. /ab+c/). The other is by using the 
+                            RegExp constructor method and passing the pattern as a string value (i.e. new RegExp('ab+c')). [1] The forward slash constructor represents a regex literal and is good to use when the regex is a constant value [1].
+                        </p>
+                        <p>
+                            You can use patterns to match against string values to determine if the given string conforms to a particular pattern. Sometimes you are looking for simple substrings like strings that contain a particular set of characters. 
+                            For example /cat/ would match strings like "cat", "catastrophe", and the like but would not match "ca t". Regex has many special characters that can enhance the pattern matching capabilities.
+                            You can use them to find strings that contain more than one instance of a particular character or that start and end with a particular pattern. MDN lists all of the characters in their guide [1].
+                        </p>
+                        <p>Below is a list of some of the important special characters.</p>
+                        <ul>
+                            <li>^ - Matches the beginning of the input.</li>
+                            <li>$ - Matches the end of the input.</li>
+                            <li>* - Matches the preceding expression zero or more times.</li>
+                            <li>+ - Matches the preceding expression one or more times.</li>
+                            <li>\ - Generally escapes a special character or is used in conjunction with another non-special character to match other special occurrences within a string.</li>
+                        </ul>
+                        <p>
+                            For more information on regex see MDN's article linked below.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" title="Goes to the MDN article on regular expressions." rel="nofollow" target="_blank">MDN - Regular Expressions</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="type-checking">Data Type Checking</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            We've already explored input validation within the HTML5 Input Types and Attributes section above however there are some other details to consider. This includes the use of the typeof operator
+                            for determining the type of a variable.
+                        </p>
+                        <p>
+                            The input type has various ways to filter input to a specific type and range. For example you can set minimum and maximum values and include a "step" attribute so that the input is limited to specific 
+                            numbers. Check out the example below to see how this is done. Input can be validated using things like regex as we've seen previously. This is all very important for two reasons. One
+                            is so that your program functions correctly and is given data in the correct format. The second is for security reasons. We don't want users maliciously entering data that could affect the
+                            application or other users' information.
+                        </p>
+                        <label for="input-step-example">
+                            Input step example:
+                        </label>
+                        <input id="input-step-example" type="number" min="0" max="100" step="5"/>
+                        <p>
+                            Input has many types available including color, date, week, url, password and more. These each alter the input element and allow for different types of data to be entered. Using these specific types along with 
+                            validation helps to ensure users enter meaningful data in the correct format and helps reduce validation code in some cases (because you can rely on the input being of a certain format and type). Some 
+                            of the different input types already have some basic validation in place such as the email and url types.
+                        </p>
+                        <p>
+                            The typeof operation can also be used to help verify input if needed. For example you can use it to be sure a particular variable is of the number type. This wouldn't be used alone and isn't necessarily 
+                            going to be that useful in terms of validation but it seemed relevant to the topic of "data type checking". Ultimately it allows you to check the type of a variable at runtime which can be useful 
+                            in some cases. For more information check out the resources below.
+                        </p>
+                        <p>
+                            Other relevant HTML attributes include spellchecker (which helps point out misspelled words), pattern (used for regex), placeholder (to help demonstrate acceptable values), required (to indicate that a 
+                            field must be filled in) and readonly (to prevent users from modifying a form value). All of these things can work together to help to ensure users are entering valid data and filling in your page forms correctly.
+                        </p>
+                        <p>
+                            Finally built-in functions like isNaN, isFinite and eval can be useful for validating input as well. isNaN can be used to determine if a value is a number or not so you can react to that and provide a validation error for instance
+                            (if your input was supposed to be a number). isFinite will return true if a value is a finite number and false otherwise. Finally eval is actually a dangerous method to use because it runs a given string input as a function. So 
+                            be sure NOT to run unsanitized user input with this method because malicious users can easily inject bad code if you do.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation" title="Goes to an MDN article discussing form data validation." rel="nofollow" target="_blank">MDN - Form data validation</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof" title="Goes to an MDN article for the typeof operator." rel="nofollow" target="_blank">MDN - typeof</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="security">Security</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Security has become a very important topic surrounding technology. Data breaches have become common so people are more cautious of entering sensitive information about themselves into applications. To help prevent hacking websites and applications
+                            need to work to prevent attacks. This includes adding defensive code to prevent cross-site scripting attacks and being sure to sanitize user input.
+                        </p>
+                        <h5>Cross-site Scripting (XSS)</h5>
+                        <p>
+                            Cross-site scripting attacks are generally when an attacker is able to inject their own JavaScript code into a web page that an innocent user runs unknowingly. This can be done by submitting JS code into input boxes which save user input and then later returns that 
+                            same data for display (thus running the injected script). This allows the attacker to run their own code and redirect the user to their own pages or to alter the existing page's functions. This is why validating user input is so important.
+                        </p>
+                        <p>
+                            As OWASP explains, the above description would be considered a stored or persisted attack. Other XSS attacks include Reflected which is generally when a malicious user is able to get an innocent user to click on a link
+                            that directs them to the trusted site but then runs the malicious code. This is considered "reflected" because the malicious code is sent to the server from the link the user clicked and thus considered to be trusted by the web 
+                            browser and run. The final type of attack (at this point) are DOM based XSS attacks. This can be where a script is run based on changes to the DOM itself. An attacker may send a URL to a victim that includes 
+                            a script appended to the query. This script is enclosed with the script tag and thus runs when the web page loads because the browser executes it (similar to reflected attacks in some cases).
+                        </p>
+                        <p>
+                            OWASP has a great cheat sheet article available for everyone (linked below). In it they list a number of rules as well as several bonus rules. Below is their high-level list. For more information check out their article. [2]
+                        </p>
+                        <ul>
+                            <li>Never insert untrusted data except in allowed locations</li>
+                            <li>HTML escape before inserting untrusted data into HTML element content</li>
+                            <li>Attribute escape before inserting untrusted data into HTML common attributes</li>
+                            <li>JavaScript escape before inserting untrusted data into JavaScript data values</li>
+                            <li>HTML escape JSON values in an HTML context and read the data with JSON.parse</li>
+                            <li>CSS escape and strictly validate before inserting untrusted data into HTML style property values</li>
+                            <li>URL escape before inserting untrusted data into HTML URL parameter values</li>
+                            <li>Sanitize HTML markup with a library designed for the job</li>
+                            <li>Avoid JavaScript URL's</li>
+                            <li>Prevent DOM-based XSS</li>
+                        </ul>
+                        <h5>URI Encoding</h5>
+                        <p>
+                            Encoding user input is a useful tool when saving said input to an application's database. It can help to sanitize the input by replacing specific characters with escaped values that won't 
+                            trigger malicious code that may have been injected along with it. There's a lot more to that but the following methods encode the data being sent to the server.
+                        </p>
+                        <p>
+                            The encodeURI and related encodeURIComponent methods encode string values by changing specific characters into representations of their UTF-8 encoding. These two methods encode slightly different 
+                            characters and also have restrictions on which characters can be encoded. The encodeURIComponent method is able to encode reserved characters that the encodeURI method cannot. However 
+                            neither can encode the following characters: -_.!~*'(). [1]
+                        </p>
+                        <p>
+                            Forms can have enctype attributes which express how to encode the form data. For instance the default application/x-www-form-urlencode encodes all the values before being sent to the server. 
+                            Generally this means that special characters are replaced with hexadecimal representations of their value preceded with a percent sign (i.e. %) [3].
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI" title="Goes to the MDN article on encodeURI." rel="nofollow" target="_blank">MDN - encodeURI</a></li>
+                            <li>[2] <a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)" title="Goes to the OWASP page on cross-site scripting." rel="nofollow" target="_blank">OWASP - Cross-site Scripting</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Glossary/percent-encoding" title="Goes to the MDN article on percent-encoding." rel="nofollow" target="_blank">MDN - Percent-encoding</a></li>    
                         </ul>
                     </div>
                 </article>
