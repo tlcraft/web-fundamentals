@@ -3379,6 +3379,36 @@
                             Security has become a very important topic surrounding technology. Data breaches have become common so people are more cautious of entering sensitive information about themselves into applications. To help prevent hacking websites and applications
                             need to work to prevent attacks. This includes adding defensive code to prevent cross-site scripting attacks and being sure to sanitize user input.
                         </p>
+                        <h5>Cross-site Scripting (XSS)</h5>
+                        <p>
+                            Cross-site scripting attacks are generally when an attacker is able to inject their own JavaScript code into a web page that an innocent user runs unknowingly. This can be done by submitting JS code into input boxes which save user input and then later returns that 
+                            same data for display (thus running the injected script). This allows the attacker to run their own code and redirect the user to their own pages or to alter the existing page's functions. This is why validating user input is so important.
+                        </p>
+                        <p>
+                            As OWASP explains, the above description would be considered a stored or persisted attack. Other XSS attacks include Reflected which is generally when a malicious user is able to get an innocent user to click on a link
+                            that directs them to the trusted site but then runs the malicious code. This is considered "reflected" because the malicious code is sent to the server from the link the user clicked and thus considered to be trusted by the web 
+                            browser and run. The final type of attack (at this point) are DOM based XSS attacks. This can be where a script is run based on changes to the DOM itself. An attacker may send a URL to a victim that includes 
+                            a script appended to the query. This script is enclosed with the script tag and thus runs when the web page loads because the browser executes it (similar to reflected attacks in some cases).
+                        </p>
+                        <p>
+                            OWASP has a great cheat sheet article available for everyone (linked below). In it they list a number of rules as well as several bonus rules. Below is their high-level list. For more information check out their article. [2]
+                        </p>
+                        <ul>
+                            <li>Never insert untrusted data except in allowed locations</li>
+                            <li>HTML escape before inserting untrusted data into HTML element content</li>
+                            <li>Attribute escape before inserting untrusted data into HTML common attributes</li>
+                            <li>JavaScript escape before inserting untrusted data into JavaScript data values</li>
+                            <li>HTML escape JSON values in an HTML context and read the data with JSON.parse</li>
+                            <li>CSS escape and strictly validate before inserting untrusted data into HTML style property values</li>
+                            <li>URL escape before inserting untrusted data into HTML URL parameter values</li>
+                            <li>Sanitize HTML markup with a library designed for the job</li>
+                            <li>Avoid JavaScript URL's</li>
+                            <li>Prevent DOM-based XSS</li>
+                        </ul>
+                        <h5>URI Encoding</h5>
+                        <p>
+
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
