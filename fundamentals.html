@@ -3407,7 +3407,17 @@
                         </ul>
                         <h5>URI Encoding</h5>
                         <p>
-
+                            Encoding user input is a useful tool when saving said input to an application's database. It can help to sanitize the input by replacing specific characters with escaped values that won't 
+                            trigger malicious code that may have been injected along with it. There's a lot more to that but the following methods encode the data being sent to the server.
+                        </p>
+                        <p>
+                            The encodeURI and related encodeURIComponent methods encode string values by changing specific characters into representations of their UTF-8 encoding. These two methods encode slightly different 
+                            characters and also have restrictions on which characters can be encoded. The encodeURIComponent method is able to encode reserved characters that the encodeURI method cannot. However 
+                            neither can encode the following characters: -_.!~*'(). [1]
+                        </p>
+                        <p>
+                            Forms can have enctype attributes which express how to encode the form data. For instance the default application/x-www-form-urlencode encodes all the values before being sent to the server. 
+                            Generally this means that special characters are replaced with hexadecimal representations of their value preceded with a percent sign (i.e. %) [3].
                         </p>
                     </div>
                     <div class="resources">
@@ -3415,6 +3425,7 @@
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI" title="Goes to the MDN article on encodeURI." rel="nofollow" target="_blank">MDN - encodeURI</a></li>
                             <li>[2] <a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)" title="Goes to the OWASP page on cross-site scripting." rel="nofollow" target="_blank">OWASP - Cross-site Scripting</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Glossary/percent-encoding" title="Goes to the MDN article on percent-encoding." rel="nofollow" target="_blank">MDN - Percent-encoding</a></li>    
                         </ul>
                     </div>
                 </article>
