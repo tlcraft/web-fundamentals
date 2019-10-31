@@ -3491,6 +3491,12 @@
                             <li>XMLHttpRequest: loads data from a URL; XML is returned as an XML Document.</li>
                             <li>XPath: a technology for creating strings containing specific XML and for locating XML nodes given specific addresses.</li>
                         </ul>
+                        <p>
+                            In MDN's examples they demonstrate using the DOMParser to generate an XML object from a string. They also note that the XMLHttpRequest's responseXML is a Document object 
+                            that is constructed from the parsed XML that may be returned. [4] They also show that we can use the XMLSerializer.serializeToString method to generate a string representation of a DOM tree. [4]
+                            You can also serialize an HTML document using the serializeToString method. MDN explains that you can serialize a node using the innerHTML or outerHTML properties. Using innerHTML
+                            would exclude the parent node and using outerHTML would include it. [4]
+                        </p>
                         <h5>JSON</h5>
                         <p>
                             
