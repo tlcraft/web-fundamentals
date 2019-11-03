@@ -33,6 +33,7 @@
             <a href="#async-programming" title="Goes to the article on asynchronous programming.">- Asynchronous Programming</a>
             <a href="#web-workers" title="Goes to the article on web worker processes.">- Web Worker Processes</a>
             <a href="#validate-input" title="Goes to the article on validating input.">- Validate Input Programmatically</a>
+            <a href="#consume-data" title="Goes to the article on consuming data.">- Consume Data</a>
         </nav>
         <section class="introduction">
             <h1>HTML, CSS, and JavaScript Review</h1>
@@ -217,11 +218,11 @@
                             <li>Input Sanitization - URI/form encoding</li>
                         </ul>
                     </ul>
-                    <li>Consume Data</li>
+                    <li><a href="#consume-data" title="Goes to the article on consuming data.">Consume Data</a></li>
                     <ul>
-                        <li>JSON and XML parsing</li>
-                        <li>Retrieve data from web services</li>
-                        <li>XMLHTTPRequest - send and receive</li>
+                        <li><a href="#data-parsing" title="Goes to the article on JSON and XML parsing">JSON and XML parsing</a></li>
+                        <li><a href="#retrieve-data" title="Goes to the article on retrieving data from web services">Retrieve data from web services</a></li>
+                        <li><a href="#xml-http" title="Goes to the artciel on XMLHTTPRequests">XMLHTTPRequest - send and receive</a></li>
                     </ul>
                     <li>Serialize, deserialize, and transmit data</li>
                     <ul>
@@ -2925,7 +2926,8 @@
             <nav class="topics-nav">
                 <a href="#async-programming" title="Goes to the article on asynchronous programming.">Asynchronous Programming</a> | 
                 <a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a> | 
-                <a href="#validate-input" title="Goes to the article on validating input.">Validate Input Programmatically</a>          
+                <a href="#validate-input" title="Goes to the article on validating input.">Validate Input Programmatically</a> |
+                <a href="#consume-data" title="Goes to the article on consuming data.">Consume Data</a>      
             </nav>
             <section>                
                 <div class="title-bar">
@@ -3426,6 +3428,154 @@
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/encodeURI" title="Goes to the MDN article on encodeURI." rel="nofollow" target="_blank">MDN - encodeURI</a></li>
                             <li>[2] <a href="https://www.owasp.org/index.php/Cross-site_Scripting_(XSS)" title="Goes to the OWASP page on cross-site scripting." rel="nofollow" target="_blank">OWASP - Cross-site Scripting</a></li>
                             <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Glossary/percent-encoding" title="Goes to the MDN article on percent-encoding." rel="nofollow" target="_blank">MDN - Percent-encoding</a></li>    
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <div class="title-bar">
+                    <h4><a id="consume-data">Consume Data</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Being able to retrieve information without requesting everything from the server all at once is a great tool. Ajax allows for that and the XMLHttpRequest is the mechanism that drives it.
+                            Using this object we can request data from the server without having to reload our entire web page. We discussed the jQuery ajax method above. Here we'll look at that underlying XMLHttpRequest
+                            object.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#data-parsing" title="Goes to the article on JSON and XML parsing">JSON and XML parsing</a> |
+                            <a href="#retrieve-data" title="Goes to the article on Retrieving data from web services">Retrieve data from web services</a> |
+                            <a href="#xml-http" title="Goes to the artciel on XMLHTTPRequests">XMLHTTPRequest - send and receive</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="Goes to the MDN article on XMLHttpRequests." rel="nofollow" target="_blank">MDN - XMLHttpRequest</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="data-parsing">JSON and XML parsing</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            JSON and XML are very common ways to consume data over the web. JSON is considered to be unstructured data where XML is structured. JSON is a simple way of
+                            listing key value pairs much like you'd expect given an object with properties and values. XML is similar to HTML and uses tags to wrap the data in a very 
+                            structured way. These tags can have attributes just like HTML. Below are examples of each.
+                        </p>
+                        <p>
+                            JSON: { name: "John Smith", age: 22, city: "New York" }
+                        </p>
+                        <p>
+                            XML: &lt;Person&gt;&lt;Name&gt;John&lt;/Name&gt;&lt; Age&gt;22&lt;/Age&gt;&lt;City&gt;New York&lt;/City&gt;&lt;/Person&gt;
+                        </p>                        
+                        <p>
+                            XML with attributes: &lt;Person name="John" age="22" city="New York"&gt;
+
+                        </p>
+                        <p>
+                            JSON and XML data can be serialized and deserialized for storage or sending data to and from web servers. By deserializing these values into objects they become easily manipulated and accessible.
+                        </p>
+                        <h5>XML</h5>
+                        <p>
+                            There are a number of ways to serialize and parse XML. MDN lists several on their guide [4]:
+                        </p>
+                        <ul>
+                            <li>XMLSerializer: serializes DOM trees and converts them into XML strings.</li>
+                            <li>DOMParser: constructs a DOM tree based on a given XML string (returning either an XMLDocument or a Document).</li>
+                            <li>XMLHttpRequest: loads data from a URL; XML is returned as an XML Document.</li>
+                            <li>XPath: a technology for creating strings containing specific XML and for locating XML nodes given specific addresses.</li>
+                        </ul>
+                        <p>
+                            In MDN's examples they demonstrate using the DOMParser to generate an XML object from a string. They also note that the XMLHttpRequest's responseXML is a Document object 
+                            that is constructed from the parsed XML that may be returned. [4] They also show that we can use the XMLSerializer.serializeToString method to generate a string representation of a DOM tree. [4]
+                            You can also serialize an HTML document using the serializeToString method. MDN explains that you can serialize a node using the innerHTML or outerHTML properties. Using innerHTML
+                            would exclude the parent node and using outerHTML would include it. [4]
+                        </p>
+                        <h5>JSON</h5>
+                        <p>
+                            The JSON object has helpful methods to parse and stringify JavaScript Object Notation. [7] The parse method allows you to convert a string representation of a JSON object to a fully hydrated object. 
+                            The stringify method allows you to convert an object into a JSON string representation. You can see how these two functions can be used together to serialize and deserialize JSON data for transportation 
+                            and saving. These methods can take custom options if you need custom mapping logic and references to "undefined" are replaced with "null". [7]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://json.org/" title="Goes to the json.org introduction page." rel="nofollow" target="_blank">JSON.org - Introducing JSON</a></li>
+                            <li>[2] <a href="https://www.w3schools.com/xml/xml_whatis.asp" title="Goes to the W3 Schools article on XML." rel="nofollow" target="_blank">W3 Schools - Introduction to XML</a></li>
+                            <li>[3] <a href="http://www.infocodify.com/html_data/serialize_deserialize" title="Goes to the Infocodify article on data serialization." rel="nofollow" target="_blank">Infocodify - Serialize and Deserialize data</a></li>
+                            <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Parsing_and_serializing_XML" title="Goes to the MDN article on XML parsing data serialization." rel="nofollow" target="_blank">MDN - Parsing and serializing XML</a></li>
+                            <li>[5] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse" title="Goes to the MDN article on JSON.parse()." rel="nofollow" target="_blank">MDN - JSON.parse()</a></li>
+                            <li>[6] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" title="Goes to the MDN article on JSON.stringify()." rel="nofollow" target="_blank">MDN - JSON.stringify()</a></li>
+                            <li>[7] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" title="Goes to the MDN article on JSON." rel="nofollow" target="_blank">MDN - JSON</a></li>                        
+                        </ul>                            
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="retrieve-data">Retrieve data from web services</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Retrieving data from web servers can be achieved by using what is commonly called an Ajax request. The underlying mechanism is an XMLHttpRequest. While XML is in the name it can be used to send and receive
+                            XML or JSON data along with other types. Ajax is a style of programming where parts of a web page can be dynamically loaded and changed after an initial GET request for a given page. 
+                            Typically Ajax will using an XMLHttpRequest to send and receive data from a web server. [1] jQuery has an ajax method which wraps the fundamental mechanisms for you. You can learn more on their site linked below. [3]
+                        </p>
+                        <h5>Fetch API</h5>
+                        <p>
+                            MDN also explains that the Fetch API is "basically a modern replacement for XHR" [4]. The syntax should read better than the original XHR workflow. With fetch you supply a URL to hit and define a callback function to
+                            run once data is received from the server. It's actually a Promise which is part of modern JS async programming. Ultimately it defines a piece of code that will run eventually, once the server returns data to the client.
+                            You can even chain together multiple statements in order to chain together a specific workflow of operations. Learn more from the MDN resources below. [4, 5]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" title="Goes to the MDN article on AJAX." rel="nofollow" target="_blank">MDN - AJAX</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="Goes to the MDN article on XMLHttpRequests." rel="nofollow" target="_blank">MDN - XMLHttpRequest</a></li>
+                            <li>[3] <a href="https://api.jquery.com/jquery.ajax/" title="Goes to the jQuery documentation for ajax." rel="nofollow" target="_blank">jQuery - ajax</a></li>
+                            <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data" title="Goes to the MDN article on fetching data from web servers." rel="nofollow" target="_blank">MDN - Fetching data from the server</a></li>
+                            <li>[5] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise" title="Goes to the MDN article on JavaScript Promises." rel="nofollow" target="_blank">MDN - Promise</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="xml-http">XMLHTTPRequest - send and receive</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            The XMLHttpRequest is a fundamental way of sending and receiving data from web services. The flow is to create an XMLHttpRequest object, add listeners, open a connection, and to 
+                            send a request. The listeners will provide callback functions that will react to any data that comes back from the server. The simple demo below loads data from a text file.
+                            We create the object, open an asynchronous GET connection to the file, setup the onreadystatechange method to display the file's responseText when successful and an error when
+                            something's gone wrong, and finally send the request.
+                        </p>
+                        <p>
+                            There are several readyStates. These are [2]:
+                        </p>
+                        <ul>
+                            <li>0 - UNSENT: client has been created but open has not been called</li>
+                            <li>1 - OPENED: open has been called</li>
+                            <li>2 - HEADERS_RECEIVED: send has been called and the headers and status have been received</li>
+                            <li>3 - LOADING: currently downloading the data and responseText has partial data</li>
+                            <li>4 - DONE: the operation is complete</li>
+                        </ul>
+                        <p id="xhr-demo" class="xhr-demo"></p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="Goes to the MDN article on XMLHttpRequests." rel="nofollow" target="_blank">MDN - XMLHttpRequest</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState" title="Goes to the MDN article on the XMLHttpRequest readyState." rel="nofollow" target="_blank">MDN - XMLHttpRequest readyState</a></li>
+                            <li>[3] <a href="https://www.youtube.com/watch?v=rjmtYkRK1nM" title="Goes to a YouTube video covering XMLHttpRequests." rel="nofollow" target="_blank">YouTube - Learn XML HTTP Requests in JavaScript | AJAX Tutorial</a></li>
                         </ul>
                     </div>
                 </article>
