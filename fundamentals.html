@@ -3616,7 +3616,13 @@
                 <article>
                     <div class="topic">
                         <p>
-                            
+                            XMLHttpRequests allow us to specify the responseType to alert the server what type of data we're expecting to be returned. The response property will be set with the returned data (or null 
+                            if the request was unsuccessful for some reason) [2]. MDN demonstrates that you can read an image as a binary file and that you can also read binary files as a Blob object. Apart from that 
+                            the load_binary_resource method allows you to read binary data from a URL [2]. MDN explains that this is done by overriding the MIME type so the bytes just "pass through unprocessed" [2].
+                        </p>
+                        <p>
+                            Sending binary data is also possible. MDN shows that you can do so by using ArrayBuffer, Blob, or the File object. Fill one of these objects with binary data and then just send that to the 
+                            server as you normally would with an XMLHttpRequest [2].
                         </p>
                     </div>
                     <div class="resources">
