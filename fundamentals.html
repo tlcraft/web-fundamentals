@@ -3606,6 +3606,7 @@
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Glossary/Serialization" title="Goes to the MDN glossary definition for serialization." rel="nofollow" target="_blank">MDN Glossary- Serialization</a></li>
+                            <li>[2] <a href="https://www.microsoftpressstore.com/articles/article.aspx?p=2244116&seqNum=4" title="Goes to the Microsoft Press Store by Pearson sample chapter for serialization." rel="nofollow" target="_blank">The Microsoft Press Store by Pearson- Objective 3.4: Serialize, deserialize, and transmit data</a></li>
                         </ul>
                     </div>
                 </article>
@@ -3622,7 +3623,10 @@
                         </p>
                         <p>
                             Sending binary data is also possible. MDN shows that you can do so by using ArrayBuffer, Blob, or the File object. Fill one of these objects with binary data and then just send that to the 
-                            server as you normally would with an XMLHttpRequest [2].
+                            server as you normally would with an XMLHttpRequest [2]. Microsoft's official exam book also explains that "in addition to working with string data, applications can work with binary data. 
+                            An application might capture drawings or pictures on a canvas and send that data back to the server. The data needs to be serialized into a binary stream to achieve this" [4]. The official 
+                            book goes on to demonstrate that we can use an XMLHttpRequest to gather an image URL in binary form by setting the responseType to Blob. The response can be
+                            passed into the URL.createObjectURL method which will return a URL to the resource. Finally we can set an image element's src attribute to this new URL and view the image in the browser [4].
                         </p>
                         <p>
                             As a quick note, there is also a format called BSON. This stands for Binary JSON and originates from MongoDB. Learn more online or at the Wikipedia resource below. [3]
@@ -3634,6 +3638,7 @@
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript" title="Goes to the MDN article on sending forms through JavaScript." rel="nofollow" target="_blank">MDN - Sending forms through JavaScript</a></li>
                             <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data" title="Goes to the MDN article on sending and receiving binary data." rel="nofollow" target="_blank">MDN - Sending and Receiving Binary Data</a></li>
                             <li>[3] <a href="https://en.wikipedia.org/wiki/BSON" title="Goes to the Wikipedia article on BSON." rel="nofollow" target="_blank">Wikipedia - BSON</a></li>
+                            <li>[4] <a href="https://www.microsoftpressstore.com/articles/article.aspx?p=2244116&seqNum=4" title="Goes to the Microsoft Press Store by Pearson sample chapter for serialization." rel="nofollow" target="_blank">The Microsoft Press Store by Pearson- Objective 3.4: Serialize, deserialize, and transmit data</a></li>
                         </ul>                            
                     </div>
                 </article>
