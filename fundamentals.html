@@ -3689,7 +3689,11 @@
                 <article>
                     <div class="topic">
                         <p>
-                           
+                           Forms are a common way to request input from users. The official exam guide explains that forms have an action attribute which specifies where to send the data and doing so "submits the entire
+                           HTML page back to the server for processing" [3]. Forms also have a submit event that you can handle with custom form submission logic. This is common with Ajax requests so the entire page isn't 
+                           sent and reloaded [3]. Using custom logic allows you to manually gather the form inputs, parse out their values and construct a query string to submit to the server [3]. As the guide explains
+                           while there is power in controlling the form submission in this way manually gathering the input can cause extra work down the line as more fields are added. Using the jQuery.serialize method 
+                           can help to gather the form data quickly and format it for you. [3] 
                         </p>                        
                     </div>
                     <div class="resources">
