@@ -3674,7 +3674,11 @@
                            The official exam guide points out that this method has some limitations. One is that the serialize method only works with valid forms so validation should be in place beforehand. It's important to note that controls like 
                            checkboxes and radio buttons only have selected options serialized. Finally in order to differentiate radio button values it can be helpful to set the value attribute on the input elements because the
                            name attribute must be the same for each radio button option for a given group [3].
-                        </p>                        
+                        </p>
+                        <p>
+                            jQuery also has a serializeArray method which can be helpful in serializing form data into an array (like the method name suggests). This can be useful if you want to process the form data yourself.
+                            This helper method is a nice way to gather the form data and automatically encode it for you. [4]
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
@@ -3682,6 +3686,7 @@
                             <li>[1] <a href="https://api.jquery.com/serialize/" title="Goes to the jQuery documentation for the serialize method." rel="nofollow" target="_blank">jQuery's serialize method</a></li>
                             <li>[2] <a href="https://api.jquery.com/serializeArray/" title="Goes to the jQuery documentation for the serializeArray method." rel="nofollow" target="_blank">jQuery's serializeArray method</a></li>
                             <li>[3] <a href="https://www.microsoftpressstore.com/articles/article.aspx?p=2244116&seqNum=4" title="Goes to the Microsoft Press Store by Pearson sample chapter for serialization." rel="nofollow" target="_blank">The Microsoft Press Store by Pearson- Objective 3.4: Serialize, deserialize, and transmit data</a></li>
+                            <li>[4] <a href="https://stackoverflow.com/questions/10430502/whats-the-difference-between-serialize-and-serializearray" title="Goes to a Stack Overflow post about the differences between jQuery's serialize and serializeArray methods." rel="nofollow" target="_blank">Stack Overflow - What's the difference between .serialize() and .serializeArray()?</a></li>
                         </ul>
                     </div>
                 </article>
