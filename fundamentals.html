@@ -34,6 +34,7 @@
             <a href="#web-workers" title="Goes to the article on web worker processes.">- Web Worker Processes</a>
             <a href="#validate-input" title="Goes to the article on validating input.">- Validate Input Programmatically</a>
             <a href="#consume-data" title="Goes to the article on consuming data.">- Consume Data</a>
+            <a href="#serialize-data" title="Goes to the article on serializing, deserializing, and transmitting data.">- Serialize, deserialize, and transmit data</a>
         </nav>
         <section class="introduction">
             <h1>HTML, CSS, and JavaScript Review</h1>
@@ -224,12 +225,12 @@
                         <li><a href="#retrieve-data" title="Goes to the article on retrieving data from web services">Retrieve data from web services</a></li>
                         <li><a href="#xml-http" title="Goes to the artciel on XMLHTTPRequests">XMLHTTPRequest - send and receive</a></li>
                     </ul>
-                    <li>Serialize, deserialize, and transmit data</li>
+                    <li><a href="#serialize-data" title="Goes to the article on serializing, deserializing, and transmitting data.">Serialize, deserialize, and transmit data</a></li>
                     <ul>
-                        <li>Binary Data</li>
-                        <li>JSON and XML</li>
-                        <li>jQuery Serialization</li>
-                        <li>Form.Submit</li>
+                        <li><a href="#binary-data" title="Goes to the article on binary data">Binary Data</a></li>
+                        <li><a href="#json-xml" title="Goes to the article on JSON and XML">JSON and XML</a></li>
+                        <li><a href="#jquery-serialization" title="Goes to the artciel on jQuery serialization">jQuery Serialization</a></li>
+                        <li><a href="#submit-form" title="Goes to the artciel on submitting forms">Form.Submit</a></li>
                     </ul>
                 </ul>
             </article>            
@@ -2927,7 +2928,8 @@
                 <a href="#async-programming" title="Goes to the article on asynchronous programming.">Asynchronous Programming</a> | 
                 <a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a> | 
                 <a href="#validate-input" title="Goes to the article on validating input.">Validate Input Programmatically</a> |
-                <a href="#consume-data" title="Goes to the article on consuming data.">Consume Data</a>      
+                <a href="#consume-data" title="Goes to the article on consuming data.">Consume Data</a> |
+                <a href="#serialize-data" title="Goes to the article on serializing, deserializing, and transmitting data.">- Serialize, deserialize, and transmit data</a>      
             </nav>
             <section>                
                 <div class="title-bar">
@@ -3576,6 +3578,138 @@
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Using_XMLHttpRequest" title="Goes to the MDN article on XMLHttpRequests." rel="nofollow" target="_blank">MDN - XMLHttpRequest</a></li>
                             <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readyState" title="Goes to the MDN article on the XMLHttpRequest readyState." rel="nofollow" target="_blank">MDN - XMLHttpRequest readyState</a></li>
                             <li>[3] <a href="https://www.youtube.com/watch?v=rjmtYkRK1nM" title="Goes to a YouTube video covering XMLHttpRequests." rel="nofollow" target="_blank">YouTube - Learn XML HTTP Requests in JavaScript | AJAX Tutorial</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
+            <section>
+                <div class="title-bar">
+                    <h4><a id="serialize-data">Serialize, deserialize, and transmit data</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            MDN's glossary defines serialization as "the process whereby an object or data structure is translated into a format suitable for transferral over a network, or 
+                            storage (e.g. in an array buffer or file format)" [1]. By using serialization techniques we can gather data and transform it into a more suitable form for sending and receiving
+                            between a client and server. You'll see examples of this when submitting form data to a server from the client. You might also find examples where data is serialized and compressed
+                            before saving the data to a database. This section discusses serialization of binary data, JSON and XML, using jQuery for serialization, and form submissions.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#binary-data" title="Goes to the article on binary data">Binary Data</a> |
+                            <a href="#json-xml" title="Goes to the article on JSON and XML">JSON and XML</a> |
+                            <a href="#jquery-serialization" title="Goes to the artciel on jQuery serialization">jQuery Serialization</a> |
+                            <a href="#submit-form" title="Goes to the artciel on submitting forms">Form.Submit</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Glossary/Serialization" title="Goes to the MDN glossary definition for serialization." rel="nofollow" target="_blank">MDN Glossary- Serialization</a></li>
+                            <li>[2] <a href="https://www.microsoftpressstore.com/articles/article.aspx?p=2244116&seqNum=4" title="Goes to the Microsoft Press Store by Pearson sample chapter for serialization." rel="nofollow" target="_blank">The Microsoft Press Store by Pearson- Objective 3.4: Serialize, deserialize, and transmit data</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="binary-data">Binary Data</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            XMLHttpRequests allow us to specify the responseType to alert the server what type of data we're expecting to be returned. The response property will be set with the returned data (or null 
+                            if the request was unsuccessful for some reason) [2]. MDN demonstrates that you can read an image as a binary file and that you can also read binary files as a Blob object. Apart from that 
+                            the load_binary_resource method allows you to read binary data from a URL [2]. MDN explains that this is done by overriding the MIME type so the bytes just "pass through unprocessed" [2].
+                        </p>
+                        <p>
+                            Sending binary data is also possible. MDN shows that you can do so by using ArrayBuffer, Blob, or the File object. Fill one of these objects with binary data and then just send that to the 
+                            server as you normally would with an XMLHttpRequest [2]. Microsoft's official exam book also explains that "in addition to working with string data, applications can work with binary data. 
+                            An application might capture drawings or pictures on a canvas and send that data back to the server. The data needs to be serialized into a binary stream to achieve this" [4]. The official 
+                            book goes on to demonstrate that we can use an XMLHttpRequest to gather an image URL in binary form by setting the responseType to Blob. The response can be
+                            passed into the URL.createObjectURL method which will return a URL to the resource. Finally we can set an image element's src attribute to this new URL and view the image in the browser [4].
+                        </p>
+                        <p>
+                            As a quick note, there is also a format called BSON. This stands for Binary JSON and originates from MongoDB. Learn more online or at the Wikipedia resource below. [3]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript" title="Goes to the MDN article on sending forms through JavaScript." rel="nofollow" target="_blank">MDN - Sending forms through JavaScript</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/Sending_and_Receiving_Binary_Data" title="Goes to the MDN article on sending and receiving binary data." rel="nofollow" target="_blank">MDN - Sending and Receiving Binary Data</a></li>
+                            <li>[3] <a href="https://en.wikipedia.org/wiki/BSON" title="Goes to the Wikipedia article on BSON." rel="nofollow" target="_blank">Wikipedia - BSON</a></li>
+                            <li>[4] <a href="https://www.microsoftpressstore.com/articles/article.aspx?p=2244116&seqNum=4" title="Goes to the Microsoft Press Store by Pearson sample chapter for serialization." rel="nofollow" target="_blank">The Microsoft Press Store by Pearson- Objective 3.4: Serialize, deserialize, and transmit data</a></li>
+                        </ul>                            
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="json-xml">JSON and XML</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            We've already covered JSON and XML serialization above within the JSON and XML parsing notes. JSON has parse and stringify methods to achieve this. There are various XML
+                            related mechanisms including: XMLSerializer, DOMParser, XMLHttpRequest, and XPath. [1].
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Parsing_and_serializing_XML" title="Goes to the MDN article on XML parsing data serialization." rel="nofollow" target="_blank">MDN - Parsing and serializing XML</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse" title="Goes to the MDN article on JSON.parse()." rel="nofollow" target="_blank">MDN - JSON.parse()</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify" title="Goes to the MDN article on JSON.stringify()." rel="nofollow" target="_blank">MDN - JSON.stringify()</a></li>
+                            <li>[4] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON" title="Goes to the MDN article on JSON." rel="nofollow" target="_blank">MDN - JSON</a></li>  
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="jquery-serialization">jQuery Serialization</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                           The jQuery.serialize method is a quick way to serialize form data. This data is also encoded for you automatically so it's really a great helper method when dealing with form submissions [3].
+                           The official exam guide points out that this method has some limitations. One is that the serialize method only works with valid forms so validation should be in place beforehand. It's important to note that controls like 
+                           checkboxes and radio buttons only have selected options serialized. Finally in order to differentiate radio button values it can be helpful to set the value attribute on the input elements because the
+                           name attribute must be the same for each radio button option for a given group [3].
+                        </p>
+                        <p>
+                            jQuery also has a serializeArray method which can be helpful in serializing form data into an array (like the method name suggests). This can be useful if you want to process the form data yourself.
+                            This helper method is a nice way to gather the form data and automatically encode it for you. [4]
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://api.jquery.com/serialize/" title="Goes to the jQuery documentation for the serialize method." rel="nofollow" target="_blank">jQuery's serialize method</a></li>
+                            <li>[2] <a href="https://api.jquery.com/serializeArray/" title="Goes to the jQuery documentation for the serializeArray method." rel="nofollow" target="_blank">jQuery's serializeArray method</a></li>
+                            <li>[3] <a href="https://www.microsoftpressstore.com/articles/article.aspx?p=2244116&seqNum=4" title="Goes to the Microsoft Press Store by Pearson sample chapter for serialization." rel="nofollow" target="_blank">The Microsoft Press Store by Pearson- Objective 3.4: Serialize, deserialize, and transmit data</a></li>
+                            <li>[4] <a href="https://stackoverflow.com/questions/10430502/whats-the-difference-between-serialize-and-serializearray" title="Goes to a Stack Overflow post about the differences between jQuery's serialize and serializeArray methods." rel="nofollow" target="_blank">Stack Overflow - What's the difference between .serialize() and .serializeArray()?</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="submit-form">Form.Submit</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                           Forms are a common way to request input from users. The official exam guide explains that forms have an action attribute which specifies where to send the data and doing so "submits the entire
+                           HTML page back to the server for processing" [3]. Forms also have a submit event that you can handle with custom form submission logic. This is common with Ajax requests so the entire page isn't 
+                           sent and reloaded [3]. Using custom logic allows you to manually gather the form inputs, parse out their values and construct a query string to submit to the server [3]. As the guide explains
+                           while there is power in controlling the form submission in this way manually gathering the input can cause extra work down the line as more fields are added. Using the jQuery.serialize method 
+                           can help to gather the form data quickly and format it for you. [3] 
+                        </p>                        
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_forms_through_JavaScript" title="Goes to the MDN article on sending forms through JavaScript." rel="nofollow" target="_blank">MDN - Sending forms through JavaScript</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Sending_and_retrieving_form_data" title="Goes to the MDN article on sending form data." rel="nofollow" target="_blank">MDN - Sending form data</a></li>       
+                            <li>[3] <a href="https://www.microsoftpressstore.com/articles/article.aspx?p=2244116&seqNum=4" title="Goes to the Microsoft Press Store by Pearson sample chapter for serialization." rel="nofollow" target="_blank">The Microsoft Press Store by Pearson- Objective 3.4: Serialize, deserialize, and transmit data</a></li>
                         </ul>
                     </div>
                 </article>
