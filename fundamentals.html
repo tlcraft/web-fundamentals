@@ -2963,13 +2963,36 @@
                 <article>
                     <div class="topic">
                         <p>
-                            
+                            MDN describes DOM Events as events that "are sent to notify code of interesting things that have taken place. Each event is represented by an object which is based on the Event interface, and may
+                            have additional custom fields and/or functions used to get additional information about what happened" [1]. There's a lot of events and the MDN resource linked below lists many of them.
+                        </p>
+                        <p>
+                            There are many categories of events. Some of these include keyboard and mouse events (such as keydown, keypress, keyup, click, dblclick, mouseover, wheel), drag and drop events (drag, drop, dragend, etc.), 
+                            clipboard events (cut, copy, paste), form events (reset and submit), css transition events (transitionstart and transitionend for example), and focus events (like blur and focus). Below are just a couple
+                            of highlights.
+                        </p>
+                        <h5>Blur</h5>
+                        <p>
+                            The blur event fires when an element loses focus. So if you click into an input box, once you click away the blur event is fired. This can be helpful to use to signal that validation 
+                            can now be run and further processing of the input can commence.
+                        </p>
+                        <h5>Focus</h5>
+                        <p>
+                            Focus is the opposite of blur. This event fires when an element receives focus. For example when a user selects an input box to enter some data. At that point we know the user's cursor is 
+                            within that box and it can accept input. You could react to that and display a helpful tip on entering the requested information for instance.
+                        </p>
+                        <h5>Click</h5>
+                        <p>
+                            This event fires when "a pointing device button (ANY button; soon to be primary button only) has been pressed and released on an element" [1]. You could use this event to react to 
+                            user input similarly to how a button works (so you wouldn't need to create a specific button input for instance if you didn't want to).
                         </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/Events" title="Goes to the MDN DOM event reference." rel="nofollow" target="_blank">MDN - DOM Event Reference</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" title="Goes to the MDN Event interface reference." rel="nofollow" target="_blank">MDN - Event interface</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events" title="Goes to the MDN Event developer guide." rel="nofollow" target="_blank">MDN - Event developer guide</a></li>
                         </ul>
                     </div>
                 </article>
