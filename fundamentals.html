@@ -3005,13 +3005,20 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            Understanding capturing and bubbling is important when dealing with events. We learned a bit about these phases earlier in the "this and events" section but here's some more information. 
+                        </p>
+                        <p>
+                            The JavaScript.info page for Bubbling and Capturing has a lot of great examples and information about these concepts. The page points out that "almost all events bubble" but that there are some exceptions [1]. 
+                            For example the focus event does not bubble up. Remember that bubbling is the process of an event firing and then triggering other events from the initial element all the way up to the document
+                            element (firing relevant events along the way). Capturing is the opposite where the events are fired from the outer most element down to the element that triggered the event in the first place. These both exist because
+                            browsers implemented this mechanism differently because there was no initial standard so both are supported.
                         </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://javascript.info/bubbling-and-capturing" title="Goes to the JavaScript.info article for bubbling and capturing events." rel="nofollow" target="_blank">JavaScript.info - Bubbling and capturing</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" title="Goes to the MDN introduction for JS events." rel="nofollow" target="_blank">MDN - JS Events Introduction</a></li>
                         </ul>
                     </div>
                 </article>
