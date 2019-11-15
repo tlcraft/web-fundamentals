@@ -3013,6 +3013,13 @@
                             element (firing relevant events along the way). Capturing is the opposite where the events are fired from the outer most element down to the element that triggered the event in the first place. These both exist because
                             browsers implemented this mechanism differently because there was no initial standard so both are supported.
                         </p>
+                        <p>
+                            JavaScript.info explains that the element that initiates the event can be reference with event.target. This value doesn't change during the bubbling process so it can be very 
+                            useful. [1] As we know "this" changes its value depending on the context so keep that in mind. 
+                        </p>
+                        <p>
+                            JavaScript.info goes on to say that some events bubble all the way up to window. If you want to stop the bubbling process call the event.stopPropagation method. [1]
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
