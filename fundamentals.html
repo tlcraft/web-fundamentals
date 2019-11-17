@@ -3020,6 +3020,12 @@
                         <p>
                             JavaScript.info goes on to say that some events bubble all the way up to window. If you want to stop the bubbling process call the event.stopPropagation method. [1]
                         </p>
+                        <p>
+                            Capturing is rarely used but is still important to understand. JavaScript.info explains that there are in fact three event phases. The capturing phase, the target phase, and the 
+                            bubbling phase (in that order) [1]. Capturing is turned off by default but can be turned on using the addEventListener method and passing in true for the third argument. JavaScript.info also
+                            explains that the target phase is not handled separately but contained within the capturing and bubbling phases (so it would fire twice if both capturing and bubbling are used) [1]. You can check the 
+                            event.eventPhase to determine the current phase (capturing has a value of 1, target is 2 and bubbling is 3) [1].
+                        </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
