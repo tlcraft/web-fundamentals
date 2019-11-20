@@ -30,6 +30,7 @@
             <a href="#selectors" title="Goes to the article on CSS and jQuery selectors.">- CSS and jQuery Selectors</a>
             <a href="#css-file-structure" title="Goes to the article on CSS file structure.">- CSS File Structure</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
+            <a href="#handle-events" title="Goes to the article raising and handling events.">- Raise and Handle events</a>
             <a href="#async-programming" title="Goes to the article on asynchronous programming.">- Asynchronous Programming</a>
             <a href="#web-workers" title="Goes to the article on web worker processes.">- Web Worker Processes</a>
             <a href="#validate-input" title="Goes to the article on validating input.">- Validate Input Programmatically</a>
@@ -180,11 +181,11 @@
                         <li>Utilize: switch, if/else, and boolean logic</li>
                         <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators" title="Goes to the MDN article for expressions and operators." rel="nofollow" target="_blank">Operators and Expressions</a></li>
                     </ul>
-                    <li>Raise and Handle events</li>
+                    <li><a href="#handle-events" title="Goes to the article raising and handling events.">Raise and Handle events</a></li>
                     <ul>
-                        <li>Common DOM events: OnBlur, OnFocus, OnClick, etc.</li>
-                        <li>Declare and handle bubbled events</li>
-                        <li>Handle events with anonymous functions</li>
+                        <li><a href="#dom-events" title="Goes to the article on common dom events.">Common DOM events: OnBlur, OnFocus, OnClick, etc.</a></li>
+                        <li><a href="#bubbled-events" title="Goes to the article on bubbled events.">Declare and handle bubbled events</a></li>
+                        <li><a href="#event-functions" title="Goes to the artciel on handling events with anonymous functions.">Handle events with anonymous functions</a></li>
                     </ul>
                     <li>Exception Handling</li>
                     <ul>
@@ -2925,12 +2926,149 @@
                 <span class="toggleAll">Show / Hide All</span>              
             </div> 
             <nav class="topics-nav">
+                <a href="#handle-events" title="Goes to the article raising and handling events.">Raise and Handle events</a> |
                 <a href="#async-programming" title="Goes to the article on asynchronous programming.">Asynchronous Programming</a> | 
                 <a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a> | 
                 <a href="#validate-input" title="Goes to the article on validating input.">Validate Input Programmatically</a> |
                 <a href="#consume-data" title="Goes to the article on consuming data.">Consume Data</a> |
                 <a href="#serialize-data" title="Goes to the article on serializing, deserializing, and transmitting data.">- Serialize, deserialize, and transmit data</a>      
             </nav>
+            <section>
+                <div class="title-bar">
+                    <h4><a id="handle-events">Raise and Handle events</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Understanding events is important to providing a good UX on a web page. You can react to different events to signal validation or further processing. Or you might display a message 
+                            to the user based on what they are currently engaged with. Events can be complicated and so it's important to understand them and their fundamental mechanics (such as bubbling and
+                            capturing). You will definitely run across event logic and want to implement your own as you develop more web pages.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#dom-events" title="Goes to the article on common dom events.">Common DOM events: OnBlur, OnFocus, OnClick, etc.</a> |
+                            <a href="#bubbled-events" title="Goes to the article on bubbled events.">Declare and handle bubbled events</a> |
+                            <a href="#event-functions" title="Goes to the artciel on handling events with anonymous functions.">Handle events with anonymous functions</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                           
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="dom-events">Common DOM events: OnBlur, OnFocus, OnClick, etc.</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            MDN describes DOM Events as events that "are sent to notify code of interesting things that have taken place. Each event is represented by an object which is based on the Event interface, and may
+                            have additional custom fields and/or functions used to get additional information about what happened" [1]. There's a lot of events and the MDN resource linked below lists many of them.
+                        </p>
+                        <p>
+                            There are many categories of events. Some of these include keyboard and mouse events (such as keydown, keypress, keyup, click, dblclick, mouseover, wheel), drag and drop events (drag, drop, dragend, etc.), 
+                            clipboard events (cut, copy, paste), form events (reset and submit), css transition events (transitionstart and transitionend for example), and focus events (like blur and focus). Below are just a couple
+                            of highlights.
+                        </p>
+                        <h5>Blur</h5>
+                        <p>
+                            The blur event fires when an element loses focus. So if you click into an input box, once you click away the blur event is fired. This can be helpful to use to signal that validation 
+                            can now be run and further processing of the input can commence.
+                        </p>
+                        <h5>Focus</h5>
+                        <p>
+                            Focus is the opposite of blur. This event fires when an element receives focus. For example when a user selects an input box to enter some data. At that point we know the user's cursor is 
+                            within that box and it can accept input. You could react to that and display a helpful tip on entering the requested information for instance.
+                        </p>
+                        <h5>Click</h5>
+                        <p>
+                            This event fires when "a pointing device button (ANY button; soon to be primary button only) has been pressed and released on an element" [1]. You could use this event to react to 
+                            user input similarly to how a button works (so you wouldn't need to create a specific button input for instance if you didn't want to).
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/Events" title="Goes to the MDN DOM event reference." rel="nofollow" target="_blank">MDN - DOM Event Reference</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event" title="Goes to the MDN Event interface reference." rel="nofollow" target="_blank">MDN - Event interface</a></li>
+                            <li>[3] <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/Events" title="Goes to the MDN Event developer guide." rel="nofollow" target="_blank">MDN - Event developer guide</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="bubbled-events">Declare and handle bubbled events</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Understanding capturing and bubbling is important when dealing with events. We learned a bit about these phases earlier in the "this and events" section but here's some more information. 
+                        </p>
+                        <p>
+                            The JavaScript.info page for Bubbling and Capturing has a lot of great examples and information about these concepts. The page points out that "almost all events bubble" but that there are some exceptions [1]. 
+                            For example the focus event does not bubble up. Remember that bubbling is the process of an event firing and then triggering other events from the initial element all the way up to the document
+                            element (firing relevant events along the way). Capturing is the opposite where the events are fired from the outer most element down to the element that triggered the event in the first place. These both exist because
+                            browsers implemented this mechanism differently because there was no initial standard so both are supported.
+                        </p>
+                        <p>
+                            JavaScript.info explains that the element that initiates the event can be reference with event.target. This value doesn't change during the bubbling process so it can be very 
+                            useful. [1] As we know "this" changes its value depending on the context so keep that in mind. 
+                        </p>
+                        <p>
+                            JavaScript.info goes on to say that some events bubble all the way up to window. If you want to stop the bubbling process call the event.stopPropagation method. [1]
+                        </p>
+                        <p>
+                            Capturing is rarely used but is still important to understand. JavaScript.info explains that there are in fact three event phases. The capturing phase, the target phase, and the 
+                            bubbling phase (in that order) [1]. Capturing is turned off by default but can be turned on using the addEventListener method and passing in true for the third argument. JavaScript.info also
+                            explains that the target phase is not handled separately but contained within the capturing and bubbling phases (so it would fire twice if both capturing and bubbling are used) [1]. You can check the 
+                            event.eventPhase to determine the current phase (capturing has a value of 1, target is 2 and bubbling is 3) [1].
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://javascript.info/bubbling-and-capturing" title="Goes to the JavaScript.info article for bubbling and capturing events." rel="nofollow" target="_blank">JavaScript.info - Bubbling and capturing</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events" title="Goes to the MDN introduction for JS events." rel="nofollow" target="_blank">MDN - JS Events Introduction</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="event-functions">Handle events with anonymous functions</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Anonymous functions are those that are not defined separately with a given name. Instead these are generally defined within the logic of another function that is commonly passed into a method that accepts a callback function. 
+                            For example the jQuery ajax method has parameters for success and error functions (which are to be called when data is received from the server depending on the status sent back to the client).
+                        </p>
+                        <p>
+                            Chineke Tobenna explains that anonymous functions are most popularly used with function expressions [3]. This is where you essentially assign a function to a variable for reuse later. Chineke notes that
+                            "these function expressions are created at runtime and must be declared/defined before they can be called i.e. they are not hoisted" [3]. Lambda expressions on the other hand allow for functions to be 
+                            passed around like other data types. Lambda's can also be named whereas anonymous functions are never named. [3]
+                        </p>
+                        <p>
+                            Below is a simple demo which sets a button element's onclick attribute to an anonymous function which displays an alert message. Try it out!
+                        </p>
+                        <button id="anonymous-function-demo">Click Me</button>
+                        <p>
+                            We have some other brief notes on anonymous functions within the "Anonymous Callback Functions" section below.
+                        </p>                        
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener" title="Goes to the MDN article on the addEventListener method." rel="nofollow" target="_blank">MDN - addEventListener</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions" title="Goes to the MDN article on functions." rel="nofollow" target="_blank">MDN - Functions</a></li>
+                            <li>[3] <a href="https://medium.com/@chineketobenna/lambda-expressions-vs-anonymous-functions-in-javascript-3aa760c958ae" title="Goes to Chineke Tobenna's Medium article on lambda and anonymous functions." rel="nofollow" target="_blank">Medium - Lambda Functions Vs Anonymous Functions in JavaScript.</a></li>
+                            <li>[4] <a href="https://thoughtbot.com/blog/back-to-basics-anonymous-functions-and-closures" title="Goes to the thoughtbot article on anonymous functions and clojures." rel="nofollow" target="_blank">thoughtbot - Back to Basics: Anonymous Functions and Closures</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
             <section>                
                 <div class="title-bar">
                     <h4><a id="async-programming">Asynchronous Programming</a></h4>
