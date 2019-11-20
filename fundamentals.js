@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     webSocketExample();
     eventHoverDemo();
     xmlHttpRequestDemo();
+    anonymousFunctionDemo();
 });
 
 function uiControlsExample() {
@@ -281,4 +282,11 @@ function xmlHttpRequestDemo() {
     };
 
     xhr.send();
+}
+
+function anonymousFunctionDemo() {
+    const demoButton = document.getElementById('anonymous-function-demo');
+    demoButton.onclick = function() {
+        alert('Hi!');
+    };
 }
