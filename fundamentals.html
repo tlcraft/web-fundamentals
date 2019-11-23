@@ -1346,7 +1346,7 @@
                     <div class="topic">
                         <p>
                            If a variable is defined outside of a block (i.e. code encapsulated with curly braces {}) then that variable has a global scope [3]. 
-                           This is actually only true for web browsers; it's different when using JavaScipt with Node.js for example [2]. It's not recommended
+                           This is actually only true for web browsers; it's different when using JavaScript with Node.js for example [2]. It's not recommended
                            to use the global scope. A naming collision is one reason (if a variable name is used more than once in several parts of the code) [3]. 
                            Variables redeclared using var are at the same global scope as previous declarations so the variable will be assigned the new value 
                            and overwrite the old value, so be careful here.
@@ -2981,11 +2981,19 @@
                             <li>for..in: for loop which iterates over each item in an array automatically.</li>
                             <li>for..of: similar to a for..in loop but it is used to iterate over properties of an object for example.</li>
                         </ul>
+                        <p>
+                            JavaScript arrays have a number of iteration methods available for use. Some of these include things like every, find, map, and reduce. Each method iterates over an array and 
+                            performs some logic that you generally define. For example you could use the filter method to return a new array of items that fit a specific criterion. Check out the example below.
+                            This example filters a list of food to only those that begin with the letter c.
+                        </p>
+                        <div id="iteration-demo">                            
+                        </div>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
                             <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration" title="Goes to the MDN article on loops and iteration." rel="nofollow" target="_blank">MDN - Loops and iteration</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Goes to the MDN article on JavaScript arrays." rel="nofollow" target="_blank">MDN - Array</a></li>
                         </ul>
                     </div>
                 </article>

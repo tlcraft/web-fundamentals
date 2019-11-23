@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     eventHoverDemo();
     xmlHttpRequestDemo();
     anonymousFunctionDemo();
+    iterationDemo();
 });
 
 function uiControlsExample() {
@@ -289,4 +290,20 @@ function anonymousFunctionDemo() {
     demoButton.onclick = function() {
         alert('Hi!');
     };
+}
+
+function iterationDemo() {
+    const iterationDemoDiv = document.getElementById('iteration-demo');
+    const food = ['apple', 'banana', 'cookie', 'cheese', 'oragne', 'cake'];
+    const foodThatBeginsWithTheLetterC = food.filter(item => item[0] === 'c');
+
+    const foodListContainer = document.createElement("ul");
+    const createListItem = function(item) { 
+        const listItem = document.createElement("li");
+        listItem.appendChild(document.createTextNode(item));
+        return listItem;
+    } 
+    
+    foodThatBeginsWithTheLetterC.forEach(item => foodListContainer.appendChild(createListItem(item)));
+    iterationDemoDiv.appendChild(foodListContainer);
 }
