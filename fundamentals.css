@@ -856,3 +856,8 @@ svg.draw {
     border: solid 1px darkred;
     padding: 10px;
 }
+
+.conditional-example {
+    border: 1px solid black;
+    display: flex;
+}

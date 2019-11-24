@@ -3004,7 +3004,51 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            Conditional logic is a fundamental part of programming. While paradigms like functional programming and polymorphism can help eliminate conditional logic it's completely ubiquitous
+                            and you will use it quite often. Generally this can be in the form of a simple "if" statement which checks for a given condition. In some cases you'll expand that to include an "else" 
+                            statement (for the alternative case). But you're not limited to just one if and else. You can chain these together if needed or use a "switch" statement to handle different states of your program.
+                        </p>
+                        <p>
+                            A lot of time you will be able to use comparison operators and logical operators in your boolean logic. Commonly these are:
+                        </p>
+                        <ul>
+                            <li>= and != - equals and not equals operators</li>
+                            <li>< and > - less than and greater than operators</li>
+                            <li><= and >= - less than or equal to and greater than or equal to operators</li>
+                            <li>&& - AND chains statements together and only evaluates to true if all statements are true</li>
+                            <li>|| - OR chains statements together and will evaluate true if any of the chained statements are true</li>
+                        </ul>
+                        <p>
+                            The above operators will be used together quite often and so being familiar with their use is important. It's also important to be sure to wrap specific expressions in parenthesis when writing longer 
+                            conditional statements which use AND and OR together. Mixing these operators can result in bugs if the statements are not wrapped correctly given a specific use case.
+                        </p>
+                        <p>
+                            As MDN points out, in JavaScript "any value that is not false, undefined, null, 0, NaN, or an empty string actually returns true when tested as a conditional statement" [1]. Many times you'll want to
+                            perform an action if you're given a value. In these cases you can wrap the variable in an if statement to essentially run a "null" check (to check if the variable has a value or not) and then perform said action.
+                        </p>
+                        <p>
+                            There is also a ternary operator which essentially is shorthand for an if..else statement. Rather than writing out the whole if..else you can simply use a question mark (?) and a colon (:) to represent
+                            the if and else syntax. For example:
+                        </p>
+                        <div class="conditional-example">
+                    <pre>
+                        var amount;
+                        if(isStudent) {
+                            amount = 0;
+                        } else {
+                            amount = 10;
+                        }
+                    </pre>
+                    <pre>
+                        var amount = isStudent ? 0 : 10;
+                    </pre>
+                        </div>
+                        <p>
+                            Switch statements take a value and compare that to a list of cases. For example you may define a set of constant values to represent specific states in your program (i.e. ACTIVE, DELETED, and DRAFT).
+                            A switch statement could be used to perform different actions on an object given its state defined by the constant flag.
+                        </p>
+                        <p>
+                            For more information check out MDN's resource below.
                         </p>
                     </div>
                     <div class="resources">
