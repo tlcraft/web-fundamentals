@@ -30,6 +30,7 @@
             <a href="#selectors" title="Goes to the article on CSS and jQuery selectors.">- CSS and jQuery Selectors</a>
             <a href="#css-file-structure" title="Goes to the article on CSS file structure.">- CSS File Structure</a>
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
+            <a href="#program-flow" title="Goes to the article on program flow.">- Program Flow</a>
             <a href="#handle-events" title="Goes to the article raising and handling events.">- Raise and Handle events</a>
             <a href="#async-programming" title="Goes to the article on asynchronous programming.">- Asynchronous Programming</a>
             <a href="#web-workers" title="Goes to the article on web worker processes.">- Web Worker Processes</a>
@@ -175,17 +176,17 @@
                 </p>
                 <h3>Topics</h3>
                 <ul>
-                    <li>Program Flow</li>
-                    <ul>                                
-                        <li>Iterate over collections and arrays</li>
-                        <li>Utilize: switch, if/else, and boolean logic</li>
-                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators" title="Goes to the MDN article for expressions and operators." rel="nofollow" target="_blank">Operators and Expressions</a></li>
+                    <li><a href="#program-flow" title="Goes to the article on program flow.">Program Flow</a></li>
+                    <ul> 
+                        <li><a href="#iteration" title="Goes to the article on iteration.">Iterate over collections and arrays</a>s</li>
+                        <li><a href="#boolean-logic" title="Goes to the article on boolean logic.">Utilize: switch, if/else, and boolean logic</a></li>
+                        <li><a href="#operators" title="Goes to the article on operators and expressions.">Operators and Expressions</a></li>
                     </ul>
                     <li><a href="#handle-events" title="Goes to the article raising and handling events.">Raise and Handle events</a></li>
                     <ul>
                         <li><a href="#dom-events" title="Goes to the article on common dom events.">Common DOM events: OnBlur, OnFocus, OnClick, etc.</a></li>
                         <li><a href="#bubbled-events" title="Goes to the article on bubbled events.">Declare and handle bubbled events</a></li>
-                        <li><a href="#event-functions" title="Goes to the artciel on handling events with anonymous functions.">Handle events with anonymous functions</a></li>
+                        <li><a href="#event-functions" title="Goes to the article on handling events with anonymous functions.">Handle events with anonymous functions</a></li>
                     </ul>
                     <li>Exception Handling</li>
                     <ul>
@@ -224,14 +225,14 @@
                     <ul>
                         <li><a href="#data-parsing" title="Goes to the article on JSON and XML parsing">JSON and XML parsing</a></li>
                         <li><a href="#retrieve-data" title="Goes to the article on retrieving data from web services">Retrieve data from web services</a></li>
-                        <li><a href="#xml-http" title="Goes to the artciel on XMLHTTPRequests">XMLHTTPRequest - send and receive</a></li>
+                        <li><a href="#xml-http" title="Goes to the article on XMLHTTPRequests">XMLHTTPRequest - send and receive</a></li>
                     </ul>
                     <li><a href="#serialize-data" title="Goes to the article on serializing, deserializing, and transmitting data.">Serialize, deserialize, and transmit data</a></li>
                     <ul>
                         <li><a href="#binary-data" title="Goes to the article on binary data">Binary Data</a></li>
                         <li><a href="#json-xml" title="Goes to the article on JSON and XML">JSON and XML</a></li>
-                        <li><a href="#jquery-serialization" title="Goes to the artciel on jQuery serialization">jQuery Serialization</a></li>
-                        <li><a href="#submit-form" title="Goes to the artciel on submitting forms">Form.Submit</a></li>
+                        <li><a href="#jquery-serialization" title="Goes to the article on jQuery serialization">jQuery Serialization</a></li>
+                        <li><a href="#submit-form" title="Goes to the article on submitting forms">Form.Submit</a></li>
                     </ul>
                 </ul>
             </article>            
@@ -1345,7 +1346,7 @@
                     <div class="topic">
                         <p>
                            If a variable is defined outside of a block (i.e. code encapsulated with curly braces {}) then that variable has a global scope [3]. 
-                           This is actually only true for web browsers; it's different when using JavaScipt with Node.js for example [2]. It's not recommended
+                           This is actually only true for web browsers; it's different when using JavaScript with Node.js for example [2]. It's not recommended
                            to use the global scope. A naming collision is one reason (if a variable name is used more than once in several parts of the code) [3]. 
                            Variables redeclared using var are at the same global scope as previous declarations so the variable will be assigned the new value 
                            and overwrite the old value, so be careful here.
@@ -2926,6 +2927,7 @@
                 <span class="toggleAll">Show / Hide All</span>              
             </div> 
             <nav class="topics-nav">
+                <a href="#program-flow" title="Goes to the article on program flow.">Program Flow</a> |
                 <a href="#handle-events" title="Goes to the article raising and handling events.">Raise and Handle events</a> |
                 <a href="#async-programming" title="Goes to the article on asynchronous programming.">Asynchronous Programming</a> | 
                 <a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a> | 
@@ -2933,6 +2935,163 @@
                 <a href="#consume-data" title="Goes to the article on consuming data.">Consume Data</a> |
                 <a href="#serialize-data" title="Goes to the article on serializing, deserializing, and transmitting data.">- Serialize, deserialize, and transmit data</a>      
             </nav>
+            <section>
+                <div class="title-bar">
+                    <h4><a id="program-flow">Program Flow</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            If you're new to programming there's a lot of resources online to help you get started. Below is one example with a link to MDN's JavaScript basics introduction. Understanding how to
+                            interact with objects and collections and how to use boolean logic are some of the fundamental concepts you'll see across popular programming languages. This section will list some basic 
+                            notes to get you going.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#iteration" title="Goes to the article on iteration.">Iterate over collections and arrays</a> |
+                            <a href="#boolean-logic" title="Goes to the article on boolean logic.">Utilize: switch, if/else, and boolean logic</a> |
+                            <a href="#operators" title="Goes to the article on operators and expressions.">Operators and Expressions</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/JavaScript_basics" title="Goes to the MDN article covering the basics of JavaScript." rel="nofollow" target="_blank">MDN - JavaScript basics</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="iteration">Iterate over collections and arrays</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            JavaScript has various ways of looping and supports the various fundamental statements we find in many programming languages. MDN lists that JavaScript supports for loops, do..while loops, while loops, 
+                            labeled statements, break statements, continue statements, for..in loops, and for..of loops. Not to mentioned that there are built in methods like map, reduce, and filter on the array prototype which can 
+                            clean up code even further. [1] Below is a quick overview of each one.
+                        </p>
+                        <ul>
+                            <li>for: classic loops with the ability to run an initialization expression, a conditional, and an increment expression.</li>
+                            <li>do..while: loops which are guaranteed to run at least one.</li>
+                            <li>while: loops with only a conditional statement.</li>
+                            <li>label: allows you to label statements to refer to later in your program. This could be used in conjunction with a break statement for example to stop a labeled loop.</li>
+                            <li>break: stops execution of the current block of code and jumps out of a loop or switch statement.</li>
+                            <li>continue: stops execution of the current iteration of a loop and jumps to the next iteration (from the beginning of the block).</li>
+                            <li>for..in: for loop which iterates over each item in an array automatically.</li>
+                            <li>for..of: similar to a for..in loop but it is used to iterate over properties of an object for example.</li>
+                        </ul>
+                        <p>
+                            JavaScript arrays have a number of iteration methods available for use. Some of these include things like every, find, map, and reduce. Each method iterates over an array and 
+                            performs some logic that you generally define. For example you could use the filter method to return a new array of items that fit a specific criterion. Check out the example below.
+                            This example filters a list of food to only those that begin with the letter c.
+                        </p>
+                        <div id="iteration-demo">                            
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration" title="Goes to the MDN article on loops and iteration." rel="nofollow" target="_blank">MDN - Loops and iteration</a></li>
+                            <li>[2] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array" title="Goes to the MDN article on JavaScript arrays." rel="nofollow" target="_blank">MDN - Array</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="boolean-logic">Utilize: switch, if/else, and boolean logic</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Conditional logic is a fundamental part of programming. While paradigms like functional programming and polymorphism can help eliminate conditional logic it's completely ubiquitous
+                            and you will use it quite often. Generally this can be in the form of a simple "if" statement which checks for a given condition. In some cases you'll expand that to include an "else" 
+                            statement (for the alternative case). But you're not limited to just one if and else. You can chain these together if needed or use a "switch" statement to handle different states of your program.
+                        </p>
+                        <p>
+                            A lot of time you will be able to use comparison operators and logical operators in your boolean logic. Commonly these are:
+                        </p>
+                        <ul>
+                            <li>= and != - equals and not equals operators</li>
+                            <li>< and > - less than and greater than operators</li>
+                            <li><= and >= - less than or equal to and greater than or equal to operators</li>
+                            <li>&& - AND chains statements together and only evaluates to true if all statements are true</li>
+                            <li>|| - OR chains statements together and will evaluate true if any of the chained statements are true</li>
+                        </ul>
+                        <p>
+                            The above operators will be used together quite often and so being familiar with their use is important. It's also important to be sure to wrap specific expressions in parenthesis when writing longer 
+                            conditional statements which use AND and OR together. Mixing these operators can result in bugs if the statements are not wrapped correctly given a specific use case.
+                        </p>
+                        <p>
+                            As MDN points out, in JavaScript "any value that is not false, undefined, null, 0, NaN, or an empty string actually returns true when tested as a conditional statement" [1]. Many times you'll want to
+                            perform an action if you're given a value. In these cases you can wrap the variable in an if statement to essentially run a "null" check (to check if the variable has a value or not) and then perform said action.
+                        </p>
+                        <p>
+                            There is also a ternary operator which essentially is shorthand for an if..else statement. Rather than writing out the whole if..else you can simply use a question mark (?) and a colon (:) to represent
+                            the if and else syntax. For example:
+                        </p>
+                        <div class="conditional-example">
+                    <pre>
+                        var amount;
+                        if(isStudent) {
+                            amount = 0;
+                        } else {
+                            amount = 10;
+                        }
+                    </pre>
+                    <pre>
+                        var amount = isStudent ? 0 : 10;
+                    </pre>
+                        </div>
+                        <p>
+                            Switch statements take a value and compare that to a list of cases. For example you may define a set of constant values to represent specific states in your program (i.e. ACTIVE, DELETED, and DRAFT).
+                            A switch statement could be used to perform different actions on an object given its state defined by the constant flag.
+                        </p>
+                        <p>
+                            For more information check out MDN's resource below.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals" title="Goes to the MDN article on conditional logic." rel="nofollow" target="_blank">MDN - Making decisions in your code — conditionals</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="operators">Operators and Expressions</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            There are many operators available in JavaScript. MDN has a full list on their website linked below. Reviewing this list is a good idea to familiarize yourself with all that's available to you.
+                        </p>                        
+                        <p>
+                            Various types of operators include: assignment operators, comparison operators, arithmetic operators, bitwise operators, logical operators, string operators, conditional operators, the comma operator, unary operators,
+                            and relational operators.
+                        </p>
+                        <p>
+                            As for expressions, these are "any valid unit of code that resolves to a value" [1]. MDN explains that there are two types: "with side effects (for example that assign value to a variable) and those
+                            that in some sense evaluate and therefore resolve to a value" [1]. For example x = 10 is an example with a "side effect" and 5 + 3 is an example which resolves to a value. 
+                        </p>
+                        <p>
+                            Everything we do as programmers comes down to writing expressions and having these evaluate to logical values that we expect (generally based on some business use case). These expressions end up turning into machine code 
+                            that is run on a computer processor. This is ultimately the reason why programming languages have a syntax which we must follow--so that the computer knows how to handle the information and can transform the human-readable 
+                            code into a language the computer can run to perform some action.
+                        </p>
+                        <p>
+                            For more information refer to MDN's resource linked below.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators" title="Goes to the MDN article on expressions and operators." rel="nofollow" target="_blank">MDN - Expressions and Operators</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>
             <section>
                 <div class="title-bar">
                     <h4><a id="handle-events">Raise and Handle events</a></h4>
@@ -2948,7 +3107,7 @@
                         <nav class="topics-nav">
                             <a href="#dom-events" title="Goes to the article on common dom events.">Common DOM events: OnBlur, OnFocus, OnClick, etc.</a> |
                             <a href="#bubbled-events" title="Goes to the article on bubbled events.">Declare and handle bubbled events</a> |
-                            <a href="#event-functions" title="Goes to the artciel on handling events with anonymous functions.">Handle events with anonymous functions</a>
+                            <a href="#event-functions" title="Goes to the article on handling events with anonymous functions.">Handle events with anonymous functions</a>
                         </nav>
                     </div>
                     <div class="resources">
@@ -3587,7 +3746,7 @@
                         <nav class="topics-nav">
                             <a href="#data-parsing" title="Goes to the article on JSON and XML parsing">JSON and XML parsing</a> |
                             <a href="#retrieve-data" title="Goes to the article on Retrieving data from web services">Retrieve data from web services</a> |
-                            <a href="#xml-http" title="Goes to the artciel on XMLHTTPRequests">XMLHTTPRequest - send and receive</a>
+                            <a href="#xml-http" title="Goes to the article on XMLHTTPRequests">XMLHTTPRequest - send and receive</a>
                         </nav>
                     </div>
                     <div class="resources">
@@ -3736,8 +3895,8 @@
                         <nav class="topics-nav">
                             <a href="#binary-data" title="Goes to the article on binary data">Binary Data</a> |
                             <a href="#json-xml" title="Goes to the article on JSON and XML">JSON and XML</a> |
-                            <a href="#jquery-serialization" title="Goes to the artciel on jQuery serialization">jQuery Serialization</a> |
-                            <a href="#submit-form" title="Goes to the artciel on submitting forms">Form.Submit</a>
+                            <a href="#jquery-serialization" title="Goes to the article on jQuery serialization">jQuery Serialization</a> |
+                            <a href="#submit-form" title="Goes to the article on submitting forms">Form.Submit</a>
                         </nav>
                     </div>
                     <div class="resources">
