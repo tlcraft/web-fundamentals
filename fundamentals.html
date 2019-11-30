@@ -3315,7 +3315,11 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            The try..catch..finally statement is a fundamental component for handling exceptions. You'll find it in many programming languages. When you are dealing with a piece of code that may throw exceptions you can wrap that code in a try statement.
+                            This expresses that you would like to <em>try</em> running the encapsulated code but that you very well may run into an error. The catch statement defines which types of exceptions to handle. Only those that
+                            are of the types specified are actually captured and handled. When that happens the code within the catch block is executed. Generally error messages are logged and other clean up can be done. The finally
+                            block is something that is run whether an error occurs or not. It's the last thing run so if you find that you need a specific section of code to be run regardless of an error occurring or not this is the place
+                            to define that logic. This may involve resource clean up and saving the state of an object for instance.
                         </p>
                     </div>
                     <div class="resources">
