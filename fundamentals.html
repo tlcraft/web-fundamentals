@@ -3305,12 +3305,14 @@
                             which protects your program from errors and accounts for instances where values are not available.  
                         </p>
                         <p>
-                            If you are trying to access a property of an object you can use boolean logic to retrieve it to include a null check. For example if you had the following object const dog = { name: "Rex" } to retrieve the name property 
-                            you could write a statement like: return dog && dog.name; This builds the null check into the expression so it will protect from exceptions where the dog object is not defined.
+                            If you are trying to access a property of an object you can use boolean logic to retrieve it to include a null check. For example if you had the following object const dog = { name: "Rex" }; to retrieve the name property 
+                            you could write a statement like: return dog && dog.name; This builds the null check into the expression so it will protect from exceptions where the dog object is not defined. Check out the demo below.
                         </p>
                         <p>
                             MDN also notes that there is a difference between null and undefined. Check out the resource below for an example of the differences when considering the equality and identity operators. [1]
                         </p>
+                        <h5>Null Check Demo</h5>
+                        <div id="null-check-demo"></div>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
