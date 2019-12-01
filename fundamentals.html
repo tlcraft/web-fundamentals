@@ -3298,7 +3298,15 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            Variables that we define are not necessarily guaranteed to have a value assigned to them. There could be a bug in our code or the value may not be required (as user input for example) or some error may 
+                            have occurred and caused an expected value to be missing. The null value, as MDN explains, "represents the intentional absence of any object value" [1]. MDN also points out that null is one of the many values
+                            in JavaScript that evaluate to false in boolean logic. Checking for null can be as simple as placing the variable in an if condition and wrapping the next set of code (which relies on the given variable) inside
+                            the if statement block. This ensures that the given variable is not null (because otherwise the if statement would evaluate to false) so that the code will run as intended. This could be considered "defensive code" 
+                            which protects your program from errors and accounts for instances where values are not available.  
+                        </p>
+                        <p>
+                            If you are trying to access a property of an object you can use boolean logic to retrieve it to include a null check. For example if you had the following object const dog = { name: "Rex" } to retrieve the name property 
+                            you could write a statement like: return dog && dog.name; This builds the null check into the expression so it will protect from exceptions where the dog object is not defined.
                         </p>
                     </div>
                     <div class="resources">
