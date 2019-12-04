@@ -3281,7 +3281,16 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            When an exception is thrown in JavaScript an instance of the Error object is generated. This object has three parameters in its constructor. Those are the message that the 
+                            error should contain, an optional filename, and an optional line number to help debug the issue. MDN explains that there are "seven other core error constructors" besides the generic
+                            Error constructor [1]. Those are: EvalError, InternalError, RangeError, ReferenceError, SyntaxError, TypeError, and URIError. Each represents a different issue. For instance 
+                            the InternalError is an error that occurs within the JavaScript engine (i.e. "too much recursion" as MDN notes) or ReferenceError which is an error that occurs when de-referencing
+                            an invalid reference [1]. You are also able to extend the Error object to create custom error objects for your own use cases.
+                        </p>
+                        <p>
+                            There are also some vendor-specific extensions which aren't standard. For example Microsoft has a "number" property which can be used to set an error number to help with debugging. Also
+                            if you intend to handle a specific error type, you'll want to utilize the instanceof operator to check for specific types within your catch block. For more information and examples 
+                            check out MDN's resource below. 
                         </p>
                     </div>
                     <div class="resources">
