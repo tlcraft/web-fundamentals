@@ -3264,13 +3264,18 @@
                 <article>
                     <div class="topic">
                         <p>
-
+                            The Error object is the base object that all error types inherit from and so should you if you extend this object for custom errors. Microsoft has a vendor-specific property
+                            named "number" which you can use to set an error code for a specific condition [1]. For instance if a resource you expected to use is not available and an exception is thrown you may assign a number
+                            to that error within the catch block. This can be useful later when reviewing which errors occur frequently (if logged) for example (listed and grouped by error code for instance). You can also handle the generated Error object later on in your 
+                            program based on the error code you assigned. You don't need to rely on Microsoft's vendor-specific property as you can just define your own just as easily within your application
+                            as sabotuer99 points out on their blog [2].
                         </p>
                     </div>
                     <div class="resources">
                         <h4>Resources</h4>
                         <ul>
-                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" title="Goes to the MDN article on HTTP response status codes." rel="nofollow" target="_blank">MDN - HTTP response status codes</a></li>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error" title="Goes to the MDN article on errors." rel="nofollow" target="_blank">MDN - Error</a></li>
+                            <li>[2] <a href="http://failedturing.blogspot.com/2014/04/microsoft-70-480-implement-exception.html" title="Goes to sabotuer99's blog post on failedturing.blogspot.com covering exception handling." rel="nofollow" target="_blank">Failed The Turing Test - Microsoft 70-480: Implement exception handling </a></li>
                         </ul>
                     </div>
                 </article>
