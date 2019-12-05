@@ -32,6 +32,7 @@
             <a href="#js-topics" title="Goes to the list of JS topics at the top of the page.">JS Topics List</a>
             <a href="#program-flow" title="Goes to the article on program flow.">- Program Flow</a>
             <a href="#handle-events" title="Goes to the article raising and handling events.">- Raise and Handle events</a>
+            <a href="#exception-handling" title="Goes to the article on exception handling.">- Exception Handling</a>
             <a href="#async-programming" title="Goes to the article on asynchronous programming.">- Asynchronous Programming</a>
             <a href="#web-workers" title="Goes to the article on web worker processes.">- Web Worker Processes</a>
             <a href="#validate-input" title="Goes to the article on validating input.">- Validate Input Programmatically</a>
@@ -188,12 +189,12 @@
                         <li><a href="#bubbled-events" title="Goes to the article on bubbled events.">Declare and handle bubbled events</a></li>
                         <li><a href="#event-functions" title="Goes to the article on handling events with anonymous functions.">Handle events with anonymous functions</a></li>
                     </ul>
-                    <li>Exception Handling</li>
+                    <li><a href="#exception-handling" title="Goes to the article on exception handling.">Exception Handling</a></li>
                     <ul>
-                        <li>Set and respond to error codes</li>
-                        <li>Exceptions</li>
-                        <li>Null checks</li>
-                        <li>try/catch/finally blocks</li>
+                        <li><a href="#error-codes" title="Goes to the article on setting and responding to error codes.">Set and respond to error codes</a></li>
+                        <li><a href="#exceptions" title="Goes to the article on exceptions.">Exceptions</a></li>
+                        <li><a href="#null-checks" title="Goes to the article on null checks.">Null checks</a></li>
+                        <li><a href="#try-catch-blocks" title="Goes to the article on try-catch-finally blocks.">try/catch/finally blocks</a></li>
                     </ul>
                     <li><a href="#async-programming" title="Goes to the article on asynchronous programming.">Asynchronous Programming</a></li>
                     <ul>
@@ -2929,6 +2930,7 @@
             <nav class="topics-nav">
                 <a href="#program-flow" title="Goes to the article on program flow.">Program Flow</a> |
                 <a href="#handle-events" title="Goes to the article raising and handling events.">Raise and Handle events</a> |
+                <a href="#exception-handling" title="Goes to the article on exception handling.">Exception Handling</a> |
                 <a href="#async-programming" title="Goes to the article on asynchronous programming.">Asynchronous Programming</a> | 
                 <a href="#web-workers" title="Goes to the article on web worker processes.">Web Worker Processes</a> | 
                 <a href="#validate-input" title="Goes to the article on validating input.">Validate Input Programmatically</a> |
@@ -3228,6 +3230,133 @@
                     </div>
                 </article>
             </section>
+            <section>
+                <div class="title-bar">
+                    <h4><a id="exception-handling">Exception Handling</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Programs need to account for errors and handle them appropriately when they arise. While programs are built and tested to run a certain way sometimes there are exceptional cases (hence the name) that come up
+                            and prevent a program from executing correctly. Sometimes an expected value is missing and other times the program has issues saving a file to a hard drive. In any case programs should be able to watch for these issues
+                            and react accordingly. This can mean logging error messages for further review as well as cleaning up the resources at hand and continuing to process as much as possible. Below are notes on how to deal with exceptions.
+                        </p>
+                        <nav class="topics-nav">
+                            <a href="#error-codes" title="Goes to the article on setting and responding to error codes.">Set and respond to error codes</a> |
+                            <a href="#exceptions" title="Goes to the article on exceptions.">Exceptions</a> |
+                            <a href="#null-checks" title="Goes to the article on null checks.">Null checks</a> |
+                            <a href="#try-catch-blocks" title="Goes to the article on try-catch-finally blocks.">try/catch/finally blocks</a>
+                        </nav>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling" title="Goes to the MDN article on control flow and error handling." rel="nofollow" target="_blank">MDN - Control flow and error handling</a></li>
+                            <li>[2] <a href="https://levelup.gitconnected.com/the-definite-guide-to-handling-errors-gracefully-in-javascript-58424d9c60e6" title="Goes to the Medium article by Lukas Gisder-Dubé on error handling in JavaScript." rel="nofollow" target="_blank">Medium - Handling Errors in JavaScript: The Definitive Guide</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="error-codes">Set and respond to error codes</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            The Error object is the base object that all error types inherit from and so should you if you extend this object for custom errors. Microsoft has a vendor-specific property
+                            named "number" which you can use to set an error code for a specific condition [1]. For instance if a resource you expected to use is not available and an exception is thrown you may assign a number
+                            to that error within the catch block. This can be useful later when reviewing which errors occur frequently (if logged) for example (listed and grouped by error code for instance). You can also handle the generated Error object later on in your 
+                            program based on the error code you assigned. You don't need to rely on Microsoft's vendor-specific property as you can just define your own just as easily within your application
+                            as sabotuer99 points out on their blog [2].
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error" title="Goes to the MDN article on errors." rel="nofollow" target="_blank">MDN - Error</a></li>
+                            <li>[2] <a href="http://failedturing.blogspot.com/2014/04/microsoft-70-480-implement-exception.html" title="Goes to sabotuer99's blog post on failedturing.blogspot.com covering exception handling." rel="nofollow" target="_blank">Failed The Turing Test - Microsoft 70-480: Implement exception handling </a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="exceptions">Exceptions</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            When an exception is thrown in JavaScript an instance of the Error object is generated. This object has three parameters in its constructor. Those are the message that the 
+                            error should contain, an optional filename, and an optional line number to help debug the issue. MDN explains that there are "seven other core error constructors" besides the generic
+                            Error constructor [1]. Those are: EvalError, InternalError, RangeError, ReferenceError, SyntaxError, TypeError, and URIError. Each represents a different issue. For instance 
+                            the InternalError is an error that occurs within the JavaScript engine (i.e. "too much recursion" as MDN notes) or ReferenceError which is an error that occurs when de-referencing
+                            an invalid reference [1]. You are also able to extend the Error object to create custom error objects for your own use cases.
+                        </p>
+                        <p>
+                            There are also some vendor-specific extensions which aren't standard. For example Microsoft has a "number" property which can be used to set an error number to help with debugging. Also
+                            if you intend to handle a specific error type, you'll want to utilize the instanceof operator to check for specific types within your catch block. For more information and examples 
+                            check out MDN's resource below. 
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error" title="Goes to the MDN article on errors." rel="nofollow" target="_blank">MDN - Error</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="null-checks">Null checks</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            Variables that we define are not necessarily guaranteed to have a value assigned to them. There could be a bug in our code or the value may not be required (as user input for example) or some error may 
+                            have occurred and caused an expected value to be missing. The null value, as MDN explains, "represents the intentional absence of any object value" [1]. MDN also points out that null is one of the many values
+                            in JavaScript that evaluate to false in boolean logic. Checking for null can be as simple as placing the variable in an if condition and wrapping the next set of code (which relies on the given variable) inside
+                            the if statement block. This ensures that the given variable is not null (because otherwise the if statement would evaluate to false) so that the code will run as intended. This could be considered "defensive code" 
+                            which protects your program from errors and accounts for instances where values are not available.  
+                        </p>
+                        <p>
+                            If you are trying to access a property of an object you can use boolean logic to retrieve it to include a null check. For example if you had the following object const dog = { name: "Rex" }; to retrieve the name property 
+                            you could write a statement like: return dog && dog.name; This builds the null check into the expression so it will protect from exceptions where the dog object is not defined. Check out the demo below.
+                        </p>
+                        <p>
+                            MDN also notes that there is a difference between null and undefined. Check out the resource below for an example of the differences when considering the equality and identity operators. [1]
+                        </p>
+                        <h5>Null Check Demo</h5>
+                        <div id="null-check-demo"></div>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null" title="Goes to the MDN article on null." rel="nofollow" target="_blank">MDN - null</a></li>
+                        </ul>
+                    </div>
+                </article>
+                <div class="title-bar">
+                    <h4><a id="try-catch-blocks">try/catch/finally blocks</a></h4>
+                    <span class="toggle">Show / Hide</span>              
+                </div> 
+                <article>
+                    <div class="topic">
+                        <p>
+                            The try..catch..finally statement is a fundamental component for handling exceptions. You'll find it in many programming languages. When you are dealing with a piece of code that may throw exceptions you can wrap that code in a try statement.
+                            This expresses that you would like to <em>try</em> running the encapsulated code but that you very well may run into an error. The catch statement defines which types of exceptions to handle. Only those that
+                            are of the types specified are actually captured and handled. When that happens the code within the catch block is executed. Generally error messages are logged and other clean up can be done. The finally
+                            block is something that is run whether an error occurs or not. It's the last thing run so if you find that you need a specific section of code to be run regardless of an error occurring or not this is the place
+                            to define that logic. This may involve resource clean up and saving the state of an object for instance.
+                        </p>
+                    </div>
+                    <div class="resources">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li>[1] <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch" title="Goes to the MDN article on the try...catch statement." rel="nofollow" target="_blank">MDN - try...catch</a></li>
+                        </ul>
+                    </div>
+                </article>
+            </section>  
             <section>                
                 <div class="title-bar">
                     <h4><a id="async-programming">Asynchronous Programming</a></h4>

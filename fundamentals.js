@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     xmlHttpRequestDemo();
     anonymousFunctionDemo();
     iterationDemo();
+    nullCheckDemo();
 });
 
 function uiControlsExample() {
@@ -306,4 +307,11 @@ function iterationDemo() {
     
     foodThatBeginsWithTheLetterC.forEach(item => foodListContainer.appendChild(createListItem(item)));
     iterationDemoDiv.appendChild(foodListContainer);
+}
+
+function nullCheckDemo() {
+    const nullDemoDiv = document.getElementById('null-check-demo');
+    const dog = { name: "Rex" };
+    nullDemoDiv.innerHTML = "Dog's Name: ";
+    nullDemoDiv.innerHTML += dog && dog.name;
 }
